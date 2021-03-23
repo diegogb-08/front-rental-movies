@@ -1,10 +1,13 @@
 import React from "react";
-import "./Home.css";
+import ModalRender from "../Modal/ModalRender";
+import "./Home.sass";
 
 const Home = () => {
     return (
-        <div className="">
+        <div className="homeContainer">
 
+            Hola soy home
+            <ModalRender name="Tenemos Modal"></ModalRender>
         </div>
     )
 };

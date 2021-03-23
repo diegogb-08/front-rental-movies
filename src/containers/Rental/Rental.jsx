@@ -1,5 +1,5 @@
 import React from "react";
-import "./Rental.css";
+import "./Rental.sass";
 
 const Rental = () => {
     return (
