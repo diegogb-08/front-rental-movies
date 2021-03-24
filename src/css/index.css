@@ -347,7 +347,7 @@ template {
   height: 2rem;
   margin-right: 3rem; }
 
-.formReg {
+.superformReg {
   display: flex;
   flex-direction: column;
   align-self: center;
