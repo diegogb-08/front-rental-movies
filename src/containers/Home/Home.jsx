@@ -1,13 +1,13 @@
 import React from "react";
 import ModalRender from "../Modal/ModalRender";
-import "./Home.sass";
 
 const Home = () => {
     return (
         <div className="homeContainer">
-
+            <div className="nesting"></div>
             Hola soy home
             <ModalRender name="Tenemos Modal"></ModalRender>
+            <button className="btn btn-primary"></button>
         </div>
     )
 };
