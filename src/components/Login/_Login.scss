@@ -1,17 +1,12 @@
 .loginComponent{
-    background: url(#{$imgpath}netflix-background.jpg) no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(#{$imgpath}netflix-background.jpg) no-repeat center center fixed;
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    // filter: brightness(50%);
-}
-
-.inputLogin{
-    width: 20rem;
-    margin: $m1;
+    flex-direction: column;
 }
 
 .loginBox {
@@ -20,7 +15,24 @@
     height: 35rem;
     width: 28em;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: $p3;
     flex-direction: column;
+    margin-top: $m10;
+    z-index: 100;
+    h1{
+        color: $fontcolor1;
+        margin-left: $m1;
+        font-weight: 700;
+    }
+}
+
+.inputLogin{
+    width: 20rem;
+    margin: $m1;
+}
+
+
+.spacer {
+    height: 5rem;
+    width: 100%;
 }

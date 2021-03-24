@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Button from '../Button/Button'
+import Header from '../Header/Header'
 import InputForm from '../InputForm/InputForm'
 
 function Login(props) {
@@ -17,7 +18,9 @@ function Login(props) {
 
     return (
         <div className="loginComponent">
+            <Header/>
             <div className="loginBox">
+                <h1>Sign In</h1>
                 <div className="inputLogin">
                     <InputForm type="text" name="email" onChange={handleState} title="Email"/>
                 </div>
@@ -28,6 +31,7 @@ function Login(props) {
                     <Button name="Sign In" />
                 </div>
             </div>
+            <div className="spacer"></div>
         </div>
     )
 }
