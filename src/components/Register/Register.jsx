@@ -1,7 +1,8 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 // IMPORT COMPONENTS
-import Button from '../Button/Button';
+import InputForm from '../../components/InputForm/InputForm';
 
 // IMPORT IMG
 import logo from "../../img/logo.png";
@@ -9,12 +10,25 @@ import logo from "../../img/logo.png";
 
 
 const Register = (props) => {
+
+    let history = useHistory();
+
+    function handleClickHome() {
+        history.push("/home");
+    };
+
+    function handleClickLogin() {
+        history.push("/login");
+    };
+
+
+
     return (
         <div className="registerContainer">
             <div className="headerReg">
 
-                <div className="fakeFlixContainer"><img src={logo} alt=""/></div>
-                <div className="buttonReg">Sign in</div>    
+                <div className="fakeFlixContainer"><img src={logo} alt="" type="button" onClick={handleClickHome}/></div>
+                <div className="buttonReg" type="button" onClick={handleClickLogin}>Sign in</div>    
     
             </div>
 
@@ -27,7 +41,9 @@ const Register = (props) => {
                         <div className="propsEmailReg">user@gmail.com</div>
                     </p>
 
-                    <div className="inputFormReg">Input</div>
+                    <div className="inputFormReg">
+                        <InputForm/>
+                    </div>
                     <div className="errorBoxReg">Error message</div>
                     <div className="buttonFormReg">Continue</div>
                 </div>
