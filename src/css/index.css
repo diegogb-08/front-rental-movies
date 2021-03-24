@@ -311,7 +311,11 @@ template {
 /*Padding*/
 /* Image */
 /*Components*/
- 
+.loginComponent {
+  background-image: url(/src/img/netflix-background.jpg);
+  height: 100vh;
+  width: 100%; }
+
 .registerContainer {
   display: flex;
   flex-direction: column;
@@ -327,14 +331,44 @@ template {
 
 /*Containers*/
 .homeContainer {
-  background-color: #0f7fe8; }
+  background: #7c7578; }
 
-.loginComponent {
+.sectionHome {
   background-image: url(/src/img/netflix-background.jpg);
-  height: 100vh;
-  width: 100%; }
+  height: 80vh;
+  width: 100%;
+  filter: brightness(50%);
+  margin-bottom: .5rem;
+  z-index: 1; }
 
+.sectionWatch {
+  height: 50vh;
+  width: 100%;
+  background-color: #0c0c0c; }
 
-/*Containers*/
+.sectionDownload {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: #0c0c0c; }
+
+.sectionDevice {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: #0c0c0c; }
+
+.containerWatchText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+h1 {
+  color: #ffffff; }
+
+h2 {
+  color: #ffffff; }
+
 /*Fonts*/
 /*Bootstrap*/

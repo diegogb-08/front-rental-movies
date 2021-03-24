@@ -1,0 +1,46 @@
+.homeContainer {
+    background: #7c7578;
+    // height: 100%;
+    // width: 100%;
+}
+.sectionHome {
+    background-image: url(#{$imgpath}netflix-background.jpg);
+    height: 80vh;
+    width: 100%;
+    filter: brightness(50%);
+    margin-bottom: .5rem;
+    z-index: 1;
+
+}
+
+.sectionWatch {
+    height: 50vh;
+    width: 100%;
+    background-color: #0c0c0c;
+}
+.sectionDownload {
+    margin-top: .4rem;
+    height: 50vh;
+    width: 100%;
+    background-color: #0c0c0c;
+}
+.sectionDevice {
+    margin-top: .4rem;
+    height: 50vh;
+    width: 100%;
+    background-color: #0c0c0c;
+}
+
+.containerWatchText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #ffffff;
+}
+h2 {
+    color: #ffffff;
+}
