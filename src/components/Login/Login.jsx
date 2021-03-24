@@ -1,9 +1,9 @@
 import React from 'react'
 
 function Login(props) {
-    
+
     return (
-        <div>
+        <div className="loginComponent">
             
         </div>
     )
