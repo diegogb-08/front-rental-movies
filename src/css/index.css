@@ -311,6 +311,12 @@ template {
 /*Padding*/
 /* Image */
 /*Components*/
+
+.loginComponent {
+  background-image: url(/src/img/netflix-background.jpg);
+  height: 100vh;
+  width: 100%; }
+
 .inputComponent {
   height: 3.8rem;
   width: 100%; }
@@ -362,18 +368,140 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center;
   flex-direction: column; }
 
+
 .registerContainer {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   width: 100%;
   height: 100vh;
+  top: 0;
+  right: 0;
   background-color: #ffffff; }
 
 .headerReg {
   display: flex;
-  width: 100%;
-  height: 4em;
-  border-bottom: 0.1rem solid black; }
+  flex-direction: row;
+  justify-content: space-between;
+  height: 7vh;
+  border-bottom: 0.1rem solid grey; }
+
+
+.fakeFlixContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 15rem;
+  height: 3rem;
+  margin-left: 3rem;
+  background-color: red; }
+
+.buttonReg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  height: 2rem;
+  margin-right: 3rem; }
+
+.superformReg {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 40rem;
+  height: 90vh;
+  border-right: 0.1rem solid grey;
+  border-left: 0.1rem solid grey; }
+
+.pFormRegUp {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin: 0; }
+
+.pFormRegMid {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 0.4rem; }
+
+.propsEmailReg {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: black; }
+
+.inputFormReg {
+  display: flex;
+  align-items: center;
+  padding-left: 0.4rem;
+  width: 30vh;
+  height: 4.5vh;
+  border: 0.1rem solid #e64034;
+  border-radius: 0.2rem;
+  color: gray; }
+
+.errorBoxReg {
+  display: flex;
+  width: 30vh;
+  height: 2.5vh;
+  font-size: 0.6rem;
+  color: red; }
+
+.buttonFormReg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vh;
+  height: 4.5vh;
+  background-color: red;
+  border-radius: 0.2rem;
+  color: white;
+  margin-top: 1rem; }
+
+.footerReg {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 18vh;
+  background-color: whitesmoke; }
+
+.footerRegUp {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 5vh; }
+
+.footerRegMid {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh; }
+
+.footerRegDown {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh; }
+
+.pReg {
+  margin-left: 5rem;
+  padding: 0.6rem; }
+
+.pRegFirst {
+  display: flex;
+  padding: 1rem;
+  margin-left: 4.5rem; }
+
+.pRegLast {
+  margin-left: 4rem;
+  padding: 0.6rem; }
 
 .buttonComponent {
   background-color: #e64034;
@@ -384,6 +512,7 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: center;
   align-items: center; }
+
 
 /*Containers*/
 /*Fonts*/
