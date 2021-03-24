@@ -1,29 +1,35 @@
 import React from "react";
 
+// IMPORT COMPONENTS
+import Button from '../Button/Button';
+
+// IMPORT IMG
+import logo from "../../img/logo.png";
 
 
-const Register = () => {
+
+const Register = (props) => {
     return (
         <div className="registerContainer">
             <div className="headerReg">
 
-                <div className="fakeFlixContainer">FakeFlix</div>
-                <div className="buttonReg">Iniciar Sesión</div>    
+                <div className="fakeFlixContainer"><img src={logo} alt=""/></div>
+                <div className="buttonReg">Sign in</div>    
     
             </div>
 
             <div className="superformReg">
                 <div className="formReg">
-                    <p className="pFormRegUp">¡Te damos de nuevo la bienvenida!</p>
-                    <p className="pFormRegUp">Es fácil suscribirse a Fakeflix.</p>
-                    <p className="pFormRegMid">Escribe tu contraseña para empezar a disfrutar.</p>
-                    <p className="pFormRegMid">Correo
+                    <p className="pFormRegUp">Welcome back geeks!</p>
+                    <p className="pFormRegUp">Joining Fakeflix is easy.</p>
+                    <p className="pFormRegMid">Enter your password and you'll be watching in no time.</p>
+                    <p className="pFormRegMid">Email
                         <div className="propsEmailReg">user@gmail.com</div>
                     </p>
 
                     <div className="inputFormReg">Input</div>
                     <div className="errorBoxReg">Error message</div>
-                    <div className="buttonFormReg">Continuar</div>
+                    <div className="buttonFormReg">Continue</div>
                 </div>
 
             </div>
@@ -32,19 +38,19 @@ const Register = () => {
             <div className="footerReg">
 
                 <div className="footerRegUp">
-                    <p className="pReg" className="pRegFirst">¿Preguntas? Contacta con nosotros.</p>
+                    <p className="pReg" className="pRegFirst">Questions? Contact us.</p>
                 </div>
 
                 <div className="footerRegMid">
-                    <p className="pReg">Preguntas frecuentes</p>
-                    <p className="pReg">Centro de ayuda</p>
-                    <p className="pReg">Términos de uso</p>
-                    <p className="pReg">Privacidad</p>
+                    <p className="pReg">FAQ</p>
+                    <p className="pRegSecond">Help Center</p>
+                    <p className="pRegThird">Terms of Use</p>
+                    <p className="pReg">Privacy</p>
                 </div>
 
                 <div className="footerRegDown">
-                    <p className="pReg">Preferencias de cookies</p>
-                    <p className="pReg" className="pRegLast">Información corporativa</p>
+                    <p className="pReg">Cookie Preferences</p>
+                    <p className="pReg" className="pRegLast">Corporate information</p>
                 </div>
             </div>    
         </div>

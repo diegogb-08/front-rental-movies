@@ -311,12 +311,6 @@ template {
 /*Padding*/
 /* Image */
 /*Components*/
-
-.loginComponent {
-  background-image: url(/src/img/netflix-background.jpg);
-  height: 100vh;
-  width: 100%; }
-
 .inputComponent {
   height: 3.8rem;
   width: 100%; }
@@ -368,7 +362,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center;
   flex-direction: column; }
 
-
 .registerContainer {
   display: flex;
   flex-direction: column;
@@ -383,20 +376,16 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 7vh;
+  height: 8vh;
   border-bottom: 0.1rem solid grey; }
-
 
 .fakeFlixContainer {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
   align-self: center;
   width: 15rem;
   height: 3rem;
-  margin-left: 3rem;
-  background-color: red; }
+  margin-left: 2.4rem; }
 
 .buttonReg {
   display: flex;
@@ -404,8 +393,11 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: center;
   align-items: center;
   align-self: center;
-  height: 2rem;
-  margin-right: 3rem; }
+  width: 7rem;
+  height: 1rem;
+  font-size: 1.3em;
+  margin-right: 3.2rem;
+  cursor: pointer; }
 
 .superformReg {
   display: flex;
@@ -422,7 +414,8 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: row;
   font-weight: bold;
-  margin: 0; }
+  margin: 0;
+  font-size: 1.5rem; }
 
 .pFormRegMid {
   display: flex;
@@ -499,6 +492,16 @@ input:not(:focus):valid ~ .floating-label {
   padding: 1rem;
   margin-left: 4.5rem; }
 
+.pRegSecond {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 10.8rem; }
+
+.pRegThird {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 8.8rem; }
+
 .pRegLast {
   margin-left: 4rem;
   padding: 0.6rem; }
@@ -512,7 +515,6 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: center;
   align-items: center; }
-
 
 /*Containers*/
 /*Fonts*/
