@@ -361,22 +361,21 @@ template {
 .pFormRegUp {
   display: flex;
   flex-direction: row;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0; }
 
 .pFormRegMid {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   font-size: 0.8rem;
-  color: gray; }
-
-.pFormReg {
-  display: flex;
-  flex-direction: row; }
+  color: gray;
+  margin-top: 0.4rem; }
 
 .propsEmailReg {
   display: flex;
-  flex-direction: row;
-  font-size: 0.8rem; }
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: black; }
 
 .inputFormReg {
   display: flex;
@@ -384,7 +383,7 @@ template {
   padding-left: 0.4rem;
   width: 30vh;
   height: 4.5vh;
-  border: 0.1rem solid red;
+  border: 0.1rem solid #e64034;
   border-radius: 0.2rem;
   color: gray; }
 

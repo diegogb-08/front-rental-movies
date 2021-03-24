@@ -68,26 +68,24 @@
     display: flex;
     flex-direction: row;
     font-weight: bold;
+    margin: 0;
+    
 }
 
 .pFormRegMid{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     font-size: 0.8rem;
     color: gray;
+    margin-top: 0.4rem;
 }
 
-.pFormReg {
-    display: flex;
-    flex-direction: row;
-    
-}
 
 .propsEmailReg{
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: column;
     font-size: 0.8rem;
+    color: black;
 }
 
 .inputFormReg {
@@ -96,7 +94,7 @@
     padding-left: 0.4rem;
     width: 30vh;
     height: 4.5vh;
-    border: 0.1rem solid red;
+    border: 0.1rem solid $btnred;
     border-radius: 0.2rem;
     color: gray;
     

@@ -17,8 +17,10 @@ const Register = () => {
                     <p className="pFormRegUp">¡Te damos de nuevo la bienvenida!</p>
                     <p className="pFormRegUp">Es fácil suscribirse a Fakeflix.</p>
                     <p className="pFormRegMid">Escribe tu contraseña para empezar a disfrutar.</p>
-                    <p className="pFormRegMid">Correo</p>
-                    <div className="propsEmailReg">user@gmail.com</div>
+                    <p className="pFormRegMid">Correo
+                        <div className="propsEmailReg">user@gmail.com</div>
+                    </p>
+
                     <div className="inputFormReg">Input</div>
                     <div className="errorBoxReg">Error message</div>
                     <div className="buttonFormReg">Continuar</div>
