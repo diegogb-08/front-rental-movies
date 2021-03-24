@@ -3,9 +3,8 @@ import React from 'react'
 function InputForm(props) {
     return (
         <div className="inputComponent">
-            <span className="spanPlaceholder" >{props.title}</span>
             <input 
-                className="input"
+                className="inputText"
                 type={props.type}
                 name={props.name}
                 maxLength={props.lenght}
@@ -13,8 +12,11 @@ function InputForm(props) {
                 onKeyDown={props.onKeyDown}
                 placeholder={props.placeholder}
                 tabIndex={props.tabIndex}
+
+                required
             ></input>
-            <span className="showPassword" onClick={props.onClick}>{props.showHide}</span>
+            <span className="floating-label" >{props.title}</span>
+            <div className="showPassword" onClick={props.onClick}>{props.showHide}</div>
         </div>
     )
 }
