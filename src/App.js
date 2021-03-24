@@ -1,5 +1,6 @@
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from './containers/Home/Home';
+import Register from './components/Register/Register';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
 
       <Switch>
         <Route path="/" exact component={Home}/>
+        <Route path="/register" exact component={Register}/>
 
       </Switch>
       </BrowserRouter>
