@@ -350,24 +350,50 @@ template {
 .formReg {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   align-self: center;
+  align-items: center;
+  padding: 3rem;
   width: 40rem;
   height: 90vh;
   border-right: 0.1rem solid grey;
   border-left: 0.1rem solid grey; }
 
+.pFormRegUp {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold; }
+
+.pFormRegMid {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  color: gray; }
+
+.pFormReg {
+  display: flex;
+  flex-direction: row; }
+
+.propsEmailReg {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem; }
+
 .inputFormReg {
   display: flex;
+  align-items: center;
+  padding-left: 0.4rem;
   width: 30vh;
   height: 4.5vh;
-  border: 0.1rem solid red; }
+  border: 0.1rem solid red;
+  border-radius: 0.2rem;
+  color: gray; }
 
 .errorBoxReg {
   display: flex;
   width: 30vh;
-  height: 4.5vh; }
+  height: 2.5vh;
+  font-size: 0.6rem;
+  color: red; }
 
 .buttonFormReg {
   display: flex;
@@ -376,7 +402,9 @@ template {
   width: 30vh;
   height: 4.5vh;
   background-color: red;
-  color: white; }
+  border-radius: 0.2rem;
+  color: white;
+  margin-top: 1rem; }
 
 .footerReg {
   display: flex;

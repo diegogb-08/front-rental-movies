@@ -13,13 +13,13 @@ const Register = () => {
             </div>
 
             <div className="formReg">
-                <p>¡Te damos de nuevo la bienvenida!</p>
-                <p>Es fácil suscribirse a Fakeflix</p>
-                <p>Escribe tu contraseña para empezar a disfrutar.</p>
-                <p>Correo</p>
+                <p className="pFormRegUp">¡Te damos de nuevo la bienvenida!</p>
+                <p className="pFormRegUp">Es fácil suscribirse a Fakeflix</p>
+                <p className="pFormRegMid">Escribe tu contraseña para empezar a disfrutar.</p>
+                <p className="pFormRegMid">Correo</p>
                 <div className="propsEmailReg">user@gmail.com</div>
-                <div className="inputFormReg"></div>
-                <div className="errorBoxReg"></div>
+                <div className="inputFormReg">Input</div>
+                <div className="errorBoxReg">Error message</div>
                 <div className="buttonFormReg">Continuar</div>
             </div>
 
