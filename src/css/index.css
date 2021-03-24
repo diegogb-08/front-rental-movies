@@ -309,7 +309,9 @@ template {
 
 /*Margin*/
 /*Padding*/
+/* Image */
 /*Components*/
+ 
 .registerContainer {
   display: flex;
   flex-direction: column;
@@ -327,5 +329,12 @@ template {
 .homeContainer {
   background-color: #0f7fe8; }
 
+.loginComponent {
+  background-image: url(/src/img/netflix-background.jpg);
+  height: 100vh;
+  width: 100%; }
+
+
+/*Containers*/
 /*Fonts*/
 /*Bootstrap*/
