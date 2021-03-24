@@ -1,14 +1,145 @@
+// Master Container
+
 .registerContainer {
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
     width: 100%;
     height: 100vh;
+    top: 0;
+    right: 0;
     background-color: nth($white , 1 )
 }
 
+// Header Container
+
 .headerReg {
     display: flex;
-    width: 100%;
-    height: 4em;
-    border-bottom: 0.1rem solid black;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 7vh;
+    border-bottom: 0.1rem solid grey;
+
 }
+
+// IMG FAKEFLIX CONTAINER
+
+.fakeFlixContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 15rem;
+    height: 3rem;
+    margin-left: 3rem;
+    background-color: red;
+    
+}
+
+// Login Container
+
+.buttonReg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 2rem;
+    margin-right: 3rem;
+}
+
+// Form Container
+
+.formReg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 40rem;
+    height: 90vh;
+    border-right: 0.1rem solid grey;
+    border-left: 0.1rem solid grey;
+
+}
+
+.inputFormReg {
+    display: flex;
+    width: 30vh;
+    height: 4.5vh;
+    border: 0.1rem solid red;
+}
+
+.errorBoxReg {
+    display: flex;
+    width: 30vh;
+    height: 4.5vh;
+}
+
+.buttonFormReg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vh;
+    height: 4.5vh;
+    background-color: red;
+    color: white;
+}
+
+// Footer Container
+
+.footerReg {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 18vh;
+    background-color:whitesmoke;
+}
+
+// Footer Up
+
+.footerRegUp {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 5vh;
+}
+
+// Footer Mid
+
+.footerRegMid {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 3vh;
+}
+
+// Footer Down
+
+.footerRegDown {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 3vh;
+}
+
+// P footer
+
+.pReg {
+  margin-left: 5rem;
+  padding: 0.6rem;
+}
+
+
+.pRegFirst {
+    display: flex;
+    padding: 1rem;
+    margin-left: 4.5rem;
+}
+
+.pRegLast {
+    margin-left: 4rem;
+    padding: 0.6rem;
+}
+
