@@ -1,6 +1,5 @@
 import React from "react";
 import ModalRender from "../Modal/ModalRender";
-import "./Home.sass";
 
 const Home = () => {
     return (
@@ -8,6 +7,7 @@ const Home = () => {
 
             Hola soy home
             <ModalRender name="Tenemos Modal"></ModalRender>
+            <button className="btn btn-primary"></button>
         </div>
     )
 };
