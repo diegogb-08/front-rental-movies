@@ -20,7 +20,8 @@ html {
    * Remove the margin in all browsers.
    */
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Kanit', sans-serif; }
 
 /**
    * Render the `main` element consistently in IE.
@@ -310,5 +311,8 @@ template {
 /*Padding*/
 /*Components*/
 /*Containers*/
+.homeContainer {
+  background-color: #0f7fe8; }
+
 /*Fonts*/
 /*Bootstrap*/
