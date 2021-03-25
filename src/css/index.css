@@ -544,12 +544,6 @@ input:not(:focus):valid ~ .floating-label {
   color: gray;
   margin-top: 0.4rem; }
 
-<<<<<<< HEAD
-.spaceReg {
-  width: 2rem;
-  height: 2rem; }
-=======
-
 .spaceReg {
   width: 2rem;
   height: 2rem; }
@@ -570,7 +564,7 @@ input:not(:focus):valid ~ .floating-label {
   border-radius: 0.2rem;
   color: gray; }
 
->>>>>>> a7394d1cb107bfccb8b7775b58fae370d1bc89a5
+
 
 .buttonFormReg {
   display: flex;
@@ -706,11 +700,7 @@ img {
   align-items: center;
   text-align: center;
   justify-content: center; }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> a7394d1cb107bfccb8b7775b58fae370d1bc89a5
 
 .inputContainer {
   display: flex;
@@ -723,10 +713,6 @@ img {
 .buttonHome {
   display: flex;
   width: 200px; }
-<<<<<<< HEAD
-=======
-
->>>>>>> a7394d1cb107bfccb8b7775b58fae370d1bc89a5
 
 /*Fonts*/
 /*Bootstrap*/
