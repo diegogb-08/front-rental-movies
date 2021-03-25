@@ -29,6 +29,25 @@
 .inputLogin{
     width: 20rem;
     margin: $m1;
+    p {
+        color: $fontcolor5;
+        font-size: 12px;
+    }
+}
+
+.contentLogin{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: $fontcolor3;
+    p{
+        margin: 0.5rem;
+    }
+    a{
+        color: $fontcolor1;
+    }
 }
 
 
@@ -36,3 +55,5 @@
     height: 5rem;
     width: 100%;
 }
+
+
