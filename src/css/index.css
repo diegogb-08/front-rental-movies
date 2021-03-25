@@ -34,7 +34,7 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0; }
 
 /* Grouping content
@@ -334,29 +334,46 @@ template {
   background: #7c7578; }
 
 .sectionHome {
-  background-image: url(/src/img/netflix-background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg);
   height: 80vh;
   width: 100%;
-  filter: brightness(50%);
-  margin-bottom: .5rem;
-  z-index: 1; }
+  margin-bottom: .4rem;
+  margin-top: -1.5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column; }
 
 .sectionWatch {
   height: 50vh;
   width: 100%;
-  background-color: #0c0c0c; }
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
 
 .sectionDownload {
   margin-top: .4rem;
   height: 50vh;
   width: 100%;
-  background-color: #0c0c0c; }
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
 
 .sectionDevice {
   margin-top: .4rem;
   height: 50vh;
   width: 100%;
-  background-color: #0c0c0c; }
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
 
 .containerWatchText {
   display: flex;
@@ -364,11 +381,29 @@ template {
   align-items: center;
   justify-content: center; }
 
-h1 {
+h1, h2, h3, h4 {
   color: #ffffff; }
 
-h2 {
-  color: #ffffff; }
+img {
+  width: 300px; }
+
+.emailText {
+  margin-top: 2rem;
+  max-width: 800px; }
+
+.sectionQuestions {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.buttonFaq {
+  width: 1000px;
+  margin: 1em; }
 
 /*Fonts*/
 /*Bootstrap*/
