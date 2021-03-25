@@ -9,6 +9,9 @@ import {port, user, searchEmail, query} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
+import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'
+
 
 
 function Home(props) {
@@ -37,7 +40,7 @@ function Home(props) {
 
     return (
         <div className="homeContainer">
-
+            <Header/>
             <div className="sectionHome">
                 <div className="containerHomeText">
                     <h1>Unlimited movies, TV <br></br>shows, and more.</h1>
@@ -55,7 +58,8 @@ function Home(props) {
                         placeholder="Email address"
 
 
-                        /></div>
+                        />
+                    </div>
                     <div className="buttonHome"><Button name="Get Started >" onClick={() => toggle()}/></div>
 
                     </div>
@@ -97,11 +101,25 @@ function Home(props) {
                     <h1>Frequently Asked Questions</h1>
 
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+                    <div className="inputContainer">
+                    <div className="inputHome">
+                    <InputForm
+                        type="text"
+                        name="email"
+                        onChange={handleState}
+                        placeholder="Email address"
+
+
+                        />
+                    </div>
+                    <div className="buttonHome"><Button name="Get Started >" onClick={() => toggle()}/></div>
+
+                    </div>
                 </div>
 
 
             </div>
-
+            <Footer/>
 
 
 
