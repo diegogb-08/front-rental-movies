@@ -2,8 +2,11 @@ import React from "react";
 
 
 // IMPORT COMPONENTS
+
 import HeaderRegister from '../HeaderRegister/HeaderRegister';
-import ErrorRegister from '../ErrorRegister/ErrorRegister';     
+
+// import ErrorRegister from '../ErrorRegister/ErrorRegister';   
+  
 import FirstStepRegister from "../FirstStepRegsiter/FirstStepRegister";
 import FooterRegister from "../FooterRegister/FooterRegister";
 
@@ -17,7 +20,6 @@ const Register = (props) => {
         <div className="registerContainer">            
             <HeaderRegister/>            
             <div className="superformReg">
-                <ErrorRegister/>
                 <FirstStepRegister/>
             </div>
             <FooterRegister/>
