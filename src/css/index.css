@@ -29,7 +29,7 @@ body {
    * Render the `main` element consistently in IE.
    */
 main {
-  display: block; }
+  display: flex; }
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -313,7 +313,6 @@ template {
 /*Padding*/
 /* Image */
 /*Components*/
-
 .inputComponent {
   height: 3.8rem;
   width: 100%; }
@@ -345,7 +344,7 @@ input:not(:focus):valid ~ .floating-label {
 .loginComponent {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg) no-repeat center center fixed;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -388,9 +387,7 @@ input:not(:focus):valid ~ .floating-label {
 
 .spacer {
   height: 5rem;
-  width: 100%;
-}
-
+  width: 100%; }
 
 .registerContainer {
   display: flex;
@@ -474,93 +471,20 @@ input:not(:focus):valid ~ .floating-label {
   height: 8vh;
   border-bottom: 0.1rem solid grey; }
 
-
-
-
-/*Containers*/
-.homeContainer {
-  background: #7c7578; }
-
-.sectionHome {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg);
-  height: 80vh;
-  width: 100%;
-  margin-bottom: .4rem;
-  margin-top: -1.5rem;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column; }
-
-.sectionWatch {
-  height: 50vh;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center; }
-
-.sectionDownload {
-  margin-top: .4rem;
-  height: 50vh;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center; }
-
-.sectionDevice {
-  margin-top: .4rem;
-  height: 50vh;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center; }
-
-.containerWatchText {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; }
-
-h1, h2, h3, h4 {
-  color: #ffffff; }
-
-img {
-  width: 300px; }
-
-.emailText {
-  margin-top: 2rem;
-  max-width: 800px; }
-
-.sectionQuestions {
-  margin-top: .4rem;
-  height: 50vh;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center; }
-
-.buttonFaq {
-  width: 1000px;
-  margin: 1em; }
-
-
 .fakeFlixContainer {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 15rem;
+  align-content: center;
+  width: 10rem;
   height: 3rem;
   margin-left: 2.4rem; }
+
+.imgFakeFlixReg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 8em; }
 
 .buttonReg {
   display: flex;
@@ -689,7 +613,6 @@ img {
   padding: 0.6rem;
   margin-left: 10.8rem; }
 
-
 .pRegThird {
   display: flex;
   padding: 0.6rem;
@@ -699,68 +622,77 @@ img {
   margin-left: 5.4rem;
   padding: 0.6rem; }
 
-.pRegLast {
-  margin-left: 5.4rem;
-  padding: 0.6rem; }
+/*Containers*/
+.homeContainer {
+  background: #7c7578; }
 
-.buttonComponent {
-  background-color: #e64034;
-  height: 3.3rem;
+.sectionHome {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg);
+  height: 80vh;
   width: 100%;
-  border-radius: 0.3em;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px; }
-
-.headerComponent {
-  width: 100%;
-  height: 5rem;
+  margin-bottom: .4rem;
+  margin-top: -1.5rem;
   z-index: 1;
-  position: fixed;
-  top: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  padding: 1rem 1rem 0 2rem; }
-  .headerComponent img {
-    height: 100%; }
-
-.buttonLogin {
-  height: 4rem;
-  width: 8rem;
-  display: flex;
+  text-align: center;
   justify-content: center;
-  position: relative;
-  left: 55rem; }
+  flex-direction: column; }
 
-.footerComponent {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+.sectionWatch {
+  height: 50vh;
   width: 100%;
-  height: 15rem;
-  background-color: #0c0c0cc2;
-  color: #7c7578;
-  padding-top: 3rem; }
-  .footerComponent h5 {
-    margin-bottom: 2rem; }
-  .footerComponent a {
-    color: #7c7578; }
-  .footerComponent p {
-    font-size: 14px;
-    color: #7c7578; }
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
 
-.section {
-  margin-left: 5rem;
-  margin-right: 5rem; 
-}
+.sectionDownload {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
 
-.section2 {
-  padding-top: 3rem; 
-}
+.sectionDevice {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
 
+.containerWatchText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+h1, h2, h3, h4 {
+  color: #ffffff; }
+
+img {
+  width: 300px; }
+
+.emailText {
+  margin-top: 2rem;
+  max-width: 800px; }
+
+.sectionQuestions {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
 
 /*Fonts*/
 /*Bootstrap*/
