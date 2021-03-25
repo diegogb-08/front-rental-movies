@@ -379,9 +379,7 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center;
   padding: 3rem;
   width: 40rem;
-  height: 90vh;
-  border-right: 0.1rem solid grey;
-  border-left: 0.1rem solid grey; }
+  height: 90vh; }
 
 .buttonComponent {
   background-color: #e64034;
