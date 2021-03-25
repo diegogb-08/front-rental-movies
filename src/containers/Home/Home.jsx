@@ -9,6 +9,9 @@ import {port, user, searchEmail, query} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
+import Footer from '../../components/Footer/Footer'
+import Header from '../../components/Header/Header'
+
 
 
 function Home(props) {
@@ -36,7 +39,7 @@ function Home(props) {
 
     return (
         <div className="homeContainer">
-
+            <Header/>
             <div className="sectionHome">
                 <div className="containerHomeText">
                     <h1>Unlimited movies, TV <br></br>shows, and more.</h1>
@@ -113,7 +116,7 @@ function Home(props) {
 
 
             </div>
-
+            <Footer/>
 
 
 
