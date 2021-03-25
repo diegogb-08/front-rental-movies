@@ -367,7 +367,7 @@ input:not(:focus):valid ~ .floating-label {
     font-weight: 700; }
 
 .inputLogin {
-  width: 20rem;
+  width: 90%;
   margin: 1rem; }
   .inputLogin p {
     color: #e87d33;
