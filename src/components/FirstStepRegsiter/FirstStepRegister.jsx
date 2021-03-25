@@ -11,14 +11,10 @@ function FirstStepRegister(props) {
                     
                     <p className="pFormRegUp">Welcome back geeks!</p>
                     <p className="pFormRegUp">Joining Fakeflix is easy.</p>
-                    <p className="pFormRegMid">Enter your password and you'll be watching in no time.</p>
+                    <p className="pFormRegMid">Enter your email and your password and you'll be watching in no time.</p>
 
-                    <p className="pFormRegMid">Email
-
-                        <div className="propsEmailReg">user@gmail.com</div>
-
-                    </p>
-
+                    <InputForm type="email" name="email" title="Email"/>
+                    <div className="spaceReg"></div>
                     <InputForm type="password" name="password" title="Password"/>
 
                     <div className="buttonFormReg">
