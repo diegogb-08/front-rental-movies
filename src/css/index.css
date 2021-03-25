@@ -29,7 +29,7 @@ body {
    * Render the `main` element consistently in IE.
    */
 main {
-  display: block; }
+  display: flex; }
 
 /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -344,7 +344,7 @@ input:not(:focus):valid ~ .floating-label {
 .loginComponent {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg) no-repeat center center fixed;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -476,9 +476,16 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 15rem;
+  align-content: center;
+  width: 10rem;
   height: 3rem;
   margin-left: 2.4rem; }
+
+.imgFakeFlixReg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 8em; }
 
 .buttonReg {
   display: flex;
@@ -537,6 +544,11 @@ input:not(:focus):valid ~ .floating-label {
   color: gray;
   margin-top: 0.4rem; }
 
+
+.spaceReg {
+  width: 2rem;
+  height: 2rem; }
+
 .propsEmailReg {
   display: flex;
   flex-direction: column;
@@ -552,6 +564,7 @@ input:not(:focus):valid ~ .floating-label {
   border: 0.1rem solid #F40612;
   border-radius: 0.2rem;
   color: gray; }
+
 
 .buttonFormReg {
   display: flex;
@@ -688,6 +701,8 @@ img {
   text-align: center;
   justify-content: center; }
 
+
+
 .inputContainer {
   display: flex;
   flex-direction: row;
@@ -699,6 +714,7 @@ img {
 .buttonHome {
   display: flex;
   width: 200px; }
+
 
 /*Fonts*/
 /*Bootstrap*/

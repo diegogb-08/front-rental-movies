@@ -19,7 +19,7 @@ function HeaderRegister (props){
             <div className="headerRegisterComponent">
 
                 <div className="fakeFlixContainer">
-                    <img src={logo} alt="" type="button" onClick={handleClick}/>
+                    <img className="imgFakeFlixReg " src={logo} alt="" type="button" onClick={handleClick}/>
                 </div>
 
                 <div className="buttonReg" type="button" onClick={handleClickLogin}>Sign in</div>    

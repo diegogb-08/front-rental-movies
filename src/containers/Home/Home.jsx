@@ -34,6 +34,7 @@ function Home(props) {
         }
     }
 
+
     return (
         <div className="homeContainer">
 
@@ -42,6 +43,7 @@ function Home(props) {
                     <h1>Unlimited movies, TV <br></br>shows, and more.</h1>
                     <h3>Watch anywhere. Cancel anytime.</h3>
                     <h4 className="emailText">Ready to watch? Enter your email to create or restart your membership.</h4>
+
 
                 </div>
                     <div className="inputContainer">
@@ -57,6 +59,7 @@ function Home(props) {
                     <div className="buttonHome"><Button name="Get Started >" onClick={() => toggle()}/></div>
 
                     </div>
+
             </div>
 
             <div className="sectionWatch">
@@ -106,4 +109,6 @@ function Home(props) {
     )
 }
 
+
 export default connect()(Home);
+
