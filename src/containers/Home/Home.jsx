@@ -53,7 +53,8 @@ function Home(props) {
                         placeholder="Email address"
 
 
-                        /></div>
+                        />
+                    </div>
                     <div className="buttonHome"><Button name="Get Started >" onClick={() => toggle()}/></div>
 
                     </div>
@@ -94,6 +95,20 @@ function Home(props) {
                     <h1>Frequently Asked Questions</h1>
 
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+                    <div className="inputContainer">
+                    <div className="inputHome">
+                    <InputForm
+                        type="text"
+                        name="email"
+                        onChange={handleState}
+                        placeholder="Email address"
+
+
+                        />
+                    </div>
+                    <div className="buttonHome"><Button name="Get Started >" onClick={() => toggle()}/></div>
+
+                    </div>
                 </div>
 
 
