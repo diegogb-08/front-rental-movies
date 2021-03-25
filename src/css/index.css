@@ -409,8 +409,8 @@ input:not(:focus):valid ~ .floating-label {
   height: 90vh; }
 
 .buttonComponent {
-  background-color: #e64034;
-  height: 3.3rem;
+  background-color: #F40612;
+  height: 3.8rem;
   width: 100%;
   border-radius: 0.3em;
   color: #ffffff;
@@ -549,7 +549,7 @@ input:not(:focus):valid ~ .floating-label {
   padding-left: 0.4rem;
   width: 30vh;
   height: 4.5vh;
-  border: 0.1rem solid #e64034;
+  border: 0.1rem solid #F40612;
   border-radius: 0.2rem;
   color: gray; }
 
@@ -687,6 +687,18 @@ img {
   align-items: center;
   text-align: center;
   justify-content: center; }
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  width: 800px; }
+
+.inputHome {
+  width: 600px; }
+
+.buttonHome {
+  display: flex;
+  width: 200px; }
 
 /*Fonts*/
 /*Bootstrap*/
