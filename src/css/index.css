@@ -546,6 +546,14 @@ input:not(:focus):valid ~ .floating-label {
   .headerComponent img {
     height: 100%; }
 
+.buttonLogin {
+  height: 4rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 55rem; }
+
 .footerComponent {
   display: flex;
   flex-direction: row;
