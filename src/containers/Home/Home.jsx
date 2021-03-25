@@ -37,32 +37,35 @@ function Home(props) {
         }
     }
 
+    const bringMe = () => {
+        history.push('/login')
+    }
 
     return (
         <div className="homeContainer">
-            <Header/>
+            <Header>
+                <Button name="Sign In" onClick={()=>bringMe()}/>
+            </Header>
             <div className="sectionHome">
                 <div className="containerHomeText">
                     <h1>Unlimited movies, TV <br></br>shows, and more.</h1>
                     <h3>Watch anywhere. Cancel anytime.</h3>
                     <h4 className="emailText">Ready to watch? Enter your email to create or restart your membership.</h4>
-
-
                 </div>
                     <div className="inputContainer">
                     <div className="inputHome">
-                    <InputForm
-                        type="text"
-                        name="email"
-                        onChange={handleState}
-                        placeholder="Email address"
-
-
-                        />
+                        <InputForm
+                            type="text"
+                            name="email"
+                            onChange={handleState}
+                            title="Email Address"
+                            />
                     </div>
-                    <div className="buttonHome"><Button name="Get Started >" onClick={() => toggle()}/></div>
-
+                    <div className="buttonHome">
+                        <Button name="Get Started >" onClick={() => toggle()}/>
                     </div>
+
+                </div>
 
             </div>
 
@@ -102,18 +105,17 @@ function Home(props) {
 
                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
                     <div className="inputContainer">
-                    <div className="inputHome">
-                    <InputForm
-                        type="text"
-                        name="email"
-                        onChange={handleState}
-                        placeholder="Email address"
-
-
-                        />
-                    </div>
-                    <div className="buttonHome"><Button name="Get Started >" onClick={() => toggle()}/></div>
-
+                        <div className="inputHome">
+                            <InputForm
+                                type="text"
+                                name="email"
+                                onChange={handleState}
+                                title="Email Address"
+                                />
+                        </div>
+                        <div className="buttonHome">
+                            <Button name="Get Started >" onClick={() => toggle()}/>
+                        </div>
                     </div>
                 </div>
 
