@@ -48,18 +48,18 @@ const Register = (props) => {
       
     try {
       let result = await axios.post(port+user, body)
-      console.log(result, '===========')
+      
       if (result.data?.email) {
-        console.log(result.data, 'REPRESENTANDOOOOOO')
+        
         
         let dataLogin = {
           email : result.data.email,
           password : customer.password
         }
-        console.log(dataLogin, "BICHITO")
+        
 
         let resultLogin = await axios.post(port+user+login, dataLogin)
-        console.log(resultLogin, '===========>')
+        
         if (resultLogin) {          
             props.dispatch({type: LOGIN, payload: resultLogin.data});
             history.push('/user')
