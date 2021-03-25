@@ -5,7 +5,7 @@ function FooterRegister(props) {
         <div className="footerRegisterComponent">
 
         <div className="footerRegUp">
-            <p className="pReg" className="pRegFirst">Questions? Contact us.</p>
+            <p className="pReg pRegFirst">Questions? Contact us.</p>
         </div>
 
         <div className="footerRegMid">
@@ -17,7 +17,7 @@ function FooterRegister(props) {
 
         <div className="footerRegDown">
             <p className="pReg">Cookie Preferences</p>
-            <p className="pReg" className="pRegLast">Corporate information</p>
+            <p className="pReg pRegLast">Corporate information</p>
         </div>
     </div>
 

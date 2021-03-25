@@ -1,5 +1,4 @@
 import React from 'react'
-
 import InputForm from '../InputForm/InputForm';
 import Button from '../Button/Button';
 
@@ -11,19 +10,15 @@ function FirstStepRegister(props) {
                     
                     <p className="pFormRegUp">Welcome back geeks!</p>
                     <p className="pFormRegUp">Joining Fakeflix is easy.</p>
-                    <p className="pFormRegMid">Enter your password and you'll be watching in no time.</p>
+                    <p className="pFormRegMid">Enter your email and your password and you'll be watching in no time.</p>
 
-                    <p className="pFormRegMid">Email
-
-                        <div className="propsEmailReg">user@gmail.com</div>
-
-                    </p>
-
-                    <InputForm type="password" name="password" title="Password"/>
+                    <InputForm type={props.type} name={props.name} title={props.title} value={props.value} onChange={props.onChange}/>
+                    <div className="spaceReg"></div>
+                    <InputForm type={props.typeP} name={props.nameP} title={props.titleP} onChange={props.onChangeP}/>
 
                     <div className="buttonFormReg">
 
-                        <Button name="Continue"/>
+                        <Button name={props.btnName} onClick={props.onClick}/>
 
                     </div>                                      
             </div>

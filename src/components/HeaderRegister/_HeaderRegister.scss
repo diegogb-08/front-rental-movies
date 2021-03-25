@@ -15,9 +15,18 @@
     display: flex;
     justify-content: center;
     align-self: center;
-    width: 15rem;
+    align-content: center;
+    width: 10rem;
     height: 3rem;
     margin-left: 2.4rem;
+}
+
+
+.imgFakeFlixReg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 8em;
 }
 
 // Login Container

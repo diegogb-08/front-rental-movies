@@ -22,23 +22,10 @@
 }
 
 
-.propsEmailReg{
-    display: flex;
-    flex-direction: column;
-    font-size: 0.8rem;
-    color: black;
-}
 
-.inputFormReg {
-    display: flex;
-    align-items: center;
-    padding-left: 0.4rem;
-    width: 30vh;
-    height: 4.5vh;
-    border: 0.1rem solid $btnred;
-    border-radius: 0.2rem;
-    color: gray;
-    
+.spaceReg {
+  width: 2rem;
+  height: 2rem;
 }
 
 

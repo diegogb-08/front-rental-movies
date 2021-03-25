@@ -12,6 +12,7 @@ function InputForm(props) {
                 onKeyDown={props.onKeyDown}
                 placeholder={props.placeholder}
                 tabIndex={props.tabIndex}
+                value={props.value}
 
                 required
             ></input>
