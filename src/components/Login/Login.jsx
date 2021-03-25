@@ -30,15 +30,18 @@ function Login(props) {
 
     // FUNCTIONS
 
-    const toggle = () => {
+    const toggle = async () => {
 
         try{
-            let result = axios.post(port+user+login, signin)
-            if(result) 
-                history.push('/user')
+            let result = await axios.post(port+user+login, signin)
+            if(result) {
                 props.dispatch({type: LOGIN, payload: result.data});
+                history.push('/user')
+            }else {
+                setMessage('Email or password not found')
+            }
         }catch(err){
-            setMessage('Email or password not found')
+            console.log(err.message)
         }
 
         
