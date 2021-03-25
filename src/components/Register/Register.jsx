@@ -3,6 +3,7 @@ import React from "react";
 
 // IMPORT COMPONENTS
 import HeaderRegister from '../HeaderRegister/HeaderRegister';
+import ErrorRegister from '../ErrorRegister/ErrorRegister';     
 import Button from '../../components/Button/Button';
 import InputForm from '../../components/InputForm/InputForm';
 
@@ -17,10 +18,7 @@ const Register = (props) => {
                 <HeaderRegister/>            
             <div className="superformReg">
                 <div className="formReg">
-                    <div className="errorDivReg">
-                        <div className="iconErrorReg"></div>
-                        <p className="errorPropsReg">Incorrect password. Please try again.</p>
-                    </div>
+                    <ErrorRegister/>
                     <p className="pFormRegUp">Welcome back geeks!</p>
                     <p className="pFormRegUp">Joining Fakeflix is easy.</p>
                     <p className="pFormRegMid">Enter your password and you'll be watching in no time.</p>

@@ -387,33 +387,6 @@ input:not(:focus):valid ~ .floating-label {
   width: 25rem;
   height: 30rem; }
 
-.errorDivReg {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: auto;
-  height: 5rem;
-  background-color: orange;
-  border-radius: 0.2rem;
-  color: white;
-  margin-bottom: 2rem; }
-
-.iconErrorReg {
-  display: flex;
-  width: 2rem;
-  height: 2rem;
-  background-color: whitesmoke;
-  margin-left: 2rem; }
-
-.errorPropsReg {
-  display: flex;
-  width: 20rem;
-  height: 2rem;
-  background-color: orange;
-  padding: 1rem;
-  font-size: 0.9rem;
-  margin-left: 0rem; }
-
 .pFormRegUp {
   display: flex;
   flex-direction: row;
@@ -543,6 +516,33 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 1.3em;
   margin-right: 3.2rem;
   cursor: pointer; }
+
+.errorRegisterComponent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 5rem;
+  background-color: orange;
+  border-radius: 0.2rem;
+  color: white;
+  margin-bottom: 2rem; }
+
+.iconErrorReg {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: whitesmoke;
+  margin-left: 2rem; }
+
+.errorPropsReg {
+  display: flex;
+  width: 20rem;
+  height: 2rem;
+  background-color: orange;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-left: 0rem; }
 
 /*Containers*/
 /*Fonts*/
