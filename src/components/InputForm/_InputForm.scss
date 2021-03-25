@@ -27,5 +27,5 @@ input:not(:focus):valid ~ .floating-label{
   left: 20px;
   bottom: 43px;
   transition: 0.2s ease all;
-  color: black;
+  color: $fontcolor3;
 }

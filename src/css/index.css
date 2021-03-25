@@ -7,6 +7,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Questrial&display=swap");
 @import url(bootstrap/dist/css/bootstrap.min.css);
 html {
   line-height: 1.15;
@@ -21,7 +23,7 @@ html {
    */
 body {
   margin: 0;
-  font-family: 'Kanit', sans-serif; }
+  font-family: 'Almarai', sans-serif; }
 
 /**
    * Render the `main` element consistently in IE.
@@ -34,7 +36,7 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0; }
 
 /* Grouping content
@@ -311,6 +313,7 @@ template {
 /*Padding*/
 /* Image */
 /*Components*/
+
 .inputComponent {
   height: 3.8rem;
   width: 100%; }
@@ -337,20 +340,17 @@ input:not(:focus):valid ~ .floating-label {
   left: 20px;
   bottom: 43px;
   transition: 0.2s ease all;
-  color: black; }
+  color: #7c7578; }
 
 .loginComponent {
-  background: url(/src/img/netflix-background.jpg) no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg) no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
-
-.inputLogin {
-  width: 20rem;
-  margin: 1rem; }
+  align-items: center;
+  flex-direction: column; }
 
 .loginBox {
   background-color: #0c0c0cc2;
@@ -358,9 +358,39 @@ input:not(:focus):valid ~ .floating-label {
   height: 35rem;
   width: 28em;
   display: flex;
-  justify-content: center;
+  padding: 3rem;
+  flex-direction: column;
+  margin-top: 10rem;
+  z-index: 100; }
+  .loginBox h1 {
+    color: #ffffff;
+    margin-left: 1rem;
+    font-weight: 700; }
+
+.inputLogin {
+  width: 90%;
+  margin: 1rem; }
+  .inputLogin p {
+    color: #e87d33;
+    font-size: 12px; }
+
+.contentLogin {
+  height: 5rem;
+  width: 100%;
+  display: flex;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: row;
+  color: #7c7578; }
+  .contentLogin p {
+    margin: 0.5rem; }
+  .contentLogin a {
+    color: #ffffff; }
+
+.spacer {
+  height: 5rem;
+  width: 100%;
+}
+
 
 .registerContainer {
   display: flex;
@@ -397,6 +427,86 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: space-between;
   height: 8vh;
   border-bottom: 0.1rem solid grey; }
+
+
+
+
+/*Containers*/
+.homeContainer {
+  background: #7c7578; }
+
+.sectionHome {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg);
+  height: 80vh;
+  width: 100%;
+  margin-bottom: .4rem;
+  margin-top: -1.5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.sectionWatch {
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.sectionDownload {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.sectionDevice {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.containerWatchText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+h1, h2, h3, h4 {
+  color: #ffffff; }
+
+img {
+  width: 300px; }
+
+.emailText {
+  margin-top: 2rem;
+  max-width: 800px; }
+
+.sectionQuestions {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.buttonFaq {
+  width: 1000px;
+  margin: 1em; }
+
 
 .fakeFlixContainer {
   display: flex;
@@ -533,6 +643,7 @@ input:not(:focus):valid ~ .floating-label {
   padding: 0.6rem;
   margin-left: 10.8rem; }
 
+
 .pRegThird {
   display: flex;
   padding: 0.6rem;
@@ -542,6 +653,64 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 5.4rem;
   padding: 0.6rem; }
 
-/*Containers*/
+.buttonComponent {
+  background-color: #e64034;
+  height: 3.3rem;
+  width: 100%;
+  border-radius: 0.3em;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; }
+
+.headerComponent {
+  width: 100%;
+  height: 5rem;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 1rem 0 2rem; }
+  .headerComponent img {
+    height: 100%; }
+
+.buttonLogin {
+  height: 4rem;
+  width: 8rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  left: 55rem; }
+
+.footerComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 15rem;
+  background-color: #0c0c0cc2;
+  color: #7c7578;
+  padding-top: 3rem; }
+  .footerComponent h5 {
+    margin-bottom: 2rem; }
+  .footerComponent a {
+    color: #7c7578; }
+  .footerComponent p {
+    font-size: 14px;
+    color: #7c7578; }
+
+.section {
+  margin-left: 5rem;
+  margin-right: 5rem; 
+}
+
+.section2 {
+  padding-top: 3rem; 
+}
+
+
 /*Fonts*/
 /*Bootstrap*/
