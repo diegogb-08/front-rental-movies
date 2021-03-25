@@ -410,6 +410,37 @@ input:not(:focus):valid ~ .floating-label {
   border-right: 0.1rem solid grey;
   border-left: 0.1rem solid grey; }
 
+.formReg {
+  width: 25rem;
+  height: 30rem; }
+
+.errorDivReg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  height: 3.8rem;
+  background-color: orange;
+  border-radius: 0.2rem;
+  color: white;
+  margin-bottom: 2rem; }
+
+.iconErrorReg {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: whitesmoke;
+  margin-left: 2rem; }
+
+.errorPropsReg {
+  display: flex;
+  width: 20rem;
+  height: 2rem;
+  background-color: orange;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-left: 0rem; }
+
 .pFormRegUp {
   display: flex;
   flex-direction: row;
@@ -440,23 +471,16 @@ input:not(:focus):valid ~ .floating-label {
   border-radius: 0.2rem;
   color: gray; }
 
-.errorBoxReg {
-  display: flex;
-  width: 30vh;
-  height: 2.5vh;
-  font-size: 0.6rem;
-  color: red; }
-
 .buttonFormReg {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 30vh;
-  height: 4.5vh;
+  width: auto;
+  height: 3.8rem;
   background-color: red;
   border-radius: 0.2rem;
   color: white;
-  margin-top: 1rem; }
+  margin-top: 2rem; }
 
 .footerReg {
   display: flex;

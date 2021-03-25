@@ -34,17 +34,17 @@ const Register = (props) => {
 
             <div className="superformReg">
                 <div className="formReg">
+                    <div className="errorDivReg">
+                        <div className="iconErrorReg"></div>
+                        <p className="errorPropsReg">Incorrect password. Please try again.</p>
+                    </div>
                     <p className="pFormRegUp">Welcome back geeks!</p>
                     <p className="pFormRegUp">Joining Fakeflix is easy.</p>
                     <p className="pFormRegMid">Enter your password and you'll be watching in no time.</p>
                     <p className="pFormRegMid">Email
                         <div className="propsEmailReg">user@gmail.com</div>
-                    </p>
-
-                    <div className="inputFormReg">
-                        <InputForm/>
-                    </div>
-                    <div className="errorBoxReg">Error message</div>
+                    </p>                   
+                        <InputForm/>                    
                     <div className="buttonFormReg">Continue</div>
                 </div>
 
