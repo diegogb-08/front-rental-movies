@@ -1,0 +1,12 @@
+.buttonComponent{
+    background-color: $btnred;
+    height: 3.8rem;
+    width: 100%;
+    border-radius: $border-radius;
+    color: $fontcolor1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}

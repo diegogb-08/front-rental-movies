@@ -1,0 +1,31 @@
+.inputComponent{
+    height: 3.8rem;
+    width: 100%;
+}
+
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label{
+    left: 15px;
+    bottom: 64px;
+    font-size: 11px;
+    opacity: 1;
+    color: $fontcolor3;
+}
+
+.inputText {
+  font-size: 16px;
+  width: 100%;
+  padding: 12px 20px;
+  height: 3.8rem;
+  display: inline-block;
+  border-radius: $border-radius;
+}
+
+.floating-label {
+  position: relative;
+  pointer-events: none;
+  left: 20px;
+  bottom: 43px;
+  transition: 0.2s ease all;
+  color: $fontcolor3;
+}

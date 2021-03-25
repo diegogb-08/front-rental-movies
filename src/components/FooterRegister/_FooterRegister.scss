@@ -1,0 +1,70 @@
+// Footer Container
+
+.footerRegisterComponent {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 18vh;
+    background-color:whitesmoke;
+}
+
+// Footer Up
+
+.footerRegUp {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 5vh;
+    font-size: 0.8rem;
+}
+
+// Footer Mid
+
+.footerRegMid {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 3vh;
+    font-size: 0.8rem;
+}
+
+// Footer Down
+
+.footerRegDown {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 3vh;
+    font-size: 0.8rem;
+}
+
+// P footer
+
+.pReg {
+  margin-left: 5rem;
+  padding: 0.6rem;
+}
+
+
+.pRegFirst {
+    display: flex;
+    padding: 1rem;
+    margin-left: 4.5rem;
+}
+
+.pRegSecond {
+    display: flex;
+    padding: 0.6rem;
+    margin-left: 10.8rem;
+}
+
+.pRegThird {
+    display: flex;
+    padding: 0.6rem;
+    margin-left: 8.8rem;
+}
+
+.pRegLast {
+    margin-left: 5.4rem;
+    padding: 0.6rem;
+}

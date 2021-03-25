@@ -1,5 +1,61 @@
 .loginComponent{
-    background-image: url(#{$imgpath}netflix-background.jpg);
-    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(#{$imgpath}netflix-background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginBox {
+    background-color: $blacktransparent2;
+    border-radius: $border-radius;
+    height: 35rem;
+    width: 28em;
+    display: flex;
+    padding: $p3;
+    flex-direction: column;
+    margin-top: $m8;
+    z-index: 100;
+    h1{
+        color: $fontcolor1;
+        margin-left: $m1;
+        font-weight: 700;
+    }
+}
+
+.inputLogin{
+    width: 90%;
+    margin: $m1;
+    p {
+        color: $fontcolor5;
+        font-size: 12px;
+    }
+}
+
+.contentLogin{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: $fontcolor3;
+    p{
+        margin: 0.5rem;
+    }
+    a{
+        color: $fontcolor1;
+    }
+}
+
+
+.spacer {
+    height: 5rem;
     width: 100%;
 }
+
+
+
+

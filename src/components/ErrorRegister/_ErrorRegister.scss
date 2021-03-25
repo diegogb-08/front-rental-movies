@@ -1,0 +1,34 @@
+// Error Div Orange
+
+.errorRegisterComponent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25rem;
+    height: 5rem;
+    background-color: orange;
+    border-radius: 0.2rem;
+    color: white;
+    margin-bottom: 2rem;
+    
+}
+
+// Icon Error Container
+
+.iconErrorReg{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background-color: whitesmoke;
+    margin-left: 2rem;
+}
+
+.errorPropsReg {
+    display: flex;
+    width: 20rem;
+    height: 2rem;
+    background-color:  orange;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-left: 0rem;
+}
