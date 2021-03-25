@@ -383,57 +383,6 @@ input:not(:focus):valid ~ .floating-label {
   border-right: 0.1rem solid grey;
   border-left: 0.1rem solid grey; }
 
-.footerReg {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: 18vh;
-  background-color: whitesmoke; }
-
-.footerRegUp {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  height: 5vh;
-  font-size: 0.8rem; }
-
-.footerRegMid {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  height: 3vh;
-  font-size: 0.8rem; }
-
-.footerRegDown {
-  display: flex;
-  flex-direction: row;
-  width: auto;
-  height: 3vh;
-  font-size: 0.8rem; }
-
-.pReg {
-  margin-left: 5rem;
-  padding: 0.6rem; }
-
-.pRegFirst {
-  display: flex;
-  padding: 1rem;
-  margin-left: 4.5rem; }
-
-.pRegSecond {
-  display: flex;
-  padding: 0.6rem;
-  margin-left: 10.8rem; }
-
-.pRegThird {
-  display: flex;
-  padding: 0.6rem;
-  margin-left: 8.8rem; }
-
-.pRegLast {
-  margin-left: 5.4rem;
-  padding: 0.6rem; }
-
 .buttonComponent {
   background-color: #e64034;
   height: 3.5rem;
@@ -543,6 +492,57 @@ input:not(:focus):valid ~ .floating-label {
   margin-top: 2rem;
   cursor: pointer;
   font-size: 1.5rem; }
+
+.footerRegisterComponent {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 18vh;
+  background-color: whitesmoke; }
+
+.footerRegUp {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 5vh;
+  font-size: 0.8rem; }
+
+.footerRegMid {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh;
+  font-size: 0.8rem; }
+
+.footerRegDown {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh;
+  font-size: 0.8rem; }
+
+.pReg {
+  margin-left: 5rem;
+  padding: 0.6rem; }
+
+.pRegFirst {
+  display: flex;
+  padding: 1rem;
+  margin-left: 4.5rem; }
+
+.pRegSecond {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 10.8rem; }
+
+.pRegThird {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 8.8rem; }
+
+.pRegLast {
+  margin-left: 5.4rem;
+  padding: 0.6rem; }
 
 /*Containers*/
 /*Fonts*/
