@@ -359,7 +359,7 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   padding: 3rem;
   flex-direction: column;
-  margin-top: 10rem;
+  margin-top: 8rem;
   z-index: 100; }
   .loginBox h1 {
     color: #ffffff;
@@ -409,15 +409,16 @@ input:not(:focus):valid ~ .floating-label {
   height: 90vh; }
 
 .buttonComponent {
-  background-color: #e64034;
-  height: 3.3rem;
+  background-color: #F40612;
+  height: 3.8rem;
   width: 100%;
   border-radius: 0.3em;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px; }
+  font-size: 18px;
+  cursor: pointer; }
 
 .headerComponent {
   width: 100%;
@@ -543,9 +544,27 @@ input:not(:focus):valid ~ .floating-label {
   color: gray;
   margin-top: 0.4rem; }
 
+
 .spaceReg {
   width: 2rem;
   height: 2rem; }
+
+.propsEmailReg {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: black; }
+
+.inputFormReg {
+  display: flex;
+  align-items: center;
+  padding-left: 0.4rem;
+  width: 30vh;
+  height: 4.5vh;
+  border: 0.1rem solid #F40612;
+  border-radius: 0.2rem;
+  color: gray; }
+
 
 .buttonFormReg {
   display: flex;
@@ -681,6 +700,21 @@ img {
   align-items: center;
   text-align: center;
   justify-content: center; }
+
+
+
+.inputContainer {
+  display: flex;
+  flex-direction: row;
+  width: 800px; }
+
+.inputHome {
+  width: 600px; }
+
+.buttonHome {
+  display: flex;
+  width: 200px; }
+
 
 /*Fonts*/
 /*Bootstrap*/
