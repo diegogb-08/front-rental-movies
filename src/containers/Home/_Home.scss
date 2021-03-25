@@ -80,3 +80,18 @@ img{
     justify-content: center;
 }
 
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+
+}
+.inputHome {
+    width: 600px;
+}
+
+
+.buttonHome {
+    display: flex;
+    width: 200px;
+}
