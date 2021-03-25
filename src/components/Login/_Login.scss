@@ -17,7 +17,7 @@
     display: flex;
     padding: $p3;
     flex-direction: column;
-    margin-top: $m10;
+    margin-top: $m8;
     z-index: 100;
     h1{
         color: $fontcolor1;
@@ -27,7 +27,7 @@
 }
 
 .inputLogin{
-    width: 20rem;
+    width: 90%;
     margin: $m1;
     p {
         color: $fontcolor5;
@@ -55,5 +55,7 @@
     height: 5rem;
     width: 100%;
 }
+
+
 
 
