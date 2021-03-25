@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 // IMPORT COMPONENTS
+import Button from '../../components/Button/Button';
 import InputForm from '../../components/InputForm/InputForm';
 
 // IMPORT IMG
@@ -13,8 +14,8 @@ const Register = (props) => {
 
     let history = useHistory();
 
-    function handleClickHome() {
-        history.push("/home");
+    function handleClick() {
+        history.push("/");
     };
 
     function handleClickLogin() {
@@ -27,7 +28,7 @@ const Register = (props) => {
         <div className="registerContainer">
             <div className="headerReg">
 
-                <div className="fakeFlixContainer"><img src={logo} alt="" type="button" onClick={handleClickHome}/></div>
+                <div className="fakeFlixContainer"><img src={logo} alt="" type="button" onClick={handleClick}/></div>
                 <div className="buttonReg" type="button" onClick={handleClickLogin}>Sign in</div>    
     
             </div>
@@ -44,8 +45,9 @@ const Register = (props) => {
                     <p className="pFormRegMid">Email
                         <div className="propsEmailReg">user@gmail.com</div>
                     </p>                   
-                        <InputForm/>                    
-                    <div className="buttonFormReg">Continue</div>
+                        <InputForm type="password" name="password" title="Password"/>
+                        <div className="buttonFormReg"><Button name="Continue"/></div>                    
+                    
                 </div>
 
             </div>

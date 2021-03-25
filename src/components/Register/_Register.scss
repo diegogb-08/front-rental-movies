@@ -75,7 +75,7 @@
     flex-direction: row;
     align-items: center;
     width: auto;
-    height: 3.8rem;
+    height: 5rem;
     background-color: orange;
     border-radius: 0.2rem;
     color: white;
@@ -146,10 +146,11 @@
     align-items: center;
     width: auto;
     height: 3.8rem;
-    background-color: red;
     border-radius: 0.2rem;
     color: white;
     margin-top: 2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
 // Footer Container
@@ -169,6 +170,7 @@
     flex-direction: column;
     width: auto;
     height: 5vh;
+    font-size: 0.8rem;
 }
 
 // Footer Mid
@@ -178,6 +180,7 @@
     flex-direction: row;
     width: auto;
     height: 3vh;
+    font-size: 0.8rem;
 }
 
 // Footer Down
@@ -187,6 +190,7 @@
     flex-direction: row;
     width: auto;
     height: 3vh;
+    font-size: 0.8rem;
 }
 
 // P footer
@@ -216,7 +220,7 @@
 }
 
 .pRegLast {
-    margin-left: 4rem;
+    margin-left: 5.4rem;
     padding: 0.6rem;
 }
 
