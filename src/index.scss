@@ -9,10 +9,12 @@
 @import './components/Login/Login';
 @import './components/Register/Register';
 @import './components/Button/Button';
+@import './components/Header/Header';
+@import './components//Footer/Footer';
 
 
 /*Containers*/
-
+ 
 @import './containers/Home/Home';
 @import './containers/Admin/Admin';
 @import './containers/Modal/Modal';
@@ -22,7 +24,8 @@
 
 /*Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Questrial&display=swap');
 
 /*Bootstrap*/
 @import 'bootstrap/dist/css/bootstrap.min.css';

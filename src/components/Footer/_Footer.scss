@@ -1,0 +1,29 @@
+.footerComponent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 15rem;
+    background-color: $blacktransparent2;
+    color: $fontcolor3;
+    padding-top: $p3;
+    h5 {
+        margin-bottom: $m2;
+    }
+    a {
+        color: $fontcolor3;
+    }
+    p {
+        font-size: 14px;
+        color: $fontcolor3;
+    }
+}
+
+.section {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.section2 {
+    padding-top: 3rem;
+}
