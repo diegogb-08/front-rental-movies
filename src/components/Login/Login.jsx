@@ -15,7 +15,7 @@ function Login(props) {
 
     // HOOKS
 
-    const [signin, setLogin] = useState({
+    const [signIn, setLogin] = useState({
         email: '',
         password: ''
     })
@@ -25,7 +25,7 @@ function Login(props) {
     // HANDLERS
 
     const handleState = (e) => {
-        setLogin({...signin, [e.target.name]: e.target.type === "number" ? + e.target.value : e.target.value});
+        setLogin({...signIn, [e.target.name]: e.target.type === "number" ? + e.target.value : e.target.value});
     }
 
     // FUNCTIONS
@@ -33,7 +33,8 @@ function Login(props) {
     const toggle = async () => {
 
         try{
-            let result = await axios.post(port+user+login, signin)
+            let result = await axios.post(port+user+login, signIn)
+            console.log(result)
             if(result) {
                 props.dispatch({type: LOGIN, payload: result.data});
                 history.push('/user')
