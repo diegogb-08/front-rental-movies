@@ -36,7 +36,7 @@ main {
    * `article` contexts in Chrome, Firefox, and Safari.
    */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0; }
 
 /* Grouping content
@@ -313,6 +313,7 @@ template {
 /*Padding*/
 /* Image */
 /*Components*/
+
 .inputComponent {
   height: 3.8rem;
   width: 100%; }
@@ -387,6 +388,7 @@ input:not(:focus):valid ~ .floating-label {
 
 .spacer {
   height: 5rem;
+
   width: 100%; }
 
 .registerContainer {
@@ -405,6 +407,83 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: space-between;
   height: 7vh;
   border-bottom: 0.1rem solid grey; }
+
+
+/*Containers*/
+.homeContainer {
+  background: #7c7578; }
+
+.sectionHome {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg);
+  height: 80vh;
+  width: 100%;
+  margin-bottom: .4rem;
+  margin-top: -1.5rem;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column; }
+
+.sectionWatch {
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.sectionDownload {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.sectionDevice {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.containerWatchText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+h1, h2, h3, h4 {
+  color: #ffffff; }
+
+img {
+  width: 300px; }
+
+.emailText {
+  margin-top: 2rem;
+  max-width: 800px; }
+
+.sectionQuestions {
+  margin-top: .4rem;
+  height: 50vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center; }
+
+.buttonFaq {
+  width: 1000px;
+  margin: 1em; }
 
 .fakeFlixContainer {
   display: flex;
@@ -578,6 +657,5 @@ input:not(:focus):valid ~ .floating-label {
 .section2 {
   padding-top: 3rem; }
 
-/*Containers*/
 /*Fonts*/
 /*Bootstrap*/
