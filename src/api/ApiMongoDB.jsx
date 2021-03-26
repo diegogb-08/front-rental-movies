@@ -1,5 +1,5 @@
 export const port = 'http://localhost:3000';
-export const user = '/user';
+export const customer = '/user';
 export const login = '/login';
 export const search = '/search';
 export const query = '?query=';

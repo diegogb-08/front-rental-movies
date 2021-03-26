@@ -12,9 +12,9 @@ function FirstStepRegister(props) {
                     <p className="pFormRegUp">Joining Fakeflix is easy.</p>
                     <p className="pFormRegMid">Enter your email and your password and you'll be watching in no time.</p>
 
-                    <InputForm type={props.type} name={props.name} title={props.title} value={props.value} onChange={props.onChange}/>
+                    <InputForm type={props.type} name={props.name} title={props.title} value={props.value} onChange={props.onChange} error={props.error} style={props.style}/>
                     <div className="spaceReg"></div>
-                    <InputForm type={props.typeP} name={props.nameP} title={props.titleP} onChange={props.onChangeP}/>
+                    <InputForm type={props.typeP} name={props.nameP} title={props.titleP} onChange={props.onChangeP} error={props.errorP} style={props.styleP}/>
 
                     <div className="buttonFormReg">
 

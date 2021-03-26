@@ -5,7 +5,7 @@ import imageDevice from '../../img/device-1.png'
 import InputForm  from '../../components/InputForm/InputForm'
 import Button  from '../../components/Button/Button'
 import axios from 'axios'
-import {port, user, searchEmail, query} from '../../api/ApiMongoDB'
+import {port, customer, searchEmail, query} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
@@ -26,7 +26,7 @@ function Home(props) {
         setEmailCheck({...emailCheck, [e.target.name]: e.target.value  })
     }
     const toggle = async() => {
-        let result = await axios.get(port+user+searchEmail+query+emailCheck.email);
+        let result = await axios.get(port+customer+searchEmail+query+emailCheck.email);
         // console.log(result.data);
         if(result.data?.email  ) {
             props.dispatch({type: LOGIN, payload: result.data.email});

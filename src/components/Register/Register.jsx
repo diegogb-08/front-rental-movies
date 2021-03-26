@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import axios from 'axios'
-import {port, user, login} from '../../api/ApiMongoDB'
+import {port, customer, login} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
@@ -26,40 +26,41 @@ const Register = (props) => {
 
   // HOOKS
 
-  const [customer, setCustomer] = useState({
+  const [user, setCustomer] = useState({
     email: '',
     password: ''
   })
-  console.log(customer)
+
 
   const [message, setMessage] = useState('')
 
   // HANDLERS
 
   const handleState = (e) => {
-    setCustomer({...customer, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
+    setCustomer({...user, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
   } 
 
   const toggle = async () => {
 
+    
     let body = {
-      email: customer.email,
-      password: customer.password
+      email: user.email,
+      password: user.password
     }
       
     try {
-      let result = await axios.post(port+user, body)
+      let result = await axios.post(port+customer, body)
       
       if (result.data?.email) {
         
         
         let dataLogin = {
           email : result.data.email,
-          password : customer.password
+          password : user.password
         }
         
 
-        let resultLogin = await axios.post(port+user+login, dataLogin)
+        let resultLogin = await axios.post(port+customer+login, dataLogin)
         
         if (resultLogin) {          
             props.dispatch({type: LOGIN, payload: resultLogin.data});
@@ -90,7 +91,10 @@ const Register = (props) => {
                   onChangeP={handleState}
                   btnName='Continue'
                   onClick={() => toggle()}
-
+                  error='Testeando el error'
+                  errorP='Testeando el error'
+                  // style={validation}
+                  // styleP={validation}
                 />
             </div>
             <FooterRegister/>
