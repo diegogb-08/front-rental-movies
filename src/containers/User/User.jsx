@@ -1,10 +1,17 @@
 import React from 'react'
 import {connect} from 'react-redux';
+import Header from '../../components/Header/Header';
+import Movie from '../../components/Movie/Movie';
 
 function User(props) {
     return (
         <div>
-            This is the User View
+          
+          <Header>
+            Soy el Componente Header
+          </Header>
+          <Movie/>
+         
         </div>
     )
 };

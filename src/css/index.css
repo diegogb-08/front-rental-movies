@@ -549,36 +549,9 @@ input:not(:focus):valid ~ .floating-label {
   color: gray;
   margin-top: 0.4rem; }
 
-
-
-.spaceReg {
-  width: 2rem;
-  height: 2rem; 
-}
-
-
 .spaceReg {
   width: 2rem;
   height: 2rem; }
-
-
-.propsEmailReg {
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8rem;
-  color: black; }
-
-.inputFormReg {
-  display: flex;
-  align-items: center;
-  padding-left: 0.4rem;
-  width: 30vh;
-  height: 4.5vh;
-  border: 0.1rem solid #F40612;
-  border-radius: 0.2rem;
-  color: gray; }
-
-
 
 .buttonFormReg {
   display: flex;
@@ -642,6 +615,9 @@ input:not(:focus):valid ~ .floating-label {
 .pRegLast {
   margin-left: 5.4rem;
   padding: 0.6rem; }
+
+.movieComponent {
+  background-color: red; }
 
 /*Containers*/
 .homeContainer {
@@ -716,17 +692,11 @@ img {
   align-items: center;
   justify-content: center; }
 
-
-
-
-
 .containerQuestionsText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
-
-
 
 .inputContainer {
   display: flex;
@@ -739,9 +709,6 @@ img {
 .buttonHome {
   display: flex;
   width: 200px; }
-
-
-
 
 /*Fonts*/
 /*Bootstrap*/

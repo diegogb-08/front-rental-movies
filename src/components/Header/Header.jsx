@@ -13,3 +13,24 @@ function Header(props) {
 }
 
 export default Header
+
+
+
+    
+/* Roo says: Ternaria Dieg
+
+                {
+                !props.user.div
+                ?
+                <>
+                     <div className="buttonLogin">{props.children}</div>
+                </>
+                :
+                <>
+                    <div>
+                      botones del user view
+                    </div>
+                </>
+            }
+
+*/
