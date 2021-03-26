@@ -633,6 +633,9 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 5.4rem;
   padding: 0.6rem; }
 
+.movieComponent {
+  background-color: red; }
+
 /*Containers*/
 .homeContainer {
   background: #7c7578; }
