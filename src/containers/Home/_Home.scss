@@ -10,10 +10,16 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
     flex-direction: column;
 
+}
+
+.containerHomeText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sectionWatch {
@@ -22,7 +28,6 @@
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 .sectionDownload {
@@ -32,7 +37,6 @@
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 .sectionDevice {
@@ -42,7 +46,6 @@
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 
@@ -76,10 +79,15 @@ img{
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 
+.containerQuestionsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .inputContainer {

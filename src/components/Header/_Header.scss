@@ -8,16 +8,22 @@
     flex-direction: row;
     align-items: center;
     padding: $p1 $p1 0 $p2;
+    
+}
+
+.logoContainer{
+    height: 3rem;
+    width: 10rem;
     img{
-        height: 100%;
+        width: 100%;
     }
 }
 
 .buttonLogin{
-    height: 4rem;
-    width: 8rem;
+    height: 2rem;
+    width: 6rem;
     display: flex;
     justify-content: center;
     position: relative;
-    left: 55rem;
+    left: 60rem;
 }
