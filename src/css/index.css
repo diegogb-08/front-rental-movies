@@ -455,7 +455,8 @@ input:not(:focus):valid ~ .floating-label {
   height: 3rem;
   width: 10rem; }
   .logoContainer img {
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
 
 .buttonLogin {
   height: 2rem;
