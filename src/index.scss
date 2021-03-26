@@ -12,22 +12,19 @@
 @import './components/Header/Header.scss';
 @import './components//Footer/Footer.scss';
 
-<<<<<<< HEAD
 @import './components/HeaderRegister/HeaderRegister.scss';
 @import './components/ErrorRegister/ErrorRegister.scss';
 @import './components/FirstStepRegsiter/FirstStepRegister.scss';
 @import './components//FooterRegister/FooterRegister.scss';
-=======
 @import './components/HeaderRegister/HeaderRegister';
 @import './components/ErrorRegister/ErrorRegister';
 @import './components/FirstStepRegsiter/FirstStepRegister';
 @import './components/FooterRegister/FooterRegister';
 @import './components/Movie/Movie';
->>>>>>> feature/Roo
 
 
 /*Containers*/
- 
+
 @import './containers/Home/Home.scss';
 @import './containers/Admin/Admin.scss';
 @import './containers/Modal/Modal.scss';
