@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: $p1 $p1 0 $p2;
-    
+    justify-content: space-between;
+    padding: $p1 $p2 0 $p2;
 }
 
 .logoContainer{
@@ -24,6 +24,4 @@
     width: 6rem;
     display: flex;
     justify-content: center;
-    position: relative;
-    left: 60rem;
 }

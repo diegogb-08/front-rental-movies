@@ -448,7 +448,8 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem 1rem 0 2rem; }
+  justify-content: space-between;
+  padding: 1rem 2rem 0 2rem; }
 
 .logoContainer {
   height: 3rem;
@@ -460,9 +461,7 @@ input:not(:focus):valid ~ .floating-label {
   height: 2rem;
   width: 6rem;
   display: flex;
-  justify-content: center;
-  position: relative;
-  left: 60rem; }
+  justify-content: center; }
 
 .footerComponent {
   display: flex;

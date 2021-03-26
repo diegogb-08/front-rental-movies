@@ -4,7 +4,7 @@ import {port, customer, login} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
-
+import validate from "../../tools/validate";
 
 
 // IMPORT COMPONENTS
@@ -26,22 +26,48 @@ const Register = (props) => {
 
   // HOOKS
 
-  const [user, setCustomer] = useState({
+  const [user, setUser] = useState({
     email: '',
     password: ''
   })
 
+  const [password, setPassword] = useState({
+    hideShow: 'password',
+    showHide: 'SHOW'
+})
 
-  const [message, setMessage] = useState('')
+  const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState([]);
 
   // HANDLERS
 
-  const handleState = (e) => {
-    setCustomer({...user, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
-  } 
+  // const handleState = (e) => {
+  //   setUser({...user, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
+  // } 
+
+  const handleState = (key, value) => {
+    setUser({ ...user, [key]: value });
+    if (Object.keys(errors).length > 0) setErrors(validate({ ...user, [key]: value }, "register"));
+  };
+
+
+  // FUNCTIONS
+
+  const showPassord = () => {
+
+    if(password.hideShow === "password"){
+        return setPassword({...password, hideShow: 'text', showHide: 'HIDE'});
+    }else{
+        return setPassword({...password, hideShow: 'password', showHide: 'SHOW'});
+    }
+}
 
   const toggle = async () => {
 
+    const errs = validate(user, "register");
+    setErrors(errs);
+
+    if (Object.keys(errs).length > 0) return;
     
     let body = {
       email: user.email,
@@ -52,13 +78,10 @@ const Register = (props) => {
       let result = await axios.post(port+customer, body)
       
       if (result.data?.email) {
-        
-        
         let dataLogin = {
           email : result.data.email,
           password : user.password
         }
-        
 
         let resultLogin = await axios.post(port+customer+login, dataLogin)
         
@@ -66,7 +89,7 @@ const Register = (props) => {
             props.dispatch({type: LOGIN, payload: resultLogin.data});
             history.push('/user')
         }else {
-            //setMessage('Email or password not found')
+            setMessage('Email or password not found')
         } 
         
       } 
@@ -81,7 +104,7 @@ const Register = (props) => {
             <div className="superformReg">
                 <FirstStepRegister
                   type='text'
-                  typeP='password'
+                  typeP={password.hideShow}
                   name='email'
                   nameP='password'
                   title='Email'
@@ -91,11 +114,14 @@ const Register = (props) => {
                   onChangeP={handleState}
                   btnName='Continue'
                   onClick={() => toggle()}
-                  error='Testeando el error'
-                  errorP='Testeando el error'
+                  error={errors.email?.help}
+                  errorP={errors.password?.help}
+                  showHide={password.showHide}
+                  PonClick={() => showPassord()}
                   // style={validation}
                   // styleP={validation}
                 />
+                <p>{message}</p>
             </div>
             <FooterRegister/>
         </div>
