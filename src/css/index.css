@@ -582,6 +582,10 @@ input:not(:focus):valid ~ .floating-label {
   cursor: pointer;
   font-size: 1.5rem; }
 
+.spacerLogin {
+  width: 2px;
+  margin-top: 2rem; }
+
 .footerRegisterComponent {
   display: flex;
   flex-direction: column;
@@ -632,6 +636,157 @@ input:not(:focus):valid ~ .floating-label {
 .pRegLast {
   margin-left: 5.4rem;
   padding: 0.6rem; }
+
+.headerRegisterComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 8vh;
+  border-bottom: 0.1rem solid grey; }
+
+.fakeFlixContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  width: 10rem;
+  height: 3rem;
+  margin-left: 2.4rem; }
+
+.imgFakeFlixReg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 8em; }
+
+.buttonReg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 7rem;
+  height: 1rem;
+  font-size: 1.3em;
+  margin-right: 3.2rem;
+  cursor: pointer; }
+
+.errorRegisterComponent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 25rem;
+  height: 5rem;
+  background-color: orange;
+  border-radius: 0.2rem;
+  color: white;
+  margin-bottom: 2rem; }
+
+.iconErrorReg {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: whitesmoke;
+  margin-left: 2rem; }
+
+.errorPropsReg {
+  display: flex;
+  width: 20rem;
+  height: 2rem;
+  background-color: orange;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-left: 0rem; }
+
+.FirstStepRegisterComponent {
+  width: 25rem;
+  height: 30rem; }
+
+.pFormRegUp {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.5rem; }
+
+.pFormRegMid {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 0.4rem; }
+
+.spaceReg {
+  width: 2rem;
+  height: 2rem; }
+
+.buttonFormReg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 3.8rem;
+  border-radius: 0.2rem;
+  color: white;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 1.5rem; }
+
+.spacerLogin {
+  width: 2px;
+  margin-top: 2rem; }
+
+.footerRegisterComponent {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 18vh;
+  background-color: whitesmoke; }
+
+.footerRegUp {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 5vh;
+  font-size: 0.8rem; }
+
+.footerRegMid {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh;
+  font-size: 0.8rem; }
+
+.footerRegDown {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh;
+  font-size: 0.8rem; }
+
+.pReg {
+  margin-left: 5rem;
+  padding: 0.6rem; }
+
+.pRegFirst {
+  display: flex;
+  padding: 1rem;
+  margin-left: 4.5rem; }
+
+.pRegSecond {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 10.8rem; }
+
+.pRegThird {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 8.8rem; }
+
+.pRegLast {
+  margin-left: 5.4rem;
+  padding: 0.6rem; }
+
 
 .headerRegisterComponent {
   display: flex;

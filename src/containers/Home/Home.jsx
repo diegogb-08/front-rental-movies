@@ -25,6 +25,7 @@ function Home(props) {
     const handleState = (e) => {
         setEmailCheck({...emailCheck, [e.target.name]: e.target.value  })
     }
+
     const toggle = async() => {
         let result = await axios.get(port+customer+searchEmail+query+emailCheck.email);
         // console.log(result.data);

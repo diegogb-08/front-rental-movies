@@ -3,21 +3,14 @@ import axios from 'axios'
 import {port, customer, login} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
-import {LOGIN} from '../../redux/types/userType'
+import {SAVEEMAIL} from '../../redux/types/userType'
 import validate from "../../tools/validate";
-
 
 // IMPORT COMPONENTS
 
 import HeaderRegister from '../HeaderRegister/HeaderRegister';
-
-// import ErrorRegister from '../ErrorRegister/ErrorRegister';   
-  
 import FirstStepRegister from "../FirstStepRegsiter/FirstStepRegister";
 import FooterRegister from "../FooterRegister/FooterRegister";
-
-
-
 
 
 const Register = (props) => {
@@ -41,15 +34,11 @@ const Register = (props) => {
 
   // HANDLERS
 
-  // const handleState = (e) => {
-  //   setUser({...user, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
-  // } 
-
-  const handleState = (key, value) => {
-    setUser({ ...user, [key]: value });
-    if (Object.keys(errors).length > 0) setErrors(validate({ ...user, [key]: value }, "register"));
-  };
-
+  const handleState = (e) => {
+     setUser({...user, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
+     if (Object.keys(errors).length > 0) 
+     setErrors(validate({ ...user, [e.target.name]: e.target.value, [e.target.name]: e.target.value}, "register"));
+  } 
 
   // FUNCTIONS
 
@@ -86,18 +75,15 @@ const Register = (props) => {
         let resultLogin = await axios.post(port+customer+login, dataLogin)
         
         if (resultLogin) {          
-            props.dispatch({type: LOGIN, payload: resultLogin.data});
+            props.dispatch({type: SAVEEMAIL, payload: resultLogin.data});
             history.push('/user')
-        }else {
-            setMessage('Email or password not found')
-        } 
-        
+        }
       } 
-
     } catch (error) {
-      
+      setMessage('User already exist!')
     }
   };
+
     return (
         <div className="registerContainer">            
             <HeaderRegister/>            
@@ -121,7 +107,7 @@ const Register = (props) => {
                   // style={validation}
                   // styleP={validation}
                 />
-                <p>{message}</p>
+                {/* <p>{message}</p> */}
             </div>
             <FooterRegister/>
         </div>
@@ -131,7 +117,6 @@ const Register = (props) => {
 const mapStateToProps = state => {
   return {
       user : state.userReducer.user,
-      token : state.userReducer.token,
   }
 }
 
