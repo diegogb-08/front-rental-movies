@@ -5,7 +5,7 @@ function Header(props) {
     return (
         <div className="headerComponent">
             <div className="logoContainer">
-                <img src={logo} alt="logo"/>
+                <img src={logo} alt="logo" onClick={props.onClick}/>
             </div>
             <div className="buttonLogin">{props.children}</div>
         </div>
