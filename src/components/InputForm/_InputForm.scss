@@ -1,6 +1,14 @@
 .inputComponent{
     height: 3.8rem;
     width: 100%;
+    .error {
+      color: red;
+      position: relative;
+      bottom: 5.5rem;
+      font-size: 12px;
+      font-style: italic;
+      transition: 0.2s ease all;
+    }
 }
 
 input:focus ~ .floating-label,
@@ -19,6 +27,7 @@ input:not(:focus):valid ~ .floating-label{
   height: 3.8rem;
   display: inline-block;
   border-radius: $border-radius;
+  border: 1px solid #ccc;
 }
 
 .floating-label {
@@ -28,4 +37,16 @@ input:not(:focus):valid ~ .floating-label{
   bottom: 43px;
   transition: 0.2s ease all;
   color: $fontcolor3;
+}
+
+.iconInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3.8rem;
+  position: relative;
+  bottom: 5.3rem;
+  border-radius: $border-radius;
+  left: 20.5rem;
 }

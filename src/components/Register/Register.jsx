@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import axios from 'axios'
-import {port, user, login} from '../../api/ApiMongoDB'
+import {port, customer, login} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
-
+import validate from "../../tools/validate";
 
 
 // IMPORT COMPONENTS
@@ -26,46 +26,70 @@ const Register = (props) => {
 
   // HOOKS
 
-  const [customer, setCustomer] = useState({
+  const [user, setUser] = useState({
     email: '',
     password: ''
   })
-  console.log(customer)
 
-  const [message, setMessage] = useState('')
+  const [password, setPassword] = useState({
+    hideShow: 'password',
+    showHide: 'SHOW'
+})
+
+  const [errors, setErrors] = useState({});
+  const [message, setMessage] = useState([]);
 
   // HANDLERS
 
-  const handleState = (e) => {
-    setCustomer({...customer, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
-  } 
+  // const handleState = (e) => {
+  //   setUser({...user, [e.target.name]: e.target.value, [e.target.name]: e.target.value});
+  // } 
+
+  const handleState = (key, value) => {
+    setUser({ ...user, [key]: value });
+    if (Object.keys(errors).length > 0) setErrors(validate({ ...user, [key]: value }, "register"));
+  };
+
+
+  // FUNCTIONS
+
+  const showPassord = () => {
+
+    if(password.hideShow === "password"){
+        return setPassword({...password, hideShow: 'text', showHide: 'HIDE'});
+    }else{
+        return setPassword({...password, hideShow: 'password', showHide: 'SHOW'});
+    }
+}
 
   const toggle = async () => {
 
+    const errs = validate(user, "register");
+    setErrors(errs);
+
+    if (Object.keys(errs).length > 0) return;
+    
     let body = {
-      email: customer.email,
-      password: customer.password
+      email: user.email,
+      password: user.password
     }
       
     try {
-      let result = await axios.post(port+user, body)
+      let result = await axios.post(port+customer, body)
       
       if (result.data?.email) {
-        
-        
         let dataLogin = {
           email : result.data.email,
-          password : customer.password
+          password : user.password
         }
-        
 
-        let resultLogin = await axios.post(port+user+login, dataLogin)
+        let resultLogin = await axios.post(port+customer+login, dataLogin)
         
         if (resultLogin) {          
             props.dispatch({type: LOGIN, payload: resultLogin.data});
             history.push('/user')
         }else {
-            //setMessage('Email or password not found')
+            setMessage('Email or password not found')
         } 
         
       } 
@@ -80,7 +104,7 @@ const Register = (props) => {
             <div className="superformReg">
                 <FirstStepRegister
                   type='text'
-                  typeP='password'
+                  typeP={password.hideShow}
                   name='email'
                   nameP='password'
                   title='Email'
@@ -90,8 +114,14 @@ const Register = (props) => {
                   onChangeP={handleState}
                   btnName='Continue'
                   onClick={() => toggle()}
-
+                  error={errors.email?.help}
+                  errorP={errors.password?.help}
+                  showHide={password.showHide}
+                  PonClick={() => showPassord()}
+                  // style={validation}
+                  // styleP={validation}
                 />
+                <p>{message}</p>
             </div>
             <FooterRegister/>
         </div>

@@ -1,30 +1,30 @@
 /*Utilities*/
-@import './scss/mixings';
-@import './scss/reset';
-@import './scss/variables';
+@import './scss/mixings.scss';
+@import './scss/reset.scss';
+@import './scss/variables.scss';
 
 /*Components*/
 
-@import './components/InputForm/InputForm';
-@import './components/Login/Login';
-@import './components/Register/Register';
-@import './components/Button/Button';
-@import './components/Header/Header';
-@import './components//Footer/Footer';
+@import './components/InputForm/InputForm.scss';
+@import './components/Login/Login.scss';
+@import './components/Register/Register.scss';
+@import './components/Button/Button.scss';
+@import './components/Header/Header.scss';
+@import './components//Footer/Footer.scss';
 
-@import './components/HeaderRegister/HeaderRegister';
-@import './components/ErrorRegister/ErrorRegister';
-@import './components/FirstStepRegsiter/FirstStepRegister';
-@import './components//FooterRegister/FooterRegister';
+@import './components/HeaderRegister/HeaderRegister.scss';
+@import './components/ErrorRegister/ErrorRegister.scss';
+@import './components/FirstStepRegsiter/FirstStepRegister.scss';
+@import './components//FooterRegister/FooterRegister.scss';
 
 
 /*Containers*/
  
-@import './containers/Home/Home';
-@import './containers/Admin/Admin';
-@import './containers/Modal/Modal';
-@import './containers/Rental/Rental';
-@import './containers/User/_User.sass';
+@import './containers/Home/Home.scss';
+@import './containers/Admin/Admin.scss';
+@import './containers/Modal/Modal.scss';
+@import './containers/Rental/Rental.scss';
+@import './containers/User/User.scss';
 
 
 /*Fonts*/

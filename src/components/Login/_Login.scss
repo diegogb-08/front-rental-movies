@@ -12,8 +12,7 @@
 .loginBox {
     background-color: $blacktransparent2;
     border-radius: $border-radius;
-    height: 35rem;
-    width: 28em;
+    width: 33em;
     display: flex;
     padding: $p3;
     flex-direction: column;
@@ -27,7 +26,7 @@
 }
 
 .inputLogin{
-    width: 90%;
+    width: 25rem;
     height: 3.5rem;
     margin: $m1;
     p {
