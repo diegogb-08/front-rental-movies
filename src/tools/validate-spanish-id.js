@@ -22,6 +22,8 @@ export default function validateSpanishID(str) {
         case 'cif':
           valid = validCIF( str );
           break;
+
+        default:
       }
   
       return {
@@ -47,7 +49,7 @@ export default function validateSpanishID(str) {
       var dni_letters = "TRWAGMYFPDXBNJZSQVHLCKE";
       var letter = dni_letters.charAt( parseInt( dni, 10 ) % 23 );
       
-      return letter == dni.charAt(8);
+      return letter === dni.charAt(8);
     };
   
     var validNIE = function( nie ) {
@@ -59,6 +61,7 @@ export default function validateSpanishID(str) {
         case 'X': nie_prefix = 0; break;
         case 'Y': nie_prefix = 1; break;
         case 'Z': nie_prefix = 2; break;
+        default:
       }
   
       return validDNI( nie_prefix + nie.substr(1) );
@@ -100,15 +103,15 @@ export default function validateSpanishID(str) {
   
       // Control must be a digit
       if ( letter.match( /[ABEH]/ ) ) {
-        return control == control_digit;
+        return control === control_digit;
   
       // Control must be a letter
       } else if ( letter.match( /[KPQS]/ ) ) {
-        return control == control_letter;
+        return control === control_letter;
   
       // Can be either
       } else {
-        return control == control_digit || control == control_letter;
+        return control === control_digit || control === control_letter;
       }
   
     };

@@ -22,7 +22,7 @@ html {
    * Remove the margin in all browsers.
    */
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Almarai', sans-serif; }
 
 /**
@@ -316,6 +316,13 @@ template {
 .inputComponent {
   height: 3.8rem;
   width: 100%; }
+  .inputComponent .error {
+    color: red;
+    position: relative;
+    bottom: 5.5rem;
+    font-size: 12px;
+    font-style: italic;
+    transition: 0.2s ease all; }
 
 input:focus ~ .floating-label,
 input:not(:focus):valid ~ .floating-label {
@@ -331,7 +338,8 @@ input:not(:focus):valid ~ .floating-label {
   padding: 12px 20px;
   height: 3.8rem;
   display: inline-block;
-  border-radius: 0.3em; }
+  border-radius: 0.3em;
+  border: 1px solid #ccc; }
 
 .floating-label {
   position: relative;
@@ -340,6 +348,17 @@ input:not(:focus):valid ~ .floating-label {
   bottom: 43px;
   transition: 0.2s ease all;
   color: #7c7578; }
+
+.iconInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 3.8rem;
+  position: relative;
+  bottom: 5.3rem;
+  border-radius: 0.3em;
+  left: 20.5rem; }
 
 .loginComponent {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/src/img/netflix-background.jpg) no-repeat center center fixed;
@@ -354,8 +373,7 @@ input:not(:focus):valid ~ .floating-label {
 .loginBox {
   background-color: #0c0c0cc2;
   border-radius: 0.3em;
-  height: 35rem;
-  width: 28em;
+  width: 33em;
   display: flex;
   padding: 3rem;
   flex-direction: column;
@@ -367,7 +385,7 @@ input:not(:focus):valid ~ .floating-label {
     font-weight: 700; }
 
 .inputLogin {
-  width: 90%;
+  width: 25rem;
   height: 3.5rem;
   margin: 1rem; }
   .inputLogin p {
@@ -430,7 +448,8 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem 1rem 0 2rem; }
+  justify-content: space-between;
+  padding: 1rem 2rem 0 2rem; }
 
 .logoContainer {
   height: 3rem;
@@ -442,9 +461,7 @@ input:not(:focus):valid ~ .floating-label {
   height: 2rem;
   width: 6rem;
   display: flex;
-  justify-content: center;
-  position: relative;
-  left: 60rem; }
+  justify-content: center; }
 
 .footerComponent {
   display: flex;

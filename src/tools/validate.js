@@ -2,7 +2,7 @@ import validateSpanishID from './validate-spanish-id';
 
 export default function validate(fields, context = 'register') {
     let errors = {};
-    if (context=='login')
+    if (context==='login')
     for (let key in fields) {
         switch (key) {
             case 'email':
@@ -10,9 +10,11 @@ export default function validate(fields, context = 'register') {
                 errors[key] = {status: 'error', help: 'Please introduce a valid email.'};
             break;
             case 'password':
-                if(fields[key] == '')
+                if(fields[key] === '')
                 errors[key] = {status: 'error', help: 'Please, introduce your password.'};
             break;
+
+            default:
         }
     }
     else
@@ -31,7 +33,7 @@ export default function validate(fields, context = 'register') {
                     errors[key] = {status: 'error', help: 'Only letters are allowed in the Surname field.'};
             break;
             case 'address':
-                if(fields[key] == '')
+                if(fields[key] === '')
                 errors[key] = {status: 'error', help: 'Please provide your address.'};
             break;
             case 'phone' :
@@ -49,13 +51,16 @@ export default function validate(fields, context = 'register') {
                     errors[key] = {status: 'error', help: 'Please provide a valid NIF, NIE or CIF.'};
             break;
             case 'password' :
+                // eslint-disable-next-line
                 if(! /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/.test(fields[key]))
                     errors[key] = {status: 'error', help: 'The password must contain at least 8 characters, uppercase, lowercase, a number and some special character.'};
             break;
             case 'passwordValidation' :
-                if(fields[key] == '' || fields[key] != fields.password)
+                if(fields[key] === '' || fields[key] !== fields.password)
                     errors[key] = {status: 'error', help: 'The password does not match the original.'};
             break;
+
+            default:
         }
     }
     return errors;
