@@ -10,7 +10,6 @@ function InputForm(props) {
                 maxLength={props.lenght}
                 onChange={props.onChange}
                 onKeyDown={props.onKeyDown}
-                placeholder={props.placeholder}
                 tabIndex={props.tabIndex}
                 value={props.value}
 

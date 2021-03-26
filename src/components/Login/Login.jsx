@@ -52,7 +52,7 @@ function Login(props) {
         <div className="loginComponent">
             <Header/>
             <div className="loginBox">
-                <h1>Sign In</h1>
+                <h3>Sign In</h3>
                 <div className="inputLogin">
                     <InputForm type="text" name="email" onChange={handleState} title="Email"/>
                     <p>{message}</p>

@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
 
 
+
 // IMPORT COMPONENTS
 
 import HeaderRegister from '../HeaderRegister/HeaderRegister';
