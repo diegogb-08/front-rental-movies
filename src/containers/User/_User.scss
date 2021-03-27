@@ -1,0 +1,40 @@
+.userComponent {
+    background: $principalcolor;
+    width: 100%;
+    color: $fontcolor1;
+    padding-top: $p10;
+    // padding-left: $p5;
+}
+
+.movieCollection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19rem;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.carouselMovies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filmPoster{
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  vertical-align: top;
+}
+
+.filmPoster:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+

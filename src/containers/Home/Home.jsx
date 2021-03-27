@@ -136,6 +136,7 @@ function Home(props) {
                                 name="email"
                                 onChange={handleState}
                                 title="Email Address"
+                                error={errors.email?.help}
                                 />
                         </div>
                         <div className="buttonHome">
