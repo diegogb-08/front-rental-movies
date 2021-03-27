@@ -16,7 +16,6 @@ import {pathImg, baseUrl, search, multi, discover,
 function User(props) {
 
     // HOOKS
-
     const [films, setFilms] = useState({
         filmCollection: []
     })
@@ -39,15 +38,19 @@ function User(props) {
 
     const searchByGender = async (genreValue) => {
         let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${genreValue}`
-        let movies = await call(url)
-        return setFilms({...films, filmCollection: movies })
+        return setFilms({...films, filmCollection: await call(url)})
+    }
+
+    const mapGenres = () => {
+        Object.keys(genres).map((genre, index) =>{
+            searchByGender(index)
+            console.log(index)
+        })
     }
 
     useEffect(()=>{
-        // Object.keys(genres).map((genre, index) =>{
-        //     searchByGender(index)
-        // })
-        searchByGender(genres.Action)
+        mapGenres()
+        // searchByGender(genres.Action)
     },[])
 
 
@@ -57,11 +60,9 @@ function User(props) {
           <Header>
           </Header>
           <div className="carouselMovies">
-
-              {
-                   Object.keys(genres).map((genre, index) =>{
-                       console.log(index)
-                       return(
+                {
+                    Object.keys(genres).map((genre, index) =>{
+                        return(
                             <Movie key={index} title={genre}>
                                 {
                                     films.filmCollection.map((film) =>{
@@ -73,12 +74,9 @@ function User(props) {
                                     })
                                 }
                             </Movie>
-
-                       )
-                   })
-
-              }
-            
+                        )
+                    })
+                }      
           </div>
         </div>
     )

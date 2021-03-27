@@ -875,7 +875,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center; }
 
 .sectionWatch {
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -884,7 +883,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .sectionDownload {
   margin-top: .4rem;
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -893,7 +891,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .sectionDevice {
   margin-top: .4rem;
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
