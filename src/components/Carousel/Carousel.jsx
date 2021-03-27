@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function Carousel(props) {
 
     const row = document.querySelector(`.${props.class}`);
-    // const leftArrow = document.getElementById('leftArrow');
-    // const rightArrow = document.getElementById('rightArrow');
 
     // Event Listener for the right arrow
     const rightArrowButton = () => {
