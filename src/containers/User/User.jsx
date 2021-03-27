@@ -38,13 +38,25 @@ function User(props) {
 
     const searchByGender = async (genreValue) => {
         let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${genreValue}`
-        return setFilms({...films, filmCollection: await call(url)})
+        let movies = await call(url)
+        
+        return setFilms({...films, filmCollection: movies})
     }
 
-    // const mapGenres = () => {
-    //     Object.keys(genres).map((genre, index) =>{
-    //         searchByGender(index)
-    //         console.log(index)
+//     var myObject = { 'a': 1, 'b': 2, 'c': 3 };
+
+// // returns a new object with the values at each key mapped using mapFn(value)
+// function objectMap(object, mapFn) {
+//   return Object.keys(object).reduce(function(result, key) {
+//     result[key] = mapFn(object[key])
+//     return result
+//   }, {})
+// }
+
+    // const mapGenres = (object, mapFn) => {
+    //     return Object.keys(genres).reduce((result, key) =>{
+    //         searchByGender()
+     
     //     })
     // }
 
@@ -63,12 +75,12 @@ function User(props) {
                 {
                     Object.keys(genres).map((genre, index) =>{
                         return(
-                            <Movie key={index} title={genre}>
+                            <Movie key={index} title={genre} class={genre}>
                                 {
                                     films.filmCollection.map((film) =>{
                                         return( 
                                             <div className='movieCollection' key={film.id}>
-                                                <img className="filmPoster" alt={pathImg+film.poster_path} src={pathImg+film.poster_path}/>
+                                                <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
                                             </div>
                                         )
                                     })
