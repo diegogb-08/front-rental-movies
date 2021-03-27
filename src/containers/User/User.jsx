@@ -41,16 +41,16 @@ function User(props) {
         return setFilms({...films, filmCollection: await call(url)})
     }
 
-    const mapGenres = () => {
-        Object.keys(genres).map((genre, index) =>{
-            searchByGender(index)
-            console.log(index)
-        })
-    }
+    // const mapGenres = () => {
+    //     Object.keys(genres).map((genre, index) =>{
+    //         searchByGender(index)
+    //         console.log(index)
+    //     })
+    // }
 
     useEffect(()=>{
-        mapGenres()
-        // searchByGender(genres.Action)
+        // mapGenres()
+        searchByGender(genres.Action)
     },[])
 
 
