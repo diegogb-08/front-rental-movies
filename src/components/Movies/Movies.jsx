@@ -11,7 +11,7 @@ function Movie (props) {
         <Carousel>
           {props.children}
         </Carousel>
-  </div>
+      </div>
     )
 }
 

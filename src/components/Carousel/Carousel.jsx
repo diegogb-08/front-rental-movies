@@ -1,5 +1,6 @@
 import React from 'react'
 import {faAngleLeft,faAngleRight} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Carousel(props) {
 
@@ -21,7 +22,7 @@ function Carousel(props) {
     return (
         <div className="carouselComponent">
             <button className="leftArrow" onClick={()=>leftArrowButton()}>
-              <i className={faAngleLeft}></i>
+            <FontAwesomeIcon icon={faAngleLeft}/>
             </button>
             <div className="carouselContainer">
                 <div className="carousel">
@@ -31,7 +32,7 @@ function Carousel(props) {
                 </div>
             </div>
             <button className="rightArrow" onClick={()=> rightArrowButton()}>
-              <i className={faAngleRight}></i>
+            <FontAwesomeIcon icon={faAngleRight}/>
             </button>
         </div>
     )

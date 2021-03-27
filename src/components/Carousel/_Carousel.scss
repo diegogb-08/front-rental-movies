@@ -1,7 +1,9 @@
 .carouselComponent {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
+    width: 100%;
 }
 
 .carouselContainer {
@@ -9,7 +11,6 @@
     align-items: center;
     flex-direction: row;
     width: 100%;
-    padding: 20px 0;
 }
 
 .carousel {
@@ -54,31 +55,13 @@
 .movieRender {
     display: flex;
     flex-direction: row;
-    height: 18rem;
-}
-
-.movieRender img {
-    transition: 0.3s ease all;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-    vertical-align: top;
-}
-
-.movieRender img:hover {
-    transform: scale(1.2);
-    transform-origin: center;
+    height: 19rem;
 }
 
 
-.movieCollection {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 18rem;
-    flex-direction: column;
-    img {
-        height: 90%;
-    }
-}
+
+
+
 
 
 

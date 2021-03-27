@@ -21,6 +21,7 @@ function User(props) {
         filmCollection: []
     })
 
+    console.log(films.filmCollection)
 
     const call = async (url) => {
         let res = await axios.get(url);
@@ -38,12 +39,15 @@ function User(props) {
 
     const searchByGender = async (genreValue) => {
         let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${genreValue}`
-        return setFilms({...films, filmCollection: await call(url)})
+        let movies = await call(url)
+        return setFilms({...films, filmCollection: movies })
     }
 
     useEffect(()=>{
-        searchByGender(genres.action)
-        console.log(genres.action)
+        // Object.keys(genres).map((genre, index) =>{
+        //     searchByGender(index)
+        // })
+        searchByGender(genres.Action)
     },[])
 
 
@@ -53,22 +57,28 @@ function User(props) {
           <Header>
           </Header>
           <div className="carouselMovies">
-            <Movie title="">
-                {
-                    films.filmCollection.map((film) =>{
-                        return( 
-                            <div class='movieCollection moviesPopular'>
-                                <div class='titleCollection'>
-                                    <img class="film" alt={pathImg+film.poster_path} src={pathImg+film.poster_path}/>
-                                    <div>
-                                        {film.title}
-                                    </div>
-                                </div>
-                            </div>
-                        )
-                    })
-                }
-            </Movie>
+
+              {
+                   Object.keys(genres).map((genre, index) =>{
+                       console.log(index)
+                       return(
+                            <Movie key={index} title={genre}>
+                                {
+                                    films.filmCollection.map((film) =>{
+                                        return( 
+                                            <div className='movieCollection' key={film.id}>
+                                                <img className="filmPoster" alt={pathImg+film.poster_path} src={pathImg+film.poster_path}/>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </Movie>
+
+                       )
+                   })
+
+              }
+            
           </div>
         </div>
     )
