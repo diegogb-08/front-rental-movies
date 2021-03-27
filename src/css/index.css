@@ -455,7 +455,8 @@ input:not(:focus):valid ~ .floating-label {
   height: 3rem;
   width: 10rem; }
   .logoContainer img {
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
 
 .buttonLogin {
   height: 2rem;
@@ -787,9 +788,225 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 5.4rem;
   padding: 0.6rem; }
 
+<<<<<<< HEAD
+=======
+
+.moviesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%; }
+
+.titleSection {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-weight: bold; }
+
+.carouselComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%; }
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%; }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth; }
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: .2s ease all; }
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.leftArrow {
+  left: 0; }
+
+.rightArrow {
+  right: 0; }
+
+.movieRender {
+  display: flex;
+  flex-direction: row;
+  height: 19rem; }
+
+
+.headerRegisterComponent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 8vh;
+  border-bottom: 0.1rem solid grey; }
+
+.fakeFlixContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-content: center;
+  width: 10rem;
+  height: 3rem;
+  margin-left: 2.4rem; }
+
+.imgFakeFlixReg {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 8em; }
+
+.buttonReg {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 7rem;
+  height: 1rem;
+  font-size: 1.3em;
+  margin-right: 3.2rem;
+  cursor: pointer; }
+
+.errorRegisterComponent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 25rem;
+  height: 5rem;
+  background-color: orange;
+  border-radius: 0.2rem;
+  color: white;
+  margin-bottom: 2rem; }
+
+.iconErrorReg {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  background-color: whitesmoke;
+  margin-left: 2rem; }
+
+.errorPropsReg {
+  display: flex;
+  width: 20rem;
+  height: 2rem;
+  background-color: orange;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-left: 0rem; }
+
+.FirstStepRegisterComponent {
+  width: 25rem;
+  height: 30rem; }
+
+.pFormRegUp {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.5rem; }
+
+.pFormRegMid {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  color: gray;
+  margin-top: 0.4rem; }
+
+.spaceReg {
+  width: 2rem;
+  height: 2rem; }
+
+.buttonFormReg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 3.8rem;
+  border-radius: 0.2rem;
+  color: white;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-size: 1.5rem; }
+
+.footerRegisterComponent {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 18vh;
+  background-color: whitesmoke; }
+
+.footerRegUp {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 5vh;
+  font-size: 0.8rem; }
+
+.footerRegMid {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh;
+  font-size: 0.8rem; }
+
+.footerRegDown {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 3vh;
+  font-size: 0.8rem; }
+
+.pReg {
+  margin-left: 5rem;
+  padding: 0.6rem; }
+
+.pRegFirst {
+  display: flex;
+  padding: 1rem;
+  margin-left: 4.5rem; }
+
+.pRegSecond {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 10.8rem; }
+
+.pRegThird {
+  display: flex;
+  padding: 0.6rem;
+  margin-left: 8.8rem; }
+
+.pRegLast {
+  margin-left: 5.4rem;
+  padding: 0.6rem; }
+
+
 .movie {
   background-color: red;
   width: auto; }
+
 
 /*Containers*/
 .homeContainer {
@@ -814,7 +1031,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center; }
 
 .sectionWatch {
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -833,7 +1049,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .sectionDownload {
   margin-top: .4rem;
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -852,7 +1067,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .sectionDevice {
   margin-top: .4rem;
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -921,6 +1135,40 @@ img {
 .buttonHome {
   display: flex;
   width: 200px; }
+
+.userComponent {
+  background: #141414;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 10rem; }
+
+.movieCollection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19rem;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.carouselMovies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.filmPoster {
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  vertical-align: top; }
+
+.filmPoster:hover {
+  transform: scale(1.2);
+  transform-origin: center; }
 
 /*Fonts*/
 /*Bootstrap*/

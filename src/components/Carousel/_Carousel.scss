@@ -1,0 +1,67 @@
+.carouselComponent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.leftArrow,
+.rightArrow {
+    position: absolute;
+    border: none;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+
+.leftArrow:hover,
+.rightArrow:hover {
+    background-color: rgba(0,0,0,0.9);;
+}
+
+.leftArrow {
+    left: 0;
+}
+
+.rightArrow {
+    right: 0;
+}
+
+.movieRender {
+    display: flex;
+    flex-direction: row;
+    height: 19rem;
+}
+
+
+
+
+
+
+
+
