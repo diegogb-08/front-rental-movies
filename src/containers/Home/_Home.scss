@@ -22,12 +22,30 @@
     align-items: center;
 }
 
+
 .sectionWatch {
     width: 100%;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1400px), screen and (max-height: 600px) {
+    .sectionWatch {
+        height: 45vh;
+
+        h1 {
+            font-size: 2.2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        img {
+            width: 200px;
+        }
+
+    }
 }
 .sectionDownload {
     margin-top: .4rem;
@@ -37,6 +55,24 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 1400px), screen and (max-height: 600px) {
+    .sectionDownload {
+        height: 45vh;
+
+        h1 {
+            font-size: 2.2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        img {
+            width: 200px;
+        }
+
+    }
+}
+
 .sectionDevice {
     margin-top: .4rem;
     width: 100%;
@@ -44,6 +80,24 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1400px), screen and (max-height: 600px) {
+    .sectionDevice {
+        height: 45vh;
+
+
+        h1 {
+            font-size: 2.2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        img {
+            width: 200px;
+        }
+
+    }
 }
 
 .containerWatchText {
@@ -77,6 +131,23 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 1400px), screen and (max-height: 600px) {
+    .sectionQuestions {
+        height: 45vh;
+
+        h1 {
+            font-size: 2.2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        img {
+            width: 200px;
+        }
+
+    }
 }
 
 .containerQuestionsText {
