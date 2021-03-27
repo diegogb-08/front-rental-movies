@@ -883,5 +883,16 @@ img {
   display: flex;
   width: 200px; }
 
+.userComponent {
+  background: #141414;
+  width: 100%;
+  height: 100vh;
+  color: #ffffff;
+  padding-top: 10rem; }
+
+.carouselContainer {
+  width: 100%;
+  background-color: red; }
+
 /*Fonts*/
 /*Bootstrap*/

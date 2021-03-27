@@ -28,10 +28,6 @@ export default function validate(fields, context = 'register') {
                 if(! /^[a-zA-Z\u00C0-\u00FF]+(([',. -][a-zA-Z\u00C0-\u00FF ])?[a-zA-Z\u00C0-\u00FF]*)*$/.test(fields[key]))
                     errors[key] = {status: 'error', help: 'Only letters are allowed in the Name field.'};
             break;
-            case 'lastname' :
-                if(! /^[a-zA-Z\u00C0-\u00FF]+(([',. -][a-zA-Z\u00C0-\u00FF ])?[a-zA-Z\u00C0-\u00FF]*)*$/.test(fields[key]))
-                    errors[key] = {status: 'error', help: 'Only letters are allowed in the Surname field.'};
-            break;
             case 'address':
                 if(fields[key] === '')
                 errors[key] = {status: 'error', help: 'Please provide your address.'};
