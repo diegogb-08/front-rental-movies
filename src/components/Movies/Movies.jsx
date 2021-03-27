@@ -8,7 +8,7 @@ function Movie (props) {
         <div className="titleSection">
             <h4>{props.title}</h4>
         </div>
-        <Carousel>
+        <Carousel class={props.class}>
           {props.children}
         </Carousel>
       </div>

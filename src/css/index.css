@@ -881,16 +881,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center;
   justify-content: center; }
 
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionWatch {
-    height: 45vh; }
-    .sectionWatch h1 {
-      font-size: 2.2rem; }
-    .sectionWatch h4 {
-      font-size: 1rem; }
-    .sectionWatch img {
-      width: 200px; } }
-
 .sectionDownload {
   margin-top: .4rem;
   width: 100%;
@@ -899,16 +889,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center;
   justify-content: center; }
 
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionDownload {
-    height: 45vh; }
-    .sectionDownload h1 {
-      font-size: 2.2rem; }
-    .sectionDownload h4 {
-      font-size: 1rem; }
-    .sectionDownload img {
-      width: 200px; } }
-
 .sectionDevice {
   margin-top: .4rem;
   width: 100%;
@@ -916,16 +896,6 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   align-items: center;
   justify-content: center; }
-
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionDevice {
-    height: 45vh; }
-    .sectionDevice h1 {
-      font-size: 2.2rem; }
-    .sectionDevice h4 {
-      font-size: 1rem; }
-    .sectionDevice img {
-      width: 200px; } }
 
 .containerWatchText {
   display: flex;
@@ -951,16 +921,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
-
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionQuestions {
-    height: 45vh; }
-    .sectionQuestions h1 {
-      font-size: 2.2rem; }
-    .sectionQuestions h4 {
-      font-size: 1rem; }
-    .sectionQuestions img {
-      width: 200px; } }
 
 .containerQuestionsText {
   display: flex;
