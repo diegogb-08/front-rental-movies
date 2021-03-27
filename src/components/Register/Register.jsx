@@ -100,14 +100,14 @@ const Register = (props) => {
                   onChangeP={handleState}
                   btnName='Continue'
                   onClick={() => toggle()}
-                  error={errors.email?.help}
+                  error={errors.email?.help ? errors.email.help : message}
                   errorP={errors.password?.help}
                   showHide={password.showHide}
                   PonClick={() => showPassord()}
+                  // message={message}
                   // style={validation}
                   // styleP={validation}
                 />
-                {/* <p>{message}</p> */}
             </div>
             <FooterRegister/>
         </div>

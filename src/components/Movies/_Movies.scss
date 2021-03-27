@@ -1,0 +1,14 @@
+.moviesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.titleSection {
+  color: $fontcolor1;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-weight: bold;
+}
+

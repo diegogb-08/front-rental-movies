@@ -455,7 +455,8 @@ input:not(:focus):valid ~ .floating-label {
   height: 3rem;
   width: 10rem; }
   .logoContainer img {
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
 
 .buttonLogin {
   height: 2rem;
@@ -787,9 +788,69 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 5.4rem;
   padding: 0.6rem; }
 
-.movie {
-  background-color: red;
-  width: auto; }
+.moviesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%; }
+
+.titleSection {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-weight: bold; }
+
+.carouselComponent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%; }
+
+.carouselContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%; }
+
+.carousel {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth; }
+
+.leftArrow,
+.rightArrow {
+  position: absolute;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: calc(50% - 25%);
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 500;
+  transition: .2s ease all; }
+
+.leftArrow:hover,
+.rightArrow:hover {
+  background-color: rgba(0, 0, 0, 0.9); }
+
+.leftArrow {
+  left: 0; }
+
+.rightArrow {
+  right: 0; }
+
+.movieRender {
+  display: flex;
+  flex-direction: row;
+  height: 19rem; }
 
 /*Containers*/
 .homeContainer {
@@ -814,7 +875,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center; }
 
 .sectionWatch {
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -833,7 +893,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .sectionDownload {
   margin-top: .4rem;
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -852,7 +911,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .sectionDevice {
   margin-top: .4rem;
-  height: 50vh;
   width: 100%;
   background-color: black;
   display: flex;
@@ -921,6 +979,40 @@ img {
 .buttonHome {
   display: flex;
   width: 200px; }
+
+.userComponent {
+  background: #141414;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 10rem; }
+
+.movieCollection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19rem;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem; }
+
+.carouselMovies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.filmPoster {
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  vertical-align: top; }
+
+.filmPoster:hover {
+  transform: scale(1.2);
+  transform-origin: center; }
 
 /*Fonts*/
 /*Bootstrap*/

@@ -11,31 +11,54 @@ import {connect} from 'react-redux';
 import {LOGIN} from '../../redux/types/userType'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
-
+import validate from "../../tools/validate";
 
 
 function Home(props) {
 
     let history = useHistory();
 
+    // HOOKS
+
     const [emailCheck, setEmailCheck] = useState({
         email: "",
     })
 
+    const [errors, setErrors] = useState({});
+
+
+    // HANDLERS
+
     const handleState = (e) => {
         setEmailCheck({...emailCheck, [e.target.name]: e.target.value  })
+        if (Object.keys(errors).length > 0) 
+     setErrors(validate({ ...emailCheck, [e.target.name]: e.target.value}, "register"));
     }
 
+    // FUNCTIONS
+
     const toggle = async() => {
-        let result = await axios.get(port+customer+searchEmail+query+emailCheck.email);
-        // console.log(result.data);
-        if(result.data?.email  ) {
-            props.dispatch({type: LOGIN, payload: result.data.email});
-            history.push('/login')
-        } else {
-            props.dispatch({type: LOGIN, payload: emailCheck.email});
-            history.push('/register')
-        }
+
+        const errs = validate(emailCheck, "register");
+        setErrors(errs);
+       
+        if (Object.keys(errs).length === 0 && emailCheck.email !== ''){
+
+            let result = await axios.get(port+customer+searchEmail+query+emailCheck.email);
+            // console.log(result.data);
+            if(result.data?.email  ) {
+                props.dispatch({type: LOGIN, payload: result.data.email});
+                setTimeout(() => {
+                    history.push('/login')
+                },1000)
+            } else {
+                props.dispatch({type: LOGIN, payload: emailCheck.email});
+                setTimeout(()=> {
+                    history.push('/register')
+                },1000)
+            }
+        };
+
     }
 
     const bringMe = () => {
@@ -60,6 +83,7 @@ function Home(props) {
                             name="email"
                             onChange={handleState}
                             title="Email Address"
+                            error={errors.email?.help}
                             />
                     </div>
                     <div className="buttonHome">
@@ -112,6 +136,7 @@ function Home(props) {
                                 name="email"
                                 onChange={handleState}
                                 title="Email Address"
+                                error={errors.email?.help}
                                 />
                         </div>
                         <div className="buttonHome">

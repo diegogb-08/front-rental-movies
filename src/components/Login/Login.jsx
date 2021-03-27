@@ -10,6 +10,7 @@ import {LOGIN} from '../../redux/types/userType'
 import {connect} from 'react-redux';
 import validate from "../../tools/validate";
 
+
 function Login(props) {
 
     let history = useHistory();
@@ -38,6 +39,12 @@ function Login(props) {
      } 
 
     // FUNCTIONS
+
+    const home = () => {
+        setTimeout(()=> {
+            history.push('/')
+        },1000)
+    }
 
     const showPassord = () => {
 
@@ -72,7 +79,7 @@ function Login(props) {
 
     return (
         <div className="loginComponent">
-            <Header/>
+            <Header onClick={()=>home()}/>
             <div className="loginBox">
                 <h3>Sign In</h3>
                 <div className="inputLogin">
