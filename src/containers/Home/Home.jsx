@@ -68,7 +68,9 @@ function Home(props) {
     return (
         <div className="homeContainer">
             <Header>
-                <Button name="Sign In" onClick={()=>bringMe()}/>
+                <div className="buttonLogin">
+                    <Button name="Sign In" onClick={()=>bringMe()}/>
+                </div>
             </Header>
             <div className="sectionHome">
                 <div className="containerHomeText">

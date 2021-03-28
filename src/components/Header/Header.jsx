@@ -7,7 +7,7 @@ function Header(props) {
             <div className="logoContainer">
                 <img src={logo} alt="logo" onClick={props.onClick}/>
             </div>
-            <div className="buttonLogin">{props.children}</div>
+            {props.children}
         </div>
     )
 }

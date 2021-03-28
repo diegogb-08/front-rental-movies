@@ -4,10 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function Carousel(props) {
 
-    const row = document.querySelector('.carousel');
-    // const leftArrow = document.getElementById('leftArrow');
-    // const rightArrow = document.getElementById('rightArrow');
-
+    const row = document.querySelector(`.${props.class}`);
 
     // Event Listener for the right arrow
     const rightArrowButton = () => {
@@ -25,7 +22,7 @@ function Carousel(props) {
             <FontAwesomeIcon icon={faAngleLeft}/>
             </button>
             <div className="carouselContainer">
-                <div className="carousel">
+                <div className={`carousel ${props.class}`}>
                     <div className="movieRender">
                         {props.children}
                     </div>
