@@ -449,7 +449,8 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem 0 2rem; }
+  padding: 1rem 2rem 0 2rem;
+  background-color: #00000050; }
 
 .logoContainer {
   height: 3rem;
@@ -940,6 +941,12 @@ img {
   display: flex;
   width: 200px; }
 
+.buttonLogin {
+  height: 2rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center; }
+
 .userComponent {
   background: #141414;
   width: 100%;
@@ -973,6 +980,13 @@ img {
 .filmPoster:hover {
   transform: scale(1.2);
   transform-origin: center; }
+
+.navbar {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 /*Fonts*/
 /*Bootstrap*/

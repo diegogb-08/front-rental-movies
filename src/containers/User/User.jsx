@@ -16,11 +16,7 @@ import {pathImg, baseUrl, search, multi, discover,
 function User(props) {
 
     // HOOKS
-    const [films, setFilms] = useState({
-        filmCollection: []
-    })
-
-    console.log(films.filmCollection)
+    const [films, setFilms] = useState({})
 
     const call = async (url) => {
         let res = await axios.get(url);
@@ -32,37 +28,26 @@ function User(props) {
         else{
             return new Error("The URL was wrong!");
         }
-    
     };
 
 
-    const searchByGender = async (genreValue) => {
-        let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${genreValue}`
+    const searchByGenre = async (value) => {
+        let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${value}`
         let movies = await call(url)
-        
-        return setFilms({...films, filmCollection: movies})
+        return movies
     }
 
-//     var myObject = { 'a': 1, 'b': 2, 'c': 3 };
-
-// // returns a new object with the values at each key mapped using mapFn(value)
-// function objectMap(object, mapFn) {
-//   return Object.keys(object).reduce(function(result, key) {
-//     result[key] = mapFn(object[key])
-//     return result
-//   }, {})
-// }
-
-    // const mapGenres = (object, mapFn) => {
-    //     return Object.keys(genres).reduce((result, key) =>{
-    //         searchByGender()
-     
-    //     })
-    // }
+    const mapGenres = async (object) => {
+        let filmCollection = {};
+        for(let key in object) {
+            let movies = await searchByGenre(object[key])
+            filmCollection[key] = movies
+        }
+        return setFilms(filmCollection)
+    }
 
     useEffect(()=>{
-        // mapGenres()
-        searchByGender(genres.Action)
+        mapGenres(genres)
     },[])
 
 
@@ -70,6 +55,9 @@ function User(props) {
     return (
         <div className="userComponent">
           <Header>
+            <div className="navbar">
+                Aqui van todos los botones del header para navegar con justify-content space-between
+            </div>
           </Header>
           <div className="carouselMovies">
                 {
@@ -77,7 +65,7 @@ function User(props) {
                         return(
                             <Movie key={index} title={genre} class={genre}>
                                 {
-                                    films.filmCollection.map((film) =>{
+                                    films[genre]?.map((film) =>{
                                         return( 
                                             <div className='movieCollection' key={film.id}>
                                                 <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
