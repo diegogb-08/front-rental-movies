@@ -976,17 +976,22 @@ input:not(:focus):valid ~ .floating-label {
   height: 19rem;
   flex-direction: column;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem; }
+  padding-bottom: 1.5rem;
+  background-color: #141414; }
 
 .movieData {
-  width: 30rem;
+  width: 35rem;
   height: 50%;
   display: flex;
-  color: black;
-  flex-direction: column; }
+  color: #ffffff;
+  flex-direction: column;
+  background-color: #141414;
+  border-radius: 5px; }
   .movieData img {
     width: 100%;
-    border-radius: 5 5 0 0; }
+    border-radius: 5px 5px 0 0; }
+  .movieData p {
+    font-size: 12px; }
 
 .movieInfo {
   padding: 1rem;
@@ -1000,7 +1005,7 @@ input:not(:focus):valid ~ .floating-label {
 
 .movieCollection {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 19rem;
   flex-direction: column;

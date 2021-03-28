@@ -6,17 +6,23 @@
     flex-direction: column;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+    background-color: $principalcolor;
   }
 
 .movieData{
-  width: 30rem;
+  width: 35rem;
   height: 50%;
   display: flex;
-  color: black;
+  color: $fontcolor1;
   flex-direction: column;
+  background-color: $principalcolor;
+  border-radius: 5px;
   img {
     width: 100%;
-    border-radius: 5 5 0 0;
+    border-radius: 5px 5px 0 0;
+  }
+  p {
+    font-size: 12px;
   }
 }
 
