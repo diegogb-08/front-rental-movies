@@ -66,5 +66,6 @@ const styles = {
         backgroundColor: '#000',
         opacity: 0.8,
         cursor: 'pointer',
+        zIndex: 1000,
     }
 }
