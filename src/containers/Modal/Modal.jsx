@@ -43,9 +43,8 @@ const styles = {
         background: '#fff',
         borderRadius: 5,
         boxShadow: '2px 2px 10px rgba(0,0,0,0.2)',
-        zIndex: 10,
+        zIndex: 1500,
         minWidth: 420,
-        padding: 24,
     },
     closeBtn: {
         position: 'absolute',
