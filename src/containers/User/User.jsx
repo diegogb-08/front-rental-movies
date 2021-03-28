@@ -12,11 +12,13 @@ import {pathImg, baseUrl, search, multi, discover,
     movie, series, popular, topRated, upcoming,
     // eslint-disable-next-line
     nowPlaying, apiKey, page, genres} from '../../api/ApiMovieDB'
+import ModalRender from '../Modal/ModalRender';
 
 function User(props) {
 
     // HOOKS
     const [films, setFilms] = useState({})
+    console.log(films)
 
     const call = async (url) => {
         let res = await axios.get(url);
@@ -32,7 +34,7 @@ function User(props) {
 
 
     const searchByGenre = async (value) => {
-        let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${value}`
+        let url = `${baseUrl}${discover}${movie}${apiKey}&include_video=true&with_genres=${value}`
         let movies = await call(url)
         return movies
     }
@@ -66,9 +68,16 @@ function User(props) {
                             <Movie key={index} title={genre} class={genre}>
                                 {
                                     films[genre]?.map((film) =>{
+                                        // let title = film.title
+                                        if(film.poster_path)
                                         return( 
                                             <div className='movieCollection' key={film.id}>
-                                                <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
+                                                <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
+                                                originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
+                                                voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path}
+                                                >
+                                                    <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
+                                                </ModalRender>
                                             </div>
                                         )
                                     })
