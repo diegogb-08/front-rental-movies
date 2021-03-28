@@ -449,7 +449,8 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem 0 2rem; }
+  padding: 1rem 2rem 0 2rem;
+  background-color: #00000050; }
 
 .logoContainer {
   height: 3rem;
@@ -788,7 +789,6 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 5.4rem;
   padding: 0.6rem; }
 
-
 .moviesContainer {
   display: flex;
   flex-direction: column;
@@ -1035,16 +1035,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center;
   justify-content: center; }
 
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionWatch {
-    height: 45vh; }
-    .sectionWatch h1 {
-      font-size: 2.2rem; }
-    .sectionWatch h4 {
-      font-size: 1rem; }
-    .sectionWatch img {
-      width: 200px; } }
-
 .sectionDownload {
   margin-top: .4rem;
   width: 100%;
@@ -1053,16 +1043,6 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center;
   justify-content: center; }
 
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionDownload {
-    height: 45vh; }
-    .sectionDownload h1 {
-      font-size: 2.2rem; }
-    .sectionDownload h4 {
-      font-size: 1rem; }
-    .sectionDownload img {
-      width: 200px; } }
-
 .sectionDevice {
   margin-top: .4rem;
   width: 100%;
@@ -1070,16 +1050,6 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   align-items: center;
   justify-content: center; }
-
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionDevice {
-    height: 45vh; }
-    .sectionDevice h1 {
-      font-size: 2.2rem; }
-    .sectionDevice h4 {
-      font-size: 1rem; }
-    .sectionDevice img {
-      width: 200px; } }
 
 .containerWatchText {
   display: flex;
@@ -1106,16 +1076,6 @@ img {
   align-items: center;
   justify-content: center; }
 
-@media screen and (max-width: 1400px), screen and (max-height: 600px) {
-  .sectionQuestions {
-    height: 45vh; }
-    .sectionQuestions h1 {
-      font-size: 2.2rem; }
-    .sectionQuestions h4 {
-      font-size: 1rem; }
-    .sectionQuestions img {
-      width: 200px; } }
-
 .containerQuestionsText {
   display: flex;
   flex-direction: column;
@@ -1133,6 +1093,12 @@ img {
 .buttonHome {
   display: flex;
   width: 200px; }
+
+.buttonLogin {
+  height: 2rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center; }
 
 .userComponent {
   background: #141414;
@@ -1167,6 +1133,13 @@ img {
 .filmPoster:hover {
   transform: scale(1.2);
   transform-origin: center; }
+
+.navbar {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
 
 /*Fonts*/
 /*Bootstrap*/

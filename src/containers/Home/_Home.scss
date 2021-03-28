@@ -46,7 +46,8 @@
 //         }
 
 //     }
-}
+
+// }
 .sectionDownload {
     margin-top: .4rem;
     width: 100%;
@@ -170,4 +171,11 @@ img{
 .buttonHome {
     display: flex;
     width: 200px;
+}
+
+.buttonLogin{
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
 }
