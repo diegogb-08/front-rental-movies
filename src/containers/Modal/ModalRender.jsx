@@ -1,43 +1,57 @@
 import React from 'react'
 import Modal from './Modal';
 import {useState} from 'react';
+import moment from 'moment'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus, faCartPlus, faHeart, faHeartBroken } from '@fortawesome/free-solid-svg-icons'
 
 
 function ModalRender(props) {
+
+    const addList = <FontAwesomeIcon icon={faPlus} />
+    const addCart = <FontAwesomeIcon icon={faCartPlus} />
+    const like = <FontAwesomeIcon icon={faHeart} />
+    const dislike = <FontAwesomeIcon icon={faHeartBroken} />
 
     const [active, setActive] = useState(false);
     const toggle = () => {
         setActive(!active)
     } 
 
-//     adult: false
-// backdrop_path: "/pcDc2WJAYGJTTvRSEIpRZwM3Ola.jpg"
-// genre_ids: (4) [28, 12, 14, 878]
-// id: 791373
-// original_language: "en"
-// original_title: "Zack Snyder's Justice League"
-// overview: "Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions."
-// popularity: 11424.918
-// poster_path: "/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg"
-// release_date: "2021-03-18"
-// title: "Zack Snyder's Justice League"
-// video: false
-// vote_average: 8.7
-// vote_count: 3789
-
     return (
             <div className="configComponent" onClick={toggle}>
                 {props.children}
                 <Modal active={active} toggle={toggle}>
                     <div className="movieData" id={props.id}>
-                        <img src={props.backdropPath} alt=""/>
+                        <img src={props.backdropPath} alt={props.title}/>
                         <div className="movieInfo">
-                            <p>Title: {props.title}</p>
-                            <p>Original Language: {props.originalLanguage}</p>
-                            <p>Original Title: {props.originalTitle}</p>
-                            <p>Overview: {props.overview}</p>
-                            <p>Release Date:{props.releaseDate}</p>
-                            <p>Rate: {props.voteAverage}</p>
+                            <div className="topInfo">
+                                <p className='releaseDate'>{moment(props.releaseDate).format('YYYY')}</p>
+                                <p className='originalLanguage'>{props.originalLanguage}</p>
+                                <p className='rate'>{props.voteAverage}</p>
+                            </div>
+                            <h5>{props.title}</h5>
+                            <p>Original title: {props.originalTitle}</p>
+                            {/* <p>{props.genres}</p> */}
+                            <p>{props.overview}</p>
+                            <div className="bottomInfo">
+                                <div>
+                                    <div className='button addList'>{addList}</div>
+                                    <div className="label">Add List</div>
+                                </div>
+                                <div>
+                                    <div className='button addCart'>{addCart}</div>
+                                    <div className="label">Add Cart</div>
+                                </div>
+                                <div>
+                                    <div className='button like'>{like}</div>
+                                    <div className="label">Like</div>
+                                </div>
+                                <div>
+                                    <div className='button dislike'>{dislike}</div>
+                                    <div className="label">Dislike</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </Modal>
