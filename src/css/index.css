@@ -852,6 +852,18 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   height: 19rem; }
 
+.profileComponent {
+  background: black;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 10rem; }
+
+.profileBody {
+  background-color: #F5F5F5;
+  width: 100%;
+  color: black;
+  height: 60vh; }
+
 .tabNav {
   height: 95%;
   width: 100%;
@@ -874,18 +886,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .ordersContainer {
   display: flex; }
-
-.profileComponent {
-  background: black;
-  width: 100%;
-  color: #ffffff;
-  padding-top: 10rem; }
-
-.profileBody {
-  background-color: #F5F5F5;
-  width: 100%;
-  color: black;
-  height: 60vh; }
 
 .movieData {
   width: 35rem;
@@ -1176,7 +1176,6 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: space-between;
   align-items: center; }
 
-
 .imageUser {
   display: flex;
   justify-content: flex-end;
@@ -1224,7 +1223,6 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   width: 100%;
   height: 100%; }
-
 
 /*Fonts*/
 /*Bootstrap*/
