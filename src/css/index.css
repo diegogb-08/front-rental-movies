@@ -852,7 +852,6 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   height: 19rem; }
 
-
 .profileComponent {
   background: black;
   width: 100%;
@@ -864,6 +863,29 @@ input:not(:focus):valid ~ .floating-label {
   width: 100%;
   color: black;
   height: 60vh; }
+
+.tabNav {
+  height: 95%;
+  width: 100%;
+  cursor: pointer; }
+
+.tab {
+  height: 100%;
+  width: 15%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.tabInfo {
+  width: 100%;
+  height: 97%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.ordersContainer {
+  display: flex; }
 
 .movieData {
   width: 35rem;
@@ -953,29 +975,6 @@ input:not(:focus):valid ~ .floating-label {
 .dislike:hover + .label {
   visibility: visible;
   transition: 0.3s ease all; }
-
-.tabNav {
-  height: 95%;
-  width: 100%;
-  cursor: pointer; }
-
-.tab {
-  height: 100%;
-  width: 15%;
-  border-radius: 0.5rem 0.5rem 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.tabInfo {
-  width: 100%;
-  height: 97%;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.ordersContainer {
-  display: flex; }
 
 /*Containers*/
 .homeContainer {
@@ -1177,7 +1176,6 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: space-between;
   align-items: center; }
 
-
 .imageUser {
   display: flex;
   justify-content: flex-end;
@@ -1225,7 +1223,6 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   width: 100%;
   height: 100%; }
-
 
 /*Fonts*/
 /*Bootstrap*/

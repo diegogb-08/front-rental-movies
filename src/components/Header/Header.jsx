@@ -9,34 +9,10 @@ function Header(props) {
 
     return (
         <div className="headerComponent">
-            {/* {props.user?.email
-                ?
-                (
-                    <>
-                        <div className="headerComponent">
-                            <div className="logoContainer">
-                                <img src={logo} alt="logo" onClick={props.onClick} />
-                            </div>
-                            <div className="imageUser">
-                                <img src={profile} alt="profile" onClick={() => {history.push('/profile')}}/>
-                            </div>
-                        </div>
-                    </>
-
-                )
-                :
-                (
-                    <> */}
-                        <div className="headerComponent">
-                            <div className="logoContainer">
-                                <img src={logo} alt="logo" onClick={props.onClick} />
-                            </div>
-                            {props.children}
-                        </div>
-                    {/* </>
-
-                )
-            } */}
+            <div className="logoContainer">
+                <img src={logo} alt="logo" onClick={props.onClick} />
+            </div>
+            {props.children}
         </div>
     )
 }
