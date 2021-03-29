@@ -12,7 +12,7 @@ function ModalRender(props) {
     const toggle = () => {
         setActive(!active)
     } 
-    console.log(active)
+    
     // Film information for redux
 
     const film = {

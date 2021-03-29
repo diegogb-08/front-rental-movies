@@ -1,27 +1,27 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import moment from 'moment'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faCartPlus, faHeart, faHeartBroken } from '@fortawesome/free-solid-svg-icons'
-import {ADD} from '../../redux/types/filmType'
+import { faPlus, faCartPlus, faHeart} from '@fortawesome/free-solid-svg-icons'
+// Redux
+import {connect} from 'react-redux';
+import {ADD} from '../../redux/types/cartType';
 
-function FilmSelected(props) {
+const FilmSelected = (props) => {
 
+    const filmCollection = {};
     const film = props.film
-    console.log(film)
+    
 
     // Incons export to buttons
 
     const addList = <FontAwesomeIcon icon={faPlus} />
     const addCart = <FontAwesomeIcon icon={faCartPlus} />
     const like = <FontAwesomeIcon icon={faHeart} />
-    const dislike = <FontAwesomeIcon icon={faHeartBroken} />
 
     // Function
     const addFilmToCart = () => {
-        console.log('ESTAMOS DENTRO')
-        film.inCart = film.inCart + 1
-        props.dispatch({type: ADD, payload: film});
+        film.inCart = film.inCart +1
+        props.dispatch({type: ADD, payload: film})
     }
 
     return (
@@ -43,21 +43,19 @@ function FilmSelected(props) {
                                     <div className="label">Add List</div>
                                 </div>
                                 <div>
-                                    <div className='button addCart'>{addCart}</div>
-                                    <div className="label" onClick={()=>addFilmToCart()}>Add Cart</div>
+                                    <div className='button addCart' onClick={()=>addFilmToCart()}>{addCart}</div>
+                                    <div className="label">Add Cart</div>
                                 </div>
                                 <div>
                                     <div className='button like'>{like}</div>
                                     <div className="label">Like</div>
                                 </div>
-                                <div>
-                                    <div className='button dislike'>{dislike}</div>
-                                    <div className="label">Dislike</div>
-                                </div>
                             </div>
                         </div>
                     </div>
     )
-}
+};
 
-export default FilmSelected
+
+
+export default connect()(FilmSelected);

@@ -45,7 +45,6 @@ function Home(props) {
         if (Object.keys(errs).length === 0 && emailCheck.email !== ''){
 
             let result = await axios.get(port+customer+searchEmail+query+emailCheck.email);
-            // console.log(result.data);
             if(result.data?.email  ) {
                 props.dispatch({type: LOGIN, payload: result.data.email});
                 setTimeout(() => {
