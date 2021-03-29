@@ -7,8 +7,8 @@ import TabNav from "../../components/Tab/TabNav";
 
 
 
-function Rental () {
-
+function Rental (props) {
+  console.log(props.cart)
   // HOOKS
 
   const [tab, setTab] = useState({
@@ -70,4 +70,4 @@ function Rental () {
     )
 };
 
-export default Rental;
+export default Rental
