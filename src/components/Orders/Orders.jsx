@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux';
+import Button from '../Button/Button';
 
 function Orders(props) {
+
 
   return(
     <div>
@@ -12,19 +14,19 @@ function Orders(props) {
                     </>
                     :
                     <>
-                    <div className="OrdersContainer">
-                    {props.cart.map( film => {
-                    return (
-                    <div key={film.id}>
-                      <p>Title: {film.title}</p>
-                      <img src={film.imgFilm} alt="film"/>
-                      <p>Price: {film.price} $</p>
-                      <p>Vote Average: {film.voteAverage}</p>
-                      <p>Overview: {film.overview}</p>
-                      <p>Release Date: {film.releaseDate}</p>
-                    </div>
-                    )
-                    })}
+                    <div className="ordersContainer">
+                      {props.cart.map( film => {
+                      return (
+                        <div className="ordersContainer" key={film.id}>
+                            <img className="imgOrder" src={film.imgFilm} alt="order"/>
+                            <p className="prueba">{film.title}</p>
+                            <p>Price: {film.price} $</p>
+                            
+                            
+                           
+                           
+                        </div>
+                      );})}
                     </div>
                     </>
           }
