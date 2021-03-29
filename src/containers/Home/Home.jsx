@@ -62,7 +62,10 @@ function Home(props) {
     }
 
     const bringMe = () => {
-        history.push('/login')
+        setTimeout(()=> {
+            history.push('/login')
+        },1000)
+        
     }
 
     return (

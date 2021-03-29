@@ -1,11 +1,11 @@
 import {combineReducers} from 'redux';
-import userReducer from './userReducer.js';
-import rentalReducer from './rentalReducer.js'
+import userReducer from './userReducer';
+import filmReducer from './filmReducer'
 import adminReducer from './adminReducer'
 
 const rootReducer = combineReducers({
     userReducer,
-    rentalReducer,
+    filmReducer,
     adminReducer
 });
 

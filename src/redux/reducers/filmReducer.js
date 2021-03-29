@@ -1,9 +1,8 @@
-import {ADD, REMOVE, CLEAN} from '../types/rentalType';
+import {ADD, REMOVE, CLEAN} from '../types/filmType';
 
 const initialState = {
-    rental: [],
-    totalRental: 0
- 
+    cart: [],
+    list: [] 
 };
 
 const rentalReducer = (state = initialState, action) => {
@@ -11,14 +10,16 @@ const rentalReducer = (state = initialState, action) => {
         case ADD :
             return {
                 ...state,
-                rental : [...state.cart, action.payload]
+                cart : [...state.cart, action.payload.cart],
+                list : [...state.list, action.payload.list],
                 
             }
 
         case REMOVE :
             return {
                 ...state,
-                rental : action.payload
+                cart : [...state.cart, action.payload.cart],
+                list : [...state.list, action.payload.list],
                 
       
             }
@@ -26,7 +27,8 @@ const rentalReducer = (state = initialState, action) => {
         case CLEAN :
             return {
                 ...state,
-                rental : initialState
+                cart : [...state.cart, action.payload.cart],
+                list : [...state.list, action.payload.list],
             }
 
         default : 
