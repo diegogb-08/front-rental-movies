@@ -3,7 +3,6 @@ import {LOGIN, LOGOUT, UPDATE, SAVEEMAIL} from '../types/userType';
 const initialState = {
     user: {},
     token: '',
-    email: ''
 
 };
  
@@ -12,7 +11,7 @@ const userReducer = (state = initialState, action) => {
         case SAVEEMAIL : 
             return {
                 ...state,
-                email : action.payload.email,
+                user : action.payload.user,
             }
 
         case LOGIN :
@@ -28,7 +27,7 @@ const userReducer = (state = initialState, action) => {
         case UPDATE :
             return {
                 ...state,
-                user : action.payload
+                user : action.payload.user
             }
         default : 
             return state

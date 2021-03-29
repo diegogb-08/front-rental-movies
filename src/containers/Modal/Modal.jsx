@@ -37,15 +37,16 @@ const styles = {
         alignItems: 'center',
         width: '100%',
         height:'100vh',
+        zIndex: 100,
     },
     window: {
         position: 'relative',
         background: '#fff',
         borderRadius: 5,
         boxShadow: '2px 2px 10px rgba(0,0,0,0.2)',
-        zIndex: 1500,
+        zIndex: 1000,
         minWidth: 420,
-        marginTop: '3rem',
+        minHeight: 100
     },
     closeBtn: {
         position: 'absolute',
@@ -55,8 +56,9 @@ const styles = {
         cursor: 'pointer',
         marginRight: '0.5rem',
         marginTop: '0.3rem',
-        color: 'grey'
+        color: 'grey',
     },
+
     background: {
         position: 'absolute',
         width: '100%',
@@ -66,6 +68,6 @@ const styles = {
         backgroundColor: '#000',
         opacity: 0.8,
         cursor: 'pointer',
-        zIndex: 1000,
+        zIndex: 1,
     }
 }

@@ -3,7 +3,7 @@ import axios from 'axios'
 import {port, customer, login} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
 import {connect} from 'react-redux';
-import {SAVEEMAIL} from '../../redux/types/userType'
+import {LOGIN} from '../../redux/types/userType'
 import validate from "../../tools/validate";
 
 // IMPORT COMPONENTS
@@ -27,7 +27,7 @@ const Register = (props) => {
   const [password, setPassword] = useState({
     hideShow: 'password',
     showHide: 'SHOW'
-})
+  })
 
   const [errors, setErrors] = useState({});
   const [message, setMessage] = useState([]);
@@ -49,7 +49,7 @@ const Register = (props) => {
     }else{
         return setPassword({...password, hideShow: 'password', showHide: 'SHOW'});
     }
-}
+  }
 
   const toggle = async () => {
 
@@ -75,7 +75,7 @@ const Register = (props) => {
         let resultLogin = await axios.post(port+customer+login, dataLogin)
         
         if (resultLogin) {          
-            props.dispatch({type: SAVEEMAIL, payload: resultLogin.data});
+            props.dispatch({type: LOGIN, payload: resultLogin.data});
             history.push('/user')
         }
       } 
