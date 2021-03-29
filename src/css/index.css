@@ -865,9 +865,10 @@ input:not(:focus):valid ~ .floating-label {
   height: 60vh; }
 
 .tabNav {
-  height: 95%;
-  width: 100%;
-  cursor: pointer; }
+  width: 50%;
+  cursor: pointer;
+  background-color: red;
+  margin-bottom: 1rem; }
 
 .tab {
   height: 100%;
@@ -879,13 +880,17 @@ input:not(:focus):valid ~ .floating-label {
 
 .tabInfo {
   width: 100%;
-  height: 97%;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: white; }
 
-.ordersContainer {
-  display: flex; }
+.prueba {
+  font-size: 1.2rem; }
+
+.imgOrder {
+  margin-top: 2rem;
+  width: 10rem; }
 
 .movieData {
   width: 35rem;
@@ -1106,34 +1111,15 @@ input:not(:focus):valid ~ .floating-label {
   box-sizing: border-box;
   max-width: 100%;
   margin: auto 0;
-  height: 100vh;
   background-color: #ffffff; }
 
 .rentalSuperMainContainer {
   display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 100%;
-  height: 100vh;
+  flex-direction: row;
+  padding: 2rem;
   margin-top: 5rem;
-  background-color: #ffffff; }
-
-.rentalMainContainer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 80%;
-  height: 70vh;
-  border: solid 0.1rem black; }
-
-.cardInfo {
-  display: flex;
   width: 100%;
-  height: 100%; }
+  background-color: #ffffff; }
 
 .userComponent {
   background: #141414;
@@ -1195,34 +1181,15 @@ input:not(:focus):valid ~ .floating-label {
   box-sizing: border-box;
   max-width: 100%;
   margin: auto 0;
-  height: 100vh;
   background-color: #ffffff; }
 
 .rentalSuperMainContainer {
   display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 100%;
-  height: 100vh;
+  flex-direction: row;
+  padding: 2rem;
   margin-top: 5rem;
-  background-color: #ffffff; }
-
-.rentalMainContainer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 80%;
-  height: 70vh;
-  border: solid 0.1rem black; }
-
-.cardInfo {
-  display: flex;
   width: 100%;
-  height: 100%; }
+  background-color: #ffffff; }
 
 /*Fonts*/
 /*Bootstrap*/

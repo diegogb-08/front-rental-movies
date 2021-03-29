@@ -18,6 +18,7 @@ function ModalRender(props) {
     const film = {
         id: props.id,
         title: props.title,
+        imgFilm: props.imgFilm,
         originalTitle: props.originalTitle,
         genres: [props.genres],
         backdropPath: props.backdropPath,
