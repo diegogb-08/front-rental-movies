@@ -26,7 +26,7 @@ function Home(props) {
 
     const [errors, setErrors] = useState({});
 
-
+    
     // HANDLERS
 
     const handleState = (e) => {
