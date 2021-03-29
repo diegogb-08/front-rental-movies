@@ -1038,6 +1038,34 @@ input:not(:focus):valid ~ .floating-label {
   grid-gap: 2rem;
   justify-content: center; }
 
+.searchByCast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  .searchByCast h4 {
+    width: 50%;
+    margin-top: 3rem; }
+
+.cast {
+  height: 20rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%; }
+  .cast .castImg {
+    border-radius: 0.3em; }
+
+.castImg {
+  height: 100%;
+  width: auto;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  vertical-align: top; }
+
 /*Containers*/
 .homeContainer {
   background: #7c7578; }

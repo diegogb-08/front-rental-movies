@@ -37,7 +37,6 @@ function User(props) {
 
     const call = async (url) => {
         let res = await axios.get(url);
-
         if (res.data.results)
             return res.data.results;
         if (res.data.title)
