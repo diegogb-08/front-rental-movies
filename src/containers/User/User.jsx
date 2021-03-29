@@ -95,7 +95,7 @@ function User(props) {
                                             <div className='movieCollection' key={film.id}>
                                                 <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
                                                 originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
-                                                voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids}
+                                                voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
                                                 >
                                                     <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
                                                 </ModalRender>

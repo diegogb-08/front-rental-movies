@@ -4,6 +4,7 @@ import Header from '../../components/Header/Header';
 import Orders from "../../components/Orders/Orders";
 import Tab from '../../components/Tab/Tab';
 import TabNav from "../../components/Tab/TabNav";
+import {connect} from 'react-redux';
 
 
 
@@ -29,7 +30,7 @@ function Rental (props) {
           <TabNav tabs={['Orders', 'Wishes', 'Last Orders', 'Gifts', 'Give Away']} selected={tab.selected} setSelected={setSelected}>
               <Tab isSelected={tab.selected === 'Orders'}>
                 <div className="cardInfo">
-                  <Orders
+                  <Orders 
                   
                   />
                 </div>
@@ -70,4 +71,10 @@ function Rental (props) {
     )
 };
 
-export default Rental
+const mapStateToProps = state => {
+  return {
+      cart : state.cartReducer.cart
+  }
+}
+
+export default connect(mapStateToProps)(Rental);
