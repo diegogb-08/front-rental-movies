@@ -852,6 +852,18 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   height: 19rem; }
 
+.profileComponent {
+  background: black;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 10rem; }
+
+.profileBody {
+  background-color: #F5F5F5;
+  width: 100%;
+  color: black;
+  height: 60vh; }
+
 .tabNav {
   height: 95%;
   width: 100%;
@@ -1163,6 +1175,19 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+
+.imageUser {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 3rem;
+  width: 3rem;
+  z-index: -1; }
+  .imageUser img {
+    width: 100%;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    cursor: pointer; }
 
 .rentalContainer {
   display: flex;
