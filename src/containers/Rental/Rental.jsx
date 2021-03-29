@@ -1,8 +1,20 @@
 import React from "react";
 
-const Rental = () => {
+import Header from '../../components/Header/Header';
+
+
+
+function Rental () {
     return (
         <div className="rentalContainer">
+          <Header/>
+          <div className="rentalSuperMainContainer">
+            <div className="rentalMainContainer">
+              
+            </div>
+
+          </div>
+          
 
         </div>
     )

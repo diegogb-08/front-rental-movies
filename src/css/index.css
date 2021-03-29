@@ -853,6 +853,26 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   height: 19rem; }
 
+.tabNav {
+  height: 95%;
+  width: 100%;
+  cursor: pointer; }
+
+.tab {
+  height: 100%;
+  width: 15%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.tabInfo {
+  width: 100%;
+  height: 97%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 /*Containers*/
 .homeContainer {
   background: #7c7578; }
@@ -1069,6 +1089,36 @@ input:not(:focus):valid ~ .floating-label {
   visibility: visible;
   transition: 0.3s ease all; }
 
+.rentalContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto 0;
+  height: 100vh;
+  background-color: #ffffff; }
+
+.rentalSuperMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+  height: 100vh;
+  margin-top: 5rem;
+  background-color: #ffffff; }
+
+.rentalMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 80%;
+  height: 70vh;
+  border: solid 0.1rem black; }
+
 .userComponent {
   background: #141414;
   width: 100%;
@@ -1109,6 +1159,36 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+
+.rentalContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto 0;
+  height: 100vh;
+  background-color: #ffffff; }
+
+.rentalSuperMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+  height: 100vh;
+  margin-top: 5rem;
+  background-color: #ffffff; }
+
+.rentalMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 80%;
+  height: 70vh;
+  border: solid 0.1rem black; }
 
 /*Fonts*/
 /*Bootstrap*/

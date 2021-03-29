@@ -1,0 +1,35 @@
+.rentalContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto 0;
+  height: 100vh;
+  background-color: nth($white , 1 )
+}
+
+.rentalSuperMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+  height: 100vh;
+  margin-top: 5rem;
+  background-color: nth($white , 1 )
+  //border-right: 0.1rem solid grey;
+ // border-left: 0.1rem solid grey;
+
+}
+
+.rentalMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 80%;
+  height: 70vh;
+  border: solid 0.1rem black;
+}
