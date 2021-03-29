@@ -23,8 +23,8 @@ function User(props) {
     // HOOKS
     const [films, setFilms] = useState({})
     const [searchFilm, setSearch] = useState('')
-    const [multiSearch, setMultiSearch] = useState({})
-
+    const [multiSearch, setMultiSearch] = useState([])
+    console.log(multiSearch)
     // HANDLER
 
     const handlState = (e) => {

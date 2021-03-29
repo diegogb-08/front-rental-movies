@@ -1,15 +1,14 @@
-import {ADD, REMOVE, CLEAN} from '../types/listType';
+import {ADDLIST, REMOVE, CLEAN} from '../types/listType';
 
 const initialState = {
-    list : []
+    list : [],
 };
 
 const listReducer = (state = initialState, action) => {
     switch(action.type){
-        case ADD :
+        case ADDLIST :
             return {
                 ...state,
-
                 list: [...state.list, action.payload]
             }
         

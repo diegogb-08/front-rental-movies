@@ -4,11 +4,13 @@
     font-size: 2.5rem;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .filmIcon{
     position: relative;
     transform: rotate(20deg);
+
 }
 
 .counterCart {
