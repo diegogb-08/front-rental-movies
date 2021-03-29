@@ -1,11 +1,5 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {connect} from 'react-redux';
-
-
-
-
-
-
 
 function Orders(props) {
 
@@ -26,6 +20,8 @@ function Orders(props) {
                       <img src={film.imgFilm} alt="film"/>
                       <p>Price: {film.price} $</p>
                       <p>Vote Average: {film.voteAverage}</p>
+                      <p>Overview: {film.overview}</p>
+                      <p>Release Date: {film.releaseDate}</p>
                     </div>
                     )
                     })}
@@ -37,9 +33,6 @@ function Orders(props) {
 }
 
 
-
-
-
 const mapStateToProps = state => {
   return {
       cart : state.cartReducer.cart
@@ -47,33 +40,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Orders);
-
-
-
-/*
-    {
-                    props.cart.length === 0
-                    ?
-                    <>
-                    </>
-                    :
-                    <>
-                                      <div className="OrdersContainer">
-              {props.cart.map( film => {
-                  return (
-                    <div key={film.id}>
-                      <p>{film.title}</p>
-                    </div>
-                  )
-              })}
-          </div>
-                    
-                    </>
-  
-                  }
-
-
-
-
-
-*/

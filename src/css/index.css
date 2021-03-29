@@ -1123,15 +1123,19 @@ input:not(:focus):valid ~ .floating-label {
 .rentalMainContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-self: center;
   align-items: center;
   padding: 3rem;
-  width: 80%;
-  height: 70vh;
-  border: solid 0.1rem black; }
+  width: 100%;
+  border-top: solid 0.1rem black; }
 
 .cardInfo {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
   width: 100%;
   height: 100%; }
 
@@ -1212,15 +1216,19 @@ input:not(:focus):valid ~ .floating-label {
 .rentalMainContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-self: center;
   align-items: center;
   padding: 3rem;
-  width: 80%;
-  height: 70vh;
-  border: solid 0.1rem black; }
+  width: 100%;
+  border-top: solid 0.1rem black; }
 
 .cardInfo {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
   width: 100%;
   height: 100%; }
 
