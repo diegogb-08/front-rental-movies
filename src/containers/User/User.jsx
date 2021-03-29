@@ -25,7 +25,8 @@ function User(props) {
 
     // HOOKS
     const [films, setFilms] = useState({})
-    console.log(films)
+
+    // Function to filter the call to the API
 
     const call = async (url) => {
         let res = await axios.get(url);
@@ -40,11 +41,16 @@ function User(props) {
     };
 
 
+    // Here we have the URL for the call to the API and return the object/s
+
     const searchByGenre = async (value) => {
         let url = `${baseUrl}${discover}${movie}${apiKey}&include_video=true&with_genres=${value}`
         let movies = await call(url)
         return movies
     }
+
+    // Here we map the Genres Object given by the API and store it in an empty object called filmCollection 
+    // which we use to setFilms state
 
     const mapGenres = async (object) => {
         let filmCollection = {};
@@ -55,9 +61,13 @@ function User(props) {
         return setFilms(filmCollection)
     }
 
-    useEffect(() => {
+
+    // we call the function mapGenres when did mount user view
+    useEffect(()=>{
         mapGenres(genres)
-    }, [])
+        // eslint-disable-next-line
+    },[])
+
 
 
 
@@ -77,20 +87,21 @@ function User(props) {
                     Object.keys(genres).map((genre, index) => {
                         return (
                             <Movie key={index} title={genre} class={genre}>
-                                {
-                                    films[genre]?.map((film) => {
-                                        // let title = film.title
-                                        if (film.poster_path)
-                                            return (
-                                                <div className='movieCollection' key={film.id}>
-                                                    <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
-                                                        originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date}
-                                                        voteAverage={film.vote_average} backdropPath={pathImg + film.backdrop_path} //genres={film.genre_ids}
-                                                    >
-                                                        <img className="filmPoster" alt={film.poster_path} src={pathImg + film.poster_path} />
-                                                    </ModalRender>
-                                                </div>
-                                            )
+
+                                {   // eslint-disable-next-line
+                                    films[genre]?.map((film) =>{
+                                        if(film.poster_path)
+                                        return( 
+                                            <div className='movieCollection' key={film.id}>
+                                                <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
+                                                originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
+                                                voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids}
+                                                >
+                                                    <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
+                                                </ModalRender>
+                                            </div>
+                                        )
+
                                     })
                                 }
                             </Movie>

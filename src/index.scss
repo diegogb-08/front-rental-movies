@@ -22,7 +22,12 @@
 @import './components/Movies/Movies.scss';
 @import './components/Carousel/Carousel.scss';
 @import './components/ProfileScreen/ProfileScreen.scss';
+@import './components/Tab/Tab.scss';
+@import './components/Orders/Orders.scss';
 
+
+
+@import './components/FilmSelected/FilmSelected.scss';
 
 /*Containers*/
 
@@ -31,6 +36,7 @@
 @import './containers/Modal/Modal.scss';
 @import './containers/Rental/Rental.scss';
 @import './containers/User/User.scss';
+@import './containers/Rental/Rental.scss';
 
 
 /*Fonts*/
