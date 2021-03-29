@@ -442,7 +442,7 @@ input:not(:focus):valid ~ .floating-label {
 .headerComponent {
   width: 100%;
   height: 5rem;
-  z-index: 1;
+  z-index: 1000;
   position: fixed;
   top: 0;
   display: flex;
@@ -835,7 +835,7 @@ input:not(:focus):valid ~ .floating-label {
   width: 50px;
   color: #fff;
   cursor: pointer;
-  z-index: 500;
+  z-index: 50;
   transition: .2s ease all; }
 
 .leftArrow:hover,
@@ -1027,6 +1027,10 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: center;
   flex-direction: column;
   align-items: center; }
+  .containerHomeText h1, .containerHomeText h2, .containerHomeText h3, .containerHomeText h4 {
+    color: #ffffff; }
+  .containerHomeText img {
+    width: 300px; }
 
 .sectionWatch {
   width: 100%;
@@ -1034,6 +1038,10 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .sectionWatch h1, .sectionWatch h2, .sectionWatch h3, .sectionWatch h4 {
+    color: #ffffff; }
+  .sectionWatch img {
+    width: 300px; }
 
 .sectionDownload {
   margin-top: .4rem;
@@ -1042,6 +1050,10 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .sectionDownload h1, .sectionDownload h2, .sectionDownload h3, .sectionDownload h4 {
+    color: #ffffff; }
+  .sectionDownload img {
+    width: 300px; }
 
 .sectionDevice {
   margin-top: .4rem;
@@ -1050,18 +1062,20 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .sectionDevice h1, .sectionDevice h2, .sectionDevice h3, .sectionDevice h4 {
+    color: #ffffff; }
+  .sectionDevice img {
+    width: 300px; }
 
 .containerWatchText {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; }
-
-h1, h2, h3, h4 {
-  color: #ffffff; }
-
-img {
-  width: 300px; }
+  .containerWatchText h1, .containerWatchText h2, .containerWatchText h3, .containerWatchText h4 {
+    color: #ffffff; }
+  .containerWatchText img {
+    width: 300px; }
 
 .emailText {
   margin-top: 2rem;
@@ -1075,12 +1089,20 @@ img {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .sectionQuestions h1, .sectionQuestions h2, .sectionQuestions h3, .sectionQuestions h4 {
+    color: #ffffff; }
+  .sectionQuestions img {
+    width: 300px; }
 
 .containerQuestionsText {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .containerQuestionsText h1, .containerQuestionsText h2, .containerQuestionsText h3, .containerQuestionsText h4 {
+    color: #ffffff; }
+  .containerQuestionsText img {
+    width: 300px; }
 
 .inputContainer {
   display: flex;
@@ -1100,6 +1122,106 @@ img {
   display: flex;
   justify-content: center; }
 
+.configComponent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 19rem;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: #141414; }
+
+.movieData {
+  width: 35rem;
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  background-color: #141414;
+  border-radius: 5px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  z-index: 1500; }
+  .movieData img {
+    width: 100%;
+    border-radius: 5px 5px 0 0; }
+  .movieData p {
+    font-size: 14px; }
+
+.movieInfo {
+  padding: 1rem;
+  width: 100%; }
+
+.topInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .topInfo p {
+    padding: 0.5rem;
+    border-radius: 0.3em;
+    font-weight: bold;
+    font-size: 1rem; }
+  .topInfo .rate {
+    background-color: #e87d33; }
+  .topInfo .releaseDate {
+    background-color: #0f7fe8; }
+  .topInfo .originalLanguage {
+    background-color: #F40612; }
+
+.bottomInfo {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .bottomInfo .button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: #00000050;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease; }
+  .bottomInfo .button:hover {
+    background-color: #777777c2;
+    transition: 0.3s ease; }
+
+.label {
+  height: 2rem;
+  width: auto;
+  padding: 0.3rem;
+  border-radius: 0.3em;
+  border: 1px solid white;
+  display: block;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 4em;
+  left: 2.5rem; }
+
+.addList:hover + .label {
+  visibility: visible;
+  transition: 0.5s ease all; }
+
+.addCart:hover + .label {
+  visibility: visible;
+  transition: 0.3s ease all; }
+
+.like:hover + .label {
+  visibility: visible;
+  transition: 0.3s ease all; }
+
+.dislike:hover + .label {
+  visibility: visible;
+  transition: 0.3s ease all; }
+
 .userComponent {
   background: #141414;
   width: 100%;
@@ -1108,7 +1230,7 @@ img {
 
 .movieCollection {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 19rem;
   flex-direction: column;
