@@ -448,7 +448,7 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem 0 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   background-color: #00000050; }
 
 .logoContainer {
@@ -887,6 +887,55 @@ input:not(:focus):valid ~ .floating-label {
 .ordersContainer {
   display: flex; }
 
+.search-box {
+  position: relative;
+  width: 250px; }
+  .search-box .search-box__input {
+    outline: none;
+    background: rgba(0, 0, 0, 0.85);
+    border: solid 1px rgba(255, 255, 255, 0.85);
+    box-sizing: border-box;
+    padding: 7px 14px 7px 40px;
+    width: 0%;
+    font-size: 13px;
+    color: #fff;
+    opacity: 0;
+    transition: ease width 0.5s, ease opacity 0.5s;
+    float: right; }
+  .search-box .search-box__icon {
+    position: absolute;
+    top: 7px;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    right: 12px;
+    transition: ease transform 0.5s;
+    transition-delay: 50ms; }
+  .search-box.active .search-box__icon {
+    transform: translateX(-214px); }
+  .search-box.active .search-box__input {
+    opacity: 1;
+    width: 100%; }
+
+.cartComponent {
+  height: 100%;
+  width: auto;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row; }
+
+.filmIcon {
+  position: relative;
+  transform: rotate(20deg); }
+
+.counterCart {
+  color: #e87d33;
+  font-size: 1.5rem;
+  position: relative;
+  top: 1rem;
+  left: 0.5rem;
+  font-weight: bold; }
+
 .movieData {
   width: 35rem;
   display: flex;
@@ -1180,7 +1229,6 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 3rem;
   width: 3rem;
   z-index: -1; }
   .imageUser img {
@@ -1188,6 +1236,10 @@ input:not(:focus):valid ~ .floating-label {
     margin-top: 2rem;
     margin-right: 2rem;
     cursor: pointer; }
+
+.cartCounter {
+  height: 100%;
+  width: auto; }
 
 .rentalContainer {
   display: flex;

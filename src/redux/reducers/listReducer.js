@@ -1,8 +1,7 @@
 import {ADD, REMOVE, CLEAN} from '../types/listType';
 
 const initialState = {
-    list : [],
-    totalCart : 0
+    list : []
 };
 
 const listReducer = (state = initialState, action) => {

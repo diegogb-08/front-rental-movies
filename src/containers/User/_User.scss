@@ -50,7 +50,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 3rem;
   width: 3rem;
   z-index: -1;
   img {
@@ -59,4 +58,9 @@
       margin-right: 2rem;
       cursor: pointer;
   }
+}
+
+.cartCounter{
+  height: 100%;
+  width: auto;
 }

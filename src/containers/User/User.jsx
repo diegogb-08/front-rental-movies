@@ -6,18 +6,14 @@ import Movie from '../../components/Movies/Movies';
 import profile from '../../img/avatarUser.png'
 import { useHistory } from 'react-router-dom'
 
-
-
 // Endpoints API The movieDB
-// eslint-disable-next-line
 import {
     pathImg, baseUrl, search, multi, discover,
-    // eslint-disable-next-line
-    movie, series, popular, topRated, upcoming,
-    // eslint-disable-next-line
-    nowPlaying, apiKey, page, genres
-} from '../../api/ApiMovieDB'
+    movie, apiKey, page, genres, query} from '../../api/ApiMovieDB'
+
 import ModalRender from '../Modal/ModalRender';
+import Cart from '../../components/Cart/Cart';
+import SearchBox from '../../components/SearchBox/SearchBox';
 
 function User(props) {
 
@@ -25,6 +21,16 @@ function User(props) {
 
     // HOOKS
     const [films, setFilms] = useState({})
+    const [searchFilm, setSearch] = useState('')
+    const [multiSearch, setMultiSearch] = useState({})
+
+    // HANDLER
+
+    const handlState = (e) => {
+
+        let value = encodeURIComponent(e.target.value.trim())
+        setSearch(value)
+    }
 
     // Function to filter the call to the API
 
@@ -49,6 +55,12 @@ function User(props) {
         return movies
     }
 
+    const multiSearchBox = async (value) => {
+        let url = `${baseUrl}${search}${multi}${apiKey}${query}${value}`
+        let movies = await call(url)
+        return setMultiSearch(movies)
+    }
+
     // Here we map the Genres Object given by the API and store it in an empty object called filmCollection 
     // which we use to setFilms state
 
@@ -68,25 +80,41 @@ function User(props) {
         // eslint-disable-next-line
     },[])
 
-
-
+    // it detect the changes from the input and on key press Enter, sends the info to multiSearch()
+    useEffect(() => {
+        const listener = event => {
+          if (event.code === "Enter" || event.code === "NumpadEnter") {
+            multiSearchBox(searchFilm);
+          }
+        };
+        document.addEventListener("keydown", listener);
+        return () => {
+          document.removeEventListener("keydown", listener);
+        };
+    }, [searchFilm]);
 
     return (
         <div className="userComponent">
             <Header>
                 <div className="navbar">
+                    <div className="searchNavbar">
+                        <SearchBox 
+                            onChange={handlState}
+                        />
+                    </div>
+                    <div className="cartCounter">
+                        <Cart/>
+                    </div>
                     <div className="imageUser">
                         <img src={profile} alt="profile" onClick={() => { history.push('/profile') }} />
                     </div>
-
                 </div>
-                {/* Aqui van todos los botones del header para navegar con justify-content space-between */}
             </Header>
             <div className="carouselMovies">
                 {
                     Object.keys(genres).map((genre, index) => {
                         return (
-                            <Movie key={index} title={genre} class={genre}>
+                            <Movie key={index} title={genre} className={genre}>
 
                                 {   // eslint-disable-next-line
                                     films[genre]?.map((film) =>{
@@ -95,7 +123,7 @@ function User(props) {
                                             <div className='movieCollection' key={film.id}>
                                                 <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
                                                 originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
-                                                voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids}
+                                                voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
                                                 >
                                                     <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
                                                 </ModalRender>
