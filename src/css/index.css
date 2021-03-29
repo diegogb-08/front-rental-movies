@@ -852,6 +852,7 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   height: 19rem; }
 
+
 .movieData {
   width: 35rem;
   display: flex;
@@ -940,6 +941,29 @@ input:not(:focus):valid ~ .floating-label {
 .dislike:hover + .label {
   visibility: visible;
   transition: 0.3s ease all; }
+
+.tabNav {
+  height: 95%;
+  width: 100%;
+  cursor: pointer; }
+
+.tab {
+  height: 100%;
+  width: 15%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.tabInfo {
+  width: 100%;
+  height: 97%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.ordersContainer {
+  display: flex; }
 
 /*Containers*/
 .homeContainer {
@@ -1065,6 +1089,41 @@ input:not(:focus):valid ~ .floating-label {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
+.rentalContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto 0;
+  height: 100vh;
+  background-color: #ffffff; }
+
+.rentalSuperMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+  height: 100vh;
+  margin-top: 5rem;
+  background-color: #ffffff; }
+
+.rentalMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 80%;
+  height: 70vh;
+  border: solid 0.1rem black; }
+
+.cardInfo {
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
 .userComponent {
   background: #141414;
   width: 100%;
@@ -1105,6 +1164,41 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   justify-content: space-between;
   align-items: center; }
+
+.rentalContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: auto 0;
+  height: 100vh;
+  background-color: #ffffff; }
+
+.rentalSuperMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+  height: 100vh;
+  margin-top: 5rem;
+  background-color: #ffffff; }
+
+.rentalMainContainer {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 80%;
+  height: 70vh;
+  border: solid 0.1rem black; }
+
+.cardInfo {
+  display: flex;
+  width: 100%;
+  height: 100%; }
 
 /*Fonts*/
 /*Bootstrap*/
