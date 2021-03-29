@@ -874,10 +874,7 @@ input:not(:focus):valid ~ .floating-label {
   align-items: center; }
 
 .ordersContainer {
-  display: flex;
-  width: 10rem;
-  height: 5rem;
-  background-color: red; }
+  display: flex; }
 
 /*Containers*/
 .homeContainer {
@@ -1127,7 +1124,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .cardInfo {
   display: flex;
-  background-color: blue;
   width: 100%;
   height: 100%; }
 
@@ -1204,7 +1200,6 @@ input:not(:focus):valid ~ .floating-label {
 
 .cardInfo {
   display: flex;
-  background-color: blue;
   width: 100%;
   height: 100%; }
 

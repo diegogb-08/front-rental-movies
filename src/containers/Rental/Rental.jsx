@@ -44,7 +44,7 @@ function Rental () {
               </Tab>
               <Tab isSelected={tab.selected === 'Last Orders'}>
                 <div className="cardInfo">
-                  <h1>Hola soy last orders!</h1>
+                  
                 </div>
 
                 
