@@ -43,9 +43,9 @@ const styles = {
         background: '#fff',
         borderRadius: 5,
         boxShadow: '2px 2px 10px rgba(0,0,0,0.2)',
-        zIndex: 10,
+        zIndex: 1500,
         minWidth: 420,
-        padding: 24,
+        marginTop: '3rem',
     },
     closeBtn: {
         position: 'absolute',
@@ -64,7 +64,8 @@ const styles = {
         top: 0,
         left: 0,
         backgroundColor: '#000',
-        opacity: 0.4,
+        opacity: 0.8,
         cursor: 'pointer',
+        zIndex: 1000,
     }
 }
