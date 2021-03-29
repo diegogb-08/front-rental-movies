@@ -64,3 +64,17 @@
   height: 100%;
   width: auto;
 }
+
+.navMenu {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  div {
+    cursor: pointer;
+  }
+  div:hover {
+    color: $fontcolor3;
+  }
+}

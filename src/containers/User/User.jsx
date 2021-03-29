@@ -50,7 +50,7 @@ function User(props) {
     // Here we have the URL for the call to the API and return the object/s
 
     const searchByGenre = async (value) => {
-        let url = `${baseUrl}${discover}${movie}${apiKey}&include_video=true&with_genres=${value}`
+        let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${value}`
         let movies = await call(url)
         return movies
     }
@@ -94,10 +94,24 @@ function User(props) {
         // eslint-disable-next-line
     },[searchFilm]);
 
+    // FUNCTIONS
+
+    const home = () => {
+        setTimeout(()=>{
+
+        },1000)
+    }
+
     return (
         <div className="userComponent">
             <Header>
                 <div className="navbar">
+                    <div className="navMenu">
+                        <div className="home" onClick={()=>home()}>Home</div>
+                        <div className="series">Series</div>
+                        <div className="newPopular">New & Popular</div>
+                        <div className="myList">My List</div>
+                    </div>
                     <div className="searchNavbar">
                         <SearchBox 
                             onChange={handlState}

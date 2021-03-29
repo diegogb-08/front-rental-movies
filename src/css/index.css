@@ -1282,6 +1282,17 @@ input:not(:focus):valid ~ .floating-label {
   height: 100%;
   width: auto; }
 
+.navMenu {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .navMenu div {
+    cursor: pointer; }
+  .navMenu div:hover {
+    color: #7c7578; }
+
 .rentalContainer {
   display: flex;
   flex-direction: column;
