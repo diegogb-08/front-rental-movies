@@ -864,8 +864,7 @@ input:not(:focus):valid ~ .floating-label {
   border-radius: 0.5rem 0.5rem 0 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: red; }
+  align-items: center; }
 
 .tabInfo {
   width: 100%;
@@ -873,6 +872,12 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.ordersContainer {
+  display: flex;
+  width: 10rem;
+  height: 5rem;
+  background-color: red; }
 
 /*Containers*/
 .homeContainer {
@@ -1120,6 +1125,12 @@ input:not(:focus):valid ~ .floating-label {
   height: 70vh;
   border: solid 0.1rem black; }
 
+.cardInfo {
+  display: flex;
+  background-color: blue;
+  width: 100%;
+  height: 100%; }
+
 .userComponent {
   background: #141414;
   width: 100%;
@@ -1190,6 +1201,12 @@ input:not(:focus):valid ~ .floating-label {
   width: 80%;
   height: 70vh;
   border: solid 0.1rem black; }
+
+.cardInfo {
+  display: flex;
+  background-color: blue;
+  width: 100%;
+  height: 100%; }
 
 /*Fonts*/
 /*Bootstrap*/
