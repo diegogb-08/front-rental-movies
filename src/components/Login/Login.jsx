@@ -63,7 +63,6 @@ function Login(props) {
         if (Object.keys(errs).length === 0) {
             try{
                 let result = await axios.post(port+customer+login, credentials)
-                console.log(result)
                 if(result) {
                     props.dispatch({type: LOGIN, payload: result.data});
                     history.push('/user')

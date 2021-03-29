@@ -45,3 +45,18 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.imageUser {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 3rem;
+  width: 3rem;
+  z-index: -1;
+  img {
+      width: 100%;
+      margin-top: 2rem;
+      margin-right: 2rem;
+      cursor: pointer;
+  }
+}
