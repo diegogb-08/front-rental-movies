@@ -2,9 +2,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    height: 3rem;
-    width: 3rem;
-    z-index: -1;
+    z-index: 99;
     img {
         width: 100%;
         margin-top: 2rem;

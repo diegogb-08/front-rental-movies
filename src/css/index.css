@@ -856,13 +856,13 @@ input:not(:focus):valid ~ .floating-label {
   background: black;
   width: 100%;
   color: #ffffff;
-  padding-top: 10rem; }
+  padding-top: 5rem; }
 
 .profileBody {
   background-color: #F5F5F5;
   width: 100%;
   color: black;
-  height: 60vh; }
+  height: 70vh; }
 
 .tabNav {
   height: 95%;
@@ -886,6 +886,17 @@ input:not(:focus):valid ~ .floating-label {
 
 .ordersContainer {
   display: flex; }
+
+.imageUser {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 99; }
+  .imageUser img {
+    width: 100%;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    cursor: pointer; }
 
 .movieData {
   width: 35rem;

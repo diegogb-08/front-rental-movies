@@ -3,7 +3,7 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom'
-import profile from '../../img/avatarUser.png'
+import AvatarUser from '../AvatarUser/AvatarUser';
 
 
 
@@ -22,9 +22,7 @@ function ProfileScreen(props) {
     return (
         <div className="profileComponent">
             <Header onClick={() => home()}>
-                <div className="imageUser">
-                    <img src={profile} alt="profile" onClick={() => { history.push('/profile') }} />
-                </div>
+                <AvatarUser />
             </Header>
             <div className="profileBody">
                 Email: {props.user.email}<br></br>
