@@ -50,7 +50,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 3rem;
   width: 3rem;
   z-index: -1;
   img {
@@ -58,5 +57,24 @@
       margin-top: 2rem;
       margin-right: 2rem;
       cursor: pointer;
+  }
+}
+
+.cartCounter{
+  height: 100%;
+  width: auto;
+}
+
+.navMenu {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  div {
+    cursor: pointer;
+  }
+  div:hover {
+    color: $fontcolor3;
   }
 }
