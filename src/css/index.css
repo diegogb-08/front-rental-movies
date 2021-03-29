@@ -377,8 +377,7 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   padding: 3rem;
   flex-direction: column;
-  margin-top: 8rem;
-  z-index: 100; }
+  margin-top: 8rem; }
   .loginBox h3 {
     color: #ffffff;
     margin-left: 1rem;
@@ -442,7 +441,7 @@ input:not(:focus):valid ~ .floating-label {
 .headerComponent {
   width: 100%;
   height: 5rem;
-  z-index: 1000;
+  z-index: 1;
   position: fixed;
   top: 0;
   display: flex;
@@ -835,7 +834,7 @@ input:not(:focus):valid ~ .floating-label {
   width: 50px;
   color: #fff;
   cursor: pointer;
-  z-index: 50;
+  z-index: 10;
   transition: .2s ease all; }
 
 .leftArrow:hover,
@@ -852,6 +851,95 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: row;
   height: 19rem; }
+
+.movieData {
+  width: 35rem;
+  display: flex;
+  color: #ffffff;
+  flex-direction: column;
+  background-color: #141414;
+  border-radius: 5px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  scroll-behavior: smooth; }
+  .movieData img {
+    width: 100%;
+    border-radius: 5px 5px 0 0; }
+  .movieData p {
+    font-size: 14px; }
+
+.movieInfo {
+  padding: 1rem;
+  width: 100%; }
+
+.topInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .topInfo p {
+    padding: 0.5rem;
+    border-radius: 0.3em;
+    font-weight: bold;
+    font-size: 1rem; }
+  .topInfo .rate {
+    background-color: #e87d33; }
+  .topInfo .releaseDate {
+    background-color: #0f7fe8; }
+  .topInfo .originalLanguage {
+    background-color: #F40612; }
+
+.bottomInfo {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .bottomInfo .button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: #00000050;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s ease; }
+  .bottomInfo .button:hover {
+    background-color: #777777c2;
+    transition: 0.3s ease; }
+
+.label {
+  height: 2rem;
+  width: auto;
+  padding: 0.3rem;
+  border-radius: 0.3em;
+  border: 1px solid white;
+  display: block;
+  visibility: hidden;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 4em;
+  left: 2.5rem; }
+
+.addList:hover + .label {
+  visibility: visible;
+  transition: 0.5s ease all; }
+
+.addCart:hover + .label {
+  visibility: visible;
+  transition: 0.3s ease all; }
+
+.like:hover + .label {
+  visibility: visible;
+  transition: 0.3s ease all; }
+
+.dislike:hover + .label {
+  visibility: visible;
+  transition: 0.3s ease all; }
 
 /*Containers*/
 .homeContainer {
@@ -971,103 +1059,11 @@ input:not(:focus):valid ~ .floating-label {
 
 .configComponent {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 19rem;
   flex-direction: column;
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  background-color: #141414; }
-
-.movieData {
-  width: 35rem;
-  display: flex;
-  color: #ffffff;
-  flex-direction: column;
-  background-color: #141414;
-  border-radius: 5px;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  scroll-behavior: smooth;
-  z-index: 1500; }
-  .movieData img {
-    width: 100%;
-    border-radius: 5px 5px 0 0; }
-  .movieData p {
-    font-size: 14px; }
-
-.movieInfo {
-  padding: 1rem;
-  width: 100%; }
-
-.topInfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-  .topInfo p {
-    padding: 0.5rem;
-    border-radius: 0.3em;
-    font-weight: bold;
-    font-size: 1rem; }
-  .topInfo .rate {
-    background-color: #e87d33; }
-  .topInfo .releaseDate {
-    background-color: #0f7fe8; }
-  .topInfo .originalLanguage {
-    background-color: #F40612; }
-
-.bottomInfo {
-  width: 100%;
-  height: 5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; }
-  .bottomInfo .button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3rem;
-    width: 3rem;
-    background-color: #00000050;
-    border-radius: 50%;
-    cursor: pointer;
-    text-align: center;
-    transition: 0.3s ease; }
-  .bottomInfo .button:hover {
-    background-color: #777777c2;
-    transition: 0.3s ease; }
-
-.label {
-  height: 2rem;
-  width: auto;
-  padding: 0.3rem;
-  border-radius: 0.3em;
-  border: 1px solid white;
-  display: block;
-  visibility: hidden;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
-  bottom: 4em;
-  left: 2.5rem; }
-
-.addList:hover + .label {
-  visibility: visible;
-  transition: 0.5s ease all; }
-
-.addCart:hover + .label {
-  visibility: visible;
-  transition: 0.3s ease all; }
-
-.like:hover + .label {
-  visibility: visible;
-  transition: 0.3s ease all; }
-
-.dislike:hover + .label {
-  visibility: visible;
-  transition: 0.3s ease all; }
+  padding-bottom: 1.5rem; }
 
 .userComponent {
   background: #141414;

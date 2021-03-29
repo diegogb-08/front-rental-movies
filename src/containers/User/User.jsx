@@ -57,6 +57,7 @@ function User(props) {
     // we call the function mapGenres when did mount user view
     useEffect(()=>{
         mapGenres(genres)
+        // eslint-disable-next-line
     },[])
 
 
@@ -73,7 +74,7 @@ function User(props) {
                     Object.keys(genres).map((genre, index) =>{
                         return(
                             <Movie key={index} title={genre} class={genre}>
-                                {
+                                {   // eslint-disable-next-line
                                     films[genre]?.map((film) =>{
                                         if(film.poster_path)
                                         return( 
