@@ -1030,7 +1030,8 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; }
+  flex-direction: row;
+  padding-bottom: 5rem; }
 
 .searchGrid {
   display: grid;
