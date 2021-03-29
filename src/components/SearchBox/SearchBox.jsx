@@ -6,7 +6,6 @@ const SearchBox = (props) => {
 
 
     const activateSearch = () => {
-        const searchIcon = document.getElementsByClassName("search-box__icon")[0];
         const searchBox = document.getElementsByClassName("search-box")[0];
         searchBox.classList.toggle("active");
     }

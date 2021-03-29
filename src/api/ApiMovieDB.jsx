@@ -10,7 +10,7 @@ export const topRated = '/top_rated';
 export const upcoming = '/upcoming';
 export const nowPlaying = '/now_playing';
 export const apiKey = '?api_key=c0b6dea31a9d647a6b7d1eafa59bacaa';
-export const page = '&page=';
+export const pageApi = '&page=';
 export const query = '&query=';
 export const genres = {
     Action: 28,

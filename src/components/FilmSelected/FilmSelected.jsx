@@ -8,7 +8,6 @@ import {ADD} from '../../redux/types/cartType';
 
 const FilmSelected = (props) => {
 
-    const filmCollection = {};
     const film = props.film
     
 

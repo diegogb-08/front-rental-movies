@@ -797,7 +797,7 @@ input:not(:focus):valid ~ .floating-label {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   font-weight: bold; }
 
 .carouselComponent {
@@ -1024,6 +1024,19 @@ input:not(:focus):valid ~ .floating-label {
 .dislike:hover + .label {
   visibility: visible;
   transition: 0.3s ease all; }
+
+.multiSearchComponent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+
+.searchGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  justify-content: center; }
 
 /*Containers*/
 .homeContainer {
