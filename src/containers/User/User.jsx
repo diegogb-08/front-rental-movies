@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import axios from 'axios'
 import Header from '../../components/Header/Header';
 import Movie from '../../components/Movies/Movies';
-import profile from '../../img/avatarUser.png'
-import { useHistory } from 'react-router-dom'
 
 
 
@@ -18,10 +16,10 @@ import {
     nowPlaying, apiKey, page, genres
 } from '../../api/ApiMovieDB'
 import ModalRender from '../Modal/ModalRender';
+import AvatarUser from '../../components/AvatarUser/AvatarUser';
 
 function User(props) {
 
-    let history = useHistory();
 
     // HOOKS
     const [films, setFilms] = useState({})
@@ -75,10 +73,7 @@ function User(props) {
         <div className="userComponent">
             <Header>
                 <div className="navbar">
-                    <div className="imageUser">
-                        <img src={profile} alt="profile" onClick={() => { history.push('/profile') }} />
-                    </div>
-
+                    <AvatarUser/>
                 </div>
                 {/* Aqui van todos los botones del header para navegar con justify-content space-between */}
             </Header>
