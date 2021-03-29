@@ -864,7 +864,8 @@ input:not(:focus):valid ~ .floating-label {
   border-radius: 0.5rem 0.5rem 0 0;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: red; }
 
 .tabInfo {
   width: 100%;
