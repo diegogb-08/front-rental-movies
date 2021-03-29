@@ -1,7 +1,8 @@
 .tabNav {
-  height: 95%;
-  width: 100%;
+  width: 50%;
   cursor: pointer;
+  background-color: red;
+  margin-bottom: 1rem;
 }
 
 .tab {
@@ -11,12 +12,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .tabInfo{
   width: 100%;
-  height: 97%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: white;
+  
 }
