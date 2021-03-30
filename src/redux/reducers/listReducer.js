@@ -10,7 +10,7 @@ const listReducer = (state = initialState, action) => {
         case ADDLIST :
             return {
                 ...state,
-                list: [...state.list, action.payload]
+                list: [...state.list, action.payload],
             }
         
         case REMOVELIST : 
