@@ -6,6 +6,7 @@ import ProfileScreen from './components/ProfileScreen/ProfileScreen';
 import User from './containers/User/User';
 import Rental from './containers/Rental/Rental';
 import MyList from './components/MyList/MyList';
+import Update from './components/UpdateUser/UpdateUser';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route path="/profile" exact component={ProfileScreen}/>
         <Route path="/rental" exact component={Rental}/>
         <Route path='/mylist' exact component={MyList}/>
- 
+        <Route path='/update' exact component={Update}/>
+
 
       </Switch>
       </BrowserRouter>
