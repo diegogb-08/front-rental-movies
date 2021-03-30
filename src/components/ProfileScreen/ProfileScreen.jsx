@@ -34,7 +34,7 @@ function ProfileScreen(props) {
             <div className="profileBody">
                 <div className="profileContainer">
                     <div className="profileTitle">
-                        <h1>Account <img src={imgSubs} alt="imgSubs"/> <h2>SUBSCRIBER SINCE 2015</h2></h1>
+                        <h1>Account <img src={imgSubs} alt="imgSubs" /> <h2>SUBSCRIBER SINCE 2015</h2></h1>
                     </div>
                     <div className="profileDetails">
                         <img src={profile} alt="profile" />
@@ -44,6 +44,13 @@ function ProfileScreen(props) {
                         </div>
                     </div>
                     <div className="profileInfo">
+                        <h2>CURRENT PLAN</h2>
+                        <div className="profilePlan">
+                            <p>Premium ULTRA <span>HD</span></p>
+                        </div>
+                        <div className="profilePlan">
+                            <button className="buttonProfile">Change Plan</button>
+                        </div>
                     </div>
                 </div>
 

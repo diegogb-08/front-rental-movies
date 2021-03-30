@@ -863,7 +863,7 @@ input:not(:focus):valid ~ .floating-label {
   background-color: #F5F5F5;
   width: 100%;
   color: black;
-  height: 70vh;
+  height: 64vh;
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -898,6 +898,39 @@ input:not(:focus):valid ~ .floating-label {
 .profileTitle h2 {
   font-size: .7rem;
   font-weight: bold; }
+
+.profileInfo {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #282c2d;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  .profileInfo h2 {
+    color: #d3d3d3;
+    font-weight: bolder;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 1.5rem; }
+
+.profilePlan {
+  flex-direction: row; }
+  .profilePlan p {
+    flex-direction: row;
+    color: black; }
+  .profilePlan span {
+    font-weight: bolder; }
+
+.buttonProfile {
+  margin-top: 1rem;
+  border-radius: .3rem;
+  background-color: #008CBA;
+  color: white;
+  border: 2px solid #008CBA;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+
+.buttonProfile:hover {
+  background-color: white;
+  color: black; }
 
 .tabNav {
   width: 50%;
