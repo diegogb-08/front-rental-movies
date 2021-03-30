@@ -1,5 +1,8 @@
 import React, {useState} from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFilm} from '@fortawesome/free-solid-svg-icons'
+
 import Header from '../../components/Header/Header';
 import Orders from "../../components/Orders/Orders";
 import Tab from '../../components/Tab/Tab';
@@ -44,7 +47,12 @@ function Rental (props) {
             
           </div>
           
-          <div className="basketRental">Soy Tramitar Pedido</div>
+          <div className="basketRental">
+
+            <div>
+            <FontAwesomeIcon className='filmIconRental' icon={faFilm} />
+            </div>
+          </div>
           
           
 

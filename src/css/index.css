@@ -1320,11 +1320,18 @@ input:not(:focus):valid ~ .floating-label {
 .basketRental {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-top: 8rem;
-  margin-left: 2rem;
-  width: 18rem;
-  height: 8rem;
-  background-color: yellow; }
+  margin-left: 5rem;
+  width: 20rem;
+  height: 7.4rem;
+  border: solid 0.1rem lightgray;
+  border-radius: 0.2rem; }
+
+.filmIconRental {
+  position: relative;
+  transform: rotate(20deg); }
 
 .userComponent {
   background: #141414;
@@ -1416,11 +1423,18 @@ input:not(:focus):valid ~ .floating-label {
 .basketRental {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-top: 8rem;
-  margin-left: 2rem;
-  width: 18rem;
-  height: 8rem;
-  background-color: yellow; }
+  margin-left: 5rem;
+  width: 20rem;
+  height: 7.4rem;
+  border: solid 0.1rem lightgray;
+  border-radius: 0.2rem; }
+
+.filmIconRental {
+  position: relative;
+  transform: rotate(20deg); }
 
 /*Fonts*/
 /*Bootstrap*/
