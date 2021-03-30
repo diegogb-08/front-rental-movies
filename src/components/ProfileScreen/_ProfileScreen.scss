@@ -10,5 +10,54 @@
     width: 100%;
     color: black;
     height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    // justify-content: center;
+    h1 {
+        border-bottom: 1px solid #282c2d;
+        text-align: center;
+        font-weight: bold;
+
+    }
 }
 
+.profileDetails {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #282c2d;
+
+    img {
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-weight: bold;
+    }
+}
+
+.profileContainer {
+    flex-direction: row;
+    p {
+        padding: 15px;
+        padding-left: 20px;
+    }
+}
+
+.profilePassword {
+    p {
+    display: flex;
+        color: gray;
+        opacity: 30%;
+    }
+}
+
+.profileTitle {
+    h2 {
+        font-size: .7rem;
+        font-weight: bold;
+
+    }
+}

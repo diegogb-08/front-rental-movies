@@ -3,15 +3,24 @@ import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { LOGOUT } from '../../redux/types/userType';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUser } from '@fortawesome/free-regular-svg-icons'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faVideo } from '@fortawesome/free-solid-svg-icons'
+import { faTicketAlt } from '@fortawesome/free-solid-svg-icons'
 
 
 function DropDownMenu(props) {
 
     let history = useHistory();
 
+
     const bringMeTo = () => {
+        history.push('/profile')
+    }
+    const rental = () => {
+        history.push('/rental')
+    }
+    const user = () => {
         history.push('/user')
     }
 
@@ -36,13 +45,25 @@ function DropDownMenu(props) {
             <div className="divItem" onClick={()=>bringMeTo()}>
                 <DropDownItem >
                     <FontAwesomeIcon icon={faUser} className="iconBtn"/>
-                    My Profile
+                    Account
+                </DropDownItem>
+            </div>
+            <div className="divItem" onClick={()=>rental()}>
+                <DropDownItem >
+                    <FontAwesomeIcon icon={faVideo} className="iconBtn"/>
+                    Rental
+                </DropDownItem>
+            </div>
+            <div className="divItem" onClick={()=>user()}>
+                <DropDownItem >
+                    <FontAwesomeIcon icon={faTicketAlt} className="iconBtn"/>
+                    User View
                 </DropDownItem>
             </div>
             <div className="divItem" onClick={()=>logOut()}>
                 <DropDownItem >
                     <FontAwesomeIcon icon={faSignOutAlt} className="iconBtn"/>
-                    Log Out
+                    Logout
                 </DropDownItem>
             </div>
         </div>

@@ -3,7 +3,12 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom'
-import AvatarUser from '../AvatarUser/AvatarUser';
+import NavBtn from '../NavBtn/NavBtn';
+import DropDownMenu from '../DropDownMenu/DropDownMenu';
+import profile from '../../img/avatarUser.png'
+import imgSubs from '../../img/Artboard.svg';
+
+
 
 
 
@@ -22,11 +27,26 @@ function ProfileScreen(props) {
     return (
         <div className="profileComponent">
             <Header onClick={() => home()}>
-                <AvatarUser />
+                <NavBtn>
+                    <DropDownMenu />
+                </NavBtn>
             </Header>
             <div className="profileBody">
-                Email: {props.user.email}<br></br>
-                Password: ******
+                <div className="profileContainer">
+                    <div className="profileTitle">
+                        <h1>Account <img src={imgSubs} alt="imgSubs"/> <h2>SUBSCRIBER SINCE 2015</h2></h1>
+                    </div>
+                    <div className="profileDetails">
+                        <img src={profile} alt="profile" />
+                        <p>Email: {props.user.email}</p>
+                        <div className="profilePassword">
+                            <p>Password: *********</p>
+                        </div>
+                    </div>
+                    <div className="profileInfo">
+                    </div>
+                </div>
+
             </div>
             <Footer />
         </div>

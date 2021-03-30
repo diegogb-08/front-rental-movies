@@ -18,7 +18,7 @@ function AvatarUser(props) {
         <div className="imageUser" >
             <div className='dropdown'>
                 <img src={profile} alt="profile" onClick={handleClick} />
-                <i className={click ? 'fas fa-poo' : 'fas fa-caret-down'} />
+                <i className={click ? 'fas fa-caret-up' : 'fas fa-caret-down'} />
                 <div className='dropdown-content'>
                     <a href='/rental'>Link 1</a>
                     <a href='/user'>Link 2</a>
