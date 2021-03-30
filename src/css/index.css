@@ -1319,19 +1319,48 @@ input:not(:focus):valid ~ .floating-label {
 
 .basketRental {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 8rem;
   margin-left: 5rem;
+  height: 10rem;
   width: 20rem;
-  height: 7.4rem;
   border: solid 0.1rem lightgray;
-  border-radius: 0.2rem; }
+  border-radius: 0.2rem;
+  font-size: 2.5rem;
+  display: flex; }
+
+.iconCounterContainer {
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row; }
 
 .filmIconRental {
+  display: flex;
   position: relative;
   transform: rotate(20deg); }
+
+.counterCartRental {
+  display: flex;
+  color: #e87d33;
+  font-size: 1.5rem;
+  position: relative;
+  top: 1rem;
+  left: 0.5rem;
+  font-weight: bold; }
+
+.pTotalPrice {
+  font-size: 1.1rem; }
+
+.priceButtonContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .userComponent {
   background: #141414;
@@ -1422,19 +1451,48 @@ input:not(:focus):valid ~ .floating-label {
 
 .basketRental {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 8rem;
   margin-left: 5rem;
+  height: 10rem;
   width: 20rem;
-  height: 7.4rem;
   border: solid 0.1rem lightgray;
-  border-radius: 0.2rem; }
+  border-radius: 0.2rem;
+  font-size: 2.5rem;
+  display: flex; }
+
+.iconCounterContainer {
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row; }
 
 .filmIconRental {
+  display: flex;
   position: relative;
   transform: rotate(20deg); }
+
+.counterCartRental {
+  display: flex;
+  color: #e87d33;
+  font-size: 1.5rem;
+  position: relative;
+  top: 1rem;
+  left: 0.5rem;
+  font-weight: bold; }
+
+.pTotalPrice {
+  font-size: 1.1rem; }
+
+.priceButtonContainer {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 /*Fonts*/
 /*Bootstrap*/
