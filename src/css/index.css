@@ -953,6 +953,17 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 0.9rem;
   cursor: pointer; }
 
+.actionDelete:hover {
+  color: #F40612;
+  font-size: 0.9rem;
+  cursor: pointer; }
+
+.actionSave:hover {
+  color: #F40612;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer; }
+
 .imageUser {
   display: flex;
   justify-content: flex-end;
