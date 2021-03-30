@@ -865,7 +865,7 @@ input:not(:focus):valid ~ .floating-label {
   height: 70vh; }
 
 .tabNav {
-  width: 26.7%; }
+  width: 28%; }
 
 .nav-item {
   cursor: pointer; }
