@@ -25,24 +25,27 @@ function Rental (props) {
         <div className="rentalContainer">
             <Header/>
           
-          <div className="rentalSuperMainContainer">
+          <div className="rentalSuperContainer">
               
-          <TabNav tabs={['Orders', 'Wishes', 'Last Orders', 'Gifts', 'Make a Gift']} selected={tab.selected} setSelected={setSelected}>
-              <Tab isSelected={tab.selected === 'Orders'}>
-                  <Orders/>
-              </Tab>
-              <Tab isSelected={tab.selected === 'Last Orders'}>
+            <TabNav tabs={['Orders', 'Wishes', 'Last Orders', 'Gifts', 'Make a Gift']} selected={tab.selected} setSelected={setSelected}>
+                <Tab isSelected={tab.selected === 'Orders'}>
+                    <Orders/>
+                </Tab>
+                <Tab isSelected={tab.selected === 'Last Orders'}>
 
-              </Tab>
-
-
+                </Tab>
 
 
-          </TabNav>
+
+
+            </TabNav>
 
             
-
+            
           </div>
+          
+          <div className="basketRental">Soy Tramitar Pedido</div>
+          
           
 
         </div>

@@ -1,8 +1,81 @@
-.prueba {
-  font-size: 1.2rem;
-}
 
 .imgOrder {
   margin-top: 2rem;
-  width: 10rem
+  width: 30rem
+}
+
+.filmsPrice {
+  color: red;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 0.9rem;
+  margin-right: 4.6rem;
+
+}
+.ordersContainer {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 1rem;
+  border-top: 0.1rem solid lightgrey;
+}
+
+.ordersInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 40rem;
+  
+}
+
+
+.ordersPrice {
+  display: flex;
+  flex-direction: row;
+  padding: 2.3rem;
+}
+
+.pPrice {
+  width: 4rem;
+  font-size: 1.5rem;
+  font-weight: 1000;
+}
+
+.orderTitle{
+  color: black;
+  font-size: 2rem;
+  margin-left: 3rem;
+}
+
+.inputGiftContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3.1rem;
+}
+
+.inputGift {
+  margin-top: 0.21rem;
+  cursor: pointer;
+}
+.pGift {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.ordersActionsContainer{
+  display: flex;
+  flex-direction: row;
+  margin-left: 3rem;
+}
+
+.actionDelete {
+  font-size: 0.9rem;
+  cursor: pointer;
+
+}
+
+.actionSave {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
 }

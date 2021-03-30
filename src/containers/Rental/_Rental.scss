@@ -1,21 +1,30 @@
 .rentalContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-sizing: border-box;
   max-width: 100%;
   margin: auto 0;
   background-color: nth($white , 1 )
 }
 
-.rentalSuperMainContainer {
+.rentalSuperContainer {
   display: flex;
   flex-direction: row;
-  padding: 2rem;
-  margin-top: 5rem;
-  width: 100%;
-  background-color: nth($white , 1 )
-  //border-right: 0.1rem solid grey;
- // border-left: 0.1rem solid grey;
-
+  margin-top: 8rem;
+  margin-left: 5rem;
+  width: 70%;
+  background-color: white;
+  padding: 1rem;
+  border: solid 0.1rem lightgray;
+  border-radius: 0.2rem;
 }
 
+.basketRental {
+  display: flex;
+  flex-direction: row;
+  margin-top: 8rem;
+  margin-left: 2rem;
+  width: 18rem;
+  height: 8rem;
+  background-color: yellow;
+}
