@@ -26,7 +26,7 @@ const cartReducer = (state = initialState, action) => {
                 cart : action.payload
             };
         
-        // Repo: https://github.com/GeeksHubsAcademy/cartEcommerceFSDJunior/blob/master/src/redux/reducers/cartReducer.js    
+           
         case EDIT:  
 		
             let newCart = state.cart.map( (_x) => {
