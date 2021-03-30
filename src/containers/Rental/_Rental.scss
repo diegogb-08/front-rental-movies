@@ -1,21 +1,73 @@
 .rentalContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   box-sizing: border-box;
   max-width: 100%;
   margin: auto 0;
   background-color: nth($white , 1 )
 }
 
-.rentalSuperMainContainer {
+.rentalSuperContainer {
   display: flex;
   flex-direction: row;
-  padding: 2rem;
-  margin-top: 5rem;
-  width: 100%;
-  background-color: nth($white , 1 )
-  //border-right: 0.1rem solid grey;
- // border-left: 0.1rem solid grey;
-
+  margin-top: 8rem;
+  margin-left: 5rem;
+  width: 70%;
+  background-color: white;
+  padding: 1rem;
+  border: solid 0.1rem lightgray;
+  border-radius: 0.2rem;
 }
 
+.basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8rem;
+  margin-left: 5rem;
+  height: 10rem;
+  width: 20rem;
+  border: solid 0.1rem lightgray;
+  border-radius: 0.2rem;
+  font-size: 2.5rem;
+  display: flex; 
+  flex-wrap: nowrap;
+  scroll-behavior: smooth
+}
+
+.iconCounterContainer {
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.filmIconRental {
+  display: flex;
+  position: relative;
+  transform: rotate(20deg);
+}
+
+.counterCartRental {
+  display: flex;
+  color: $fontcolor5;
+  font-size: 1.5rem;
+  position: relative;
+  top: 1rem;
+  left: 0.5rem;
+  font-weight: bold;
+}
+
+.pTotalPrice{
+  font-size: 1.1rem;
+}
+
+.priceButtonContainer{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

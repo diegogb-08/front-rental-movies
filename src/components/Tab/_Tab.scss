@@ -1,8 +1,12 @@
 .tabNav {
-  width: 50%;
+  width: 28%;  // AQUI ROB 99.74%
+  
+  
+}
+
+.nav-item {
   cursor: pointer;
-  background-color: red;
-  margin-bottom: 1rem;
+ 
 }
 
 .tab {
@@ -18,8 +22,10 @@
 .tabInfo{
   width: 100%;
   display: flex;
+  flex-direction: row;
+  padding: 1rem;
   justify-content: flex-start;
   flex-direction: row;
-  background-color: white;
+  background-color:white;
   
 }
