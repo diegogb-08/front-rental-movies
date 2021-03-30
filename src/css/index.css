@@ -863,7 +863,75 @@ input:not(:focus):valid ~ .floating-label {
   background-color: #F5F5F5;
   width: 100%;
   color: black;
-  height: 70vh; }
+  height: 64vh;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center; }
+  .profileBody h1 {
+    border-bottom: 1px solid #282c2d;
+    text-align: center;
+    font-weight: bold; }
+
+.profileDetails {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #282c2d; }
+  .profileDetails img {
+    height: 100px;
+    margin-bottom: 1rem; }
+  .profileDetails p {
+    font-weight: bold; }
+
+.profileContainer {
+  flex-direction: row;
+  margin-top: 3rem;
+  justify-content: center; }
+  .profileContainer p {
+    padding: 15px;
+    padding-left: 20px; }
+
+.profilePassword p {
+  display: flex;
+  color: gray;
+  opacity: 30%; }
+
+.profileTitle h2 {
+  font-size: .7rem;
+  font-weight: bold; }
+
+.profileInfo {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #282c2d;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  .profileInfo h2 {
+    color: #d3d3d3;
+    font-weight: bolder;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 1.5rem; }
+
+.profilePlan {
+  flex-direction: row; }
+  .profilePlan p {
+    flex-direction: row;
+    color: black; }
+  .profilePlan span {
+    font-weight: bolder; }
+
+.buttonProfile {
+  margin-top: 1rem;
+  border-radius: .3rem;
+  background-color: #008CBA;
+  color: white;
+  border: 2px solid #008CBA; }
+
+.buttonProfile:hover {
+  background-color: white;
+  color: black; }
 
 .tabNav {
   width: 50%;
@@ -1104,25 +1172,25 @@ input:not(:focus):valid ~ .floating-label {
   vertical-align: top; }
 
 .dropDown {
-  height: 7rem;
-  width: 12rem;
-  background-color: whitesmoke;
+  height: 10rem;
+  width: 10rem;
+  background-color: black;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
   top: 60px;
   transform: translateX(-35%);
   overflow: hidden;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   border: 1px solid #ccc;
   padding: 0.5rem;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.75); }
 
 .divItem {
-  width: 100%;
-  height: 100%; }
+  width: 100%; }
 
 .menuItem {
   text-decoration: none;
@@ -1130,11 +1198,13 @@ input:not(:focus):valid ~ .floating-label {
   transition: 3ms;
   border-radius: 0.3rem;
   width: 100%;
-  color: blue; }
+  color: white;
+  font-weight: bold;
+  font-family: Helvetica, sans-serif;
+  font-size: .8rem; }
 
 .menuItem:hover {
-  background-color: #c2c2c2;
-  color: black; }
+  text-decoration: underline; }
 
 .iconBtn {
   margin-right: 1rem; }

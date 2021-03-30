@@ -9,10 +9,12 @@ function NavBtn(props) {
 
     const [open, setOpen] = useState(false);
 
+    const handleClick = () => setOpen(!open);
+
 
 
     return (
-        <div className="loggedUser" onMouseOver={()=> setTimeout(()=>{setOpen(!open)},500) } onMouseOut={()=> setTimeout(()=>{setOpen(!open)},500)}>
+        <div className="loggedUser" onClick={handleClick}>
             <FontAwesomeIcon className="arrow" icon={faSortDown} />
             <img className='profileImg' src={profile} alt={profile}/>
             {open && <DropDownMenu></DropDownMenu>}
