@@ -448,8 +448,8 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem 0 2rem;
-  background-color: #00000050; }
+  padding: 1rem 2rem 1rem 2rem;
+  background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0.034)); }
 
 .logoContainer {
   height: 3rem;
@@ -797,7 +797,7 @@ input:not(:focus):valid ~ .floating-label {
   color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   font-weight: bold; }
 
 .carouselComponent {
@@ -865,9 +865,10 @@ input:not(:focus):valid ~ .floating-label {
   height: 70vh; }
 
 .tabNav {
-  height: 95%;
-  width: 100%;
-  cursor: pointer; }
+  width: 50%;
+  cursor: pointer;
+  background-color: red;
+  margin-bottom: 1rem; }
 
 .tab {
   height: 100%;
@@ -879,13 +880,67 @@ input:not(:focus):valid ~ .floating-label {
 
 .tabInfo {
   width: 100%;
-  height: 97%;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color: white; }
 
-.ordersContainer {
-  display: flex; }
+.prueba {
+  font-size: 1.2rem; }
+
+.imgOrder {
+  margin-top: 2rem;
+  width: 10rem; }
+
+.search-box {
+  position: relative;
+  width: 250px; }
+  .search-box .search-box__input {
+    outline: none;
+    background: rgba(0, 0, 0, 0.85);
+    border: solid 1px rgba(255, 255, 255, 0.85);
+    box-sizing: border-box;
+    padding: 7px 14px 7px 40px;
+    width: 0%;
+    font-size: 13px;
+    color: #fff;
+    opacity: 0;
+    transition: ease width 0.5s, ease opacity 0.5s;
+    float: right; }
+  .search-box .search-box__icon {
+    position: absolute;
+    top: 7px;
+    color: white;
+    z-index: 10;
+    cursor: pointer;
+    right: 12px;
+    transition: ease transform 0.5s;
+    transition-delay: 50ms; }
+  .search-box.active .search-box__icon {
+    transform: translateX(-214px); }
+  .search-box.active .search-box__input {
+    opacity: 1;
+    width: 100%; }
+
+.cartComponent {
+  height: 100%;
+  width: auto;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer; }
+
+.filmIcon {
+  position: relative;
+  transform: rotate(20deg); }
+
+.counterCart {
+  color: #e87d33;
+  font-size: 1.5rem;
+  position: relative;
+  top: 1rem;
+  left: 0.5rem;
+  font-weight: bold; }
 
 .imageUser {
   display: flex;
@@ -1004,6 +1059,48 @@ input:not(:focus):valid ~ .floating-label {
 .dislike:hover + .label {
   visibility: visible;
   transition: 0.3s ease all; }
+
+.multiSearchComponent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding-bottom: 5rem; }
+
+.searchGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  justify-content: center; }
+
+.searchByCast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  .searchByCast h4 {
+    width: 50%;
+    margin-top: 3rem; }
+
+.cast {
+  height: 20rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%; }
+  .cast .castImg {
+    border-radius: 0.3em; }
+
+.castImg {
+  height: 100%;
+  width: auto;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  vertical-align: top; }
 
 /*Containers*/
 .homeContainer {
@@ -1135,34 +1232,15 @@ input:not(:focus):valid ~ .floating-label {
   box-sizing: border-box;
   max-width: 100%;
   margin: auto 0;
-  height: 100vh;
   background-color: #ffffff; }
 
 .rentalSuperMainContainer {
   display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 100%;
-  height: 100vh;
+  flex-direction: row;
+  padding: 2rem;
   margin-top: 5rem;
-  background-color: #ffffff; }
-
-.rentalMainContainer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 80%;
-  height: 70vh;
-  border: solid 0.1rem black; }
-
-.cardInfo {
-  display: flex;
   width: 100%;
-  height: 100%; }
+  background-color: #ffffff; }
 
 .userComponent {
   background: #141414;
@@ -1209,7 +1287,6 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  height: 3rem;
   width: 3rem;
   z-index: -1; }
   .imageUser img {
@@ -1218,40 +1295,36 @@ input:not(:focus):valid ~ .floating-label {
     margin-right: 2rem;
     cursor: pointer; }
 
+.cartCounter {
+  height: 100%;
+  width: auto; }
+
+.navMenu {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .navMenu div {
+    cursor: pointer; }
+  .navMenu div:hover {
+    color: #7c7578; }
+
 .rentalContainer {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   max-width: 100%;
   margin: auto 0;
-  height: 100vh;
   background-color: #ffffff; }
 
 .rentalSuperMainContainer {
   display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 100%;
-  height: 100vh;
+  flex-direction: row;
+  padding: 2rem;
   margin-top: 5rem;
-  background-color: #ffffff; }
-
-.rentalMainContainer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 80%;
-  height: 70vh;
-  border: solid 0.1rem black; }
-
-.cardInfo {
-  display: flex;
   width: 100%;
-  height: 100%; }
+  background-color: #ffffff; }
 
 /*Fonts*/
 /*Bootstrap*/

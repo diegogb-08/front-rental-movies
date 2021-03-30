@@ -5,10 +5,10 @@ import { faPlus, faCartPlus, faHeart} from '@fortawesome/free-solid-svg-icons'
 // Redux
 import {connect} from 'react-redux';
 import {ADD} from '../../redux/types/cartType';
+import {ADDLIST} from '../../redux/types/listType';
 
 const FilmSelected = (props) => {
 
-    const filmCollection = {};
     const film = props.film
     
 
@@ -18,10 +18,15 @@ const FilmSelected = (props) => {
     const addCart = <FontAwesomeIcon icon={faCartPlus} />
     const like = <FontAwesomeIcon icon={faHeart} />
 
-    // Function
+    // FUNCTIONS
     const addFilmToCart = () => {
         film.inCart = film.inCart +1
         props.dispatch({type: ADD, payload: film})
+    }
+
+    const addFilmToList = () => {
+        film.inCart = film.inCart +1
+        props.dispatch({type: ADDLIST, payload: film})
     }
 
     return (
@@ -44,7 +49,7 @@ const FilmSelected = (props) => {
                                 </div>
                                 <div>
                                     <div className='button addCart' onClick={()=>addFilmToCart()}>{addCart}</div>
-                                    <div className="label">Add Cart</div>
+                                    <div className="label" onClick={()=>addFilmToList()}>Add Cart</div>
                                 </div>
                                 <div>
                                     <div className='button like'>{like}</div>

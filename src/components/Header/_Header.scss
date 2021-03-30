@@ -8,8 +8,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: $p1 $p2 0 $p2;
-    background-color: $blacktransparent1;
+    padding: $p1 $p2 $p1 $p2;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.034));
 }
 
 .logoContainer{
