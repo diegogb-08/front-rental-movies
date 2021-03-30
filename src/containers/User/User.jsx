@@ -103,7 +103,7 @@ const User = (props) => {
                         {
                             Object.keys(genres).map((genre, index) => {
                                 return (
-                                    <Movie key={index} title={genre} className={genre}>
+                                    <Movie key={index} title={genre} genre={genre}>
 
                                         {   // eslint-disable-next-line
                                             films[genre]?.map((film) =>{

@@ -9,14 +9,11 @@ import Header from '../Header/Header';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import Cart from '../../components/Cart/Cart';
 import NavBtn from '../../components/NavBtn/NavBtn';
-import { useHistory } from 'react-router-dom'
 import NavMenu from '../NavMenu/NavMenu';
 
 
 const MyList = (props) => {
-    
-    let history = useHistory()
-    
+        
     useEffect(()=>{
 
     },[])
@@ -35,7 +32,7 @@ const MyList = (props) => {
                     </NavBtn> 
                 </div>
             </Header>
-
+            <h4>My List...</h4>
             {
                 props.list.length === 0
                 ?

@@ -1,6 +1,6 @@
 
 .movieData{
-    width: 35rem;
+    width: 30rem;
     display: flex;
     color: $fontcolor1;
     flex-direction: column;
@@ -42,6 +42,11 @@
     .originalLanguage{
       background-color: $lable3;
     }
+  }
+
+  .overview{
+    text-align: justify;
+    font-size: 11px;
   }
   
   .bottomInfo{

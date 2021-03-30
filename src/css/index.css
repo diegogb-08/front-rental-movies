@@ -973,7 +973,7 @@ input:not(:focus):valid ~ .floating-label {
   font-weight: bold; }
 
 .movieData {
-  width: 35rem;
+  width: 30rem;
   display: flex;
   color: #ffffff;
   flex-direction: column;
@@ -1007,6 +1007,10 @@ input:not(:focus):valid ~ .floating-label {
     background-color: #0f7fe8; }
   .topInfo .originalLanguage {
     background-color: #F40612; }
+
+.overview {
+  text-align: justify;
+  font-size: 11px; }
 
 .bottomInfo {
   width: 100%;
@@ -1169,14 +1173,16 @@ input:not(:focus):valid ~ .floating-label {
 .myListComponent {
   background: #141414;
   width: 100%;
-  height: 100vh;
   color: #ffffff;
-  padding-top: 10rem; }
+  padding-top: 8rem;
+  padding-bottom: 5rem; }
+  .myListComponent h4 {
+    padding-left: 5rem; }
 
 .listGrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.5rem;
   justify-content: center;
   padding: 0 1rem 0 1rem; }
 

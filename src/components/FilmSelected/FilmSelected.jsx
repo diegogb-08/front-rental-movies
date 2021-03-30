@@ -45,7 +45,7 @@ const FilmSelected = (props) => {
     }
 
     const addLike = () => {
-        
+        setColor({...textcolor, like: '#F40612'})
     }
    
 
@@ -61,7 +61,7 @@ const FilmSelected = (props) => {
                             <h5>{film.title}</h5>
                             <p>Original title: {film.originalTitle}</p>
                             {/* <p>{film.genres}</p> */}
-                            <p>{film.overview}</p>
+                            <p className='overview'>{film.overview}</p>
                             <div className="bottomInfo">
                                 <div>
                                     <div className='button addList' style={{color:textcolor.list}} onClick={()=>addFilmToList()}>{addList}</div>
