@@ -10,10 +10,12 @@ import {
     movie, apiKey, genres, query} from '../../api/ApiMovieDB'
 
 import ModalRender from '../Modal/ModalRender';
-import AvatarUser from '../../components/AvatarUser/AvatarUser';
+// import AvatarUser from '../../components/AvatarUser/AvatarUser';
 import Cart from '../../components/Cart/Cart';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import MultiSearch from '../../components/MultiSearch/MultiSearch';
+import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
+import NavBtn from '../../components/NavBtn/NavBtn';
 
 
 function User(props) {
@@ -122,7 +124,10 @@ function User(props) {
                     <div className="cartCounter">
                         <Cart/>
                     </div>
-                    <AvatarUser/>
+                    <NavBtn>
+                        <DropDownMenu/>
+                    </NavBtn>
+                    {/* <AvatarUser/> */}
   
                 </div>
             </Header>
