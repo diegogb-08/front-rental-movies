@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 import axios from 'axios'
 import Header from '../../components/Header/Header';
 import Movie from '../../components/Movies/Movies';
-import profile from '../../img/avatarUser.png'
-import { useHistory } from 'react-router-dom'
 
 // Endpoints API The movieDB
 import {
@@ -12,13 +10,14 @@ import {
     movie, apiKey, genres, query} from '../../api/ApiMovieDB'
 
 import ModalRender from '../Modal/ModalRender';
+import AvatarUser from '../../components/AvatarUser/AvatarUser';
 import Cart from '../../components/Cart/Cart';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import MultiSearch from '../../components/MultiSearch/MultiSearch';
 
+
 function User(props) {
 
-    let history = useHistory();
 
     // HOOKS
     const [films, setFilms] = useState({})
@@ -106,6 +105,9 @@ function User(props) {
         <div className="userComponent">
             <Header>
                 <div className="navbar">
+
+                    
+
                     <div className="navMenu">
                         <div className="home" onClick={()=>home()}>Home</div>
                         <div className="series">Series</div>
@@ -120,9 +122,8 @@ function User(props) {
                     <div className="cartCounter">
                         <Cart/>
                     </div>
-                    <div className="imageUser">
-                        <img src={profile} alt="profile" onClick={() => { history.push('/profile') }} />
-                    </div>
+                    <AvatarUser/>
+  
                 </div>
             </Header>
             {

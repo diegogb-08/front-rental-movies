@@ -3,6 +3,8 @@ import Footer from '../Footer/Footer'
 import Header from '../Header/Header'
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom'
+import AvatarUser from '../AvatarUser/AvatarUser';
+
 
 
 
@@ -19,7 +21,9 @@ function ProfileScreen(props) {
 
     return (
         <div className="profileComponent">
-            <Header onClick={() => home()} />
+            <Header onClick={() => home()}>
+                <AvatarUser />
+            </Header>
             <div className="profileBody">
                 Email: {props.user.email}<br></br>
                 Password: ******
