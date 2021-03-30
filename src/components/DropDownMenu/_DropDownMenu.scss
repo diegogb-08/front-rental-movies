@@ -1,0 +1,40 @@
+.dropDown{
+    height: 7rem;
+    width: 12rem;
+    background-color: whitesmoke;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 60px;
+    transform: translateX(-35%);
+    overflow: hidden;
+    border-radius: 0.3rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+}
+
+.divItem{
+    width: 100%;
+    height: 100%;
+
+}
+
+.menuItem {
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: 3ms;
+    border-radius: 0.3rem;
+    width: 100%;
+    color: blue;
+}
+.menuItem:hover {
+    background-color: rgb(194, 194, 194);
+    color: black;
+}
+
+.iconBtn{
+    margin-right: 1rem;
+}
