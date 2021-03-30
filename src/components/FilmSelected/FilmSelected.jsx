@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, /*useEffect*/} from 'react'
 import moment from 'moment'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faCartPlus, faHeart} from '@fortawesome/free-solid-svg-icons'
@@ -10,6 +10,15 @@ import {ADDLIST} from '../../redux/types/listType';
 const FilmSelected = (props) => {
 
     let film = props.film
+    // let idCart = props.cart.map(item => item.id)
+    // let idCartFound = idCart.find(element => element === film.id);
+    // let idList = props.list.map(item => item.id)
+    // let idListFound = idList.find(element => element === film.id)
+    // Incons export to buttons
+
+    const addList = <FontAwesomeIcon icon={faPlus} />
+    const addCart = <FontAwesomeIcon icon={faCartPlus} />
+    const like = <FontAwesomeIcon icon={faHeart} />
 
     // HOOKS
 
@@ -20,30 +29,43 @@ const FilmSelected = (props) => {
     });
 
 
+    // const checkProps = () => {
+    //     if(idCartFound !== undefined)
+    //         setColor({...textcolor, cart: 'green'})
+    //     if( idListFound !== undefined)
+    //         setColor({...textcolor, list: '#0f7fe8'})
+    // }
 
-    // Incons export to buttons
 
-    const addList = <FontAwesomeIcon icon={faPlus} />
-    const addCart = <FontAwesomeIcon icon={faCartPlus} />
-    const like = <FontAwesomeIcon icon={faHeart} />
+
+    // useEffect(()=> {
+    //     checkProps()
+    // },[textcolor])
+
+
 
     // FUNCTIONS
     const addFilmToCart = () => {
-        if(film.inCart === 0)
-        film.inCart = film.inCart +1
-        props.dispatch({type: ADD, payload: film})
-        setColor({...textcolor, cart: 'green'})
-
+        let id = props.cart.map(item => item.id)
+        if(id.find(element => element === film.id) === undefined){
+            film.inCart = film.inCart +1
+            props.dispatch({type: ADD, payload: film})
+            setColor({...textcolor, cart: 'green'})
+        }else{
+            alert('You are trying to add an existing product to the cart!')
+        }
     }
 
     const addFilmToList = () => {
         let list = film
-        // let include = props.list.includes(id:list.id)
-        // console.log(include)
-        if(list.inList === 0)
-        list.inList = list.inList +1
-        props.dispatch({type: ADDLIST, payload: list})
-        setColor({...textcolor, list: '#0f7fe8'})
+        let id = props.list.map(item => item.id)
+        if(id.find(element => element === list.id) === undefined){
+            list.inList = list.inList +1
+            props.dispatch({type: ADDLIST, payload: list})
+            setColor({...textcolor, list: '#0f7fe8'})
+        }else{
+            alert('You are trying to add an existing product to the list!')
+        }
     }
 
     const addLike = () => {
