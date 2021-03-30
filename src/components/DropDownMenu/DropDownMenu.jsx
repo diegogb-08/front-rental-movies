@@ -28,6 +28,7 @@ function DropDownMenu(props) {
         setTimeout(()=> {
             props.dispatch({ type: LOGOUT, payload : {}});
         },500);
+        history.push("/");
     }
 
     function DropDownItem(props){
