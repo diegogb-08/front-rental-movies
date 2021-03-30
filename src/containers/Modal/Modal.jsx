@@ -41,7 +41,6 @@ const styles = {
     },
     window: {
         position: 'relative',
-        background: '#fff',
         borderRadius: 5,
         boxShadow: '2px 2px 10px rgba(0,0,0,0.2)',
         zIndex: 1000,
@@ -50,13 +49,19 @@ const styles = {
     },
     closeBtn: {
         position: 'absolute',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '1.5rem',
+        height: '1.5rem',
         top: 0,
         right: 0,
-        borderRadius: '4rem',
+        borderRadius: '5rem',
         cursor: 'pointer',
         marginRight: '0.5rem',
         marginTop: '0.3rem',
-        color: 'grey',
+        color: 'white',
+        backgroundColor: '#777777c2',
     },
 
     background: {

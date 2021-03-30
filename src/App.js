@@ -5,6 +5,7 @@ import Register from './components/Register/Register';
 import ProfileScreen from './components/ProfileScreen/ProfileScreen';
 import User from './containers/User/User';
 import Rental from './containers/Rental/Rental';
+import MyList from './components/MyList/MyList';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/user" exact component={User}/>
         <Route path="/profile" exact component={ProfileScreen}/>
         <Route path="/rental" exact component={Rental}/>
-
+        <Route path='/mylist' exact component={MyList}/>
  
 
       </Switch>

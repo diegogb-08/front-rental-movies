@@ -1,7 +1,8 @@
-import {ADDLIST, REMOVE, CLEAN} from '../types/listType';
+import {ADDLIST, REMOVELIST, CLEANLIST} from '../types/listType';
 
 const initialState = {
     list : [],
+    totalList : 0
 };
 
 const listReducer = (state = initialState, action) => {
@@ -12,13 +13,13 @@ const listReducer = (state = initialState, action) => {
                 list: [...state.list, action.payload]
             }
         
-        case REMOVE : 
+        case REMOVELIST : 
             return {
                 ...state,
                 list : action.payload
             }
 
-        case CLEAN : 
+        case CLEANLIST : 
             return {
                 ...state,
                 list : action.payload

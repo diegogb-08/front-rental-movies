@@ -1,6 +1,6 @@
 
 .movieData{
-    width: 35rem;
+    width: 30rem;
     display: flex;
     color: $fontcolor1;
     flex-direction: column;
@@ -43,6 +43,11 @@
       background-color: $lable3;
     }
   }
+
+  .overview{
+    text-align: justify;
+    font-size: 11px;
+  }
   
   .bottomInfo{
     width: 100%;
@@ -61,12 +66,13 @@
       border-radius: 50%;
       cursor: pointer;
       text-align: center;
-      transition: 0.3s ease;
+      transition: 0.2s ease;
     }
     .button:hover{
       background-color: $blacktransparent3;
       transition: 0.3s ease;
     }
+
   }
   
   

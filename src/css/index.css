@@ -1041,7 +1041,7 @@ input:not(:focus):valid ~ .floating-label {
   font-weight: bold; }
 
 .movieData {
-  width: 35rem;
+  width: 30rem;
   display: flex;
   color: #ffffff;
   flex-direction: column;
@@ -1076,6 +1076,10 @@ input:not(:focus):valid ~ .floating-label {
   .topInfo .originalLanguage {
     background-color: #F40612; }
 
+.overview {
+  text-align: justify;
+  font-size: 11px; }
+
 .bottomInfo {
   width: 100%;
   height: 5rem;
@@ -1093,7 +1097,7 @@ input:not(:focus):valid ~ .floating-label {
     border-radius: 50%;
     cursor: pointer;
     text-align: center;
-    transition: 0.3s ease; }
+    transition: 0.2s ease; }
   .bottomInfo .button:hover {
     background-color: #777777c2;
     transition: 0.3s ease; }
@@ -1235,6 +1239,39 @@ input:not(:focus):valid ~ .floating-label {
   bottom: 1.3rem;
   font-weight: bold;
   color: white; }
+
+.myListComponent {
+  background: #141414;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 8rem;
+  padding-bottom: 5rem; }
+  .myListComponent h4 {
+    padding-left: 5rem; }
+
+.listGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 0.5rem;
+  justify-content: center;
+  padding: 0 1rem 0 1rem; }
+
+.noList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.navMenu {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center; }
+  .navMenu div {
+    cursor: pointer; }
+  .navMenu div:hover {
+    color: #7c7578; }
 
 /*Containers*/
 .homeContainer {
@@ -1432,17 +1469,6 @@ input:not(:focus):valid ~ .floating-label {
 .cartCounter {
   height: 100%;
   width: auto; }
-
-.navMenu {
-  display: flex;
-  width: 30%;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center; }
-  .navMenu div {
-    cursor: pointer; }
-  .navMenu div:hover {
-    color: #7c7578; }
 
 .rentalContainer {
   display: flex;
