@@ -1329,7 +1329,9 @@ input:not(:focus):valid ~ .floating-label {
   border: solid 0.1rem lightgray;
   border-radius: 0.2rem;
   font-size: 2.5rem;
-  display: flex; }
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth; }
 
 .iconCounterContainer {
   display: flex;
@@ -1461,7 +1463,9 @@ input:not(:focus):valid ~ .floating-label {
   border: solid 0.1rem lightgray;
   border-radius: 0.2rem;
   font-size: 2.5rem;
-  display: flex; }
+  display: flex;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth; }
 
 .iconCounterContainer {
   display: flex;

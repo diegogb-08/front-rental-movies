@@ -19,7 +19,7 @@
   border-radius: 0.2rem;
 }
 
-.basketRental {
+.basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,6 +32,8 @@
   border-radius: 0.2rem;
   font-size: 2.5rem;
   display: flex; 
+  flex-wrap: nowrap;
+  scroll-behavior: smooth
 }
 
 .iconCounterContainer {
