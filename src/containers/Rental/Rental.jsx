@@ -27,7 +27,7 @@ function Rental (props) {
           
           <div className="rentalSuperContainer">
               
-            <TabNav tabs={['Orders', 'Wishes', 'Last Orders', 'Gifts', 'Make a Gift']} selected={tab.selected} setSelected={setSelected}>
+            <TabNav tabs={['Orders', 'Wishes', 'Last Orders', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
                 <Tab isSelected={tab.selected === 'Orders'}>
                     <Orders/>
                 </Tab>
