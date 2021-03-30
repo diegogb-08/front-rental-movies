@@ -6,3 +6,4 @@ export const query = '?query=';
 export const movie = '/movie';
 export const rental = '/rental';
 export const searchEmail = '/email';
+export const update = '/update';

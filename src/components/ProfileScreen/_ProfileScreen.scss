@@ -49,8 +49,9 @@
 }
 
 .profilePassword {
-    p {
     display: flex;
+    flex-direction: row;
+    p {
         color: gray;
         opacity: 30%;
     }
@@ -70,6 +71,7 @@
     border-bottom: 1px solid #282c2d;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    justify-content: center;
     h2 {
         color: #d3d3d3;
         font-weight: bolder;
@@ -100,7 +102,11 @@
 }
 
 .buttonProfile:hover {
-    
     background-color: white;
     color: black;
+}
+
+.updateEmail {
+    display: flex;
+    flex-direction: column;
 }

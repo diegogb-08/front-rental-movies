@@ -24,6 +24,10 @@ function ProfileScreen(props) {
         }, 1000)
     }
 
+    const updateEmail = () => {
+        history.push('/update')
+    }
+
     return (
         <div className="profileComponent">
             <Header onClick={() => home()}>
@@ -34,13 +38,20 @@ function ProfileScreen(props) {
             <div className="profileBody">
                 <div className="profileContainer">
                     <div className="profileTitle">
-                        <h1>Account <img src={imgSubs} alt="imgSubs" /> <h2>SUBSCRIBER SINCE 2015</h2></h1>
+                        <h1>Account <img src={imgSubs} alt="imgSubs" /> </h1>
+                        <h2>SUBSCRIBER SINCE 2015</h2>
                     </div>
                     <div className="profileDetails">
                         <img src={profile} alt="profile" />
                         <p>Email: {props.user.email}</p>
+                        <div className="updateEmail">
+                            <button className="buttonProfile" onClick={updateEmail}>CHANGE EMAIL</button>
+                        </div>
                         <div className="profilePassword">
                             <p>Password: *********</p>
+                            <div className="updateEmail">
+                                <button className="buttonProfile">CHANGE PASSWORD</button>
+                            </div>
                         </div>
                     </div>
                     <div className="profileInfo">
