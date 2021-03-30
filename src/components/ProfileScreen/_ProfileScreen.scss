@@ -40,6 +40,8 @@
 
 .profileContainer {
     flex-direction: row;
+    margin-top: 3rem;
+    justify-content: center;
     p {
         padding: 15px;
         padding-left: 20px;
@@ -94,7 +96,7 @@
     background-color: #008CBA;
     color: white;
     border: 2px solid #008CBA;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    // box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .buttonProfile:hover {
