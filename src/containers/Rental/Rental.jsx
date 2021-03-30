@@ -51,10 +51,10 @@ function Rental (props) {
           <div className="basketRental">
             <div className="iconCounterContainer">
               <div><FontAwesomeIcon className='filmIconRental' icon={faFilm}/></div>
-              <div className="counterCartRental">{props.cart.length}</div>
+              <div className="counterCartRental">{props.cart.length}</div> 
             </div>
             <div className="priceButtonContainer">
-                <p className="pTotalPrice">Total Price: PROPS</p>
+                <p className="pTotalPrice">Total Price PROPS</p>
                 <div className="rentalButton">
                   <Button name="Buy"/>
                 </div>

@@ -1,8 +1,17 @@
 import React from 'react'
 import {connect} from 'react-redux';
+import {REMOVE} from '../../redux/types/cartType'
 
 
 function Orders(props) {
+
+  const deleteOrder = () => {
+    
+
+    props.dispatch({type: REMOVE, payload: [] });
+    
+    
+};
 
 
   return(
@@ -26,7 +35,7 @@ function Orders(props) {
                               <p className="pGift">It's a gift</p>
                             </div>
                             <div className="ordersActionsContainer">
-                              <u className="actionDelete">Delete</u>
+                              <u className="actionDelete" onClick={()=> deleteOrder()}>Delete</u>
                               <u className="actionSave">Save on Whishes</u>
                             </div>
 
