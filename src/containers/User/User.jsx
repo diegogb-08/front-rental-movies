@@ -10,10 +10,10 @@ import MultiSearch from '../../components/MultiSearch/MultiSearch';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import NavBtn from '../../components/NavBtn/NavBtn';
 import {call, searchByGenre} from '../../tools/helper'
+import NavMenu from '../../components/NavMenu/NavMenu';
 
 // Endpoints API The movieDB
 import {pathImg, baseUrl, search, multi, apiKey, genres, query} from '../../api/ApiMovieDB'
-import NavMenu from '../../components/NavMenu/NavMenu';
 
 
 const User = (props) => {
@@ -23,10 +23,9 @@ const User = (props) => {
     const [films, setFilms] = useState({})
     const [searchFilm, setSearch] = useState('')
     const [multiSearch, setMultiSearch] = useState([])
+    
     // HANDLER
-
     const handlState = (e) => {
-
         let value = encodeURIComponent(e.target.value.trim())
         setSearch(value)
     }
@@ -57,7 +56,7 @@ const User = (props) => {
         // eslint-disable-next-line
     },[])
 
-    // it detect the changes from the input and on key press Enter, sends the info to multiSearch()
+    // it detects the changes from the input and on key press Enter, sends the info to multiSearch()
     useEffect(() => {
         const listener = event => {
           if (event.code === "Enter" || event.code === "NumpadEnter") {
