@@ -38,6 +38,8 @@ const FilmSelected = (props) => {
 
     const addFilmToList = () => {
         let list = film
+        // let include = props.list.includes(id:list.id)
+        // console.log(include)
         if(list.inList === 0)
         list.inList = list.inList +1
         props.dispatch({type: ADDLIST, payload: list})
@@ -81,6 +83,11 @@ const FilmSelected = (props) => {
     )
 };
 
+const mapStateToProps = state => {
+    return {
+        list: state.listReducer.list,
+        cart: state.cartReducer.cart,
+    }
+};
 
-
-export default connect()(FilmSelected);
+export default connect(mapStateToProps)(FilmSelected);
