@@ -1,31 +1,28 @@
 import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
-import axios from 'axios'
 import Header from '../../components/Header/Header';
 import Movie from '../../components/Movies/Movies';
 
-// Endpoints API The movieDB
-import {
-    pathImg, baseUrl, search, multi, discover,
-    movie, apiKey, genres, query} from '../../api/ApiMovieDB'
-
 import ModalRender from '../Modal/ModalRender';
-// import AvatarUser from '../../components/AvatarUser/AvatarUser';
 import Cart from '../../components/Cart/Cart';
 import SearchBox from '../../components/SearchBox/SearchBox';
 import MultiSearch from '../../components/MultiSearch/MultiSearch';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import NavBtn from '../../components/NavBtn/NavBtn';
+import {call, searchByGenre} from '../../tools/helper'
+
+// Endpoints API The movieDB
+import {pathImg, baseUrl, search, multi, apiKey, genres, query} from '../../api/ApiMovieDB'
+import NavMenu from '../../components/NavMenu/NavMenu';
 
 
-function User(props) {
+const User = (props) => {
 
-
+    
     // HOOKS
     const [films, setFilms] = useState({})
     const [searchFilm, setSearch] = useState('')
     const [multiSearch, setMultiSearch] = useState([])
-    console.log(multiSearch)
     // HANDLER
 
     const handlState = (e) => {
@@ -34,27 +31,7 @@ function User(props) {
         setSearch(value)
     }
 
-    // Function to filter the call to the API
-
-    const call = async (url) => {
-        let res = await axios.get(url);
-        if (res.data.results)
-            return res.data.results;
-        if (res.data.title)
-            return res.data;
-        else {
-            return new Error("The URL was wrong!");
-        }
-    };
-
-
-    // Here we have the URL for the call to the API and return the object/s
-
-    const searchByGenre = async (value) => {
-        let url = `${baseUrl}${discover}${movie}${apiKey}&with_genres=${value}`
-        let movies = await call(url)
-        return movies
-    }
+    // // Here we have the URL for the call to the API and return the object/s
 
     const multiSearchBox = async (value) => {
         let url = `${baseUrl}${search}${multi}${apiKey}${query}${value}`
@@ -73,7 +50,6 @@ function User(props) {
         }
         return setFilms(filmCollection)
     }
-
 
     // we call the function mapGenres when did mount user view
     useEffect(()=>{
@@ -95,27 +71,11 @@ function User(props) {
         // eslint-disable-next-line
     },[searchFilm]);
 
-    // FUNCTIONS
-
-    const home = () => {
-        setTimeout(()=>{
-
-        },1000)
-    }
-
     return (
         <div className="userComponent">
             <Header>
                 <div className="navbar">
-
-                    
-
-                    <div className="navMenu">
-                        <div className="home" onClick={()=>home()}>Home</div>
-                        <div className="series">Series</div>
-                        <div className="newPopular">New & Popular</div>
-                        <div className="myList">My List</div>
-                    </div>
+                    <NavMenu/>
                     <div className="searchNavbar">
                         <SearchBox 
                             onChange={handlState}
@@ -126,9 +86,7 @@ function User(props) {
                     </div>
                     <NavBtn>
                         <DropDownMenu/>
-                    </NavBtn>
-                    {/* <AvatarUser/> */}
-  
+                    </NavBtn> 
                 </div>
             </Header>
             {

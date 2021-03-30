@@ -9,7 +9,6 @@ import {connect} from 'react-redux';
 
 
 function Rental (props) {
-  console.log(props.cart)
   // HOOKS
 
   const [tab, setTab] = useState({

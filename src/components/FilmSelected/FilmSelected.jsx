@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import moment from 'moment'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faCartPlus, faHeart} from '@fortawesome/free-solid-svg-icons'
@@ -9,8 +9,17 @@ import {ADDLIST} from '../../redux/types/listType';
 
 const FilmSelected = (props) => {
 
-    const film = props.film
-    
+    let film = props.film
+
+    // HOOKS
+
+    const [textcolor,setColor]=useState({
+        list: 'white',
+        cart: 'white',
+        like: 'white',
+    });
+
+
 
     // Incons export to buttons
 
@@ -20,14 +29,25 @@ const FilmSelected = (props) => {
 
     // FUNCTIONS
     const addFilmToCart = () => {
+        if(film.inCart === 0)
         film.inCart = film.inCart +1
         props.dispatch({type: ADD, payload: film})
+        setColor({...textcolor, cart: 'green'})
+
     }
 
     const addFilmToList = () => {
-        film.inCart = film.inCart +1
-        props.dispatch({type: ADDLIST, payload: film})
+        let list = film
+        if(list.inList === 0)
+        list.inList = list.inList +1
+        props.dispatch({type: ADDLIST, payload: list})
+        setColor({...textcolor, list: '#0f7fe8'})
     }
+
+    const addLike = () => {
+        
+    }
+   
 
     return (
         <div className="movieData" id={film.id}>
@@ -44,15 +64,15 @@ const FilmSelected = (props) => {
                             <p>{film.overview}</p>
                             <div className="bottomInfo">
                                 <div>
-                                    <div className='button addList'>{addList}</div>
+                                    <div className='button addList' style={{color:textcolor.list}} onClick={()=>addFilmToList()}>{addList}</div>
                                     <div className="label">Add List</div>
                                 </div>
                                 <div>
-                                    <div className='button addCart' onClick={()=>addFilmToCart()}>{addCart}</div>
-                                    <div className="label" onClick={()=>addFilmToList()}>Add Cart</div>
+                                    <div className='button addCart' style={{color:textcolor.cart}} onClick={()=>addFilmToCart()}>{addCart}</div>
+                                    <div className="label">Add Cart</div>
                                 </div>
                                 <div>
-                                    <div className='button like'>{like}</div>
+                                    <div className='button like' style={{color:textcolor.like}} onClick={()=>addLike()}>{like}</div>
                                     <div className="label">Like</div>
                                 </div>
                             </div>

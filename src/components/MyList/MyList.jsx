@@ -1,9 +1,72 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {connect} from 'react-redux'
+// import {
+//     pathImg, baseUrl, search, multi, discover,
+//     movie, apiKey, genres, query} from '../../api/ApiMovieDB';
+import ModalRender from '../../containers/Modal/ModalRender';
+import Header from '../Header/Header';
 
-function MyList(props) {
+import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
+import Cart from '../../components/Cart/Cart';
+import NavBtn from '../../components/NavBtn/NavBtn';
+import { useHistory } from 'react-router-dom'
+import NavMenu from '../NavMenu/NavMenu';
+
+
+const MyList = (props) => {
+    
+    let history = useHistory()
+    
+    useEffect(()=>{
+
+    },[])
+
+  
     return (
-        <div>
+        <div className="myListComponent">
+            <Header>
+            <div className="navbar">
+                    <NavMenu/>
+                    <div className="cartCounter">
+                        <Cart/>
+                    </div>
+                    <NavBtn>
+                        <DropDownMenu/>
+                    </NavBtn> 
+                </div>
+            </Header>
+
+            {
+                props.list.length === 0
+                ?
+                <>
+                    <div className="noList">
+                        <h2>Nothing added to your list yet!</h2>
+                    </div>
+                </>
+                :
+                <>
+                    <div className="listGrid">
+                        {
+                            props.list.map((film) =>{
+                                if(film.imgFilm)
+                                return( 
+                                    <div key={film.id}>
+                                        <ModalRender title={film.title} id={film.id} originalLanguage={film.originalLanguage}
+                                        originalTitle={film.originalTitle} overview={film.overview} releaseDate={film.releaseDate} 
+                                        voteAverage={film.voteAverage} backdropPath={film.backdropPath} genres={film.genres} imgFilm={film.imgFilm}
+                                        >
+                                            <img className="filmPoster" alt={film.poster_path} src={film.imgFilm}/>
+                                        </ModalRender>
+                                    </div>
+                                )
+
+                            })
+                        }     
+                    </div>
+                </>
+
+            }
             
         </div>
     )

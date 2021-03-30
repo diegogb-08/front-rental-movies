@@ -11,7 +11,8 @@ const store = createStoreWithMiddleware(
     load({
         preloadState : {
             user : {},
-            cart : []
+            cart : [],
+            list : []
         },
         state: ['dataUser']
     }),

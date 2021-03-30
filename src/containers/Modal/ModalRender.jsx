@@ -27,7 +27,8 @@ function ModalRender(props) {
         voteAverage: props.voteAverage,
         overview: props.overview,
         price: 2.50,
-        inCart: 0
+        inCart: 0,
+        inList: 0
     }
 
     
