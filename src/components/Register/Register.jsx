@@ -17,12 +17,15 @@ const Register = (props) => {
 
   let history = useHistory();
 
+  let storedEmail = localStorage.getItem('email')
+  
   // HOOKS
-
   const [user, setUser] = useState({
-    email: '',
+    email: storedEmail,
     password: ''
   })
+
+  console.log(user.email)
 
   const [password, setPassword] = useState({
     hideShow: 'password',
@@ -95,7 +98,7 @@ const Register = (props) => {
                   nameP='password'
                   title='Email'
                   titleP='Password'
-                  //value={props.user?.email}
+                  value={user.email}
                   onChange={handleState}
                   onChangeP={handleState}
                   btnName='Continue'

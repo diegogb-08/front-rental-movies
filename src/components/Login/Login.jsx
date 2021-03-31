@@ -15,10 +15,12 @@ function Login(props) {
 
     let history = useHistory();
 
+    let storedEmail = localStorage.getItem('email')
+
     // HOOKS
 
     const [credentials, setCredentials] = useState({
-        email: '',
+        email: storedEmail,
         password: ''
     })
 
@@ -82,7 +84,7 @@ function Login(props) {
             <div className="loginBox">
                 <h3>Sign In</h3>
                 <div className="inputLogin">
-                    <InputForm type="text" name="email" onChange={handleState} title="Email" error={errors.email?.help}/>
+                    <InputForm type="text" name="email" onChange={handleState} title="Email" error={errors.email?.help} value={credentials.email}/>
                     <p>{message}</p>
                 </div>
                 <div className="inputLogin">        

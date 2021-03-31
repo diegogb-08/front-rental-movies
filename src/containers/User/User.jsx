@@ -33,12 +33,12 @@ const User = (props) => {
         if(!films.Action){
             setLoading(true)
             if(storage === true){
-                localStorage.setItem('loading',true)
                 setTimeout(() => {
                     setLoading(false)
                 }, 1000)
             }else{
                 setTimeout(() => {
+                    localStorage.setItem('loading', true)
                     setLoading(false)
                 }, 5000)
             }
@@ -65,11 +65,11 @@ const User = (props) => {
         // eslint-disable-next-line
     },[])
 
-    // if (props.token === ''){
-    //     setTimeout(()=> {
-    //         return history.push('/')
-    //     },1000)
-    // }
+    if (props.token === ''){
+        setTimeout(()=> {
+            return history.push('/')
+        },1000)
+    }
 
     if(loading){
         

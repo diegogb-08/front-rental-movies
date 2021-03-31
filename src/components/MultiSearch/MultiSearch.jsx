@@ -9,11 +9,19 @@ import NavMenu from '../NavMenu/NavMenu'
 import SearchBox from '../SearchBox/SearchBox'
 import {connect} from 'react-redux';
 import Footer from '../Footer/Footer'
+import { useHistory } from 'react-router'
 
 function MultiSearch(props) {
 
+    let history = useHistory()
+
     const multiSearch = props.search.search
     
+    if (props.token === ''){
+        setTimeout(()=> {
+            return history.push('/')
+        },1000)
+    }
 
     return (
         <div className="userComponent">

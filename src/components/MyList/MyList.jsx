@@ -11,14 +11,18 @@ import Cart from '../../components/Cart/Cart';
 import NavBtn from '../../components/NavBtn/NavBtn';
 import NavMenu from '../NavMenu/NavMenu';
 import Footer from '../Footer/Footer';
+import { useHistory } from 'react-router';
 
 
 const MyList = (props) => {
+
+    let history = useHistory()
         
-    useEffect(()=>{
-
-    },[])
-
+    if (props.token === ''){
+        setTimeout(()=> {
+            return history.push('/')
+        },1000)
+    }
   
     return (
         <div className="myListComponent">
