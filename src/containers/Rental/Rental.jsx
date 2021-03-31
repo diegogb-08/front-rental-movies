@@ -9,6 +9,7 @@ import Tab from '../../components/Tab/Tab';
 import TabNav from "../../components/Tab/TabNav";
 import {connect} from 'react-redux';
 import Button from '../../components/Button/Button';
+import { CLEAN } from "../../redux/types/cartType";
 
 
 
@@ -36,19 +37,24 @@ function Rental (props) {
 
  // FUNCTIONS
 
-  const calculateTotal = () => {
-    console.log(props.cart, "Peliculas en Redux")
+   // Delete all orders (Roo says: Molaría que fuese solo una, y no todas. JOJOOOOOOOOOOOOOOOOOOOOJO)
+   const deleteOrder = () => {
 
-      let totalPriceOnCart = 0
-      
+    props.dispatch({type: CLEAN, payload: [] }); 
+    
+  }; 
+
+  const calculateTotal = () => {
+      let totalPriceOnCart = 0 
 
       let priceArray = props.cart.map(x=> {
         return x.price
-      })
-      console.log(priceArray, "=====================")
+      })    
+
       priceArray.map(num => {
         totalPriceOnCart +=num
       })
+      
       setTotalPrice(totalPriceOnCart)
       
 
@@ -83,10 +89,18 @@ function Rental (props) {
             </div>
             <div className="priceButtonContainer">
                 <p className="pTotalPrice">{totalPrice}€</p>
-                <div className="rentalButton">
-                  <Button name="Buy"/>
-                </div>
             </div>
+            <div className="containerButtonsRental">
+              <div className="buyButton">
+                <Button name="Buy"/>
+              </div>
+              <div className="emptyOrdersButton">
+                <Button onClick={()=> deleteOrder()} name="Empty Orders"/>
+              </div>
+            </div>
+
+                  
+
                      
           </div>
           
