@@ -1083,7 +1083,6 @@ input:not(:focus):valid ~ .floating-label {
   right: 0;
   background-color: #ffffff; }
 
-
 .superformReg {
   display: flex;
   flex-direction: column;
@@ -1115,7 +1114,6 @@ input:not(:focus):valid ~ .floating-label {
     color: black;
     text-align: center; }
 
-
 .superformReg {
   display: flex;
   flex-direction: column;
@@ -1124,6 +1122,7 @@ input:not(:focus):valid ~ .floating-label {
   padding: 3rem;
   width: 40rem;
   height: 90vh; }
+
 
 .search-box {
   position: relative;
