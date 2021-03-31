@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm} from '@fortawesome/free-solid-svg-icons'
@@ -9,17 +9,57 @@ import Tab from '../../components/Tab/Tab';
 import TabNav from "../../components/Tab/TabNav";
 import {connect} from 'react-redux';
 import Button from '../../components/Button/Button';
+import { CLEAN } from "../../redux/types/cartType";
+
 
 
 
 function Rental (props) {
   // HOOKS
 
+  const [totalPrice, setTotalPrice] = useState(0)
+
   const [tab, setTab] = useState({
     selected: 'Orders'
-  })
+  });
+
+
+  useEffect(() => {
+      calculateTotal();
+    },[]);
+  
+    
+  useEffect(()=> {
+      calculateTotal();
+  });
+  
+
 
  // FUNCTIONS
+
+   // Delete all orders (Roo says: Molaría que fuese solo una, y no todas. JOJOOOOOOOOOOOOOOOOOOOOJO)
+   const deleteOrder = () => {
+
+    props.dispatch({type: CLEAN, payload: [] }); 
+    
+  }; 
+
+  const calculateTotal = () => {
+      let totalPriceOnCart = 0 
+
+      let priceArray = props.cart.map(x=> {
+        return x.price
+      })    
+
+      priceArray.map(num => {
+        totalPriceOnCart +=num
+      })
+      
+      setTotalPrice(totalPriceOnCart)
+      
+
+
+  };
 
   const setSelected = (tab) => {
     setTab({selected: tab});
@@ -38,13 +78,8 @@ function Rental (props) {
 
                 </Tab>
 
-
-
-
             </TabNav>
-
-            
-            
+           
           </div>
           
           <div className="basketRental">
@@ -53,23 +88,30 @@ function Rental (props) {
               <div className="counterCartRental">{props.cart.length}</div> 
             </div>
             <div className="priceButtonContainer">
-                <p className="pTotalPrice">Total Price PROPS</p>
-                <div className="rentalButton">
-                  <Button name="Buy"/>
-                </div>
+                <p className="pTotalPrice">{totalPrice}€</p>
             </div>
-          
-            
+            <div className="containerButtonsRental">
+              <div className="buyButton">
+                <Button name="Buy"/>
+              </div>
+              <div className="emptyOrdersButton">
+                <Button onClick={()=> deleteOrder()} name="Empty Orders"/>
+              </div>
+            </div>
+
+                  
+
+                     
           </div>
           
-
         </div>
     )
 };
 
 const mapStateToProps = state => {
   return {
-      cart : state.cartReducer.cart
+      cart : state.cartReducer.cart,
+      
   }
 }
 
