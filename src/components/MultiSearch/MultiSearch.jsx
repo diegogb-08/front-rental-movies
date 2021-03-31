@@ -8,6 +8,7 @@ import NavBtn from '../NavBtn/NavBtn'
 import NavMenu from '../NavMenu/NavMenu'
 import SearchBox from '../SearchBox/SearchBox'
 import {connect} from 'react-redux';
+import Footer from '../Footer/Footer'
 
 function MultiSearch(props) {
 
@@ -85,8 +86,12 @@ function MultiSearch(props) {
                                     if(film.poster_path)
                                     return( 
                                         <div className='d' key={film.id}>
-                                            <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
-                                            originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
+                                            <ModalRender 
+                                            id={film.id} originalLanguage={film.original_language}
+                                            title={film.title ? film.title : film.name} 
+                                            originalTitle={film.original_title ? film.original_title : film.original_name} 
+                                            overview={film.overview} 
+                                            releaseDate={film.release_date ? film.release_date : film.first_air_date} 
                                             voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
                                             >
                                                 <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
@@ -101,6 +106,7 @@ function MultiSearch(props) {
                 }
                 
             </div>
+            <Footer/>
         </div>
     )
 }
