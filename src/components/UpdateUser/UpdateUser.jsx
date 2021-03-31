@@ -47,7 +47,7 @@ const UpdateUser = (props) => {
 
 
     const toggle = async () => {
-        console.log(props.token); //undefined?
+
         const errs = validate(user, "register");
         setErrors(errs);
 
@@ -64,16 +64,8 @@ const UpdateUser = (props) => {
 
             if (result.data?.email) {
                 props.dispatch({ type: UPDATE, payload: result.data });
+                setMessage('Email updated')
                 history.push('/profile')
-
-                // let dataLogin = {
-                //     email: result.data.email,
-                // }
-
-                // let resultLogin = await axios.put(port + customer + update, dataLogin)
-
-                // if (resultLogin) {
-                // }
             }
         } catch (error) {
             setMessage('Email already exist!')
