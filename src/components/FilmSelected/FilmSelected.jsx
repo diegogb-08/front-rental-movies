@@ -1,4 +1,4 @@
-import React, {useState, /*useEffect*/} from 'react'
+import React, {useState, useEffect} from 'react'
 import moment from 'moment'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faCartPlus, faHeart} from '@fortawesome/free-solid-svg-icons'
@@ -10,10 +10,10 @@ import {ADDLIST} from '../../redux/types/listType';
 const FilmSelected = (props) => {
 
     let film = props.film
-    // let idCart = props.cart.map(item => item.id)
-    // let idCartFound = idCart.find(element => element === film.id);
-    // let idList = props.list.map(item => item.id)
-    // let idListFound = idList.find(element => element === film.id)
+    let idCart = props.cart.map(item => item.id)
+    let idCartFound = idCart.find(element => element === film.id);
+    let idList = props.list.map(item => item.id)
+    let idListFound = idList.find(element => element === film.id)
     // Incons export to buttons
 
     const addList = <FontAwesomeIcon icon={faPlus} />
@@ -29,18 +29,18 @@ const FilmSelected = (props) => {
     });
 
 
-    // const checkProps = () => {
-    //     if(idCartFound !== undefined)
-    //         setColor({...textcolor, cart: 'green'})
-    //     if( idListFound !== undefined)
-    //         setColor({...textcolor, list: '#0f7fe8'})
-    // }
+    const checkProps = () => {
+        if(idCartFound !== undefined)
+            setColor({...textcolor, cart: 'green'})
+        if( idListFound !== undefined)
+            setColor({...textcolor, list: '#0f7fe8'})
+    }
 
 
 
-    // useEffect(()=> {
-    //     checkProps()
-    // },[textcolor])
+    useEffect(()=> {
+        checkProps()
+    },[])
 
 
 

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
 import Movie from '../../components/Movies/Movies';
+import Reactplayer from 'react-player'
 
 import ModalRender from '../Modal/ModalRender';
 import Cart from '../../components/Cart/Cart';
@@ -11,10 +12,11 @@ import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import NavBtn from '../../components/NavBtn/NavBtn';
 import {call, searchByGenre} from '../../tools/helper'
 import NavMenu from '../../components/NavMenu/NavMenu';
-import video from '../../img/fakeflixvideo.webm'
+import fakeflix from '../../img/fakeflixvideo.webm';
 
 // Endpoints API The movieDB
 import {pathImg, baseUrl, search, multi, apiKey, genres, query} from '../../api/ApiMovieDB'
+import Footer from '../../components/Footer/Footer';
 
 
 const User = (props) => {
@@ -24,7 +26,7 @@ const User = (props) => {
     const [films, setFilms] = useState({})
     const [searchFilm, setSearch] = useState('')
     const [multiSearch, setMultiSearch] = useState([])
-    console.log(films)
+    const [loading, setLoading] = useState(false);
     
     // HANDLER
     const handlState = (e) => {
@@ -32,6 +34,14 @@ const User = (props) => {
         setSearch(value)
     }
 
+    const loadingHandeler = () => {
+        if(!films.Action){
+            setLoading(true)
+            setTimeout(() => {
+                setLoading(false)
+            }, 5000)
+        }
+    };
     // // Here we have the URL for the call to the API and return the object/s
 
     const multiSearchBox = async (value) => {
@@ -72,13 +82,15 @@ const User = (props) => {
         // eslint-disable-next-line
     },[searchFilm]);
 
-    if(!films.Action){
+    useEffect(()=>{
+        loadingHandeler()
+        // eslint-disable-next-line
+    },[])
 
+    if(loading){
         return(
             <div className='video'>
-                <video width="100%" height="100%" autoPlay>
-                    <source src={video} type="video/x-webm"></source>
-                </video>
+                <Reactplayer width="100%" height="100%" url={fakeflix} controls playing muted/>
             </div>
         )
     }else{
@@ -140,6 +152,7 @@ const User = (props) => {
                         </div>
                     </>
                 }
+                <Footer/>
             </div>
         )
     }

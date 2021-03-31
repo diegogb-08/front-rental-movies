@@ -10,6 +10,7 @@ import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import Cart from '../../components/Cart/Cart';
 import NavBtn from '../../components/NavBtn/NavBtn';
 import NavMenu from '../NavMenu/NavMenu';
+import Footer from '../Footer/Footer';
 
 
 const MyList = (props) => {
@@ -64,7 +65,7 @@ const MyList = (props) => {
                 </>
 
             }
-            
+            <Footer/>
         </div>
     )
 }

@@ -9,8 +9,10 @@ function NavMenu() {
 
     const bringMeTo = (className) => {
         setTimeout(()=>{
-            if(className === 'home')
+            if(className === 'home'){
+                
                 return history.push('/user')
+            }  
             if(className === 'series')
                 return history.push('/series')
             if(className === 'newPopular')
