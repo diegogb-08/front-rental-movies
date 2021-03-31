@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
-import { port, customer, rental} from '../../api/ApiMongoDB';
+import { port, customer, rental } from '../../api/ApiMongoDB';
 import Header from '../../components/Header/Header';
 import Orders from "../../components/Orders/Orders";
 import Tab from '../../components/Tab/Tab';
@@ -9,11 +9,21 @@ import TabNav from "../../components/Tab/TabNav";
 import { connect } from 'react-redux';
 import Button from '../../components/Button/Button';
 import { CLEAN } from "../../redux/types/cartType";
+import axios from 'axios'
 
 
 
 
 function Rental(props) {
+
+  // AUTHORIZATION
+  let token = props.token
+  let auth = {
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  };
+
   // HOOKS
 
   const [totalPrice, setTotalPrice] = useState(0)
@@ -43,7 +53,16 @@ function Rental(props) {
 
   };
 
-  const buyOrder = () => {
+  // Función para enviar las peliculas al backend
+  const buyOrder = async () => {
+
+    let body = {
+      rental: props.cart
+    }
+    const id = props.user._id;
+    await axios.post(port + rental + customer + '/' + id, body, auth);
+
+    return props.dispatch({ type: CLEAN, payload: [] });
 
   }
 
@@ -55,7 +74,7 @@ function Rental(props) {
     })
 
     priceArray.map(num => {
-      totalPriceOnCart += num
+      return totalPriceOnCart += num
     })
 
     setTotalPrice(totalPriceOnCart)
@@ -95,7 +114,7 @@ function Rental(props) {
         </div>
         <div className="containerButtonsRental">
           <div className="buyButton">
-            <Button name="Buy" onClick={() => buyOrder()}/>
+            <Button name="Buy" onClick={() => buyOrder()} />
           </div>
           <div className="emptyOrdersButton">
             <Button onClick={() => deleteOrder()} name="Empty Orders" />
@@ -114,6 +133,10 @@ function Rental(props) {
 const mapStateToProps = state => {
   return {
     cart: state.cartReducer.cart,
+    user: state.userReducer.user,
+    token: state.userReducer.token
+
+
 
   }
 }
