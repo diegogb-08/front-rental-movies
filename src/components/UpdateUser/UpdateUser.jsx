@@ -5,7 +5,6 @@ import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { UPDATE } from '../../redux/types/userType'
 import validate from "../../tools/validate";
-import Button  from '../../components/Button/Button'
 
 
 // IMPORT COMPONENTS
