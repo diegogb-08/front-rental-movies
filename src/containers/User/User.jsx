@@ -11,6 +11,7 @@ import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import NavBtn from '../../components/NavBtn/NavBtn';
 import {call, searchByGenre} from '../../tools/helper'
 import NavMenu from '../../components/NavMenu/NavMenu';
+import video from '../../img/fakeflixvideo.webm'
 
 // Endpoints API The movieDB
 import {pathImg, baseUrl, search, multi, apiKey, genres, query} from '../../api/ApiMovieDB'
@@ -23,6 +24,7 @@ const User = (props) => {
     const [films, setFilms] = useState({})
     const [searchFilm, setSearch] = useState('')
     const [multiSearch, setMultiSearch] = useState([])
+    console.log(films)
     
     // HANDLER
     const handlState = (e) => {
@@ -70,65 +72,78 @@ const User = (props) => {
         // eslint-disable-next-line
     },[searchFilm]);
 
-    return (
-        <div className="userComponent">
-            <Header>
-                <div className="navbar">
-                    <NavMenu/>
-                    <div className="searchNavbar">
-                        <SearchBox 
-                            onChange={handlState}
-                        />
-                    </div>
-                    <div className="cartCounter">
-                        <Cart/>
-                    </div>
-                    <NavBtn>
-                        <DropDownMenu/>
-                    </NavBtn> 
-                </div>
-            </Header>
-            {
-                multiSearch.length
-                ?
-                <>
-                <div>
-                    <MultiSearch multiSearcher={multiSearch} />
-                </div>
-                </>
-                :
-                <>
-                    <div className="carouselMovies">
-                        {
-                            Object.keys(genres).map((genre, index) => {
-                                return (
-                                    <Movie key={index} title={genre} genre={genre}>
+    if(!films.Action){
 
-                                        {   // eslint-disable-next-line
-                                            films[genre]?.map((film) =>{
-                                                if(film.poster_path)
-                                                return( 
-                                                    <div className='movieCollection' key={film.id}>
-                                                        <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
-                                                        originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
-                                                        voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
-                                                        >
-                                                            <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
-                                                        </ModalRender>
-                                                    </div>
-                                                )
+        return(
+            <div className='video'>
+                <video width="100%" height="100%" autoPlay>
+                    <source src={video} type="video/x-webm"></source>
+                </video>
+            </div>
+        )
+    }else{
 
-                                            })
-                                        }
-                                    </Movie>
-                                )
-                            })
-                        }
+        return (
+            <div className="userComponent">
+                <Header>
+                    <div className="navbar">
+                        <NavMenu/>
+                        <div className="searchNavbar">
+                            <SearchBox 
+                                onChange={handlState}
+                            />
+                        </div>
+                        <div className="cartCounter">
+                            <Cart/>
+                        </div>
+                        <NavBtn>
+                            <DropDownMenu/>
+                        </NavBtn> 
                     </div>
-                </>
-            }
-        </div>
-    )
+                </Header>
+                {
+                    multiSearch.length
+                    ?
+                    <>
+                    <div>
+                        <MultiSearch multiSearcher={multiSearch} />
+                    </div>
+                    </>
+                    :
+                    <>
+                        <div className="carouselMovies">
+                            {
+                                Object.keys(genres).map((genre, index) => {
+                                    return (
+                                        <Movie key={index} title={genre} genre={genre}>
+    
+                                            {   // eslint-disable-next-line
+                                                films[genre]?.map((film) =>{
+                                                    if(film.poster_path)
+                                                    return( 
+                                                        <div className='movieCollection' key={film.id}>
+                                                            <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
+                                                            originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
+                                                            voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
+                                                            >
+                                                                <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
+                                                            </ModalRender>
+                                                        </div>
+                                                    )
+    
+                                                })
+                                            }
+                                        </Movie>
+                                    )
+                                })
+                            }
+                        </div>
+                    </>
+                }
+            </div>
+        )
+    }
+
 };
 
 
