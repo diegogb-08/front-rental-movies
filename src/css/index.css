@@ -940,8 +940,12 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: column; }
 
+.tabContainer {
+  display: flex;
+  flex-direction: column; }
+
 .tabNav {
-  width: 28%; }
+  width: 100%; }
 
 .nav-item {
   cursor: pointer; }
@@ -1078,6 +1082,39 @@ input:not(:focus):valid ~ .floating-label {
   top: 0;
   right: 0;
   background-color: #ffffff; }
+
+
+.superformReg {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 40rem;
+  height: 90vh; }
+
+
+
+.superformReg {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 40rem;
+  height: 90vh; }
+
+.buttonUpdate {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; }
+  .buttonUpdate button {
+    border-radius: .3rem;
+    padding: .5rem 2rem;
+    background-color: #b5ec62;
+    color: black;
+    text-align: center; }
+
 
 .superformReg {
   display: flex;
@@ -1566,7 +1603,25 @@ input:not(:focus):valid ~ .floating-label {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
+
+.containerButtonsRental {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.buyButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
+
+.emptyOrdersButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
 
 .userComponent {
   background: #141414;
@@ -1704,7 +1759,25 @@ input:not(:focus):valid ~ .floating-label {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
+
+.containerButtonsRental {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.buyButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
+
+.emptyOrdersButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
 
 /*Fonts*/
 /*Bootstrap*/
