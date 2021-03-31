@@ -1,4 +1,4 @@
-import {ADD, REMOVE, CLEAN} from '../types/cartType';
+import {ADD, REMOVE, CLEAN, EDIT, TOTAL_CART} from '../types/cartType';
 
 const initialState = {
     cart : [],
@@ -12,19 +12,44 @@ const cartReducer = (state = initialState, action) => {
                 ...state,
 
                 cart: [...state.cart, action.payload]
-            }
+            };
         
         case REMOVE : 
             return {
                 ...state,
                 cart : action.payload
-            }
+            };
 
         case CLEAN : 
             return {
                 ...state,
                 cart : action.payload
-            }
+            };
+        
+           
+        case EDIT:  
+		
+            let newCart = state.cart.map( (_x) => {
+                
+                if (_x.name === action.payload.name) { // If it already exists
+                    _x.onCart = action.payload.newAmount; // I modity it
+                };
+                
+                return _x;
+                
+            });
+        
+          return {
+            ...state,
+            cart: newCart,
+
+          };
+          
+        case TOTAL_CART :
+            return {
+              ...state,
+              totalCart : action.payload
+            };
 
         default : 
             return state
