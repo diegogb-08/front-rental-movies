@@ -1173,6 +1173,12 @@ input:not(:focus):valid ~ .floating-label {
     background-color: #0f7fe8; }
   .topInfo .originalLanguage {
     background-color: #F40612; }
+  .topInfo .price {
+    background-color: #fdf137;
+    color: #333333;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem; }
 
 .overview {
   text-align: justify;
@@ -1363,7 +1369,7 @@ input:not(:focus):valid ~ .floating-label {
 
 .navMenu {
   display: flex;
-  width: 30%;
+  width: 40%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center; }
@@ -1621,6 +1627,14 @@ input:not(:focus):valid ~ .floating-label {
 
 .video {
   height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.gif {
+  background-color: black;
+  height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;

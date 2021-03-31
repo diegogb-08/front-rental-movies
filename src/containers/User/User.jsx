@@ -12,15 +12,19 @@ import NavBtn from '../../components/NavBtn/NavBtn';
 import {searchByGenre} from '../../tools/helper'
 import NavMenu from '../../components/NavMenu/NavMenu';
 import fakeflix from '../../img/fakeflixvideo.webm';
+import gif from '../../img/fakeflix_loadtime.gif'
 
 // Endpoints API The movieDB
 import { pathImg, genres } from '../../api/ApiMovieDB'
 import Footer from '../../components/Footer/Footer';
+import { useHistory } from 'react-router';
 
 
 
 const User = (props) => {
-    
+
+    let history = useHistory()
+    let storage = JSON.parse(localStorage.getItem('loading'))
     // HOOKS
     const [films, setFilms] = useState({})
     const [loading, setLoading] = useState(false);
@@ -28,9 +32,16 @@ const User = (props) => {
     const loadingHandeler = () => {
         if(!films.Action){
             setLoading(true)
-            setTimeout(() => {
-                setLoading(false)
-            }, 5000)
+            if(storage === true){
+                localStorage.setItem('loading',true)
+                setTimeout(() => {
+                    setLoading(false)
+                }, 1000)
+            }else{
+                setTimeout(() => {
+                    setLoading(false)
+                }, 5000)
+            }
         }
     };
 
@@ -54,12 +65,27 @@ const User = (props) => {
         // eslint-disable-next-line
     },[])
 
+    // if (props.token === ''){
+    //     setTimeout(()=> {
+    //         return history.push('/')
+    //     },1000)
+    // }
+
     if(loading){
-        return(
-            <div className='video'>
-                <Reactplayer width="100%" height="100%" url={fakeflix} controls playing muted/>
-            </div>
-        )
+        
+        if(storage === true){
+            return(
+                <div className='gif'>
+                    <img width="50%" src={gif} alt={gif}/>
+                </div>
+            )
+        }else{
+            return(
+                <div className='video'>
+                    <Reactplayer width="100%" height="100%" url={fakeflix} controls playing muted/>
+                </div>
+            )
+        }
     }else{
 
         return (

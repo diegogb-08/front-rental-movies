@@ -18,15 +18,18 @@ function NavMenu() {
                 return history.push('/newpopular')
             if(className === 'myList')
                 return history.push('/mylist')
+            if(className === 'watchList')
+                return history.push('/watch')
         },1000)
     }
 
     return (
         <div className="navMenu">
             <div className="home" onClick={()=>bringMeTo('home')}>Home</div>
-            <div className="series" onClick={()=>bringMeTo('series')}>Series</div>
-            <div className="newPopular" onClick={()=>bringMeTo('newPopular')}>New & Popular</div>
+            {/* <div className="series" onClick={()=>bringMeTo('series')}>Series</div>
+            <div className="newPopular" onClick={()=>bringMeTo('newPopular')}>New & Popular</div> */}
             <div className="myList" onClick={()=>bringMeTo('myList')}>My List</div>
+            <div className="watchList" onClick={()=>bringMeTo('watchList')}>Watch List</div>
         </div>
     )
 }

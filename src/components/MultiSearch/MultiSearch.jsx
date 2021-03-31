@@ -14,7 +14,6 @@ function MultiSearch(props) {
 
     const multiSearch = props.search.search
     
-    console.log(multiSearch)
 
     return (
         <div className="userComponent">
@@ -87,12 +86,15 @@ function MultiSearch(props) {
                                     return( 
                                         <div className='d' key={film.id}>
                                             <ModalRender 
-                                            id={film.id} originalLanguage={film.original_language}
-                                            title={film.title ? film.title : film.name} 
-                                            originalTitle={film.original_title ? film.original_title : film.original_name} 
-                                            overview={film.overview} 
-                                            releaseDate={film.release_date ? film.release_date : film.first_air_date} 
-                                            voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
+                                                id={film.id} originalLanguage={film.original_language}
+                                                title={film.title ? film.title : film.name} 
+                                                originalTitle={film.original_title ? film.original_title : film.original_name} 
+                                                overview={film.overview} 
+                                                releaseDate={film.release_date ? film.release_date : film.first_air_date} 
+                                                voteAverage={film.vote_average} 
+                                                backdropPath={film.backdrop_path === null ? null : pathImg+film.backdrop_path} 
+                                                genres={film.genre_ids} 
+                                                imgFilm={pathImg+film.poster_path}
                                             >
                                                 <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
                                             </ModalRender>
