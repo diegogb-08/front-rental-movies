@@ -1,4 +1,4 @@
-import React, {useState, /*useEffect*/} from 'react'
+import React, {useState, useEffect} from 'react'
 import moment from 'moment'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faCartPlus, faHeart} from '@fortawesome/free-solid-svg-icons'
@@ -10,10 +10,7 @@ import {ADDLIST} from '../../redux/types/listType';
 const FilmSelected = (props) => {
 
     let film = props.film
-    // let idCart = props.cart.map(item => item.id)
-    // let idCartFound = idCart.find(element => element === film.id);
-    // let idList = props.list.map(item => item.id)
-    // let idListFound = idList.find(element => element === film.id)
+    
     // Incons export to buttons
 
     const addList = <FontAwesomeIcon icon={faPlus} />
@@ -27,21 +24,31 @@ const FilmSelected = (props) => {
         cart: 'white',
         like: 'white',
     });
+    console.log(textcolor.cart)
 
+    // Here we check if the movie/series is already in the Cart and render the button if it exist
 
-    // const checkProps = () => {
-    //     if(idCartFound !== undefined)
-    //         setColor({...textcolor, cart: 'green'})
-    //     if( idListFound !== undefined)
-    //         setColor({...textcolor, list: '#0f7fe8'})
-    // }
+    let idCartFound = props.cart.map(item => item.id).find(element => element === film.id);
+    let idListFound = props.list.map(item => item.id).find(element => element === film.id)
+    
+    // Here we check if the movie/series is already in the List and render the button if it exist
+    const checkList = () => {
+        if ( idListFound !== undefined) return setColor({...textcolor, list: '#0f7fe8'})
+    }
+    
+    const checkCart = () => {
+        if(idCartFound !== undefined) return setColor({...textcolor, cart: '#60d369'})
+    }
 
+    useEffect(()=> {
+        checkList()
+        // eslint-disable-next-line
+    },[])
 
-
-    // useEffect(()=> {
-    //     checkProps()
-    // },[textcolor])
-
+    useEffect(()=> {
+        checkCart()
+        // eslint-disable-next-line
+    },[])
 
 
     // FUNCTIONS
@@ -50,7 +57,7 @@ const FilmSelected = (props) => {
         if(id.find(element => element === film.id) === undefined){
             film.inCart = film.inCart +1
             props.dispatch({type: ADD, payload: film})
-            setColor({...textcolor, cart: 'green'})
+            setColor({...textcolor, cart: '#60d369'})
         }else{
             alert('You are trying to add an existing product to the cart!')
         }
@@ -75,33 +82,43 @@ const FilmSelected = (props) => {
 
     return (
         <div className="movieData" id={film.id}>
-                        <img src={film.backdropPath} alt={film.title}/>
-                        <div className="movieInfo">
-                            <div className="topInfo">
-                                <p className='releaseDate'>{moment(film.releaseDate).format('YYYY')}</p>
-                                <p className='originalLanguage'>{film.originalLanguage}</p>
-                                <p className='rate'>{film.voteAverage}</p>
-                            </div>
-                            <h5>{film.title}</h5>
-                            <p>Original title: {film.originalTitle}</p>
-                            {/* <p>{film.genres}</p> */}
-                            <p className='overview'>{film.overview}</p>
-                            <div className="bottomInfo">
-                                <div>
-                                    <div className='button addList' style={{color:textcolor.list}} onClick={()=>addFilmToList()}>{addList}</div>
-                                    <div className="label">Add List</div>
-                                </div>
-                                <div>
-                                    <div className='button addCart' style={{color:textcolor.cart}} onClick={()=>addFilmToCart()}>{addCart}</div>
-                                    <div className="label">Add Cart</div>
-                                </div>
-                                <div>
-                                    <div className='button like' style={{color:textcolor.like}} onClick={()=>addLike()}>{like}</div>
-                                    <div className="label">Like</div>
-                                </div>
-                            </div>
+            {
+                film.backdropPath === null
+                ?
+                <>
+                </>
+                :
+                <>
+                    <img src={film.backdropPath} alt={film.title}/>
+                </>
+            }
+                <div className="movieInfo">
+                    <div className="topInfo">
+                        <p className='releaseDate'>{moment(film.releaseDate).format('YYYY')}</p>
+                        <p className='originalLanguage'>{film.originalLanguage}</p>
+                        <p className='rate'>{film.voteAverage}</p>
+                        <p className='price'>€{(Math.round(film.price * 100) / 100).toFixed(2)}</p>
+                    </div>
+                    <h5>{film.title}</h5>
+                    <p>Original title: {film.originalTitle}</p>
+                    {/* <p>{film.genres}</p> */}
+                    <p className='overview'>{film.overview}</p>
+                    <div className="bottomInfo">
+                        <div>
+                            <div className='button addList' style={{color:textcolor.list}} onClick={()=>addFilmToList()}>{addList}</div>
+                            <div className="label">Add List</div>
+                        </div>
+                        <div>
+                            <div className='button addCart' style={{color:textcolor.cart}} onClick={()=>addFilmToCart()}>{addCart}</div>
+                            <div className="label">Add Cart</div>
+                        </div>
+                        <div>
+                            <div className='button like' style={{color:textcolor.like}} onClick={()=>addLike()}>{like}</div>
+                            <div className="label">Like</div>
                         </div>
                     </div>
+                </div>
+        </div>
     )
 };
 

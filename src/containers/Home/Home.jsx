@@ -7,8 +7,6 @@ import Button  from '../../components/Button/Button'
 import axios from 'axios'
 import {port, customer, searchEmail, query} from '../../api/ApiMongoDB'
 import {useHistory} from 'react-router-dom'
-import {connect} from 'react-redux';
-import {LOGIN} from '../../redux/types/userType'
 import Footer from '../../components/Footer/Footer'
 import Header from '../../components/Header/Header'
 import validate from "../../tools/validate";
@@ -46,12 +44,12 @@ function Home(props) {
 
             let result = await axios.get(port+customer+searchEmail+query+emailCheck.email);
             if(result.data?.email  ) {
-                props.dispatch({type: LOGIN, payload: result.data.email});
+                localStorage.setItem('email', result.data.email)
                 setTimeout(() => {
                     history.push('/login')
                 },1000)
             } else {
-                props.dispatch({type: LOGIN, payload: emailCheck.email});
+                localStorage.setItem('email', emailCheck.email)
                 setTimeout(()=> {
                     history.push('/register')
                 },1000)
@@ -160,5 +158,5 @@ function Home(props) {
 }
 
 
-export default connect()(Home);
+export default Home;
 

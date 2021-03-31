@@ -2,44 +2,48 @@ import React, { useState, useEffect } from 'react'
 import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
 import Movie from '../../components/Movies/Movies';
+import Reactplayer from 'react-player'
 
 import ModalRender from '../Modal/ModalRender';
 import Cart from '../../components/Cart/Cart';
 import SearchBox from '../../components/SearchBox/SearchBox';
-import MultiSearch from '../../components/MultiSearch/MultiSearch';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import NavBtn from '../../components/NavBtn/NavBtn';
-import {call, searchByGenre} from '../../tools/helper'
+import {searchByGenre} from '../../tools/helper'
 import NavMenu from '../../components/NavMenu/NavMenu';
+import fakeflix from '../../img/fakeflixvideo.webm';
+import gif from '../../img/fakeflix_loadtime.gif'
 
 // Endpoints API The movieDB
-import {pathImg, baseUrl, search, multi, apiKey, genres, query} from '../../api/ApiMovieDB'
+import { pathImg, genres } from '../../api/ApiMovieDB'
+import Footer from '../../components/Footer/Footer';
+import { useHistory } from 'react-router';
+
 
 
 const User = (props) => {
 
-    
+    let history = useHistory()
+    let storage = JSON.parse(localStorage.getItem('loading'))
     // HOOKS
     const [films, setFilms] = useState({})
-    const [searchFilm, setSearch] = useState('')
-    const [multiSearch, setMultiSearch] = useState([])
-    
-    // HANDLER
-    const handlState = (e) => {
-        let value = encodeURIComponent(e.target.value.trim())
-        setSearch(value)
-    }
+    const [loading, setLoading] = useState(false);
 
-    // // Here we have the URL for the call to the API and return the object/s
-
-    const multiSearchBox = async (value) => {
-        let url = `${baseUrl}${search}${multi}${apiKey}${query}${value}`
-        let movies = await call(url)
-        return setMultiSearch(movies)
-    }
-
-    // Here we map the Genres Object given by the API and store it in an empty object called filmCollection 
-    // which we use to setFilms state
+    const loadingHandeler = () => {
+        if(!films.Action){
+            setLoading(true)
+            if(storage === true){
+                setTimeout(() => {
+                    setLoading(false)
+                }, 1000)
+            }else{
+                setTimeout(() => {
+                    localStorage.setItem('loading', true)
+                    setLoading(false)
+                }, 5000)
+            }
+        }
+    };
 
     const mapGenres = async (object) => {
         let filmCollection = {};
@@ -56,48 +60,50 @@ const User = (props) => {
         // eslint-disable-next-line
     },[])
 
-    // it detects the changes from the input and on key press Enter, sends the info to multiSearch()
-    useEffect(() => {
-        const listener = event => {
-          if (event.code === "Enter" || event.code === "NumpadEnter") {
-            multiSearchBox(searchFilm);
-          }
-        };
-        document.addEventListener("keydown", listener);
-        return () => {
-          document.removeEventListener("keydown", listener);
-        };
+    useEffect(()=>{
+        loadingHandeler()
         // eslint-disable-next-line
-    },[searchFilm]);
+    },[])
 
-    return (
-        <div className="userComponent">
-            <Header>
-                <div className="navbar">
-                    <NavMenu/>
-                    <div className="searchNavbar">
-                        <SearchBox 
-                            onChange={handlState}
-                        />
-                    </div>
-                    <div className="cartCounter">
-                        <Cart/>
-                    </div>
-                    <NavBtn>
-                        <DropDownMenu/>
-                    </NavBtn> 
+    if (props.token === ''){
+        setTimeout(()=> {
+            return history.push('/')
+        },1000)
+    }
+
+    if(loading){
+        
+        if(storage === true){
+            return(
+                <div className='gif'>
+                    <img width="50%" src={gif} alt={gif}/>
                 </div>
-            </Header>
-            {
-                multiSearch.length
-                ?
-                <>
-                <div>
-                    <MultiSearch multiSearcher={multiSearch} />
+            )
+        }else{
+            return(
+                <div className='video'>
+                    <Reactplayer width="100%" height="100%" url={fakeflix} controls playing muted/>
                 </div>
-                </>
-                :
-                <>
+            )
+        }
+    }else{
+
+        return (
+            <div className="userComponent">
+                <Header>
+                    <div className="navbar">
+                        <NavMenu/>
+                        <div className="searchNavbar">
+                            <SearchBox/>
+                        </div>
+                        <div className="cartCounter">
+                            <Cart/>
+                        </div>
+                        <NavBtn>
+                            <DropDownMenu/>
+                        </NavBtn> 
+                    </div>
+                </Header>
                     <div className="carouselMovies">
                         {
                             Object.keys(genres).map((genre, index) => {
@@ -125,10 +131,11 @@ const User = (props) => {
                             })
                         }
                     </div>
-                </>
-            }
-        </div>
-    )
+                <Footer/>
+            </div>
+        )
+    }
+
 };
 
 

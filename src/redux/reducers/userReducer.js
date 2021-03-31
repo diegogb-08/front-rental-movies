@@ -1,19 +1,13 @@
-import {LOGIN, LOGOUT, UPDATE, SAVEEMAIL} from '../types/userType';
+import { LOGIN, LOGOUT, UPDATE } from '../types/userType';
 
 const initialState = {
     user: {},
-    token: '',
+    token: ''
 
 };
 
 const userReducer = (state = initialState, action) => {
     switch(action.type){
-        case SAVEEMAIL :
-            return {
-                ...state,
-                user : action.payload.user,
-            }
-
         case LOGIN :
             return {
                 ...state,
