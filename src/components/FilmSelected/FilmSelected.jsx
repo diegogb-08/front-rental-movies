@@ -36,13 +36,10 @@ const FilmSelected = (props) => {
             setColor({...textcolor, list: '#0f7fe8'})
     }
 
-
-
     useEffect(()=> {
         checkProps()
+        // eslint-disable-next-line
     },[])
-
-
 
     // FUNCTIONS
     const addFilmToCart = () => {

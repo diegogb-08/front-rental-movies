@@ -10,7 +10,6 @@ function NavMenu() {
     const bringMeTo = (className) => {
         setTimeout(()=>{
             if(className === 'home'){
-                
                 return history.push('/user')
             }  
             if(className === 'series')

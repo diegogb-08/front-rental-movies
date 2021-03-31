@@ -7,32 +7,23 @@ import Reactplayer from 'react-player'
 import ModalRender from '../Modal/ModalRender';
 import Cart from '../../components/Cart/Cart';
 import SearchBox from '../../components/SearchBox/SearchBox';
-import MultiSearch from '../../components/MultiSearch/MultiSearch';
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu';
 import NavBtn from '../../components/NavBtn/NavBtn';
-import {call, searchByGenre} from '../../tools/helper'
+import {searchByGenre} from '../../tools/helper'
 import NavMenu from '../../components/NavMenu/NavMenu';
 import fakeflix from '../../img/fakeflixvideo.webm';
 
 // Endpoints API The movieDB
-import {pathImg, baseUrl, search, multi, apiKey, genres, query} from '../../api/ApiMovieDB'
+import { pathImg, genres } from '../../api/ApiMovieDB'
 import Footer from '../../components/Footer/Footer';
 
 
-const User = (props) => {
 
+const User = (props) => {
     
     // HOOKS
     const [films, setFilms] = useState({})
-    const [searchFilm, setSearch] = useState('')
-    const [multiSearch, setMultiSearch] = useState([])
     const [loading, setLoading] = useState(false);
-    
-    // HANDLER
-    const handlState = (e) => {
-        let value = encodeURIComponent(e.target.value.trim())
-        setSearch(value)
-    }
 
     const loadingHandeler = () => {
         if(!films.Action){
@@ -42,16 +33,6 @@ const User = (props) => {
             }, 5000)
         }
     };
-    // // Here we have the URL for the call to the API and return the object/s
-
-    const multiSearchBox = async (value) => {
-        let url = `${baseUrl}${search}${multi}${apiKey}${query}${value}`
-        let movies = await call(url)
-        return setMultiSearch(movies)
-    }
-
-    // Here we map the Genres Object given by the API and store it in an empty object called filmCollection 
-    // which we use to setFilms state
 
     const mapGenres = async (object) => {
         let filmCollection = {};
@@ -67,20 +48,6 @@ const User = (props) => {
         mapGenres(genres)
         // eslint-disable-next-line
     },[])
-
-    // it detects the changes from the input and on key press Enter, sends the info to multiSearch()
-    useEffect(() => {
-        const listener = event => {
-          if (event.code === "Enter" || event.code === "NumpadEnter") {
-            multiSearchBox(searchFilm);
-          }
-        };
-        document.addEventListener("keydown", listener);
-        return () => {
-          document.removeEventListener("keydown", listener);
-        };
-        // eslint-disable-next-line
-    },[searchFilm]);
 
     useEffect(()=>{
         loadingHandeler()
@@ -101,9 +68,7 @@ const User = (props) => {
                     <div className="navbar">
                         <NavMenu/>
                         <div className="searchNavbar">
-                            <SearchBox 
-                                onChange={handlState}
-                            />
+                            <SearchBox/>
                         </div>
                         <div className="cartCounter">
                             <Cart/>
@@ -113,45 +78,33 @@ const User = (props) => {
                         </NavBtn> 
                     </div>
                 </Header>
-                {
-                    multiSearch.length
-                    ?
-                    <>
-                    <div>
-                        <MultiSearch multiSearcher={multiSearch} />
+                    <div className="carouselMovies">
+                        {
+                            Object.keys(genres).map((genre, index) => {
+                                return (
+                                    <Movie key={index} title={genre} genre={genre}>
+
+                                        {   // eslint-disable-next-line
+                                            films[genre]?.map((film) =>{
+                                                if(film.poster_path)
+                                                return( 
+                                                    <div className='movieCollection' key={film.id}>
+                                                        <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
+                                                        originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
+                                                        voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
+                                                        >
+                                                            <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
+                                                        </ModalRender>
+                                                    </div>
+                                                )
+
+                                            })
+                                        }
+                                    </Movie>
+                                )
+                            })
+                        }
                     </div>
-                    </>
-                    :
-                    <>
-                        <div className="carouselMovies">
-                            {
-                                Object.keys(genres).map((genre, index) => {
-                                    return (
-                                        <Movie key={index} title={genre} genre={genre}>
-    
-                                            {   // eslint-disable-next-line
-                                                films[genre]?.map((film) =>{
-                                                    if(film.poster_path)
-                                                    return( 
-                                                        <div className='movieCollection' key={film.id}>
-                                                            <ModalRender title={film.title} id={film.id} originalLanguage={film.original_language}
-                                                            originalTitle={film.original_title} overview={film.overview} releaseDate={film.release_date} 
-                                                            voteAverage={film.vote_average} backdropPath={pathImg+film.backdrop_path} genres={film.genre_ids} imgFilm={pathImg+film.poster_path}
-                                                            >
-                                                                <img className="filmPoster" alt={film.poster_path} src={pathImg+film.poster_path}/>
-                                                            </ModalRender>
-                                                        </div>
-                                                    )
-    
-                                                })
-                                            }
-                                        </Movie>
-                                    )
-                                })
-                            }
-                        </div>
-                    </>
-                }
                 <Footer/>
             </div>
         )

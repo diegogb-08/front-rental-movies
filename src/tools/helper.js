@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 // Endpoints API The movieDB
-import {pathImg, baseUrl, search, multi, discover,
-        movie, apiKey, genres, query} from '../api/ApiMovieDB'
+import { baseUrl,discover, movie, apiKey } from '../api/ApiMovieDB'
  
  // Function to filter the call to the API
 

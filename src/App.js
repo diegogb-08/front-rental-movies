@@ -8,6 +8,7 @@ import Rental from './containers/Rental/Rental';
 import MyList from './components/MyList/MyList';
 import Update from './components/UpdateUser/UpdateUser';
 import NewPopular from './components/NewPopular/NewPopular';
+import MultiSearch from './components/MultiSearch/MultiSearch';
 
 
 function App() {
@@ -25,7 +26,7 @@ function App() {
         <Route path='/mylist' exact component={MyList}/>
         <Route path='/update' exact component={Update}/>
         <Route path='/newpopular' exact component={NewPopular}/>
-
+        <Route path='/search' exact component={MultiSearch}/>
 
       </Switch>
       </BrowserRouter>
