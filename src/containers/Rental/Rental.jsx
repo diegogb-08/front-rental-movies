@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm} from '@fortawesome/free-solid-svg-icons'
@@ -12,14 +12,48 @@ import Button from '../../components/Button/Button';
 
 
 
+
 function Rental (props) {
   // HOOKS
 
+  const [totalPrice, setTotalPrice] = useState(0)
+
   const [tab, setTab] = useState({
     selected: 'Orders'
-  })
+  });
+
+
+  useEffect(() => {
+      calculateTotal();
+    },[]);
+  
+    
+  useEffect(()=> {
+      calculateTotal();
+  });
+  
+
 
  // FUNCTIONS
+
+  const calculateTotal = () => {
+    console.log(props.cart, "Peliculas en Redux")
+
+      let totalPriceOnCart = 0
+      
+
+      let priceArray = props.cart.map(x=> {
+        return x.price
+      })
+      console.log(priceArray, "=====================")
+      priceArray.map(num => {
+        totalPriceOnCart +=num
+      })
+      setTotalPrice(totalPriceOnCart)
+      
+
+
+  };
 
   const setSelected = (tab) => {
     setTab({selected: tab});
@@ -38,13 +72,8 @@ function Rental (props) {
 
                 </Tab>
 
-
-
-
             </TabNav>
-
-            
-            
+           
           </div>
           
           <div className="basketRental">
@@ -53,23 +82,22 @@ function Rental (props) {
               <div className="counterCartRental">{props.cart.length}</div> 
             </div>
             <div className="priceButtonContainer">
-                <p className="pTotalPrice">Total Price PROPS</p>
+                <p className="pTotalPrice">{totalPrice}€</p>
                 <div className="rentalButton">
                   <Button name="Buy"/>
                 </div>
             </div>
-          
-            
+                     
           </div>
           
-
         </div>
     )
 };
 
 const mapStateToProps = state => {
   return {
-      cart : state.cartReducer.cart
+      cart : state.cartReducer.cart,
+      
   }
 }
 

@@ -1,17 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {connect} from 'react-redux';
 import {REMOVE} from '../../redux/types/cartType'
 
 
+
+
+
 function Orders(props) {
 
-  const deleteOrder = () => {
-    
 
-    props.dispatch({type: REMOVE, payload: [] });
+
+  // Functions
+
+  // Delete all orders (Roo says: Molaría que fuese solo una, y no todas. JOJOOOOOOOOOOOOOOOOOOOOJO)
+  const deleteOrder = () => {
+
+    props.dispatch({type: REMOVE, payload: [] }); 
     
-    
-};
+  }; 
 
 
   return(
@@ -67,3 +73,8 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Orders);
+
+
+
+
+// onClick={()=> deleteOrder()}
