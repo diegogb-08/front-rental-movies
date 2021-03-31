@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from 'axios'
-import { port, customer, update } from '../../api/ApiMongoDB'
+import { port, customer} from '../../api/ApiMongoDB'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { UPDATE } from '../../redux/types/userType'
@@ -47,7 +47,7 @@ const UpdateUser = (props) => {
 
 
     const toggle = async () => {
-
+        console.log(props.token); //undefined?
         const errs = validate(user, "register");
         setErrors(errs);
 
@@ -60,20 +60,20 @@ const UpdateUser = (props) => {
         try {
 
             const id = props.user._id;
-
             let result = await axios.put(port + customer + '/' + id, body, auth)
 
             if (result.data?.email) {
-                let dataLogin = {
-                    email: result.data.email,
-                }
+                props.dispatch({ type: UPDATE, payload: result.data });
+                history.push('/profile')
 
-                let resultLogin = await axios.put(port + customer + update, dataLogin)
+                // let dataLogin = {
+                //     email: result.data.email,
+                // }
 
-                if (resultLogin) {
-                    props.dispatch({ type: UPDATE, payload: resultLogin.data });
-                    history.push('/profile')
-                }
+                // let resultLogin = await axios.put(port + customer + update, dataLogin)
+
+                // if (resultLogin) {
+                // }
             }
         } catch (error) {
             setMessage('Email already exist!')
@@ -96,7 +96,7 @@ const UpdateUser = (props) => {
                 // styleP={validation}
                 />
                 <div className="buttonUpdate">
-                    <button onClick={() => toggle()}>Update</button>
+                    <button onClick={() => toggle()}>UPDATE</button>
                 </div>
             </div>
 
@@ -108,6 +108,7 @@ const UpdateUser = (props) => {
 const mapStateToProps = state => {
     return {
         user: state.userReducer.user,
+        token: state.userReducer.token
     }
 }
 

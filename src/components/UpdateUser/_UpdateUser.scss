@@ -30,12 +30,12 @@
 .buttonUpdate {
     display: flex;
     justify-content: center;
+    margin-top: 1rem;
     button {
         border-radius: .3rem;
-        width: 5rem;
-        padding: 5px;
-        background-color: rgb(126, 185, 38);
+        padding: .5rem 2rem;
+        background-color: rgb(181, 236, 98);
         color: black;
-        font-weight: bold;
+        text-align: center;
     }
 }

@@ -1090,14 +1090,14 @@ input:not(:focus):valid ~ .floating-label {
 
 .buttonUpdate {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-top: 1rem; }
   .buttonUpdate button {
     border-radius: .3rem;
-    width: 5rem;
-    padding: 5px;
-    background-color: #7eb926;
+    padding: .5rem 2rem;
+    background-color: #b5ec62;
     color: black;
-    font-weight: bold; }
+    text-align: center; }
 
 .search-box {
   position: relative;
