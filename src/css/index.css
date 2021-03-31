@@ -940,8 +940,12 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: column; }
 
+.tabContainer {
+  display: flex;
+  flex-direction: column; }
+
 .tabNav {
-  width: 28%; }
+  width: 100%; }
 
 .nav-item {
   cursor: pointer; }
