@@ -27,6 +27,8 @@ function DropDownMenu(props) {
     const logOut = () => {
         setTimeout(()=> {
             props.dispatch({ type: LOGOUT, payload : {}});
+            localStorage.setItem('email', '')
+            localStorage.removeItem('loading')
         },500);
         history.push("/");
     }

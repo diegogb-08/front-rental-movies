@@ -5,14 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const  Carousel = (props)  => {
 
     // Event Listener for the right arrow
-    const rightArrowButton = async () => {
-        let row =  await document.querySelector(`.${props.genre}`);
+    const rightArrowButton = () => {
+        let row =  document.querySelector(`.${props.genre}`);
         row.scrollLeft += row.offsetWidth;
     };
 
     // Event Listener for the left arrow
-    const leftArrowButton = async () => {
-        let row =  await document.querySelector(`.${props.genre}`);
+    const leftArrowButton = () => {
+        let row =  document.querySelector(`.${props.genre}`);
         row.scrollLeft -= row.offsetWidth;
     };
 
