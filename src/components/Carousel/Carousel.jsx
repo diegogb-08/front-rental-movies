@@ -2,17 +2,17 @@ import React from 'react'
 import {faAngleLeft,faAngleRight} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Carousel(props) {
-
-    const row = document.querySelector(`.${props.genre}`);
+const  Carousel = (props)  => {
 
     // Event Listener for the right arrow
-    const rightArrowButton = () => {
+    const rightArrowButton = async () => {
+        let row =  await document.querySelector(`.${props.genre}`);
         row.scrollLeft += row.offsetWidth;
     };
 
     // Event Listener for the left arrow
-    const leftArrowButton = () => {
+    const leftArrowButton = async () => {
+        let row =  await document.querySelector(`.${props.genre}`);
         row.scrollLeft -= row.offsetWidth;
     };
 

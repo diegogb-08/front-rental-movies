@@ -1093,6 +1093,17 @@ input:not(:focus):valid ~ .floating-label {
   width: 40rem;
   height: 90vh; }
 
+
+
+.superformReg {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 40rem;
+  height: 90vh; }
+
 .buttonUpdate {
   display: flex;
   justify-content: center;
@@ -1113,7 +1124,6 @@ input:not(:focus):valid ~ .floating-label {
   padding: 3rem;
   width: 40rem;
   height: 90vh; }
-
 
 .search-box {
   position: relative;
@@ -1200,6 +1210,12 @@ input:not(:focus):valid ~ .floating-label {
     background-color: #0f7fe8; }
   .topInfo .originalLanguage {
     background-color: #F40612; }
+  .topInfo .price {
+    background-color: #fdf137;
+    color: #333333;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem; }
 
 .overview {
   text-align: justify;
@@ -1369,9 +1385,9 @@ input:not(:focus):valid ~ .floating-label {
 .myListComponent {
   background: #141414;
   width: 100%;
+  height: 100%;
   color: #ffffff;
-  padding-top: 8rem;
-  padding-bottom: 5rem; }
+  padding-top: 8rem; }
   .myListComponent h4 {
     padding-left: 5rem; }
 
@@ -1390,7 +1406,7 @@ input:not(:focus):valid ~ .floating-label {
 
 .navMenu {
   display: flex;
-  width: 30%;
+  width: 40%;
   flex-direction: row;
   justify-content: space-around;
   align-items: center; }
@@ -1663,6 +1679,21 @@ input:not(:focus):valid ~ .floating-label {
 .cartCounter {
   height: 100%;
   width: auto; }
+
+.video {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.gif {
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .rentalContainer {
   display: flex;
