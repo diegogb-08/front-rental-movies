@@ -1092,17 +1092,6 @@ input:not(:focus):valid ~ .floating-label {
   width: 40rem;
   height: 90vh; }
 
-
-
-.superformReg {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 40rem;
-  height: 90vh; }
-
 .buttonUpdate {
   display: flex;
   justify-content: center;
@@ -1113,16 +1102,6 @@ input:not(:focus):valid ~ .floating-label {
     background-color: #b5ec62;
     color: black;
     text-align: center; }
-
-.superformReg {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  align-items: center;
-  padding: 3rem;
-  width: 40rem;
-  height: 90vh; }
-
 
 .search-box {
   position: relative;
