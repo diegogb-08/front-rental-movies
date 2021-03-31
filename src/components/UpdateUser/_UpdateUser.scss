@@ -25,3 +25,17 @@
    // border-left: 0.1rem solid grey;
 
 }
+
+
+.buttonUpdate {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    button {
+        border-radius: .3rem;
+        padding: .5rem 2rem;
+        background-color: rgb(181, 236, 98);
+        color: black;
+        text-align: center;
+    }
+}

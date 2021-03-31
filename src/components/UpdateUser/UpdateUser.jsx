@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from 'axios'
-import { port, customer, update } from '../../api/ApiMongoDB'
+import { port, customer} from '../../api/ApiMongoDB'
 import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { UPDATE } from '../../redux/types/userType'
 import validate from "../../tools/validate";
+
+
 
 // IMPORT COMPONENTS
 
@@ -59,20 +61,12 @@ const UpdateUser = (props) => {
         try {
 
             const id = props.user._id;
-
             let result = await axios.put(port + customer + '/' + id, body, auth)
 
             if (result.data?.email) {
-                let dataLogin = {
-                    email: result.data.email,
-                }
-
-                let resultLogin = await axios.put(port + customer + update, dataLogin)
-
-                if (resultLogin) {
-                    props.dispatch({ type: UPDATE, payload: resultLogin.data });
-                    history.push('/profile')
-                }
+                props.dispatch({ type: UPDATE, payload: result.data });
+                setMessage('Email updated')
+                history.push('/profile')
             }
         } catch (error) {
             setMessage('Email already exist!')
@@ -89,13 +83,16 @@ const UpdateUser = (props) => {
                     //value={props.user?.email}
                     onChange={handleState}
                     btnName='Continue'
-                    onClick={() => toggle()}
                     error={errors.email?.help ? errors.email.help : message}
                 // message={message}
                 // style={validation}
                 // styleP={validation}
                 />
+                <div className="buttonUpdate">
+                    <button onClick={() => toggle()}>UPDATE</button>
+                </div>
             </div>
+
             <FooterRegister />
         </div>
     )
@@ -104,6 +101,7 @@ const UpdateUser = (props) => {
 const mapStateToProps = state => {
     return {
         user: state.userReducer.user,
+        token: state.userReducer.token
     }
 }
 

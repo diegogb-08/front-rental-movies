@@ -5,10 +5,10 @@ const initialState = {
     token: '',
 
 };
- 
+
 const userReducer = (state = initialState, action) => {
     switch(action.type){
-        case SAVEEMAIL : 
+        case SAVEEMAIL :
             return {
                 ...state,
                 user : action.payload.user,
@@ -27,9 +27,10 @@ const userReducer = (state = initialState, action) => {
         case UPDATE :
             return {
                 ...state,
-                user : action.payload.user
+                user : action.payload
+
             }
-        default : 
+        default :
             return state
     }
 };
