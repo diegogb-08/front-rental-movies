@@ -7,6 +7,7 @@ import { UPDATE } from '../../redux/types/userType'
 import validate from "../../tools/validate";
 
 
+
 // IMPORT COMPONENTS
 
 import FooterRegister from "../FooterRegister/FooterRegister";
