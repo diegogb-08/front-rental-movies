@@ -1083,6 +1083,7 @@ input:not(:focus):valid ~ .floating-label {
   right: 0;
   background-color: #ffffff; }
 
+
 .superformReg {
   display: flex;
   flex-direction: column;
@@ -1102,6 +1103,17 @@ input:not(:focus):valid ~ .floating-label {
     background-color: #b5ec62;
     color: black;
     text-align: center; }
+
+
+.superformReg {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  padding: 3rem;
+  width: 40rem;
+  height: 90vh; }
+
 
 .search-box {
   position: relative;
@@ -1575,7 +1587,25 @@ input:not(:focus):valid ~ .floating-label {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
+
+.containerButtonsRental {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.buyButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
+
+.emptyOrdersButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
 
 .userComponent {
   background: #141414;
@@ -1698,7 +1728,25 @@ input:not(:focus):valid ~ .floating-label {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
+
+.containerButtonsRental {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.buyButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
+
+.emptyOrdersButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400; }
 
 /*Fonts*/
 /*Bootstrap*/
