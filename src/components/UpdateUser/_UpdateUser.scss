@@ -25,3 +25,17 @@
    // border-left: 0.1rem solid grey;
 
 }
+
+
+.buttonUpdate {
+    display: flex;
+    justify-content: center;
+    button {
+        border-radius: .3rem;
+        width: 5rem;
+        padding: 5px;
+        background-color: rgb(126, 185, 38);
+        color: black;
+        font-weight: bold;
+    }
+}

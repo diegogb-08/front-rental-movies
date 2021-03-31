@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { UPDATE } from '../../redux/types/userType'
 import validate from "../../tools/validate";
+import Button  from '../../components/Button/Button'
+
 
 // IMPORT COMPONENTS
 
@@ -89,13 +91,16 @@ const UpdateUser = (props) => {
                     //value={props.user?.email}
                     onChange={handleState}
                     btnName='Continue'
-                    onClick={() => toggle()}
                     error={errors.email?.help ? errors.email.help : message}
                 // message={message}
                 // style={validation}
                 // styleP={validation}
                 />
+                <div className="buttonUpdate">
+                    <button onClick={() => toggle()}>Update</button>
+                </div>
             </div>
+
             <FooterRegister />
         </div>
     )
