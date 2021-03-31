@@ -9,11 +9,20 @@ import TabNav from "../../components/Tab/TabNav";
 import { connect } from 'react-redux';
 import Button from '../../components/Button/Button';
 import { CLEAN } from "../../redux/types/cartType";
+import axios from 'axios'
 
 
 
 
 function Rental(props) {
+
+  // AUTHORIZATION
+  let token = props.token
+  let auth = {
+      headers: {
+          'Authorization': `Bearer ${token}`
+      }};
+
   // HOOKS
 
   const [totalPrice, setTotalPrice] = useState(0)
@@ -43,7 +52,17 @@ function Rental(props) {
 
   };
 
-  const buyOrder = () => {
+  const buyOrder = async () => {
+
+      let body = {
+        rental: props.cart
+      }
+      console.log(body);
+      const id = props.user._id;
+      console.log(id);
+      let result = await axios.post(port + rental + customer + '/' + id, body, auth);
+
+      console.log('OLA K ASEEEEEEEEEEEEEEEEE', result);
 
   }
 
@@ -114,6 +133,10 @@ function Rental(props) {
 const mapStateToProps = state => {
   return {
     cart: state.cartReducer.cart,
+    user: state.userReducer.user,
+    token: state.userReducer.token
+
+
 
   }
 }
