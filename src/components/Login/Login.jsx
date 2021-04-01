@@ -67,7 +67,11 @@ function Login(props) {
                 let result = await axios.post(port+customer+login, credentials)
                 if(result) {
                     props.dispatch({type: LOGIN, payload: result.data});
+                    if(result.data.user.email === 'fakeflix@fakeflix.com'){
+                        history.push('/admin')
+                    }else{
                     history.push('/user')
+                    }
                 }else {
                     setMessage('Email or password not found')
                 }

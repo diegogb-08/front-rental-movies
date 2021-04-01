@@ -65,11 +65,11 @@ const User = (props) => {
         // eslint-disable-next-line
     },[])
 
-    if (props.token === ''){
-        setTimeout(()=> {
-            return history.push('/')
-        },1000)
-    }
+    // if (props.token === ''){
+    //     setTimeout(()=> {
+    //         return history.push('/')
+    //     },1000)
+    // }
 
     if(loading){
         
