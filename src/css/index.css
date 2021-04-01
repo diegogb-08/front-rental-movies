@@ -945,6 +945,9 @@ input:not(:focus):valid ~ .floating-label {
   display: flex;
   flex-direction: column; }
 
+.profileNav {
+  margin-right: 1rem; }
+
 .tabNav {
   width: 100%; }
 

@@ -40,9 +40,11 @@ function ProfileScreen(props) {
     return (
         <div className="profileComponent">
             <Header onClick={() => home()}>
-                <NavBtn>
-                    <DropDownMenu />
-                </NavBtn>
+                <div className="profileNav">
+                    <NavBtn>
+                        <DropDownMenu />
+                    </NavBtn>
+                </div>
             </Header>
             <div className="profileBody">
                 <div className="profileContainer">
