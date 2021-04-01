@@ -1504,7 +1504,7 @@ input:not(:focus):valid ~ .floating-label {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
 
-.rentalContainer {
+.rentalComponent {
   background: black;
   width: 100%;
   color: #ffffff;
@@ -1527,23 +1527,16 @@ input:not(:focus):valid ~ .floating-label {
     text-align: center;
     font-weight: bold; }
 
-.rentalSuperContainer {
+.rentalContainer {
   display: flex;
   flex-direction: row;
-  margin-top: 8rem;
-  margin-left: 5rem;
-  width: 70%;
-  background-color: white;
-  padding: 1rem;
-  border: solid 0.1rem lightgray;
-  border-radius: 0.2rem; }
+  justify-content: center; }
 
 .basketRental {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
   margin-left: 5rem;
   height: 10rem;
   width: 20rem;
@@ -1552,7 +1545,8 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 2.5rem;
   display: flex;
   flex-wrap: nowrap;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  background-color: white; }
 
 .iconCounterContainer {
   display: flex;
@@ -1675,7 +1669,7 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: center;
   align-items: center; }
 
-.rentalContainer {
+.rentalComponent {
   background: black;
   width: 100%;
   color: #ffffff;
@@ -1698,23 +1692,16 @@ input:not(:focus):valid ~ .floating-label {
     text-align: center;
     font-weight: bold; }
 
-.rentalSuperContainer {
+.rentalContainer {
   display: flex;
   flex-direction: row;
-  margin-top: 8rem;
-  margin-left: 5rem;
-  width: 70%;
-  background-color: white;
-  padding: 1rem;
-  border: solid 0.1rem lightgray;
-  border-radius: 0.2rem; }
+  justify-content: center; }
 
 .basketRental {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
   margin-left: 5rem;
   height: 10rem;
   width: 20rem;
@@ -1723,7 +1710,8 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 2.5rem;
   display: flex;
   flex-wrap: nowrap;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  background-color: white; }
 
 .iconCounterContainer {
   display: flex;

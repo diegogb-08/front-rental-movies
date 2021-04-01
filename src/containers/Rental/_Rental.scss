@@ -1,4 +1,4 @@
-.rentalContainer {
+.rentalComponent {
   background: black;
   width: 100%;
   color: $fontcolor1;
@@ -26,16 +26,10 @@
   }
 }
 
-.rentalSuperContainer {
-  display: flex;
+.rentalContainer {
+  display: flex; 
   flex-direction: row;
-  margin-top: 8rem;
-  margin-left: 5rem;
-  width: 70%;
-  background-color: white;
-  padding: 1rem;
-  border: solid 0.1rem lightgray;
-  border-radius: 0.2rem;
+  justify-content: center;
 }
 
 .basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
@@ -43,7 +37,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
   margin-left: 5rem;
   height: 10rem;
   width: 20rem;
@@ -52,7 +45,8 @@
   font-size: 2.5rem;
   display: flex; 
   flex-wrap: nowrap;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  background-color: white;
 }
 
 .iconCounterContainer {

@@ -99,7 +99,7 @@ function Rental(props) {
     setTab({ selected: tab });
   }
   return (
-    <div className="rentalContainer">
+    <div className="rentalComponent">
       <Header onClick={() => home()}>
         <div className="profileNav">
           <NavBtn>
@@ -107,7 +107,41 @@ function Rental(props) {
           </NavBtn>
         </div>
       </Header>
-      <div className="rentalBody"></div>
+
+      <div className="rentalBody">
+        <div className="rentalContainer"> 
+          <TabNav tabs={['Orders', 'Last Orders', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
+            <Tab isSelected={tab.selected === 'Orders'}>
+              
+            </Tab>
+            <Tab isSelected={tab.selected === 'Last Orders'}>
+
+            </Tab>
+            <Tab isSelected={tab.selected === 'Gifts'}>
+
+            </Tab>
+        
+          </TabNav>
+          <div className="basketRental">
+            <div className="iconCounterContainer">
+              <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
+              <div className="counterCartRental">{props.cart.length}</div>
+            </div>
+            <div className="priceButtonContainer">
+              <p className="pTotalPrice">{totalPrice}€</p>
+            </div>
+            <div className="containerButtonsRental">
+              <div className="buyButton">
+                <Button name="Buy" onClick={() => buyOrder()} />
+              </div>
+              <div className="emptyOrdersButton">
+                <Button onClick={() => deleteOrder()} name="Empty Orders" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   )
 };
@@ -129,30 +163,11 @@ export default connect(mapStateToProps)(Rental);
 
 
 /*
-      <Header />
-
-      <div className="rentalSuperContainer">
-
-        <TabNav tabs={['Orders', 'Wishes', 'Last Orders', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
-          <Tab isSelected={tab.selected === 'Orders'}>
-            <Orders />
-          </Tab>
-          <Tab isSelected={tab.selected === 'Last Orders'}>
-
-          </Tab>
-
-        </TabNav>
+     
 
       </div>
 
-      <div className="basketRental">
-        <div className="iconCounterContainer">
-          <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
-          <div className="counterCartRental">{props.cart.length}</div>
-        </div>
-        <div className="priceButtonContainer">
-          <p className="pTotalPrice">{totalPrice}€</p>
-        </div>
+
         <div className="containerButtonsRental">
           <div className="buyButton">
             <Button name="Buy" onClick={() => buyOrder()} />
