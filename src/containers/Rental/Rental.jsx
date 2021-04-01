@@ -135,9 +135,6 @@ const mapStateToProps = state => {
     cart: state.cartReducer.cart,
     user: state.userReducer.user,
     token: state.userReducer.token
-
-
-
   }
 }
 

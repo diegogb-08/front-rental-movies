@@ -90,6 +90,7 @@ const User = (props) => {
 
         return (
             <div className="userComponent">
+                <div className="blackHeader"></div>
                 <Header>
                     <div className="navbar">
                         <NavMenu/>

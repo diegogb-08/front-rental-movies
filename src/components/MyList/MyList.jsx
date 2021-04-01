@@ -27,6 +27,7 @@ const MyList = (props) => {
   
     return (
         <div className="myListComponent">
+            <div className="blackHeader"></div>
             <Header>
             <div className="navbar">
                     <NavMenu/>
