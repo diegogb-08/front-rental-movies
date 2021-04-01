@@ -12,6 +12,7 @@ import NavBtn from '../../components/NavBtn/NavBtn';
 import NavMenu from '../NavMenu/NavMenu';
 import Footer from '../Footer/Footer';
 import { useHistory } from 'react-router';
+import SearchBox from '../SearchBox/SearchBox';
 
 
 const MyList = (props) => {
@@ -29,6 +30,7 @@ const MyList = (props) => {
             <Header>
             <div className="navbar">
                     <NavMenu/>
+                    <SearchBox/>
                     <div className="cartCounter">
                         <Cart/>
                     </div>
