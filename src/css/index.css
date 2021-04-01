@@ -1565,34 +1565,20 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 3rem;
   border-radius: 0.2rem; }
 
-/*
-.prueba {
-  display: flex;
-  justify-content: center;
-  width: 13rem;
-  height: 2rem;
-  align-items: center;
-  background-color: red;
-  position: fixed;
-}
-*/
-/*
-.basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
+.basketRental {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 5rem;
-  height: 10rem;
-  width: 20rem;
+  padding: 1rem;
+  width: 100%;
   border: solid 0.1rem lightgray;
   border-radius: 0.2rem;
   font-size: 2.5rem;
-  display: flex; 
+  display: flex;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
-  background-color: white
-}
+  background-color: white; }
 
 .iconCounterContainer {
   display: flex;
@@ -1600,59 +1586,49 @@ input:not(:focus):valid ~ .floating-label {
   width: 6rem;
   font-size: 2.5rem;
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: row; }
 
 .filmIconRental {
   display: flex;
   position: relative;
-  transform: rotate(20deg);
-}
+  transform: rotate(20deg); }
 
 .counterCartRental {
   display: flex;
-  color: $fontcolor5;
+  color: #e87d33;
   font-size: 1.5rem;
   position: relative;
   top: 1rem;
   left: 0.5rem;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-.pTotalPrice{
-  font-size: 1.1rem;
-}
+.pTotalPrice {
+  font-size: 1.1rem; }
 
-.priceButtonContainer{
+.priceButtonContainer {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
-
-
-.containerButtonsRental{
+.containerButtonsRental {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 .buyButton {
   display: flex;
   padding: .5rem;
   width: 9rem;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
-.emptyOrdersButton{
+.emptyOrdersButton {
   display: flex;
   padding: .5rem;
   width: 9rem;
-  font-weight: 400;
-}
-*/
+  font-weight: 400; }
+
 .userComponent {
   background: #141414;
   width: 100%;
@@ -1759,34 +1735,20 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 3rem;
   border-radius: 0.2rem; }
 
-/*
-.prueba {
-  display: flex;
-  justify-content: center;
-  width: 13rem;
-  height: 2rem;
-  align-items: center;
-  background-color: red;
-  position: fixed;
-}
-*/
-/*
-.basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
+.basketRental {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 5rem;
-  height: 10rem;
-  width: 20rem;
+  padding: 1rem;
+  width: 100%;
   border: solid 0.1rem lightgray;
   border-radius: 0.2rem;
   font-size: 2.5rem;
-  display: flex; 
+  display: flex;
   flex-wrap: nowrap;
   scroll-behavior: smooth;
-  background-color: white
-}
+  background-color: white; }
 
 .iconCounterContainer {
   display: flex;
@@ -1794,58 +1756,48 @@ input:not(:focus):valid ~ .floating-label {
   width: 6rem;
   font-size: 2.5rem;
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: row; }
 
 .filmIconRental {
   display: flex;
   position: relative;
-  transform: rotate(20deg);
-}
+  transform: rotate(20deg); }
 
 .counterCartRental {
   display: flex;
-  color: $fontcolor5;
+  color: #e87d33;
   font-size: 1.5rem;
   position: relative;
   top: 1rem;
   left: 0.5rem;
-  font-weight: bold;
-}
+  font-weight: bold; }
 
-.pTotalPrice{
-  font-size: 1.1rem;
-}
+.pTotalPrice {
+  font-size: 1.1rem; }
 
-.priceButtonContainer{
+.priceButtonContainer {
   margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
-
-
-.containerButtonsRental{
+.containerButtonsRental {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
 .buyButton {
   display: flex;
   padding: .5rem;
   width: 9rem;
-  font-weight: 400;
-}
+  font-weight: 400; }
 
-.emptyOrdersButton{
+.emptyOrdersButton {
   display: flex;
   padding: .5rem;
   width: 9rem;
-  font-weight: 400;
-}
-*/
+  font-weight: 400; }
+
 /*Fonts*/
 /*Bootstrap*/
