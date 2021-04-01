@@ -7,9 +7,13 @@ import Orders from "../../components/Orders/Orders";
 import Tab from '../../components/Tab/Tab';
 import TabNav from "../../components/Tab/TabNav";
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom'
 import Button from '../../components/Button/Button';
 import { CLEAN } from "../../redux/types/cartType";
 import axios from 'axios'
+import NavBtn from "../../components/NavBtn/NavBtn";
+import DropDownMenu from "../../components/DropDownMenu/DropDownMenu";
+import Footer from "../../components/Footer/Footer";
 
 
 
@@ -25,6 +29,15 @@ function Rental(props) {
   };
 
   // HOOKS
+
+  let history = useHistory();
+
+
+  const home = () => {
+      setTimeout(() => {
+          history.push('/')
+      }, 1000)
+  }
 
   const [totalPrice, setTotalPrice] = useState(0)
 
@@ -87,45 +100,57 @@ function Rental(props) {
     setTab({ selected: tab });
   }
   return (
-    <div className="rentalContainer">
-      <Header />
+    <div className="rentalComponent">
+      <Header onClick={() => home()}>
+        <div className="rentalNav">
+          <NavBtn>
+            <DropDownMenu/>
+          </NavBtn>
+        </div>
+      </Header>
 
-      <div className="rentalSuperContainer">
+      <div className="rentalBody">
+        <div className="rentalContainer"> 
+          <TabNav tabs={['Orders', 'Last Orders', 'My List', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
+            <Tab isSelected={tab.selected === 'Orders'}>
+             <Orders/>
+            </Tab>
+            <Tab isSelected={tab.selected === 'Last Orders'}>
 
-        <TabNav tabs={['Orders', 'Wishes', 'Last Orders', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
-          <Tab isSelected={tab.selected === 'Orders'}>
-            <Orders />
-          </Tab>
-          <Tab isSelected={tab.selected === 'Last Orders'}>
+            </Tab>
+            <Tab isSelected={tab.selected === 'My List'}>
 
-          </Tab>
+            </Tab>
+            <Tab isSelected={tab.selected === 'Gifts'}>
 
-        </TabNav>
+            </Tab>
+        
+          </TabNav>
+
+
+        </div>
+        <div className="cartBoxContainer">
+          <div className="cartBoxFixed">
+          <div className="basketRental">
+            <div className="iconCounterContainer">
+              <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
+              <div className="counterCartRental">{props.cart.length}</div>
+            </div>
+            <div className="priceButtonContainer">
+              <p className="pTotalPrice">{totalPrice}€</p>
+            </div>
+            <div className="containerButtonsRental">
+              <div className="buyButton">
+                <Button name="Buy" onClick={() => buyOrder()} />
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+ 
 
       </div>
-
-      <div className="basketRental">
-        <div className="iconCounterContainer">
-          <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
-          <div className="counterCartRental">{props.cart.length}</div>
-        </div>
-        <div className="priceButtonContainer">
-          <p className="pTotalPrice">{totalPrice}€</p>
-        </div>
-        <div className="containerButtonsRental">
-          <div className="buyButton">
-            <Button name="Buy" onClick={() => buyOrder()} />
-          </div>
-          <div className="emptyOrdersButton">
-            <Button onClick={() => deleteOrder()} name="Empty Orders" />
-          </div>
-        </div>
-
-
-
-
-      </div>
-
+      <Footer/>
     </div>
   )
 };
@@ -139,3 +164,28 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Rental);
+
+
+
+
+/*
+
+          <div className="basketRental">
+            <div className="iconCounterContainer">
+              <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
+              <div className="counterCartRental">{props.cart.length}</div>
+            </div>
+            <div className="priceButtonContainer">
+              <p className="pTotalPrice">{totalPrice}€</p>
+            </div>
+            <div className="containerButtonsRental">
+              <div className="buyButton">
+                <Button name="Buy" onClick={() => buyOrder()} />
+              </div>
+              <div className="emptyOrdersButton">
+                <Button onClick={() => deleteOrder()} name="Empty Orders" />
+              </div>
+            </div>
+          </div>
+<Footer/>
+*/

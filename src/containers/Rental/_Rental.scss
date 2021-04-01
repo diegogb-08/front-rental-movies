@@ -1,39 +1,60 @@
-.rentalContainer {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  max-width: 100%;
-  margin: auto 0;
-  background-color: nth($white , 1 )
+.rentalComponent {
+  background: black;
+  width: 100%;
+  color: $fontcolor1;
+  padding-top: $p5;
 }
 
-.rentalSuperContainer {
+
+.rentalBody {
+  background-color: #F5F5F5;
+  width: 100%;
+  color: black;
   display: flex;
   flex-direction: row;
-  margin-top: 8rem;
-  margin-left: 5rem;
-  width: 70%;
+  padding: 2rem;
+}
+
+.rentalContainer {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+}
+
+
+.cartBoxContainer {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 2.6rem;
+}
+
+.cartBoxFixed {
+  width: 9rem;
+  height: 7rem;
   background-color: white;
-  padding: 1rem;
-  border: solid 0.1rem lightgray;
+  position: fixed;
+  margin-left: 3rem;
   border-radius: 0.2rem;
 }
+
+
 
 .basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
-  margin-left: 5rem;
-  height: 10rem;
-  width: 20rem;
+  padding: 1rem;
+  width: 100%;
   border: solid 0.1rem lightgray;
   border-radius: 0.2rem;
   font-size: 2.5rem;
   display: flex; 
   flex-wrap: nowrap;
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  background-color: white
 }
 
 .iconCounterContainer {
