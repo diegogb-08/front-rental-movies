@@ -863,13 +863,14 @@ input:not(:focus):valid ~ .floating-label {
   background-color: #F5F5F5;
   width: 100%;
   color: black;
-  height: 65vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  align-items: center; }
+  align-items: center;
+  padding: 3rem 0 3rem 0; }
   .profileBody h1 {
     border-bottom: 1px solid #282c2d;
     text-align: center;
@@ -1043,35 +1044,6 @@ input:not(:focus):valid ~ .floating-label {
   margin-left: 1rem;
   font-size: 0.9rem;
   cursor: pointer; }
-
-.imageUser {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 1rem; }
-  .imageUser img {
-    width: 100%;
-    margin-top: 1rem;
-    margin-right: 2rem;
-    cursor: pointer; }
-
-.dropdown {
-  position: relative;
-  display: inline-block; }
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 99; }
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block; }
 
 .registerContainer {
   display: flex;
