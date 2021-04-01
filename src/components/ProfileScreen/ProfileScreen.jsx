@@ -83,7 +83,7 @@ function ProfileScreen(props) {
                         <Tab isSelected={tab.selected === 'User Info'}>
                             <div className="tabContainer">
                                 <div className="profileTitle">
-                                    <h1>Account <img src={imgSubs} alt="imgSubs" /> </h1>
+                                    <h1>User Info<img src={imgSubs} alt="imgSubs" /> </h1>
                                     <h2>SUBSCRIBER SINCE 2015</h2>
                                 </div>
                                 <div className="profileDetails">
