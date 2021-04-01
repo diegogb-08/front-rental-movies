@@ -9,9 +9,10 @@
     background-color: #F5F5F5;
     width: 100%;
     color: black;
-    height: 64vh;
+    height: 65vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
@@ -40,7 +41,6 @@
 
 .profileContainer {
     flex-direction: row;
-    margin-top: 3rem;
     justify-content: center;
     p {
         padding: 15px;
