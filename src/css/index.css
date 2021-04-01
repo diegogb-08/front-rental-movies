@@ -927,6 +927,24 @@ input:not(:focus):valid ~ .floating-label {
   .profilePlan span {
     font-weight: bolder; }
 
+.userInfo {
+  text-align: center;
+  align-items: center;
+  flex-direction: row; }
+
+.addInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.userDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .userDetails span {
+    font-weight: bold; }
+
 .buttonProfile {
   margin-top: 1rem;
   border-radius: .3rem;

@@ -86,28 +86,17 @@ function ProfileScreen(props) {
                             <div className="tabContainer">
                                 <div className="profileTitle">
                                     <h1>User Info<img src={imgSubs} alt="imgSubs" /> </h1>
-                                    <h2>SUBSCRIBER SINCE 2015</h2>
                                 </div>
-                                <div className="profileDetails">
-                                    <img src={profile} alt="profile" />
-                                    <p>Email: {props.user.email}</p>
-                                    <div className="updateEmail">
-                                        <button className="buttonProfile" onClick={updateEmail}>CHANGE EMAIL</button>
-                                    </div>
-                                    <div className="profilePassword">
-                                        <p>Password: *********</p>
-                                        <div className="updateEmail">
-                                            <button className="buttonProfile">CHANGE PASSWORD</button>
-                                        </div>
-                                    </div>
+                                <div className="userDetails">
+                                    <p>Full Name: <span>{props.user?.full_name}</span></p>
+                                    <p>Phone Number: <span>{props.user?.phone_number}</span></p>
+                                    <p>Address: <span>{props.user?.address}</span></p>
+                                    <p>Birth Date: <span>{props.user?.birth_date}</span></p>
+                                    <p>Email: <span>{props.user?.email}</span></p>
                                 </div>
-                                <div className="profileInfo">
-                                    <h2>CURRENT PLAN</h2>
-                                    <div className="profilePlan">
-                                        <p>Premium ULTRA <span>HD</span></p>
-                                    </div>
-                                    <div className="profilePlan">
-                                        <button className="buttonProfile">Change Plan</button>
+                                <div className="addInfo">
+                                    <div className="userInfo">
+                                        <button className="buttonProfile">ADD USER INFO</button>
                                     </div>
                                 </div>
                             </div>
