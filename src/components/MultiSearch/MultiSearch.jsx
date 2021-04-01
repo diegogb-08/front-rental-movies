@@ -53,7 +53,7 @@ function MultiSearch(props) {
                             <h4>Known for:</h4>
                             <div className='searchGrid'>
                                 {
-                                    multiSearch[0].known_for.map((film) =>{
+                                    multiSearch[0]?.known_for.map((film) =>{
                                         if(film.poster_path)
                                         return( 
                                             <div className='d' key={film.id}>
