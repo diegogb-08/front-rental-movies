@@ -7,9 +7,12 @@ import Orders from "../../components/Orders/Orders";
 import Tab from '../../components/Tab/Tab';
 import TabNav from "../../components/Tab/TabNav";
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom'
 import Button from '../../components/Button/Button';
 import { CLEAN } from "../../redux/types/cartType";
 import axios from 'axios'
+import NavBtn from "../../components/NavBtn/NavBtn";
+import DropDownMenu from "../../components/DropDownMenu/DropDownMenu";
 
 
 
@@ -25,6 +28,15 @@ function Rental(props) {
   };
 
   // HOOKS
+
+  let history = useHistory();
+
+
+  const home = () => {
+      setTimeout(() => {
+          history.push('/')
+      }, 1000)
+  }
 
   const [totalPrice, setTotalPrice] = useState(0)
 
@@ -88,6 +100,35 @@ function Rental(props) {
   }
   return (
     <div className="rentalContainer">
+      <Header onClick={() => home()}>
+        <div className="profileNav">
+          <NavBtn>
+            <DropDownMenu/>
+          </NavBtn>
+        </div>
+      </Header>
+      <div className="rentalBody"></div>
+    </div>
+  )
+};
+
+const mapStateToProps = state => {
+  return {
+    cart: state.cartReducer.cart,
+    user: state.userReducer.user,
+    token: state.userReducer.token
+
+
+
+  }
+}
+
+export default connect(mapStateToProps)(Rental);
+
+
+
+
+/*
       <Header />
 
       <div className="rentalSuperContainer">
@@ -125,20 +166,4 @@ function Rental(props) {
 
 
       </div>
-
-    </div>
-  )
-};
-
-const mapStateToProps = state => {
-  return {
-    cart: state.cartReducer.cart,
-    user: state.userReducer.user,
-    token: state.userReducer.token
-
-
-
-  }
-}
-
-export default connect(mapStateToProps)(Rental);
+*/

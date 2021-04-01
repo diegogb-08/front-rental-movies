@@ -1,10 +1,29 @@
 .rentalContainer {
+  background: black;
+  width: 100%;
+  color: $fontcolor1;
+  padding-top: $p5;
+}
+
+.rentalBody {
+  background-color: #F5F5F5;
+  width: 100%;
+  color: black;
+  height: 100%;
   display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  max-width: 100%;
-  margin: auto 0;
-  background-color: nth($white , 1 )
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding: 3rem 0 3rem 0;
+  // justify-content: center;
+  h1 {
+      border-bottom: 1px solid #282c2d;
+      text-align: center;
+      font-weight: bold;
+
+  }
 }
 
 .rentalSuperContainer {
