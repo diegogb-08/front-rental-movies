@@ -5,14 +5,13 @@
   padding-top: $p5;
 }
 
+
 .rentalBody {
   background-color: #F5F5F5;
   width: 100%;
   color: black;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
   padding: 2rem;
 }
 
@@ -20,7 +19,38 @@
   display: flex; 
   flex-direction: row;
   justify-content: center;
+  width: 80%;
 }
+
+
+.cartBoxContainer {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 2.6rem;
+}
+
+.cartBoxFixed {
+  width: 9rem;
+  height: 7rem;
+  background-color: white;
+  position: fixed;
+  margin-left: 3rem;
+  border-radius: 0.2rem;
+}
+
+
+/*
+.prueba {
+  display: flex;
+  justify-content: center;
+  width: 13rem;
+  height: 2rem;
+  align-items: center;
+  background-color: red;
+  position: fixed;
+}
+*/
 /*
 .basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
   display: flex;

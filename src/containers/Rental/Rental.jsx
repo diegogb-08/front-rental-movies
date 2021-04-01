@@ -129,8 +129,14 @@ function Rental(props) {
 
 
         </div>
-        
+        <div className="cartBoxContainer">
+          <div className="cartBoxFixed">
+          </div>
+        </div>
+ 
+
       </div>
+      <Footer/>
     </div>
   )
 };

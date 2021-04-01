@@ -1,100 +1,137 @@
-
-.imgOrder {
-  width: 20rem;
-  padding: .5rem;
-}
-
-
-.filmsPrice {
-  color: #F40612;
+.orderComponent {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row-reverse;
-  font-size: 0.8rem;
-  font-weight: 1000;
-  width: 93.2%;
-
+  flex-direction: column;
 }
 
-.ordersContainer {
+// NavBar Delete All Orders n Price
+
+.navBarOrders {
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+
+.deleteAll {
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.deleteAll:hover {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: red;
+}
+
+.priceAll {
+  font-size: 0.8rem;
+  color: red;
+  font-weight: 600;
+  margin-right: 0.8rem;
+}
+
+// Master Order Container
+
+
+.ordersContainer { 
   display: flex;
   flex-direction: row;
-  background-color: white;
   border-top: 0.1rem solid lightgrey;
   width: 100%;
 }
 
+// Img Container **
 
-.ordersInfo {
+.imgOrderContainer {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  padding: 1.5%;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.imgOrder {
+  display: flex;
+  width: 100%;
+}
+
+// Info Container 
+
+.infoOrderContainer {
   display: flex;
   flex-direction: column;
-  width: 35%;
-  padding: .5rem
+  width: 50%;
+  padding: 1.5%;
 }
 
 
-.ordersPrice {
-  display: flex;
-  flex-direction: row;
-  margin-left: 2rem;
-  padding: .5rem;
-}
-
-.pPrice {     // AQUI ROB
+.orderTitle {
   font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem;
+  font-weight: 1000;
 }
 
-.orderTitle{
-  color: black;
-  font-size: 1rem;
-  padding: 1rem;
+.dateOrder {
+  font-size: 0.65rem;
   font-weight: 600;
 }
 
-.inputGiftContainer {
-  display: flex;
-  flex-direction: row;
-  margin-left: 1rem;
-}
-
-.inputGift {
-  margin-top: 0.08rem;
-  cursor: pointer;
-}
-.pGift {
-  margin-left: 1rem;
-  font-size: 0.7rem;
-}
+// Actions Container
 
 .ordersActionsContainer{
   display: flex;
   flex-direction: row;
-  margin-left: 1rem;
+  font-size: 0.8rem;
+}
+
+.inputGift{
+  display: flex;
+  margin-top: 0.1rem;
+}
+
+.pGift {
+  display: flex;
+  font-size: 0.7rem;
+  margin-left: 2%;
+}
+
+
+.actionSave {
+  display: flex;
+  cursor: pointer;
+  margin-left: 7%;
+  font-size: 0.7rem;
 }
 
 .actionDelete {
-  font-size: 0.7rem;
+  display: flex;
+  margin-left: 7%;
   cursor: pointer;
-
-}
-
-.actionSave {
-  margin-left: 1rem;
   font-size: 0.7rem;
-  cursor: pointer;
-}
-
-.actionDelete:hover {
-  color: #F40612;
-  font-size: 0.7rem;
-  cursor: pointer;
-
 }
 
 .actionSave:hover {
-  color: #F40612;
-  margin-left: 1rem;
-  font-size: 0.7rem;
+  display: flex;
+  color: red;
   cursor: pointer;
+  font-size: 0.7rem;
 }
+
+.actionDelete:hover {
+  display: flex;
+  margin-left: 7%;
+  color: red;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+.priceContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 10%;
+  padding: 0.9%;
+  font-weight: 700;
+}
+
+

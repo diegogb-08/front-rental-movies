@@ -971,85 +971,109 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   background-color: white; }
 
-.imgOrder {
-  width: 20rem;
-  padding: .5rem; }
-
-.filmsPrice {
-  color: #F40612;
+.orderComponent {
+  width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column; }
+
+.navBarOrders {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+
+.deleteAll {
   font-size: 0.8rem;
-  font-weight: 1000;
-  width: 93.2%; }
+  cursor: pointer; }
+
+.deleteAll:hover {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: red; }
+
+.priceAll {
+  font-size: 0.8rem;
+  color: red;
+  font-weight: 600;
+  margin-right: 0.8rem; }
 
 .ordersContainer {
   display: flex;
   flex-direction: row;
-  background-color: white;
   border-top: 0.1rem solid lightgrey;
   width: 100%; }
 
-.ordersInfo {
+.imgOrderContainer {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  padding: 1.5%;
+  justify-content: center;
+  align-self: center; }
+
+.imgOrder {
+  display: flex;
+  width: 100%; }
+
+.infoOrderContainer {
   display: flex;
   flex-direction: column;
-  width: 35%;
-  padding: .5rem; }
-
-.ordersPrice {
-  display: flex;
-  flex-direction: row;
-  margin-left: 2rem;
-  padding: .5rem; }
-
-.pPrice {
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 1rem; }
+  width: 50%;
+  padding: 1.5%; }
 
 .orderTitle {
-  color: black;
   font-size: 1rem;
-  padding: 1rem;
+  font-weight: 1000; }
+
+.dateOrder {
+  font-size: 0.65rem;
   font-weight: 600; }
-
-.inputGiftContainer {
-  display: flex;
-  flex-direction: row;
-  margin-left: 1rem; }
-
-.inputGift {
-  margin-top: 0.08rem;
-  cursor: pointer; }
-
-.pGift {
-  margin-left: 1rem;
-  font-size: 0.7rem; }
 
 .ordersActionsContainer {
   display: flex;
   flex-direction: row;
-  margin-left: 1rem; }
+  font-size: 0.8rem; }
 
-.actionDelete {
+.inputGift {
+  display: flex;
+  margin-top: 0.1rem; }
+
+.pGift {
+  display: flex;
   font-size: 0.7rem;
-  cursor: pointer; }
+  margin-left: 2%; }
 
 .actionSave {
-  margin-left: 1rem;
-  font-size: 0.7rem;
-  cursor: pointer; }
+  display: flex;
+  cursor: pointer;
+  margin-left: 7%;
+  font-size: 0.7rem; }
 
-.actionDelete:hover {
-  color: #F40612;
-  font-size: 0.7rem;
-  cursor: pointer; }
+.actionDelete {
+  display: flex;
+  margin-left: 7%;
+  cursor: pointer;
+  font-size: 0.7rem; }
 
 .actionSave:hover {
-  color: #F40612;
-  margin-left: 1rem;
-  font-size: 0.7rem;
-  cursor: pointer; }
+  display: flex;
+  color: red;
+  cursor: pointer;
+  font-size: 0.7rem; }
+
+.actionDelete:hover {
+  display: flex;
+  margin-left: 7%;
+  color: red;
+  cursor: pointer;
+  font-size: 0.7rem; }
+
+.priceContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 10%;
+  padding: 0.9%;
+  font-weight: 700; }
 
 .registerContainer {
   display: flex;
@@ -1517,17 +1541,41 @@ input:not(:focus):valid ~ .floating-label {
   background-color: #F5F5F5;
   width: 100%;
   color: black;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
   padding: 2rem; }
 
 .rentalContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  width: 80%; }
 
+.cartBoxContainer {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 2.6rem; }
+
+.cartBoxFixed {
+  width: 9rem;
+  height: 7rem;
+  background-color: white;
+  position: fixed;
+  margin-left: 3rem;
+  border-radius: 0.2rem; }
+
+/*
+.prueba {
+  display: flex;
+  justify-content: center;
+  width: 13rem;
+  height: 2rem;
+  align-items: center;
+  background-color: red;
+  position: fixed;
+}
+*/
 /*
 .basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
   display: flex;
@@ -1687,17 +1735,41 @@ input:not(:focus):valid ~ .floating-label {
   background-color: #F5F5F5;
   width: 100%;
   color: black;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
   padding: 2rem; }
 
 .rentalContainer {
   display: flex;
   flex-direction: row;
-  justify-content: center; }
+  justify-content: center;
+  width: 80%; }
 
+.cartBoxContainer {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 2.6rem; }
+
+.cartBoxFixed {
+  width: 9rem;
+  height: 7rem;
+  background-color: white;
+  position: fixed;
+  margin-left: 3rem;
+  border-radius: 0.2rem; }
+
+/*
+.prueba {
+  display: flex;
+  justify-content: center;
+  width: 13rem;
+  height: 2rem;
+  align-items: center;
+  background-color: red;
+  position: fixed;
+}
+*/
 /*
 .basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
   display: flex;
