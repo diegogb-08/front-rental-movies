@@ -25,8 +25,6 @@ const Register = (props) => {
     password: ''
   })
 
-  console.log(user.email)
-
   const [password, setPassword] = useState({
     hideShow: 'password',
     showHide: 'SHOW'
@@ -79,7 +77,11 @@ const Register = (props) => {
         
         if (resultLogin) {          
             props.dispatch({type: LOGIN, payload: resultLogin.data});
-            history.push('/user')
+            if(resultLogin.data.user.email === 'fakeflix@fakeflix.com'){
+              history.push('/admin')
+            }else{
+              history.push('/user')
+            }
         }
       } 
     } catch (error) {

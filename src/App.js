@@ -9,6 +9,7 @@ import MyList from './components/MyList/MyList';
 import Update from './components/UpdateUser/UpdateUser';
 // import NewPopular from './components/NewPopular/NewPopular';
 import MultiSearch from './components/MultiSearch/MultiSearch';
+import Admin from './containers/Admin/Admin';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/update' exact component={Update}/>
         {/* <Route path='/newpopular' exact component={NewPopular}/> */}
         <Route path='/search' exact component={MultiSearch}/>
+        <Route path='/admin' exact component={Admin}/>
 
       </Switch>
       </BrowserRouter>

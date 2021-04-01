@@ -45,32 +45,53 @@ function DropDownMenu(props) {
 
     return (
         <div className="dropDown">
-            <div className="divItem" onClick={()=>bringMeTo()}>
-                <DropDownItem >
-                    <FontAwesomeIcon icon={faUser} className="iconBtn"/>
-                    Account
-                </DropDownItem>
-            </div>
-            <div className="divItem" onClick={()=>rental()}>
-                <DropDownItem >
-                    <FontAwesomeIcon icon={faVideo} className="iconBtn"/>
-                    Rental
-                </DropDownItem>
-            </div>
-            <div className="divItem" onClick={()=>user()}>
-                <DropDownItem >
-                    <FontAwesomeIcon icon={faTicketAlt} className="iconBtn"/>
-                    User View
-                </DropDownItem>
-            </div>
-            <div className="divItem" onClick={()=>logOut()}>
-                <DropDownItem >
-                    <FontAwesomeIcon icon={faSignOutAlt} className="iconBtn"/>
-                    Logout
-                </DropDownItem>
-            </div>
+            {
+                props.user?.email !== 'fakeflix@fakeflix.com'
+                ?
+                <>
+                    <div className="divItem" onClick={()=>bringMeTo()}>
+                        <DropDownItem >
+                            <FontAwesomeIcon icon={faUser} className="iconBtn"/>
+                            Account
+                        </DropDownItem>
+                    </div>
+                    <div className="divItem" onClick={()=>rental()}>
+                        <DropDownItem >
+                            <FontAwesomeIcon icon={faVideo} className="iconBtn"/>
+                            Rental
+                        </DropDownItem>
+                    </div>
+                    <div className="divItem" onClick={()=>user()}>
+                        <DropDownItem >
+                            <FontAwesomeIcon icon={faTicketAlt} className="iconBtn"/>
+                            User View
+                        </DropDownItem>
+                    </div>
+                    <div className="divItem" onClick={()=>logOut()}>
+                        <DropDownItem >
+                            <FontAwesomeIcon icon={faSignOutAlt} className="iconBtn"/>
+                            Logout
+                        </DropDownItem>
+                    </div>
+                </>
+                :
+                <>
+                    <div className="divItem" onClick={()=>logOut()}>
+                        <DropDownItem >
+                            <FontAwesomeIcon icon={faSignOutAlt} className="iconBtn"/>
+                            Logout
+                        </DropDownItem>
+                    </div>
+                </>
+            }
         </div>
     )
 }
 
-export default connect()(DropDownMenu);
+const mapStateToProps = state => {
+    return {
+        user: state.userReducer.user,
+    }
+};
+
+export default connect(mapStateToProps)(DropDownMenu);

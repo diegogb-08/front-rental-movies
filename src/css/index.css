@@ -1295,7 +1295,6 @@ input:not(:focus):valid ~ .floating-label {
   vertical-align: top; }
 
 .dropDown {
-  height: 10rem;
   width: 10rem;
   background-color: black;
   position: absolute;
@@ -1340,11 +1339,11 @@ input:not(:focus):valid ~ .floating-label {
   width: 2.5rem;
   border-radius: 0.3rem;
   cursor: pointer;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
   font-family: 'Open Sans Condensed', sans-serif; }
 
 .profileImg {
-  width: 100%; }
+  width: 100%;
+  border-radius: 0.3em; }
 
 .arrow {
   color: white;
@@ -1508,6 +1507,19 @@ input:not(:focus):valid ~ .floating-label {
   width: 6rem;
   display: flex;
   justify-content: center; }
+
+.adminContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #e8f0fe; }
+
+.adminNav {
+  margin-right: 1rem; }
+
+.allRentalsContainer {
+  width: 100%;
+  height: 100%;
+  margin: 5rem; }
 
 .configComponent {
   display: flex;
