@@ -13,8 +13,12 @@ function Admin() {
 
     const getAllRentals = async () => {
 
-        let result = await axios.get(port+rental)
-        setAllRentals(result.data)
+        try{
+            let result = await axios.get(port+rental)
+            setAllRentals(result.data)
+        }catch(e){
+            return e.status(404)
+        }
     }
 
 
@@ -50,7 +54,6 @@ function Admin() {
                         {
                             allRentals.map(order => {
                                 return order.rental.map(film => {
-                                    console.log(film.title)
                                     return(
                                         <tr>
                                                 <td>{order._id}</td>
