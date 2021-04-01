@@ -13,6 +13,7 @@ import { CLEAN } from "../../redux/types/cartType";
 import axios from 'axios'
 import NavBtn from "../../components/NavBtn/NavBtn";
 import DropDownMenu from "../../components/DropDownMenu/DropDownMenu";
+import Footer from "../../components/Footer/Footer";
 
 
 
@@ -101,7 +102,7 @@ function Rental(props) {
   return (
     <div className="rentalComponent">
       <Header onClick={() => home()}>
-        <div className="profileNav">
+        <div className="rentalNav">
           <NavBtn>
             <DropDownMenu/>
           </NavBtn>
@@ -110,11 +111,14 @@ function Rental(props) {
 
       <div className="rentalBody">
         <div className="rentalContainer"> 
-          <TabNav tabs={['Orders', 'Last Orders', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
+          <TabNav tabs={['Orders', 'Last Orders', 'My List', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
             <Tab isSelected={tab.selected === 'Orders'}>
-              
+             <Orders/>
             </Tab>
             <Tab isSelected={tab.selected === 'Last Orders'}>
+
+            </Tab>
+            <Tab isSelected={tab.selected === 'My List'}>
 
             </Tab>
             <Tab isSelected={tab.selected === 'Gifts'}>
@@ -122,25 +126,10 @@ function Rental(props) {
             </Tab>
         
           </TabNav>
-          <div className="basketRental">
-            <div className="iconCounterContainer">
-              <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
-              <div className="counterCartRental">{props.cart.length}</div>
-            </div>
-            <div className="priceButtonContainer">
-              <p className="pTotalPrice">{totalPrice}€</p>
-            </div>
-            <div className="containerButtonsRental">
-              <div className="buyButton">
-                <Button name="Buy" onClick={() => buyOrder()} />
-              </div>
-              <div className="emptyOrdersButton">
-                <Button onClick={() => deleteOrder()} name="Empty Orders" />
-              </div>
-            </div>
-          </div>
+
 
         </div>
+        
       </div>
     </div>
   )
@@ -163,22 +152,23 @@ export default connect(mapStateToProps)(Rental);
 
 
 /*
-     
 
-      </div>
-
-
-        <div className="containerButtonsRental">
-          <div className="buyButton">
-            <Button name="Buy" onClick={() => buyOrder()} />
+          <div className="basketRental">
+            <div className="iconCounterContainer">
+              <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
+              <div className="counterCartRental">{props.cart.length}</div>
+            </div>
+            <div className="priceButtonContainer">
+              <p className="pTotalPrice">{totalPrice}€</p>
+            </div>
+            <div className="containerButtonsRental">
+              <div className="buyButton">
+                <Button name="Buy" onClick={() => buyOrder()} />
+              </div>
+              <div className="emptyOrdersButton">
+                <Button onClick={() => deleteOrder()} name="Empty Orders" />
+              </div>
+            </div>
           </div>
-          <div className="emptyOrdersButton">
-            <Button onClick={() => deleteOrder()} name="Empty Orders" />
-          </div>
-        </div>
-
-
-
-
-      </div>
+<Footer/>
 */

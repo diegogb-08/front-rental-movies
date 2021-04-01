@@ -12,18 +12,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  padding: 3rem 0 3rem 0;
-  // justify-content: center;
-  h1 {
-      border-bottom: 1px solid #282c2d;
-      text-align: center;
-      font-weight: bold;
-
-  }
+  justify-content: flex-start;
+  padding: 2rem;
 }
 
 .rentalContainer {
@@ -31,7 +21,7 @@
   flex-direction: row;
   justify-content: center;
 }
-
+/*
 .basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
   display: flex;
   flex-direction: column;
@@ -46,7 +36,7 @@
   display: flex; 
   flex-wrap: nowrap;
   scroll-behavior: smooth;
-  background-color: white;
+  background-color: white
 }
 
 .iconCounterContainer {
@@ -107,3 +97,4 @@
   width: 9rem;
   font-weight: 400;
 }
+*/

@@ -30,7 +30,7 @@ function Orders(props) {
                             </div>
                             <div className="ordersActionsContainer">
                               <u className="actionDelete">Delete</u>
-                              <u className="actionSave">Save on Whishes</u>
+                              <u className="actionSave">Save on my list</u>
                             </div>
 
                             

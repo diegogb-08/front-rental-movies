@@ -1,88 +1,93 @@
 
 .imgOrder {
-  margin-top: 2rem;
-  width: 30rem
+  width: 20rem;
+  padding: .5rem;
 }
+
 
 .filmsPrice {
   color: #F40612;
   display: flex;
   flex-direction: row-reverse;
-  font-size: 1rem;
-  margin-right: 4.6rem;
+  font-size: 0.8rem;
+  font-weight: 1000;
+  width: 93.2%;
 
 }
+
 .ordersContainer {
   display: flex;
   flex-direction: row;
   background-color: white;
-  padding: 1rem;
   border-top: 0.1rem solid lightgrey;
+  width: 100%;
 }
+
 
 .ordersInfo {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  width: 40rem;
-  
+  width: 35%;
+  padding: .5rem
 }
 
 
 .ordersPrice {
   display: flex;
   flex-direction: row;
-  padding: 2.3rem;
+  margin-left: 2rem;
+  padding: .5rem;
 }
 
 .pPrice {     // AQUI ROB
-  width: 4rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
+  padding: 1rem;
 }
 
 .orderTitle{
   color: black;
-  font-size: 2rem;
-  margin-left: 3rem;
+  font-size: 1rem;
+  padding: 1rem;
+  font-weight: 600;
 }
 
 .inputGiftContainer {
   display: flex;
   flex-direction: row;
-  margin-left: 3.1rem;
+  margin-left: 1rem;
 }
 
 .inputGift {
-  margin-top: 0.21rem;
+  margin-top: 0.08rem;
   cursor: pointer;
 }
 .pGift {
   margin-left: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 .ordersActionsContainer{
   display: flex;
   flex-direction: row;
-  margin-left: 3rem;
+  margin-left: 1rem;
 }
 
 .actionDelete {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   cursor: pointer;
 
 }
 
 .actionSave {
   margin-left: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   cursor: pointer;
 }
 
 .actionDelete:hover {
   color: #F40612;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   cursor: pointer;
 
 }
@@ -90,6 +95,6 @@
 .actionSave:hover {
   color: #F40612;
   margin-left: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   cursor: pointer;
 }
