@@ -1909,11 +1909,12 @@ input:not(:focus):valid ~ .floating-label {
   width: auto; }
 
 .video {
-  height: 100%;
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-color: #8e8c8e; }
 
 .gif {
   background-color: black;

@@ -17,11 +17,14 @@ import gif from '../../img/fakeflix_loadtime.gif'
 // Endpoints API The movieDB
 import { pathImg, genres } from '../../api/ApiMovieDB'
 import Footer from '../../components/Footer/Footer';
+import { useHistory } from 'react-router';
 
 
 
 
 const User = (props) => {
+
+    let history = useHistory()
 
     let storage = JSON.parse(localStorage.getItem('loading'))
     // HOOKS
@@ -64,11 +67,11 @@ const User = (props) => {
         // eslint-disable-next-line
     },[])
 
-    // if (props.token === ''){
-    //     setTimeout(()=> {
-    //         return history.push('/')
-    //     },1000)
-    // }
+    if (props.token === ''){
+        setTimeout(()=> {
+            return history.push('/')
+        },1000)
+    }
 
     if(loading){
         

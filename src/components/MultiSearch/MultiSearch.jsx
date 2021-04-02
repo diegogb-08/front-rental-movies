@@ -39,10 +39,12 @@ function MultiSearch(props) {
                     </NavBtn> 
                 </div>
             </Header>
+              <div className="spacer"></div>
+              <div className="spacer"></div>
             <div className="multiSearchComponent">
 
                 {
-                    multiSearch[0].known_for
+                    multiSearch[0]?.known_for
                     ?
                     <>
                         <div className='searchByCast'>

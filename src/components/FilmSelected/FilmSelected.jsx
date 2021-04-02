@@ -27,24 +27,28 @@ const FilmSelected = (props) => {
 
 
     // Here we check if the movie/series is already in the Cart and render the button if it exist
-
-    let idCartFound = props.cart.map(item => item.id).find(element => element === film.id);
-    let idListFound = props.list.map(item => item.id).find(element => element === film.id)
-    
     // Here we check if the movie/series is already in the List and render the button if it exist
     const checkList = () => {
-        if ( idListFound !== undefined) return setColor({...textcolor, list: '#0f7fe8'})
+      if(props.list[0]){
+        let idListFound = props.list?.map(item => item.id).find(element => element === film.id);
+          if ( idListFound !== undefined) 
+            return setColor({...textcolor, list: '#0f7fe8'})
+      }
     }
     
     const checkCart = () => {
-        if(idCartFound !== undefined) return setColor({...textcolor, cart: '#60d369'})
+      if(props.cart[0]){
+        let idCartFound = props.cart?.map(item => item.id).find(element => element === film.id);
+        if(idCartFound !== undefined) 
+          return setColor({...textcolor, cart: '#60d369'})
+      }
     }
-
+    
     useEffect(()=> {
-        checkList()
-        // eslint-disable-next-line
+      checkList()
+      // eslint-disable-next-line
     },[])
-
+    
     useEffect(()=> {
         checkCart()
         // eslint-disable-next-line
@@ -65,13 +69,19 @@ const FilmSelected = (props) => {
 
     const addFilmToList = () => {
         let list = film
-        let id = props.list.map(item => item.id)
-        if(id.find(element => element === list.id) === undefined){
+        if(props.list[0]){
+          let id = props.list.map(item => item.id)
+          if(id.find(element => element === list.id) === undefined){
             list.inList = list.inList +1
             props.dispatch({type: ADDLIST, payload: list})
             setColor({...textcolor, list: '#0f7fe8'})
-        }else{
+          }else{
             alert('You are trying to add an existing product to the list!')
+          }        
+        }else{
+            list.inList = list.inList +1
+            props.dispatch({type: ADDLIST, payload: list})
+            setColor({...textcolor, list: '#0f7fe8'})
         }
     }
 
