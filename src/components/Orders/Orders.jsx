@@ -63,7 +63,6 @@ function Orders(props) {
                           <div className="ordersActionsContainer">
                             <input className="inputGift" type="checkbox"/>
                             <p className="pGift">It's a gift</p>
-                            <u className="actionSave">Save on my list</u>
                             <u className="actionDelete">Delete</u>
                           </div>
 

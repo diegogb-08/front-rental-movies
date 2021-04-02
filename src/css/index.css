@@ -1007,7 +1007,8 @@ input:not(:focus):valid ~ .floating-label {
 
 .deleteAll {
   font-size: 0.8rem;
-  cursor: pointer; }
+  cursor: pointer;
+  color: red; }
 
 .deleteAll:hover {
   font-size: 0.8rem;
@@ -1066,21 +1067,9 @@ input:not(:focus):valid ~ .floating-label {
   font-size: 0.7rem;
   margin-left: 2%; }
 
-.actionSave {
-  display: flex;
-  cursor: pointer;
-  margin-left: 7%;
-  font-size: 0.7rem; }
-
 .actionDelete {
   display: flex;
   margin-left: 7%;
-  cursor: pointer;
-  font-size: 0.7rem; }
-
-.actionSave:hover {
-  display: flex;
-  color: red;
   cursor: pointer;
   font-size: 0.7rem; }
 
