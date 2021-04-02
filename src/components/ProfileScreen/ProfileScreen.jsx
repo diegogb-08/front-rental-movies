@@ -18,7 +18,7 @@ function ProfileScreen(props) {
 
     const home = () => {
         setTimeout(() => {
-            history.push('/')
+            history.push('/user')
         }, 1000)
     }
 
