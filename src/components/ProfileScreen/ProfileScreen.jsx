@@ -65,7 +65,7 @@ function ProfileScreen(props) {
                                     <div className="profilePassword">
                                         <p>Password: *********</p>
                                         <div className="updateEmail">
-                                            {/* <button className="buttonProfile">CHANGE PASSWORD</button> */}
+                                            <button className="buttonProfile">CHANGE PASSWORD</button>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +75,7 @@ function ProfileScreen(props) {
                                         <p>Premium ULTRA <span>HD</span></p>
                                     </div>
                                     <div className="profilePlan">
-                                        <button className="buttonProfile">Change Plan</button>
+                                        {/* <button className="buttonProfile">Change Plan</button> */}
                                     </div>
                                 </div>
 
