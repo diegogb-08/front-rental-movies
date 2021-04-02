@@ -17,13 +17,12 @@ import gif from '../../img/fakeflix_loadtime.gif'
 // Endpoints API The movieDB
 import { pathImg, genres } from '../../api/ApiMovieDB'
 import Footer from '../../components/Footer/Footer';
-import { useHistory } from 'react-router';
+
 
 
 
 const User = (props) => {
 
-    let history = useHistory()
     let storage = JSON.parse(localStorage.getItem('loading'))
     // HOOKS
     const [films, setFilms] = useState({})

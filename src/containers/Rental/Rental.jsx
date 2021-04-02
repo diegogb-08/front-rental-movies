@@ -48,6 +48,7 @@ function Rental(props) {
 
   useEffect(() => {
     calculateTotal();
+    // eslint-disable-next-line
   }, []);
 
 

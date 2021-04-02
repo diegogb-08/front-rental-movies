@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 // import {
 //     pathImg, baseUrl, search, multi, discover,
@@ -53,7 +53,7 @@ const MyList = (props) => {
                 :
                 <>
                     <div className="listGrid">
-                        {
+                        {     // eslint-disable-next-line      
                             props.list.map((film) =>{
                                 if(film.imgFilm)
                                 return( 
@@ -66,7 +66,6 @@ const MyList = (props) => {
                                         </ModalRender>
                                     </div>
                                 )
-
                             })
                         }     
                     </div>
