@@ -5,10 +5,14 @@
   padding-top: $p5;
 }
 
+.rentalNav {
+  margin-right: 1rem;
+}
 
 .rentalBody {
   background-color: #F5F5F5;
   width: 100%;
+  min-height: 100vh;    // Aquí Victor
   color: black;
   display: flex;
   flex-direction: row;

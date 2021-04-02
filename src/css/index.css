@@ -1100,16 +1100,17 @@ input:not(:focus):valid ~ .floating-label {
 
 .emptyOrderContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  height: 100vh;
-  width: 100%; }
+  width: 100%;
+  background-color: red; }
 
 .messageEmpyOrder {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: 100%;
   height: 50%; }
 
@@ -1513,23 +1514,24 @@ input:not(:focus):valid ~ .floating-label {
 
 .emptyLastOrderContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  height: 100vh;
-  width: 100%; }
+  width: 100%;
+  background-color: red; }
 
 .messageEmptyLastOrder {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: 100%;
   height: 50%; }
 
 .containerCatLastOrder {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-self: flex-end;
   width: 50%; }
 
 .angryCat {
@@ -1574,23 +1576,24 @@ input:not(:focus):valid ~ .floating-label {
 
 .emptyGiftsContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  height: 100vh;
-  width: 100%; }
+  width: 100%;
+  background-color: red; }
 
 .messageEmptyGifts {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  align-self: center;
   width: 100%;
   height: 50%; }
 
 .containerCatGifts {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-self: flex-end;
   width: 50%; }
 
 .happyCat {
@@ -1759,9 +1762,13 @@ input:not(:focus):valid ~ .floating-label {
   color: #ffffff;
   padding-top: 5rem; }
 
+.rentalNav {
+  margin-right: 1rem; }
+
 .rentalBody {
   background-color: #F5F5F5;
   width: 100%;
+  min-height: 100vh;
   color: black;
   display: flex;
   flex-direction: row;
@@ -1932,9 +1939,13 @@ input:not(:focus):valid ~ .floating-label {
   color: #ffffff;
   padding-top: 5rem; }
 
+.rentalNav {
+  margin-right: 1rem; }
+
 .rentalBody {
   background-color: #F5F5F5;
   width: 100%;
+  min-height: 100vh;
   color: black;
   display: flex;
   flex-direction: row;

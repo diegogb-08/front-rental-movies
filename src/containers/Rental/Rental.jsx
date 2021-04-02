@@ -99,8 +99,8 @@ function Rental(props) {
     <div className="rentalComponent">
       <Header onClick={() => user()}>
         <div className="rentalNav">
-          <NavBtn>
-            <DropDownMenu/>
+          <NavBtn> 
+              <DropDownMenu/>                      
           </NavBtn>
         </div>
       </Header>

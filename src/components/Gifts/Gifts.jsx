@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux';
-import happycat from '../../img/happycat.png'
+import rental from '../../img/rental.gif'
 
 
 
@@ -17,15 +17,10 @@ function Gifts(props) {
                     <>
                     <div className="emptyGiftsContainer">
                       <div className="messageEmptyGifts">
-                        <h1>Work in progress</h1>
-                        <br/>
-                        <h2>Senior trick</h2>
-                        <br/>
-                        <br/>
-                        <h3>Guys.</h3>                     
+                        <p>Work in progress ...</p>              
                       </div>
                       <div className="containerCatGifts">
-                        <img className="happyCat"src={happycat} alt="happyCat"/>
+                        <img className="happyCat"src={rental} alt="happyCat"/>
                       </div>  
                     </div>
                     </>
