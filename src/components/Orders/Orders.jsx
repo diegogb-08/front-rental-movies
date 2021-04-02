@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {connect} from 'react-redux';
 import { CLEAN } from '../../redux/types/cartType';
 import moment from 'moment'
+import sadcat from '../../img/sadcat.png'
 
 
 
@@ -19,7 +20,7 @@ function Orders(props) {
     };
 
     // Order start date
-    
+
     const startOrder = moment();
 
     // Order end date
@@ -34,6 +35,19 @@ function Orders(props) {
                     props.cart.length === 0
                     ?
                     <>
+                    <div className="emptyOrderContainer">
+                      <div className="messageEmpyOrder">
+                        <h1>We're sorry,</h1>
+                        <br/>
+                        <h2>but you don't have any order in process.</h2>
+                        <br/>
+                        <br/>
+                        <h3>Miaaaaaauuu.</h3>                     
+                      </div>
+                      <div className="containerCat">
+                        <img className="sadCat" src={sadcat} alt="sadCat"/>
+                      </div>  
+                    </div>
                     </>
                     :
                     <>
@@ -65,8 +79,10 @@ function Orders(props) {
                         </div>                       
                       );})}                     
                     </>
+                    
           }
     </div>
+
   ) 
 }
 
