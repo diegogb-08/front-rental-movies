@@ -85,18 +85,28 @@ const WatchList = (props) => {
                     </div>
             </Header>
             <div className="videoListContainer">
-                <h4>Watch List</h4>
-                
                 {
-                    youTubeKey.map( trailerKey => {
-                        let url = `https://www.youtube.com/embed/${trailerKey}` 
-                        return (
+                    youTubeKey
+                    ?
+                    <>
+                        <h4>Enjoy your popcorns! <p>&#127871;</p></h4>
 
-                            <div className="videoCard" key={trailerKey}>
-                              <iframe width="748" height="421" src={url} title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                            </div>
-                        )
-                    })
+                        {
+                            youTubeKey.map( trailerKey => {
+                                let url = `https://www.youtube.com/embed/${trailerKey}` 
+                                return (
+
+                                    <div className="videoCard" key={trailerKey}>
+                                    <iframe width="748" height="421" src={url} title="YouTube video player" frameBorder="0" allow="accelerometer; gyroscope;" allowFullScreen></iframe>
+                                    </div>
+                                )
+                            })
+                        }
+                    </>
+                    :
+                    <>
+                        <h4>Please buy your movie first! <p>&#129301;</p></h4>
+                    </>
                 }
 
             </div>
