@@ -131,7 +131,7 @@ function Rental(props) {
               <div className="counterCartRental">{props.cart.length}</div>
             </div>
             <div className="priceButtonContainer">
-              <p className="pTotalPrice">{totalPrice}€</p>
+              <p className="pTotalPrice">Total Price: {totalPrice}€</p>
             </div>
             <div className="containerButtonsRental">
               <div className="buyButton">

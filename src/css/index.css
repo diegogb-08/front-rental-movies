@@ -1703,7 +1703,7 @@ input:not(:focus):valid ~ .floating-label {
   font-weight: bold; }
 
 .pTotalPrice {
-  font-size: 1.1rem; }
+  font-size: 0.8rem; }
 
 .priceButtonContainer {
   margin-top: 1rem;
@@ -1876,7 +1876,7 @@ input:not(:focus):valid ~ .floating-label {
   font-weight: bold; }
 
 .pTotalPrice {
-  font-size: 1.1rem; }
+  font-size: 0.8rem; }
 
 .priceButtonContainer {
   margin-top: 1rem;
