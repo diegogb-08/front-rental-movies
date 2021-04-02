@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux';
 import { CLEAN } from '../../redux/types/cartType';
 import moment from 'moment'
-import sadcat from '../../img/sadcat.png'
+import rental from '../../img/rental.gif'
 
 
 
@@ -37,15 +37,10 @@ function Orders(props) {
                     <>
                     <div className="emptyOrderContainer">
                       <div className="messageEmpyOrder">
-                        <h1>We're sorry,</h1>
-                        <br/>
-                        <h2>but you don't have any order in process.</h2>
-                        <br/>
-                        <br/>
-                        <h3>Miaaaaaauuu.</h3>                     
+                        <p>Waiting for your Orders</p>                
                       </div>
                       <div className="containerCat">
-                        <img className="sadCat" src={sadcat} alt="sadCat"/>
+                        <img className="sadCat" src={rental} alt="sadCat"/>
                       </div>  
                     </div>
                     </>

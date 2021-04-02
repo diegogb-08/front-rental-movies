@@ -14,6 +14,8 @@ import axios from 'axios'
 import NavBtn from "../../components/NavBtn/NavBtn";
 import DropDownMenu from "../../components/DropDownMenu/DropDownMenu";
 import Footer from "../../components/Footer/Footer";
+import LastOrders from "../../components/LastOrders/LastOrders";
+import Gifts from "../../components/Gifts/Gifts";
 
 
 
@@ -98,26 +100,23 @@ function Rental(props) {
     <div className="rentalComponent">
       <Header onClick={() => user()}>
         <div className="rentalNav">
-          <NavBtn>
-            <DropDownMenu/>
+          <NavBtn> 
+              <DropDownMenu/>                      
           </NavBtn>
         </div>
       </Header>
 
       <div className="rentalBody">
         <div className="rentalContainer"> 
-          <TabNav tabs={['Orders', 'Last Orders', 'My List', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
+          <TabNav tabs={['Orders', 'Last Orders', 'Gifts']} selected={tab.selected} setSelected={setSelected}>
             <Tab isSelected={tab.selected === 'Orders'}>
-             <Orders/>
+              <Orders/>
             </Tab>
             <Tab isSelected={tab.selected === 'Last Orders'}>
-
-            </Tab>
-            <Tab isSelected={tab.selected === 'My List'}>
-
+              <LastOrders/>
             </Tab>
             <Tab isSelected={tab.selected === 'Gifts'}>
-
+              <Gifts/>
             </Tab>
         
           </TabNav>
@@ -132,7 +131,7 @@ function Rental(props) {
               <div className="counterCartRental">{props.cart.length}</div>
             </div>
             <div className="priceButtonContainer">
-              <p className="pTotalPrice">{totalPrice}€</p>
+              <p className="pTotalPrice">Total Price: {totalPrice}€</p>
             </div>
             <div className="containerButtonsRental">
               <div className="buyButton">

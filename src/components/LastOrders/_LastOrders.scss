@@ -1,0 +1,83 @@
+.lastOrderComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+// Master Last Order Container
+
+
+.lastOrdersContainer { 
+  display: flex;
+  flex-direction: row;
+  border-top: 0.1rem solid lightgrey;
+  width: 100%;
+}
+
+// Img Container **
+
+.imgLastOrderContainer {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  padding: 1.5%;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.imgLastOrder {
+  display: flex;
+  width: 100%;
+}
+
+// Info Container 
+
+.infoLastOrderContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1.5%;
+}
+
+
+.LastOrderTitle {
+  font-size: 1rem;
+  font-weight: 1000;
+}
+
+// Empty View
+
+.emptyLastOrderContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: red;
+}
+
+.messageEmptyLastOrder{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 50%;
+}
+
+.containerCatLastOrder {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: 50%;
+}
+
+.angryCat {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}

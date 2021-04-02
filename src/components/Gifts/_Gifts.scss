@@ -1,0 +1,84 @@
+.giftsComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+// Master Gifts Container
+
+
+.ordersContainer { 
+  display: flex;
+  flex-direction: row;
+  border-top: 0.1rem solid lightgrey;
+  width: 100%;
+}
+
+// Img Container **
+
+.imgGiftsContainer {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  padding: 1.5%;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.imgGifts {
+  display: flex;
+  width: 100%;
+}
+
+// Info Container 
+
+.infoGiftsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1.5%;
+}
+
+
+.giftsTitle {
+  font-size: 1rem;
+  font-weight: 1000;
+}
+
+
+// Empty View
+
+.emptyGiftsContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background-color: red;
+}
+
+.messageEmptyGifts{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 50%;
+}
+
+.containerCatGifts {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: 50%;
+}
+
+.happyCat {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
