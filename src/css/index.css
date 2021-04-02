@@ -1477,6 +1477,68 @@ input:not(:focus):valid ~ .floating-label {
   height: 100%;
   width: 100%; }
 
+.lastOrderComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.lastOrdersContainer {
+  display: flex;
+  flex-direction: row;
+  border-top: 0.1rem solid lightgrey;
+  width: 100%; }
+
+.imgLastOrderContainer {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  padding: 1.5%;
+  justify-content: center;
+  align-self: center; }
+
+.imgLastOrder {
+  display: flex;
+  width: 100%; }
+
+.infoLastOrderContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1.5%; }
+
+.LastOrderTitle {
+  font-size: 1rem;
+  font-weight: 1000; }
+
+.emptyLastOrderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: red; }
+
+.messageEmptyLastOrder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%; }
+
+.containerCatLastOrder {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: 50%; }
+
+.sadCat {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%; }
+
 /*Containers*/
 .homeContainer {
   background: #7c7578; }
