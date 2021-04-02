@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {connect} from 'react-redux';
-import { CLEAN } from '../../redux/types/cartType';
-import moment from 'moment'
 import sadcat from '../../img/sadcat.png'
 
 
@@ -9,77 +7,42 @@ import sadcat from '../../img/sadcat.png'
 
 
 
-function Orders(props) {
-
-
-    // Delete all orders 
-    const deleteAllOrders = () => {
-
-      props.dispatch({ type: CLEAN, payload: [] });
-  
-    };
-
-    // Order start date
-
-    const startOrder = moment();
-
-    // Order end date
-
-    const endOrder = moment().add(7, 'days');
-    
-  
+function Gifts(props) {
 
   return(
-    <div className="orderComponent">
+    <div className="giftsComponent">
           {
                     props.cart.length === 0
                     ?
                     <>
-                    <div className="emptyOrderContainer">
-                      <div className="messageEmpyOrder">
-                        <h1>We're sorry,</h1>
+                    <div className="emptyGiftsContainer">
+                      <div className="messageEmptyGifts">
+                        <h1>No, no, no, no, no,</h1>
                         <br/>
-                        <h2>but you don't have any order in process.</h2>
+                        <h2>jojoooooooooooooo</h2>
                         <br/>
                         <br/>
-                        <h3>Miaaaaaauuu.</h3>                     
+                        <h3>bru.</h3>                     
                       </div>
-                      <div className="containerCat">
+                      <div className="containerCatGifts">
                         <img className="sadCat" src={sadcat} alt="sadCat"/>
                       </div>  
                     </div>
                     </>
                     :
-                    <>
-                    <div className="navBarOrders">
-                        <div className="deleteAll" onClick={() => deleteAllOrders()}>Delete All Orders</div>
-                        <div className="priceAll">Price</div>
-                    </div>                    
+                    <>                
                       {props.cart.map( film => {
                       return (
-                        <div className="ordersContainer"key={film.id}>
-                          <div className="imgOrderContainer">
-                            <img className="imgOrder" src={film.backdropPath} alt="order"/>
+                        <div className="GiftsContainer"key={film.id}>
+                          <div className="imgGiftsContainer">
+                            <img className="imgGifts" src={film.backdropPath} alt="gifts"/>
                           </div> 
-                          <div className="infoOrderContainer">
-                            <p className="orderTitle">{film.title}</p>
-                            <p className="dateOrder">Order start date: {moment(startOrder).format(("dddd MMMM Do YYYY"))}</p>
-                            <p className="dateOrder">Order return date: {moment(endOrder).format(("dddd MMMM Do YYYY"))}</p>
-                          <div className="ordersActionsContainer">
-                            <input className="inputGift" type="checkbox"/>
-                            <p className="pGift">It's a gift</p>
-                            <u className="actionSave">Save on my list</u>
-                            <u className="actionDelete">Delete</u>
-                          </div>
-
-                          </div>
-                          <div className="priceContainer">
-                            <p className="pPrice">{film.price} €</p>
+                          <div className="infoGiftsContainer">
+                            <p className="GiftsTitle">{film.title}</p>
                           </div>
                         </div>                       
                       );})}                     
-                    </>
-                    
+                    </>                   
           }
     </div>
 
@@ -93,4 +56,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Orders);
+export default connect(mapStateToProps)(Gifts);
