@@ -1050,7 +1050,7 @@ input:not(:focus):valid ~ .floating-label {
   font-weight: 1000; }
 
 .dateOrder {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 600; }
 
 .ordersActionsContainer {

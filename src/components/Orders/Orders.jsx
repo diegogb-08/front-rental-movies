@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useState } from 'react'
 import {connect} from 'react-redux';
 import { CLEAN } from '../../redux/types/cartType';
+import moment from 'moment'
 
 
 
@@ -9,7 +10,6 @@ import { CLEAN } from '../../redux/types/cartType';
 
 function Orders(props) {
 
-  // Functions
 
     // Delete all orders 
     const deleteAllOrders = () => {
@@ -17,6 +17,15 @@ function Orders(props) {
       props.dispatch({ type: CLEAN, payload: [] });
   
     };
+
+    // Order start date
+    
+    const startOrder = moment();
+
+    // Order end date
+
+    const endOrder = moment().add(7, 'days');
+    
   
 
   return(
@@ -40,8 +49,8 @@ function Orders(props) {
                           </div> 
                           <div className="infoOrderContainer">
                             <p className="orderTitle">{film.title}</p>
-                            <p className="dateOrder">Props Date: 10/20/20</p>
-                            <p className="dateOrder">Props Date: 10/20/20</p>
+                            <p className="dateOrder">Order start date: {moment(startOrder).format(("dddd MMMM Do YYYY"))}</p>
+                            <p className="dateOrder">Order return date: {moment(endOrder).format(("dddd MMMM Do YYYY"))}</p>
                           <div className="ordersActionsContainer">
                             <input className="inputGift" type="checkbox"/>
                             <p className="pGift">It's a gift</p>
