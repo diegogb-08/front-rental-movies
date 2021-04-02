@@ -158,28 +158,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Rental);
-
-
-
-
-/*
-
-          <div className="basketRental">
-            <div className="iconCounterContainer">
-              <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
-              <div className="counterCartRental">{props.cart.length}</div>
-            </div>
-            <div className="priceButtonContainer">
-              <p className="pTotalPrice">{totalPrice}€</p>
-            </div>
-            <div className="containerButtonsRental">
-              <div className="buyButton">
-                <Button name="Buy" onClick={() => buyOrder()} />
-              </div>
-              <div className="emptyOrdersButton">
-                <Button onClick={() => deleteOrder()} name="Empty Orders" />
-              </div>
-            </div>
-          </div>
-<Footer/>
-*/
