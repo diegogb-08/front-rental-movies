@@ -9,7 +9,7 @@ import moment from 'moment';
 function Admin() {
 
     const [allRentals, setAllRentals] = useState([])
-    console.log(allRentals)
+
 
     const getAllRentals = async () => {
 

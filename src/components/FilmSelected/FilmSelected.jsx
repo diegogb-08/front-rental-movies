@@ -24,7 +24,7 @@ const FilmSelected = (props) => {
         cart: 'white',
         like: 'white',
     });
-    console.log(textcolor.cart)
+
 
     // Here we check if the movie/series is already in the Cart and render the button if it exist
 

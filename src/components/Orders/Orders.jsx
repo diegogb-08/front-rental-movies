@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {connect} from 'react-redux';
 import { CLEAN } from '../../redux/types/cartType';
 import moment from 'moment'

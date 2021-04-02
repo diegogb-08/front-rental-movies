@@ -7,7 +7,6 @@ import User from './containers/User/User';
 import Rental from './containers/Rental/Rental';
 import MyList from './components/MyList/MyList';
 import Update from './components/UpdateUser/UpdateUser';
-// import NewPopular from './components/NewPopular/NewPopular';
 import MultiSearch from './components/MultiSearch/MultiSearch';
 import Admin from './containers/Admin/Admin';
 import WatchList from './components/WatchList/WatchList';
@@ -27,7 +26,6 @@ function App() {
         <Route path="/rental" exact component={Rental}/>
         <Route path='/mylist' exact component={MyList}/>
         <Route path='/update' exact component={Update}/>
-        {/* <Route path='/newpopular' exact component={NewPopular}/> */}
         <Route path='/search' exact component={MultiSearch}/>
         <Route path='/admin' exact component={Admin}/>
         <Route path='/watch' exact component={WatchList}/>

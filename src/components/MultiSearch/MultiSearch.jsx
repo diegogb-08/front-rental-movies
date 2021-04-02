@@ -52,7 +52,7 @@ function MultiSearch(props) {
                             </div>
                             <h4>Known for:</h4>
                             <div className='searchGrid'>
-                                {
+                                { // eslint-disable-next-line
                                     multiSearch[0]?.known_for.map((film) =>{
                                         if(film.poster_path)
                                         return( 
@@ -67,7 +67,7 @@ function MultiSearch(props) {
                                         )
 
                                     })
-                                }{
+                                }{ // eslint-disable-next-line
                                     multiSearch.map((film) => {
                                         if(film.poster_path)
                                         return( 
@@ -88,7 +88,7 @@ function MultiSearch(props) {
                     :
                     <>
                         <div className='searchGrid'>
-                            {   
+                            {   // eslint-disable-next-line
                                 multiSearch.map((film) =>{
                                     if(film.poster_path)
                                     return( 

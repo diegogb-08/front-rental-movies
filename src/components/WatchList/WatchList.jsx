@@ -9,7 +9,6 @@ import SearchBox from '../SearchBox/SearchBox';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import { customer, port, rental } from '../../api/ApiMongoDB';
-import Reactplayer from 'react-player'
 import { apiKey, baseUrl, movie } from '../../api/ApiMovieDB';
 import moment from 'moment';
 
@@ -17,7 +16,8 @@ const WatchList = (props) => {
 
     const [allRentals, setAllRentals] = useState([])
     const [youTubeKey, setYouTubeKey] = useState([])
-    console.log('8==============D',youTubeKey)
+
+
     // AUTHORIZATION
     let auth = {
         headers: {
@@ -38,7 +38,6 @@ const WatchList = (props) => {
         try{
             let result = await axios.get(baseUrl+movie+'/'+movieId+'/videos'+apiKey)
             let key = result.data.results[0].key
-
             setYouTubeKey(youTubeKey => [...youTubeKey, key])
         }catch(e){
             return {e: e.message} 
@@ -47,19 +46,24 @@ const WatchList = (props) => {
 
 
     const getFilmId = () => {
+        let today = new Date()
+        // eslint-disable-next-line
         allRentals.map(order => {
-            return order.rental.map(film => {
-                return getAllTrailers(film.id)
-            })
+            if(moment(order.return_date).diff(today) >= 0)
+                return order.rental.map(film => {
+                        return getAllTrailers(film.id)
+                })
         })
     }
 
     useEffect(()=>{
         getAllRentals()
+        // eslint-disable-next-line
     },[])
 
     useEffect(()=>{
         getFilmId()
+        // eslint-disable-next-line
     },[allRentals])
 
 
@@ -84,41 +88,17 @@ const WatchList = (props) => {
                 <h4>Watch List</h4>
                 
                 {
-                            allRentals.map(order => {
-                                return order.rental.map(film => {
-                                    return(
+                    youTubeKey.map( trailerKey => {
+                        let url = `https://www.youtube.com/embed/${trailerKey}` 
+                        return (
 
-                                        <div className="videoCard">
-                                            <div className="videoInfo">
-                                                <h6>{film.title}</h6>
-                                                {/* {
-                                                    youTubeKey.map(key => {
-                                                        return(
-                                                            <Reactplayer url={`https://www.youtube.com/watch?v=${key}`} controls/>
-                                                        )
-                                                    })
-                                                } */}
+                            <div className="videoCard" key={trailerKey}>
+                              <iframe width="748" height="421" src={url} title="YouTube video player" frameBorder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            </div>
+                        )
+                    })
+                }
 
-                                            </div>
-                                        </div>
-
-
-                                        // <tr>
-                                        //         <td>{order._id}</td>
-                                        //         <td>{film.title}</td>
-                                        //         <td>{film.id}</td>
-                                        //         <td>{order.email ? order?.email : 'email not found'}</td>
-                                        //         <td>{moment(order.rental_date).format('DD-MM-YYYY')}</td>
-                                        //         <td>{moment(order.return_date).format('DD-MM-YYYY')}</td>
-                                        //         <td>€{film.price}</td>
-                                        // </tr>
-                                
-                                    )
-                                  
-                                })
-
-                            })
-                        }             
             </div>
             <Footer/>
         </div>

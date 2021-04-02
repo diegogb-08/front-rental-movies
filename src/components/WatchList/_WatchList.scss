@@ -21,18 +21,13 @@
 }
 
 .videoCard {
-    width: 100%;
-    height: 20rem;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: $p1;
-    padding: $p1;
+    margin: $p5;
 }
 
-.videoInfo {
-    display: flex;
+.youtube {
     height: 100%;
-    width: 100%;
 }
