@@ -2,11 +2,13 @@ import React from 'react'
 import {useHistory} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { LOGOUT } from '../../redux/types/userType';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { faVideo } from '@fortawesome/free-solid-svg-icons'
 import { faTicketAlt } from '@fortawesome/free-solid-svg-icons'
+import { CLEANLIST } from '../../redux/types/listType';
 
 
 function DropDownMenu(props) {
@@ -27,6 +29,7 @@ function DropDownMenu(props) {
     const logOut = () => {
         setTimeout(()=> {
             props.dispatch({ type: LOGOUT, payload : {}});
+            props.dispatch({ type: CLEANLIST, payload : {}});
             localStorage.setItem('email', '')
             localStorage.removeItem('loading')
         },500);
