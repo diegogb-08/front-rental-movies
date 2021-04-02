@@ -33,9 +33,9 @@ function Rental(props) {
   let history = useHistory();
 
 
-  const home = () => {
+  const user = () => {
       setTimeout(() => {
-          history.push('/')
+          history.push('/user')
       }, 1000)
   }
 
@@ -59,12 +59,6 @@ function Rental(props) {
 
   // FUNCTIONS
 
-  // Delete all orders (Roo says: Molaría que fuese solo una, y no todas. JOJOOOOOOOOOOOOOOOOOOOOJO)
-  const deleteOrder = () => {
-
-    props.dispatch({ type: CLEAN, payload: [] });
-
-  };
 
   // Función para enviar las peliculas al backend
   const buyOrder = async () => {
@@ -101,7 +95,7 @@ function Rental(props) {
   }
   return (
     <div className="rentalComponent">
-      <Header onClick={() => home()}>
+      <Header onClick={() => user()}>
         <div className="rentalNav">
           <NavBtn>
             <DropDownMenu/>
@@ -164,28 +158,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Rental);
-
-
-
-
-/*
-
-          <div className="basketRental">
-            <div className="iconCounterContainer">
-              <div><FontAwesomeIcon className='filmIconRental' icon={faFilm} /></div>
-              <div className="counterCartRental">{props.cart.length}</div>
-            </div>
-            <div className="priceButtonContainer">
-              <p className="pTotalPrice">{totalPrice}€</p>
-            </div>
-            <div className="containerButtonsRental">
-              <div className="buyButton">
-                <Button name="Buy" onClick={() => buyOrder()} />
-              </div>
-              <div className="emptyOrdersButton">
-                <Button onClick={() => deleteOrder()} name="Empty Orders" />
-              </div>
-            </div>
-          </div>
-<Footer/>
-*/

@@ -74,7 +74,7 @@
 }
 
 .dateOrder {
-  font-size: 0.65rem;
+  font-size: 0.7rem;
   font-weight: 600;
 }
 
@@ -132,6 +132,38 @@
   width: 10%;
   padding: 0.9%;
   font-weight: 700;
+}
+
+
+.emptyOrderContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.messageEmpyOrder{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+}
+
+.containerCat {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: 50%;
+}
+
+.sadCat {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
 }
 
 
