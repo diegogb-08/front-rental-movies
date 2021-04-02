@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux';
 import sadcat from '../../img/sadcat.png'
+import angrycat from '../../img/angrycat.png'
 
 
 
@@ -25,7 +26,7 @@ function LastOrders(props) {
                         <h3>We need the money.</h3>                     
                       </div>
                       <div className="containerCatLastOrder">
-                          <img className="sadCat" src={sadcat} alt="sadCat"/>
+                          <img className="angryCat" src={angrycat} alt="angry"/>
                       </div>  
                     </div>
                     </>

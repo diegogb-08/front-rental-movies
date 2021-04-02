@@ -1529,10 +1529,10 @@ input:not(:focus):valid ~ .floating-label {
 .containerCatLastOrder {
   display: flex;
   justify-content: center;
-  align-self: flex-end;
+  align-self: center;
   width: 50%; }
 
-.sadCat {
+.angryCat {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -1590,10 +1590,10 @@ input:not(:focus):valid ~ .floating-label {
 .containerCatGifts {
   display: flex;
   justify-content: center;
-  align-self: flex-end;
+  align-self: center;
   width: 50%; }
 
-.sadCat {
+.happyCat {
   display: flex;
   justify-content: center;
   align-self: center;
