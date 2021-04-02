@@ -17,7 +17,7 @@ function LastOrders(props) {
                     <>
                     <div className="emptyLastOrderContainer">
                       <div className="messageEmptyLastOrder">
-                        <p>You don't have orders yet.</p>           
+                        <p className="pEmptyOrder">You don't have orders yet.</p>           
                       </div>
                       <div className="containerCatLastOrder">
                           <img className="angryCat" src={rental} alt="angry"/>

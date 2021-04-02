@@ -37,7 +37,7 @@ function Orders(props) {
                     <>
                     <div className="emptyOrderContainer">
                       <div className="messageEmpyOrder">
-                        <p>Waiting for your Orders</p>                
+                        <p className="pEmptyOrder">Waiting for your orders.</p>                
                       </div>
                       <div className="containerCat">
                         <img className="sadCat" src={rental} alt="sadCat"/>
@@ -63,7 +63,6 @@ function Orders(props) {
                           <div className="ordersActionsContainer">
                             <input className="inputGift" type="checkbox"/>
                             <p className="pGift">It's a gift</p>
-                            <u className="actionSave">Save on my list</u>
                             <u className="actionDelete">Delete</u>
                           </div>
 
