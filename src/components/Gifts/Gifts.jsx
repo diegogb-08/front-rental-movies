@@ -17,7 +17,7 @@ function Gifts(props) {
                     <>
                     <div className="emptyGiftsContainer">
                       <div className="messageEmptyGifts">
-                        <p>Work in progress ...</p>              
+                        <p className="pEmptyOrder">Work in progress ...</p>              
                       </div>
                       <div className="containerCatGifts">
                         <img className="happyCat"src={rental} alt="happyCat"/>

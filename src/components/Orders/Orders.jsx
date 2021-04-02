@@ -37,7 +37,7 @@ function Orders(props) {
                     <>
                     <div className="emptyOrderContainer">
                       <div className="messageEmpyOrder">
-                        <p>Waiting for your Orders</p>                
+                        <p className="pEmptyOrder">Waiting for your orders</p>                
                       </div>
                       <div className="containerCat">
                         <img className="sadCat" src={rental} alt="sadCat"/>
