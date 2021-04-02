@@ -59,12 +59,6 @@ function Rental(props) {
 
   // FUNCTIONS
 
-  // Delete all orders (Roo says: Molaría que fuese solo una, y no todas. JOJOOOOOOOOOOOOOOOOOOOOJO)
-  const deleteOrder = () => {
-
-    props.dispatch({ type: CLEAN, payload: [] });
-
-  };
 
   // Función para enviar las peliculas al backend
   const buyOrder = async () => {

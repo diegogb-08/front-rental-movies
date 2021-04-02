@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import {connect} from 'react-redux';
+import { CLEAN } from '../../redux/types/cartType';
 
 
 
@@ -7,6 +8,16 @@ import {connect} from 'react-redux';
 
 
 function Orders(props) {
+
+  // Functions
+
+    // Delete all orders 
+    const deleteAllOrders = () => {
+
+      props.dispatch({ type: CLEAN, payload: [] });
+  
+    };
+  
 
   return(
     <div className="orderComponent">
@@ -18,7 +29,7 @@ function Orders(props) {
                     :
                     <>
                     <div className="navBarOrders">
-                        <div className="deleteAll">Delete All Orders</div>
+                        <div className="deleteAll" onClick={() => deleteAllOrders()}>Delete All Orders</div>
                         <div className="priceAll">Price</div>
                     </div>                    
                       {props.cart.map( film => {
@@ -58,17 +69,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(Orders);
-
-
-
-
-/*
-                            <div className="inputGiftContainer">
-                              <input className="inputGift" type="checkbox"/>
-                              <p className="pGift">It's a gift</p>
-                            </div>
-                            <div className="ordersActionsContainer">
-                              <u className="actionSave">Save on my list</u>
-                              <u className="actionDelete">Delete</u>
-                            </div>
-*/
