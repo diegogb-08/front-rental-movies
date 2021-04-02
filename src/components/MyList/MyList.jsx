@@ -40,6 +40,7 @@ const MyList = (props) => {
                     </NavBtn> 
                 </div>
             </Header>
+            <div className="spacer"></div>
             <h4>My List...</h4>
             {
                 props.list.length === 0

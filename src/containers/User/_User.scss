@@ -2,8 +2,13 @@
     background: $principalcolor;
     width: 100%;
     color: $fontcolor1;
-    padding-top: $p10;
+    // padding-top: $p10;
     // padding-left: $p5;
+}
+
+.spacer {
+  width: 100%;
+  padding-bottom: $p5;
 }
 
 .movieCollection {

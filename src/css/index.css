@@ -29,8 +29,7 @@ html {
    */
 body {
   margin: 0 auto;
-  font-family: 'Almarai', sans-serif;
-  background-color: #e8f0fe; }
+  font-family: 'Almarai', sans-serif; }
 
 /**
    * Render the `main` element consistently in IE.
@@ -1416,8 +1415,7 @@ input:not(:focus):valid ~ .floating-label {
   background: #141414;
   width: 100%;
   height: 100%;
-  color: #ffffff;
-  padding-top: 8rem; }
+  color: #ffffff; }
   .myListComponent h4 {
     padding-left: 5rem; }
 
@@ -1734,8 +1732,11 @@ input:not(:focus):valid ~ .floating-label {
 .userComponent {
   background: #141414;
   width: 100%;
-  color: #ffffff;
-  padding-top: 10rem; }
+  color: #ffffff; }
+
+.spacer {
+  width: 100%;
+  padding-bottom: 5rem; }
 
 .movieCollection {
   display: flex;

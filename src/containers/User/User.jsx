@@ -105,6 +105,7 @@ const User = (props) => {
                         </NavBtn> 
                     </div>
                 </Header>
+                    <div className="spacer"></div>
                     <div className="carouselMovies">
                         {
                             Object.keys(genres).map((genre, index) => {
