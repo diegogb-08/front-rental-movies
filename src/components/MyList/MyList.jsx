@@ -43,7 +43,7 @@ const MyList = (props) => {
             <div className="spacer"></div>
             <h4>My List...</h4>
             {
-                props.list.length === 0
+                !props.list[0]
                 ?
                 <>
                     <div className="noList">
