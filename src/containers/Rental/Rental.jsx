@@ -33,9 +33,9 @@ function Rental(props) {
   let history = useHistory();
 
 
-  const home = () => {
+  const user = () => {
       setTimeout(() => {
-          history.push('/')
+          history.push('/user')
       }, 1000)
   }
 
@@ -95,7 +95,7 @@ function Rental(props) {
   }
   return (
     <div className="rentalComponent">
-      <Header onClick={() => home()}>
+      <Header onClick={() => user()}>
         <div className="rentalNav">
           <NavBtn>
             <DropDownMenu/>
