@@ -858,6 +858,122 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   height: 19rem; }
 
+.profileComponent {
+  background: black;
+  width: 100%;
+  color: #ffffff;
+  padding-top: 5rem; }
+
+.profileBody {
+  background-color: #F5F5F5;
+  width: 100%;
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding: 3rem 0 3rem 0; }
+  .profileBody h1 {
+    border-bottom: 1px solid #282c2d;
+    text-align: center;
+    font-weight: bold; }
+
+.profileDetails {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #282c2d; }
+  .profileDetails img {
+    height: 100px;
+    margin-bottom: 1rem; }
+  .profileDetails p {
+    font-weight: bold; }
+
+.profileContainer {
+  flex-direction: row;
+  justify-content: center; }
+  .profileContainer p {
+    padding: 15px;
+    padding-left: 20px; }
+
+.profilePassword {
+  display: flex;
+  flex-direction: row; }
+  .profilePassword p {
+    color: gray;
+    opacity: 30%; }
+
+.profileTitle h2 {
+  font-size: .7rem;
+  font-weight: bold; }
+
+.profileInfo {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #282c2d;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center; }
+  .profileInfo h2 {
+    color: #d3d3d3;
+    font-weight: bolder;
+    padding: 15px;
+    padding-left: 20px;
+    font-size: 1.5rem; }
+
+.profilePlan {
+  flex-direction: row; }
+  .profilePlan p {
+    flex-direction: row;
+    color: black; }
+  .profilePlan span {
+    font-weight: bolder; }
+
+.userInfo {
+  text-align: center;
+  align-items: center;
+  flex-direction: row; }
+
+.addInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.userDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem; }
+  .userDetails span {
+    font-weight: bold; }
+
+.buttonProfile {
+  margin-top: 1rem;
+  border-radius: .3rem;
+  background-color: #008CBA;
+  color: white;
+  border: 2px solid #008CBA; }
+
+.buttonProfile:hover {
+  background-color: white;
+  color: black; }
+
+.updateEmail {
+  display: flex;
+  flex-direction: column; }
+
+.tabContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50rem; }
+
+.profileNav {
+  margin-right: 1rem; }
+
 .tabNav {
   width: 100%; }
 
@@ -878,7 +994,6 @@ input:not(:focus):valid ~ .floating-label {
   flex-direction: row;
   padding: 1rem;
   justify-content: flex-start;
-  flex-direction: row;
   background-color: white; }
 
 .orderComponent {
@@ -1005,6 +1120,56 @@ input:not(:focus):valid ~ .floating-label {
   justify-content: center;
   align-self: center;
   width: 100%; }
+
+.profileModalContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.3em; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.header h2 {
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+
+.lineForm {
+  width: 100%;
+  border: 0.2px solid #ccc;
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+
+.formModal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.messageUpdate {
+  font-size: 12px;
+  color: red;
+  height: 3rem; }
+
+.inputProfileContainer {
+  height: 2rem;
+  width: 15rem;
+  margin: 2rem; }
+
+.submitUpdate {
+  height: 2.5rem;
+  width: 6rem;
+  margin: 2rem; }
 
 .registerContainer {
   display: flex;
@@ -1355,6 +1520,56 @@ input:not(:focus):valid ~ .floating-label {
 
 .youtube {
   height: 100%; }
+
+.profileModalContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0.3em; }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.header h2 {
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+
+.lineForm {
+  width: 100%;
+  border: 0.2px solid #ccc;
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+
+.formModal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.messageUpdate {
+  font-size: 12px;
+  color: red;
+  height: 3rem; }
+
+.inputProfileContainer {
+  height: 2rem;
+  width: 15rem;
+  margin: 2rem; }
+
+.submitUpdate {
+  height: 2.5rem;
+  width: 6rem;
+  margin: 2rem; }
 
 .lastOrderComponent {
   width: 100%;
