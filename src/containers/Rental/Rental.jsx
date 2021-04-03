@@ -16,7 +16,7 @@ import DropDownMenu from "../../components/DropDownMenu/DropDownMenu";
 import Footer from "../../components/Footer/Footer";
 import LastOrders from "../../components/LastOrders/LastOrders";
 import Gifts from "../../components/Gifts/Gifts";
-
+import NavMenu from '../../components/NavMenu/NavMenu';
 
 
 
@@ -65,15 +65,16 @@ function Rental(props) {
 
   // Función para enviar las peliculas al backend
   const buyOrder = async () => {
-
     let body = {
       rental: props.cart
     }
     const id = props.user._id;
-    await axios.post(port + rental + customer + '/' + id, body, auth);
 
-    return props.dispatch({ type: CLEAN, payload: [] });
-
+    if(props.cart[0]){
+      await axios.post(port + rental + customer + '/' + id, body, auth);
+      props.dispatch({ type: CLEAN, payload: [] });
+      return alert('Your order has been successfully dispatched!')
+    }
   }
 
   const calculateTotal = () => {
@@ -99,11 +100,12 @@ function Rental(props) {
   return (
     <div className="rentalComponent">
       <Header onClick={() => user()}>
-        <div className="rentalNav">
-          <NavBtn> 
-              <DropDownMenu/>                      
-          </NavBtn>
-        </div>
+          <div className="navbar">
+              <NavMenu/>
+              <NavBtn>
+                  <DropDownMenu/>
+              </NavBtn> 
+          </div>
       </Header>
 
       <div className="rentalBody">
