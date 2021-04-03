@@ -140,6 +140,7 @@ function Rental(props) {
                 <Button name="Buy" onClick={() => buyOrder()} />
               </div>
             </div>
+              <p className='pBuyNow'>Buy now and enjoy them for 7 days!</p>
             </div>
           </div>
         </div>

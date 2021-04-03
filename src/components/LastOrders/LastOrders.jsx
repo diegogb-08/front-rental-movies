@@ -63,6 +63,24 @@ function LastOrders(props) {
                             <p className='rentalDate'><b>Rental Date: </b>{moment(order.rental_date).format('DD MMMM YYYY, h:mm a')}</p>
                             <p className='returnDate'><b>Return Date: </b>{moment(order.return_date).format('DD MMMM YYYY, h:mm a')}</p>
                           </div>
+                          <div className="countdown">
+                            <div className="countDownTitle">
+                              <p>Days left</p>
+                            </div>
+                            <div className="counter">
+                              {
+                                moment(order.return_date).diff(order.rental_date) >= 0
+                                ?
+                                <>
+                                  <p className='days'>{moment(order.return_date).diff(order.rental_date, 'days')}</p>
+                                </>
+                                :
+                                <>
+                                  <p>Expired</p>
+                                </>
+                              }
+                            </div>
+                          </div>
                         </div>                       
                       );
                       

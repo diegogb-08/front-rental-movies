@@ -1238,7 +1238,6 @@ input:not(:focus):valid ~ .floating-label {
   .topInfo .price {
     background-color: #fdf137;
     color: #333333;
-    font-size: 1.5rem;
     position: absolute;
     top: 1rem; }
 
@@ -1532,6 +1531,48 @@ input:not(:focus):valid ~ .floating-label {
   align-self: center;
   width: 100%; }
 
+.expireDateOrder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem; }
+
+.countdown {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 0.3em;
+  margin-top: 1rem; }
+  .countdown .countDownTitle {
+    background-color: #F40612;
+    border-radius: 0.3rem 0.3rem 0 0;
+    color: white;
+    height: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold; }
+    .countdown .countDownTitle p {
+      text-align: center;
+      margin-top: 1rem; }
+  .countdown .counter {
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .countdown .counter .days {
+      font-size: 2rem;
+      text-align: center; }
+
 .giftsComponent {
   width: 100%;
   height: 100%;
@@ -1753,9 +1794,6 @@ input:not(:focus):valid ~ .floating-label {
   color: #ffffff;
   padding-top: 5rem; }
 
-.rentalNav {
-  margin-right: 1rem; }
-
 .rentalBody {
   background-color: #F5F5F5;
   width: 100%;
@@ -1848,6 +1886,10 @@ input:not(:focus):valid ~ .floating-label {
   padding: .5rem;
   width: 9rem;
   font-weight: 400; }
+
+.pBuyNow {
+  font-size: 0.8rem;
+  text-align: center; }
 
 .userComponent {
   background: #141414;
@@ -1931,9 +1973,6 @@ input:not(:focus):valid ~ .floating-label {
   color: #ffffff;
   padding-top: 5rem; }
 
-.rentalNav {
-  margin-right: 1rem; }
-
 .rentalBody {
   background-color: #F5F5F5;
   width: 100%;
@@ -2026,6 +2065,10 @@ input:not(:focus):valid ~ .floating-label {
   padding: .5rem;
   width: 9rem;
   font-weight: 400; }
+
+.pBuyNow {
+  font-size: 0.8rem;
+  text-align: center; }
 
 /*Fonts*/
 /*Bootstrap*/
