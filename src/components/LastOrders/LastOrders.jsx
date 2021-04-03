@@ -19,6 +19,7 @@ function LastOrders(props) {
 
   useEffect(()=> {
     getAllRentals()
+    // eslint-disable-next-line
   },[])
 
   // FUNCTIONS

@@ -14,9 +14,12 @@ const listReducer = (state = initialState, action) => {
             }
         
         case REMOVE_LIST : 
+            const numIndex = parseInt(action.payload)
             return {
-                ...state,
-                list : state.cart.filter(cart => cart.id !== action.payload) 
+                list : [
+                    ...state.list.slice(0, numIndex),
+                    ...state.list.slice(numIndex + 1)
+                ]
             }
 
         case CLEAN_LIST : 

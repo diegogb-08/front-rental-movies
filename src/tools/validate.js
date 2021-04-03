@@ -32,13 +32,13 @@ export default function validate(fields, context = 'register') {
                 if(fields[key] === '')
                 errors[key] = {status: 'error', help: 'Please provide your address.'};
             break;
-            case 'phone' :
+            case 'phoneNumber' :
                 if(! /^(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}/.test(fields[key])
                     && ! /^(\+34|0034|34)?[ -]*(8|9)[ -]*([0-9][ -]*){8}/.test(fields[key]))
                     errors[key] = {status: 'error', help: 'Please provide a valid landline or mobile phone.'};
             break;
-            case 'born' :
-                if(! /^(19|20)\d\d([- /.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/.test(fields[key])
+            case 'birthDate' :
+                if(! /^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$/.test(fields[key])
                     /*&& ! /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/.test(fields[key])*/)
                     errors[key] = {status: 'error', help: 'Please enter a date like dd-mm-yyyy.'};
             break;

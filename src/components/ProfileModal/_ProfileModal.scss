@@ -5,9 +5,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: bold;
-
+    background-color: white;
+    border-radius: $border-radius;
 }
 
 .header {
@@ -43,4 +42,16 @@
     font-size: 12px;
     color: red;
     height: 3rem;
+}
+
+.inputProfileContainer{
+    height: 2rem;
+    width: 15rem;
+    margin: 2rem;  
+}
+
+.submitUpdate{
+    height: 2.5rem;
+    width: 6rem;
+    margin: 2rem;
 }
