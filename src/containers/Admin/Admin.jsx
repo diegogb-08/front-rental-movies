@@ -55,7 +55,7 @@ function Admin() {
                             allRentals.map(order => {
                                 return order.rental.map(film => {
                                     return (
-                                        <tr>
+                                        <tr key={film.id}>
                                             <td>{order._id}</td>
                                             <td>{film.title}</td>
                                             <td>{film.id}</td>
