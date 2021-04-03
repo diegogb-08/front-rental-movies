@@ -23,7 +23,6 @@ function Orders(props) {
   const deleteOrder = (index) => {
 
     props.dispatch({ type: REMOVE, payload: index });
-    console.log(index);
 
   };
 

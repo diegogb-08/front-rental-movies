@@ -9,6 +9,7 @@ import profile from '../../img/avatarUser.png'
 import imgSubs from '../../img/Artboard.svg';
 import Tab from '../../components/Tab/Tab';
 import TabNav from "../../components/Tab/TabNav";
+import ProfileModal from '../ProfileModal/ProfileModal';
 
 
 function ProfileScreen(props) {
@@ -96,7 +97,9 @@ function ProfileScreen(props) {
                                 </div>
                                 <div className="addInfo">
                                     <div className="userInfo">
+                                    <ProfileModal>
                                         <button className="buttonProfile">ADD USER INFO</button>
+                                    </ProfileModal>
                                     </div>
                                 </div>
                             </div>
