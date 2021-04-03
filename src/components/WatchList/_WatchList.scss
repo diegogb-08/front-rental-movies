@@ -1,0 +1,36 @@
+.watchListComponent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: $principalcolor;
+    color: $fontcolor1;
+}
+
+.videoListContainer {
+    width: 100%;
+    min-height: 100vh;
+    padding: $p4;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h4 {
+        text-align: center;
+        p {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.videoCard {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: $p5;
+}
+
+.youtube {
+    height: 100%;
+}

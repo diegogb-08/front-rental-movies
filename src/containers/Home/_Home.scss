@@ -10,57 +10,135 @@
     z-index: 1;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
     flex-direction: column;
-
+    
 }
+
+.containerHomeText{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h1,h2,h3,h4 {
+        color: #ffffff;
+    }
+    img{
+        width: 300px;
+    }
+}
+
 
 .sectionWatch {
-    height: 50vh;
     width: 100%;
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    h1,h2,h3,h4 {
+        color: #ffffff;
+    }
+    img{
+        width: 300px;
+    }
 }
+
+// @media screen and (max-width: 1400px), screen and (max-height: 600px) {
+//     .sectionWatch {
+//         height: 45vh;
+
+//         h1 {
+//             font-size: 2.2rem;
+//         }
+//         h4 {
+//             font-size: 1rem;
+//         }
+//         img {
+//             width: 200px;
+//         }
+
+//     }
+
+// }
 .sectionDownload {
     margin-top: .4rem;
-    height: 50vh;
     width: 100%;
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    h1,h2,h3,h4 {
+        color: #ffffff;
+    }
+    img{
+        width: 300px;
+    }
 }
+
+// @media screen and (max-width: 1400px), screen and (max-height: 600px) {
+//     .sectionDownload {
+//         height: 45vh;
+
+//         h1 {
+//             font-size: 2.2rem;
+//         }
+//         h4 {
+//             font-size: 1rem;
+//         }
+//         img {
+//             width: 200px;
+//         }
+
+//     }
+// }
+
 .sectionDevice {
     margin-top: .4rem;
-    height: 50vh;
     width: 100%;
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    h1,h2,h3,h4 {
+        color: #ffffff;
+    }
+    img{
+        width: 300px;
+    }
 }
+
+// @media screen and (max-width: 1400px), screen and (max-height: 600px) {
+//     .sectionDevice {
+//         height: 45vh;
+
+
+//         h1 {
+//             font-size: 2.2rem;
+//         }
+//         h4 {
+//             font-size: 1rem;
+//         }
+//         img {
+//             width: 200px;
+//         }
+
+//     }
+// }
 
 .containerWatchText {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    h1,h2,h3,h4 {
+        color: #ffffff;
+    }
+    img{
+        width: 300px;
+    }
 }
 
-h1,h2,h3,h4 {
-    color: #ffffff;
-}
 
-
-img{
-    width: 300px;
-}
 
 .emailText {
     margin-top: 2rem;
@@ -76,22 +154,63 @@ img{
     background-color: black;
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
+    h1,h2,h3,h4 {
+        color: #ffffff;
+    }
+    img{
+        width: 300px;
+    }
+}
+
+// @media screen and (max-width: 1400px), screen and (max-height: 600px) {
+//     .sectionQuestions {
+//         height: 45vh;
+
+//         h1 {
+//             font-size: 2.2rem;
+//         }
+//         h4 {
+//             font-size: 1rem;
+//         }
+//         img {
+//             width: 200px;
+//         }
+
+//     }
+// }
+
+.containerQuestionsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1,h2,h3,h4 {
+        color: #ffffff;
+    }
+    img{
+        width: 300px;
+    }
 }
 
 .inputContainer {
     display: flex;
     flex-direction: row;
     width: 800px;
-
 }
+
 .inputHome {
     width: 600px;
 }
 
-
 .buttonHome {
     display: flex;
     width: 200px;
+}
+
+.buttonLogin{
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
 }

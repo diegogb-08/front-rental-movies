@@ -1,0 +1,38 @@
+.adminContainer{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #e8f0fe;
+
+}
+
+.adminNav{
+    margin-right: 1rem;
+}
+
+.allRentalsContainer{
+    width: 100%;
+    height: 100%;
+    padding: $p5;
+}
+
+.rentalTable {
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: $border-radius;
+    thead {
+        border: 2px solid gray;
+        width: 100%;
+        th{
+            border: 1px solid gray;
+            text-align: center;
+        }
+    }
+    tbody {
+        border: 2px solid gray;
+        width: 100%;
+        td {
+            border: 1px solid gray;
+            text-align: center;
+        }
+    }
+}

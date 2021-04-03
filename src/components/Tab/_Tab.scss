@@ -1,0 +1,31 @@
+.tabNav {
+  width: 100%;  
+  
+  
+}
+
+.nav-item {
+  cursor: pointer;
+ 
+}
+
+.tab {
+  height: 100%;
+  width: 15%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.tabInfo{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  justify-content: flex-start;
+  flex-direction: row;
+  background-color:white;
+  
+}

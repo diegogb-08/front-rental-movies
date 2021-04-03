@@ -1,0 +1,123 @@
+.rentalComponent {
+  background: black;
+  width: 100%;
+  color: $fontcolor1;
+  padding-top: $p5;
+}
+
+
+.rentalBody {
+  background-color: #F5F5F5;
+  width: 100%;
+  min-height: 100vh;    // Aquí Victor
+  color: black;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+}
+
+.rentalContainer {
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  width: 80%;
+}
+
+
+.cartBoxContainer {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-top: 2.6rem;
+}
+
+.cartBoxFixed {
+  width: 9rem;
+  height: 7rem;
+  background-color: white;
+  position: fixed;
+  margin-left: 3rem;
+  border-radius: 0.2rem;
+}
+
+
+
+.basketRental {   // AQUI DIEGO, DIV DE LA COMPRA.
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  border: solid 0.1rem lightgray;
+  border-radius: 0.2rem;
+  font-size: 2.5rem;
+  display: flex; 
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+  background-color: white
+}
+
+.iconCounterContainer {
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.filmIconRental {
+  display: flex;
+  position: relative;
+  transform: rotate(20deg);
+}
+
+.counterCartRental {
+  display: flex;
+  color: $fontcolor5;
+  font-size: 1.5rem;
+  position: relative;
+  top: 1rem;
+  left: 0.5rem;
+  font-weight: bold;
+}
+
+.pTotalPrice{
+  font-size: 0.8rem;
+}
+
+.priceButtonContainer{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.containerButtonsRental{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.buyButton {
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400;
+}
+
+.emptyOrdersButton{
+  display: flex;
+  padding: .5rem;
+  width: 9rem;
+  font-weight: 400;
+}
+
+.pBuyNow{
+  font-size: 0.8rem;
+  text-align: center;
+}

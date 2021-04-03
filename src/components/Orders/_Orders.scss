@@ -1,0 +1,164 @@
+.orderComponent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+// NavBar Delete All Orders n Price
+
+.navBarOrders {
+  width: 100%;
+  display: flex;
+  justify-content: space-between
+}
+
+.deleteAll {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: red;
+}
+
+.deleteAll:hover {
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: red;
+}
+
+.priceAll {
+  font-size: 0.8rem;
+  color: red;
+  font-weight: 600;
+  margin-right: 0.8rem;
+}
+
+// Master Order Container
+
+
+.ordersContainer { 
+  display: flex;
+  flex-direction: row;
+  border-top: 0.1rem solid lightgrey;
+  width: 100%;
+}
+
+// Img Container **
+
+.imgOrderContainer {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  padding: 1.5%;
+  justify-content: center;
+  align-self: center;
+
+}
+
+.imgOrder {
+  display: flex;
+  width: 100%;
+}
+
+// Info Container 
+
+.infoOrderContainer {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1.5%;
+}
+
+
+.orderTitle {
+  font-size: 1rem;
+  font-weight: 1000;
+}
+
+.dateOrder {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+// Actions Container
+
+.ordersActionsContainer{
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+}
+
+.inputGift{
+  display: flex;
+  margin-top: 0.1rem;
+}
+
+.pGift {
+  display: flex;
+  font-size: 0.7rem;
+  margin-left: 2%;
+}
+
+.actionDelete {
+  display: flex;
+  margin-left: 7%;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+
+.actionDelete:hover {
+  display: flex;
+  margin-left: 7%;
+  color: red;
+  cursor: pointer;
+  font-size: 0.7rem;
+}
+.priceContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 10%;
+  padding: 0.9%;
+  font-weight: 700;
+}
+
+// Empty View
+
+
+.emptyOrderContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+}
+
+.messageEmpyOrder{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 50%;
+}
+
+.pEmptyOrder{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.containerCat {
+  display: flex;
+  justify-content: center;
+  align-self: flex-end;
+  width: 50%;
+}
+
+.sadCat {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+}
+
+

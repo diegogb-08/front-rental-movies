@@ -1,13 +1,26 @@
 import React from 'react'
 import logo from '../../img/logo.png'
+import { connect } from 'react-redux';
+
+
 
 function Header(props) {
+
+
     return (
         <div className="headerComponent">
-            <img src={logo} alt="logo"/>
-            <div className="buttonLogin">{props.children}</div>
+            <div className="logoContainer">
+                <img src={logo} alt="logo" onClick={props.onClick} />
+            </div>
+            {props.children}
         </div>
     )
 }
 
-export default Header
+const mapStateToProps = state => {
+    return {
+        user: state.userReducer.user,
+    }
+};
+
+export default connect(mapStateToProps)(Header);

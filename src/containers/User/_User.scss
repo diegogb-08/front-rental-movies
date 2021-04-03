@@ -1,0 +1,89 @@
+.userComponent {
+    background: $principalcolor;
+    width: 100%;
+    color: $fontcolor1;
+    // padding-top: $p10;
+    // padding-left: $p5;
+}
+
+.spacer {
+  width: 100%;
+  padding-bottom: $p5;
+}
+
+.movieCollection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 19rem;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.carouselMovies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.filmPoster{
+  cursor: pointer;
+  height: 100%;
+  width: auto;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  vertical-align: top;
+}
+
+.filmPoster:hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+
+.navbar{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imageUser {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 3rem;
+  z-index: -1;
+  img {
+      width: 100%;
+      margin-top: 2rem;
+      margin-right: 2rem;
+      cursor: pointer;
+  }
+}
+
+.cartCounter{
+  height: 100%;
+  width: auto;
+}
+
+.video{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(142, 140, 142);
+}
+
+.gif{
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

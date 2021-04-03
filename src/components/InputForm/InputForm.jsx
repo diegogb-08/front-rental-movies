@@ -10,13 +10,14 @@ function InputForm(props) {
                 maxLength={props.lenght}
                 onChange={props.onChange}
                 onKeyDown={props.onKeyDown}
-                placeholder={props.placeholder}
                 tabIndex={props.tabIndex}
-
+                value={props.value}
+                style={props.style}
                 required
             ></input>
             <span className="floating-label" >{props.title}</span>
-            <div className="showPassword" onClick={props.onClick}>{props.showHide}</div>
+            <div className="iconInput" onClick={props.onClick}>{props.showHide}</div>
+            <span className="error">{props.error}</span>
         </div>
     )
 }

@@ -7,17 +7,23 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: $p1 $p1 0 $p2;
+    justify-content: space-between;
+    padding: $p1 $p2 $p1 $p2;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0.034));
+}
+
+.logoContainer{
+    height: 3rem;
+    width: 10rem;
     img{
-        height: 100%;
+        width: 100%;
+        cursor: pointer;
     }
 }
 
 .buttonLogin{
-    height: 4rem;
-    width: 8rem;
+    height: 2rem;
+    width: 6rem;
     display: flex;
     justify-content: center;
-    position: relative;
-    left: 55rem;
 }

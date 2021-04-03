@@ -37,26 +37,33 @@ const styles = {
         alignItems: 'center',
         width: '100%',
         height:'100vh',
+        zIndex: 100,
     },
     window: {
         position: 'relative',
-        background: '#fff',
         borderRadius: 5,
         boxShadow: '2px 2px 10px rgba(0,0,0,0.2)',
-        zIndex: 10,
+        zIndex: 1000,
         minWidth: 420,
-        padding: 24,
+        minHeight: 100
     },
     closeBtn: {
         position: 'absolute',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '1.5rem',
+        height: '1.5rem',
         top: 0,
         right: 0,
-        borderRadius: '4rem',
+        borderRadius: '5rem',
         cursor: 'pointer',
         marginRight: '0.5rem',
         marginTop: '0.3rem',
-        color: 'grey'
+        color: 'white',
+        backgroundColor: '#777777c2',
     },
+
     background: {
         position: 'absolute',
         width: '100%',
@@ -64,7 +71,8 @@ const styles = {
         top: 0,
         left: 0,
         backgroundColor: '#000',
-        opacity: 0.4,
+        opacity: 0.8,
         cursor: 'pointer',
+        zIndex: 1,
     }
 }
