@@ -15,10 +15,13 @@ const cartReducer = (state = initialState, action) => {
             };
 
         case REMOVE:
+            const numIndex = parseInt(action.payload)
             return {
-                ...state,
-                cart: state.cart.filter(cart => cart.id !== action.payload)
-            };
+                cart: [
+                    ...state.cart.slice(0, numIndex),
+                    ...state.cart.slice(numIndex + 1)
+                ]
+            }
 
         case CLEAN:
             return {
