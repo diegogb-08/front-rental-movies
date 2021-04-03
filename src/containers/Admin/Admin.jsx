@@ -1,9 +1,9 @@
-import React,{useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import DropDownMenu from '../../components/DropDownMenu/DropDownMenu'
 import Header from '../../components/Header/Header'
 import NavBtn from '../../components/NavBtn/NavBtn'
 import axios from 'axios'
-import {port, rental} from '../../api/ApiMongoDB'
+import { port, rental } from '../../api/ApiMongoDB'
 import moment from 'moment';
 
 function Admin() {
@@ -13,18 +13,18 @@ function Admin() {
 
     const getAllRentals = async () => {
 
-        try{
-            let result = await axios.get(port+rental)
+        try {
+            let result = await axios.get(port + rental)
             setAllRentals(result.data)
-        }catch(e){
+        } catch (e) {
             return e.status(404)
         }
     }
 
 
-    useEffect(()=> {
+    useEffect(() => {
         getAllRentals()
-    },[])
+    }, [])
 
 
     return (
@@ -33,8 +33,8 @@ function Admin() {
             <Header>
                 <div className="adminNav">
                     <NavBtn>
-                        <DropDownMenu/>
-                    </NavBtn> 
+                        <DropDownMenu />
+                    </NavBtn>
                 </div>
             </Header>
             <div className="allRentalsContainer">
@@ -54,23 +54,23 @@ function Admin() {
                         {
                             allRentals.map(order => {
                                 return order.rental.map(film => {
-                                    return(
+                                    return (
                                         <tr>
-                                                <td>{order._id}</td>
-                                                <td>{film.title}</td>
-                                                <td>{film.id}</td>
-                                                <td>{order.email ? order?.email : 'email not found'}</td>
-                                                <td>{moment(order.rental_date).format('DD-MM-YYYY')}</td>
-                                                <td>{moment(order.return_date).format('DD-MM-YYYY')}</td>
-                                                <td>€{film.price}</td>
+                                            <td>{order._id}</td>
+                                            <td>{film.title}</td>
+                                            <td>{film.id}</td>
+                                            <td>{order.user_email ? order.user_email : 'email not found'}</td>
+                                            <td>{moment(order.rental_date).format('DD-MM-YYYY')}</td>
+                                            <td>{moment(order.return_date).format('DD-MM-YYYY')}</td>
+                                            <td>€{film.price}</td>
                                         </tr>
-                                
+
                                     )
-                                  
+
                                 })
 
                             })
-                        }                   
+                        }
                     </tbody>
                 </table>
             </div>
