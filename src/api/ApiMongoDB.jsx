@@ -1,4 +1,4 @@
-export const port = 'http://localhost:3000';
+export const port = 'https://fakeflix-backend.herokuapp.com';
 export const customer = '/user';
 export const login = '/login';
 export const search = '/search';
