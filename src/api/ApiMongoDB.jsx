@@ -4,6 +4,6 @@ export const login = '/login';
 export const search = '/search';
 export const query = '?query=';
 export const movie = '/movie';
-export const rental = '/rental';
+export const rentals = '/rental';
 export const searchEmail = '/email';
 export const update = '/update';

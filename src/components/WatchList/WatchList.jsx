@@ -8,7 +8,7 @@ import NavMenu from '../NavMenu/NavMenu';
 import SearchBox from '../SearchBox/SearchBox';
 import axios from 'axios';
 import {connect} from 'react-redux';
-import { customer, port, rental } from '../../api/ApiMongoDB';
+import { customer, port, rentals } from '../../api/ApiMongoDB';
 import { apiKey, baseUrl, movie } from '../../api/ApiMovieDB';
 import moment from 'moment';
 
@@ -23,11 +23,11 @@ const WatchList = (props) => {
         headers: {
         'Authorization': `Bearer ${props.token}`
         }
-  };
+    };
 
     const getAllRentals = async () => {
         try{
-            let result = await axios.get(port+rental+customer+'/'+props.user._id, auth)
+            let result = await axios.get(port+rentals+customer+'/'+props.user._id, auth)
             setAllRentals(result.data)
          }catch(e){
             return {e: e.message}
