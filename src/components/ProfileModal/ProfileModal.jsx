@@ -78,7 +78,7 @@ function ProfileModal(props) {
 
     return (
         <div>
-            <div className="configComponent" onClick={toggle}>{props.children}</div>
+            <div className="profileModalComponent" onClick={toggle}>{props.children}</div>
             <Modal active={active} toggle={toggle}>
                 <div className="profileModalContainer">
                     <div className="header">

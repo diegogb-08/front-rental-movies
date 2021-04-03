@@ -98,7 +98,6 @@
     align-items: center;
     flex-direction: row;
 
-
 }
 
 .addInfo {
@@ -110,9 +109,11 @@
 
 .userDetails {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
     span {
         font-weight: bold;
 

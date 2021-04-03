@@ -10,19 +10,19 @@ import imgSubs from '../../img/Artboard.svg';
 import Tab from '../../components/Tab/Tab';
 import TabNav from "../../components/Tab/TabNav";
 import ProfileModal from '../ProfileModal/ProfileModal';
+import moment from 'moment';
 
 
 function ProfileScreen(props) {
 
     let history = useHistory();
 
-
     const home = () => {
         setTimeout(() => {
             history.push('/user')
         }, 1000)
     }
-
+    console.log(props.user)
     //Tab
     const [tab, setTab] = useState({
         selected: 'Account'
@@ -45,13 +45,12 @@ function ProfileScreen(props) {
             </Header>
             <div className="profileBody">
                 <div className="profileContainer">
-
                     <TabNav tabs={['Account', 'User Info']} selected={tab.selected} setSelected={setSelected}>
                         <Tab isSelected={tab.selected === 'Account'}>
                             <div className="tabContainer">
                                 <div className="profileTitle">
                                     <h1>Account <img src={imgSubs} alt="imgSubs" /> </h1>
-                                    <h2>SUBSCRIBER SINCE 2015</h2>
+                                    <h2>SUBSCRIBER SINCE {moment(props.user.creationDate).format('YYYY')}</h2>
                                 </div>
                                 <div className="profileDetails">
                                     <img src={profile} alt="profile" />
@@ -63,11 +62,8 @@ function ProfileScreen(props) {
                                         <p>Premium ULTRA <span>HD</span></p>
                                     </div>
                                     <div className="profilePlan">
-                                        {/* <button className="buttonProfile">Change Plan</button> */}
                                     </div>
                                 </div>
-
-
                             </div>
                         </Tab>
                         <Tab isSelected={tab.selected === 'User Info'}>
@@ -79,7 +75,7 @@ function ProfileScreen(props) {
                                     <p>Full Name: <span>{props.user?.full_name}</span></p>
                                     <p>Phone Number: <span>{props.user?.phone_number}</span></p>
                                     <p>Address: <span>{props.user?.address}</span></p>
-                                    <p>Birth Date: <span>{props.user?.birth_date}</span></p>
+                                    <p>Birth Date: <span>{moment(props.user?.birth_date).format('DD-MM-YYYY')}</span></p>
                                     <p>Email: <span>{props.user?.email}</span></p>
                                 </div>
                                 <div className="addInfo">
