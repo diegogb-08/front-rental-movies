@@ -23,10 +23,6 @@ function ProfileScreen(props) {
         }, 1000)
     }
 
-    const updateEmail = () => {
-        history.push('/update')
-    }
-
     //Tab
     const [tab, setTab] = useState({
         selected: 'Account'
@@ -60,15 +56,6 @@ function ProfileScreen(props) {
                                 <div className="profileDetails">
                                     <img src={profile} alt="profile" />
                                     <p>Email: {props.user.email}</p>
-                                    <div className="updateEmail">
-                                        <button className="buttonProfile" onClick={updateEmail}>CHANGE EMAIL</button>
-                                    </div>
-                                    <div className="profilePassword">
-                                        <p>Password: *********</p>
-                                        <div className="updateEmail">
-                                            <button className="buttonProfile">CHANGE PASSWORD</button>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div className="profileInfo">
                                     <h2>CURRENT PLAN</h2>
@@ -97,9 +84,9 @@ function ProfileScreen(props) {
                                 </div>
                                 <div className="addInfo">
                                     <div className="userInfo">
-                                    <ProfileModal>
-                                        <button className="buttonProfile">ADD USER INFO</button>
-                                    </ProfileModal>
+                                        <ProfileModal>
+                                            <button className="buttonProfile">ADD USER INFO</button>
+                                        </ProfileModal>
                                     </div>
                                 </div>
                             </div>
