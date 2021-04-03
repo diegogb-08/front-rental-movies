@@ -8,7 +8,7 @@ import moment from 'moment';
 function LastOrders(props) {
 
   const [allRentals, setAllRentals] = useState([])
-  console.log(allRentals)
+
 
   // AUTHORIZATION
   let auth = {
@@ -51,7 +51,6 @@ function LastOrders(props) {
             <>             
               {
                 allRentals.map( order => {
-                  console.log(order.rental)
                   return order.rental.map(film => {
                       return (
                         <div className="lastOrdersContainer"key={film.id}>
