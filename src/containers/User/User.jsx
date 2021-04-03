@@ -26,7 +26,7 @@ const User = (props) => {
 
     let history = useHistory()
 
-    let storage = JSON.parse(localStorage.getItem('loading'))
+    let login = JSON.parse(localStorage.getItem('loading'))
     // HOOKS
     const [films, setFilms] = useState({})
     const [loading, setLoading] = useState(false);
@@ -34,7 +34,7 @@ const User = (props) => {
     const loadingHandeler = () => {
         if(!films.Action){
             setLoading(true)
-            if(storage === true){
+            if(login === true){
                 setTimeout(() => {
                     setLoading(false)
                 }, 1000)
@@ -75,7 +75,7 @@ const User = (props) => {
 
     if(loading){
         
-        if(storage === true){
+        if(login === true){
             return(
                 <div className='gif'>
                     <img width="50%" src={gif} alt={gif}/>

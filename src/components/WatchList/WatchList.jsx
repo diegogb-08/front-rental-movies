@@ -86,7 +86,7 @@ const WatchList = (props) => {
             </Header>
             <div className="videoListContainer">
                 {
-                    !youTubeKey
+                    youTubeKey[0]
                     ?
                     <>
                         <h4>Enjoy your popcorns! <p>&#127871;</p></h4>

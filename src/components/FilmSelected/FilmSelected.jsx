@@ -29,23 +29,23 @@ const FilmSelected = (props) => {
     // Here we check if the movie/series is already in the Cart and render the button if it exist
     // Here we check if the movie/series is already in the List and render the button if it exist
     const checkList = () => {
-      if(props.list[0]){
-        let idListFound = props.list?.map(item => item.id).find(element => element === film.id);
-          if ( idListFound !== undefined) 
-            return setColor({...textcolor, list: '#0f7fe8'})
-      }
+        if(props.list[0]){
+            let idListFound = props.list?.map(item => item.id).find(element => element === film.id);
+            if ( idListFound !== undefined) 
+                return setColor({...textcolor, list: '#0f7fe8'})
+        }
     }
     
     const checkCart = () => {
-      if(props.cart[0]){
-        let idCartFound = props.cart?.map(item => item.id).find(element => element === film.id);
-        if(idCartFound !== undefined) 
-          return setColor({...textcolor, cart: '#60d369'})
-      }
+        if(props.cart[0]){
+            let idCartFound = props.cart?.map(item => item.id).find(element => element === film.id);
+            if(idCartFound !== undefined) 
+                return setColor({...textcolor, cart: '#60d369'})
+        }
     }
     
     useEffect(()=> {
-      checkList()
+        checkList()
       // eslint-disable-next-line
     },[])
     
@@ -57,27 +57,33 @@ const FilmSelected = (props) => {
 
     // FUNCTIONS
     const addFilmToCart = () => {
-        let id = props.cart.map(item => item.id)
-        if(id.find(element => element === film.id) === undefined){
+        if(props.cart[0]){
+            let id = props.cart.map(item => item.id)
+            if(id.find(element => element === film.id) === undefined){
+                film.inCart = film.inCart +1
+                props.dispatch({type: ADD, payload: film})
+                setColor({...textcolor, cart: '#60d369'})
+            }else{
+                alert('You are trying to add an existing product to the cart!')
+            }
+        }else{
             film.inCart = film.inCart +1
             props.dispatch({type: ADD, payload: film})
             setColor({...textcolor, cart: '#60d369'})
-        }else{
-            alert('You are trying to add an existing product to the cart!')
         }
     }
 
     const addFilmToList = () => {
         let list = film
         if(props.list[0]){
-          let id = props.list.map(item => item.id)
-          if(id.find(element => element === list.id) === undefined){
-            list.inList = list.inList +1
-            props.dispatch({type: ADDLIST, payload: list})
-            setColor({...textcolor, list: '#0f7fe8'})
-          }else{
-            alert('You are trying to add an existing product to the list!')
-          }        
+            let id = props.list.map(item => item.id)
+            if(id.find(element => element === list.id) === undefined){
+                list.inList = list.inList +1
+                props.dispatch({type: ADDLIST, payload: list})
+                setColor({...textcolor, list: '#0f7fe8'})
+            }else{
+                alert('You are trying to add an existing product to the list!')
+            }        
         }else{
             list.inList = list.inList +1
             props.dispatch({type: ADDLIST, payload: list})
