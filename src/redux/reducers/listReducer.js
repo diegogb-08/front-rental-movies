@@ -1,4 +1,4 @@
-import {ADDLIST, REMOVELIST, CLEANLIST} from '../types/listType';
+import {ADD_LIST, REMOVE_LIST, CLEAN_LIST} from '../types/listType';
 
 const initialState = {
     list : [],
@@ -7,19 +7,19 @@ const initialState = {
 
 const listReducer = (state = initialState, action) => {
     switch(action.type){
-        case ADDLIST :
+        case ADD_LIST :
             return {
                 ...state,
                 list: [...state.list, action.payload],
             }
         
-        case REMOVELIST : 
+        case REMOVE_LIST : 
             return {
                 ...state,
-                list : action.payload
+                list : state.cart.filter(cart => cart.id !== action.payload) 
             }
 
-        case CLEANLIST : 
+        case CLEAN_LIST : 
             return {
                 ...state,
                 list : action.payload

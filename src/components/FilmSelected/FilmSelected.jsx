@@ -5,7 +5,8 @@ import { faPlus, faCartPlus, faHeart} from '@fortawesome/free-solid-svg-icons'
 // Redux
 import {connect} from 'react-redux';
 import {ADD} from '../../redux/types/cartType';
-import {ADDLIST} from '../../redux/types/listType';
+import { ADD_LIST } from '../../redux/types/listType';
+
 
 const FilmSelected = (props) => {
 
@@ -79,14 +80,14 @@ const FilmSelected = (props) => {
             let id = props.list.map(item => item.id)
             if(id.find(element => element === list.id) === undefined){
                 list.inList = list.inList +1
-                props.dispatch({type: ADDLIST, payload: list})
+                props.dispatch({type: ADD_LIST, payload: list})
                 setColor({...textcolor, list: '#0f7fe8'})
             }else{
                 alert('You are trying to add an existing product to the list!')
             }        
         }else{
             list.inList = list.inList +1
-            props.dispatch({type: ADDLIST, payload: list})
+            props.dispatch({type: ADD_LIST, payload: list})
             setColor({...textcolor, list: '#0f7fe8'})
         }
     }
