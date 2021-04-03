@@ -26,17 +26,14 @@ function Gifts(props) {
                     </>
                     :
                     <>                
-                      {props.cart.map( film => {
-                      return (
-                        <div className="GiftsContainer"key={film.id}>
-                          <div className="imgGiftsContainer">
-                            <img className="imgGifts" src={film.backdropPath} alt="gifts"/>
-                          </div> 
-                          <div className="infoGiftsContainer">
-                            <p className="GiftsTitle">{film.title}</p>
-                          </div>
-                        </div>                       
-                      );})}                     
+                    <div className="emptyGiftsContainer">
+                      <div className="messageEmptyGifts">
+                        <p className="pEmptyOrder">Work in progress ...</p>              
+                      </div>
+                      <div className="containerCatGifts">
+                        <img className="happyCat"src={rental} alt="happyCat"/>
+                      </div>  
+                    </div>             
                     </>                   
           }
     </div>
