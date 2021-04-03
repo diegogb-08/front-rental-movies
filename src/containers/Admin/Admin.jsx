@@ -3,7 +3,7 @@ import DropDownMenu from '../../components/DropDownMenu/DropDownMenu'
 import Header from '../../components/Header/Header'
 import NavBtn from '../../components/NavBtn/NavBtn'
 import axios from 'axios'
-import { port, rental } from '../../api/ApiMongoDB'
+import { port, rentals } from '../../api/ApiMongoDB'
 import moment from 'moment';
 
 function Admin() {
@@ -14,7 +14,7 @@ function Admin() {
     const getAllRentals = async () => {
 
         try {
-            let result = await axios.get(port + rental)
+            let result = await axios.get(port + rentals)
             setAllRentals(result.data)
         } catch (e) {
             return e.status(404)

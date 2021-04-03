@@ -80,3 +80,51 @@
   align-self: center;
   width: 100%;
 }
+
+.expireDateOrder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+}
+
+.countdown {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: $border-radius;
+  margin-top: 1rem;
+  .countDownTitle{
+    background-color: $btnred;
+    border-radius: 0.3rem 0.3rem 0 0;
+    color: white;
+    height: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    p {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  .counter{
+    height: 3.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .days {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+}

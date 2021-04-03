@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFilm } from '@fortawesome/free-solid-svg-icons'
-import { port, customer, rental } from '../../api/ApiMongoDB';
+import { port, customer, rentals } from '../../api/ApiMongoDB';
 import Header from '../../components/Header/Header';
 import Orders from "../../components/Orders/Orders";
 import Tab from '../../components/Tab/Tab';
@@ -71,7 +71,7 @@ function Rental(props) {
     const id = props.user._id;
 
     if(props.cart[0]){
-      await axios.post(port + rental + customer + '/' + id, body, auth);
+      await axios.post(port + rentals + customer + '/' + id, body, auth);
       props.dispatch({ type: CLEAN, payload: [] });
       return alert('Your order has been successfully dispatched!')
     }
@@ -140,6 +140,7 @@ function Rental(props) {
                 <Button name="Buy" onClick={() => buyOrder()} />
               </div>
             </div>
+              <p className='pBuyNow'>Buy now and enjoy them for 7 days!</p>
             </div>
           </div>
         </div>
