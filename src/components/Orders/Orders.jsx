@@ -22,6 +22,7 @@ function Orders(props) {
   // Remove one item order
   const deleteOrder = (index) => {
     props.dispatch({ type: REMOVE, payload: index });
+
   };
 
   // Order start date
