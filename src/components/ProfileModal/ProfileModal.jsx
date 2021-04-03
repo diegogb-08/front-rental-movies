@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import {connect} from 'react-redux';
-import { useHistory } from 'react-router-dom'
 import axios from 'axios';
 import {UPDATE} from '../../redux/types/userType'
 import Modal from '../../containers/Modal/Modal';
@@ -12,8 +11,6 @@ import {port,customer} from '../../api/ApiMongoDB';
 
 
 function ProfileModal(props) {
-
-    let history = useHistory();
 
     // AUTHORIZATION
     let token = props.token
