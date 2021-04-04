@@ -199,12 +199,9 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Diego García - [@diegogb-08](https://github.com/diegogb-08)
-<br>
-
-Robert de la Fuente - [@Roo-Git](https://github.com/Roo-Git)
-<br>
-Víctor Sanchis - [@vicGeo](https://github.com/vicGeo)
+- Diego García - [@diegogb-08](https://github.com/diegogb-08)
+- Robert de la Fuente - [@Roo-Git](https://github.com/Roo-Git)
+- Víctor Sanchis - [@vicGeo](https://github.com/vicGeo)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
