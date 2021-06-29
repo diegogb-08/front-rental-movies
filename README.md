@@ -12,7 +12,7 @@
     An awesome clone of Netflix!
     <br />
     <br />
-    <a href="https://fakeflixmock.herokuapp.com/">View Demo</a>
+    <a href="https://fakeflixmock.herokuapp.com/">View Application</a>
   </p>
 </p>
 
