@@ -6,7 +6,7 @@
     <img src="https://i.imgur.com/oJkLhii.png" alt="Logo" >
   </a>
 
-  <h3 align="center">Best Clone NETFLIX</h3>
+  <h3 align="center">BEST NETFLIX CLONE</h3>
 
   <p align="center">
     An awesome clone of Netflix!
